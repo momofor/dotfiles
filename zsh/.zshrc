@@ -140,6 +140,7 @@ alias pc='picom-trans -5'
 alias ct='colorscript -e colortest '
 alias ct-s='colorscript -e colortest-slim'
 alias l='ls -all'
+alias spicetify='/home/momofor/spicetify-cli/spicetify'
 #autostart
 colorscript -e colortest #run a random color script
 #neofetch #run neofetch 
