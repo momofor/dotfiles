@@ -1,8 +1,8 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'preservim/nerdtree' 
+Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'kaicataldo/material.vim', { 'branch': 'main' }
