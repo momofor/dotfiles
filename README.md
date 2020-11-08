@@ -35,7 +35,7 @@ see in reddit
 ## table example
 
 | program | role                 |
-|-------- |----------------------|
+|:------: |:--------------------:|
 | awesome | window manager       |
 |rofi     | run prompt           |
 |fish     | shell                |
