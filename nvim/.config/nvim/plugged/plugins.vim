@@ -24,6 +24,7 @@ Plug 'vim-python/python-syntax'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
+Plug 'gabrielelana/vim-markdown'
 call plug#end()
 let g:NERDTreeGitStatusConcealBrackets = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
