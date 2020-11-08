@@ -1,8 +1,6 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree' 
-Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'kaicataldo/material.vim', { 'branch': 'main' }
@@ -24,5 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'SirVer/ultisnips'
 Plug 'vim-python/python-syntax'
-Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'
 call plug#end()
