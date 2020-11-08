@@ -26,3 +26,5 @@ Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
 call plug#end()
+let g:NERDTreeGitStatusConcealBrackets = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
