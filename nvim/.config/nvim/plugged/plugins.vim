@@ -23,4 +23,5 @@ Plug 'tpope/vim-surround'
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'SirVer/ultisnips'
 Plug 'vim-python/python-syntax'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
