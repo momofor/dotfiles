@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
