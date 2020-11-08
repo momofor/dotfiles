@@ -1,7 +1,7 @@
 * {
-  background-color: #282C33;
+  background-color: #3b4252;
   border-color: #2e343f;
-  text-color: #8ca0aa;
+  text-color: #88c0d0;
   spacing: 0;
   width: 512px;
 }
@@ -39,5 +39,5 @@ element {
 }
 
 element selected {
-  background-color: #2e343f;
+  background-color: #434c5e;
 }
