@@ -25,3 +25,16 @@
 ***
 # screenshots
 see in reddit
+
+
+## table example 
+
+
+| program | role                 |
+|-------- |----------------------|
+| awesome | window manager       |
+|rofi     | run prompt           |
+|fish     | shell                |
+|polybar  | status bar           |
+|(neo)vim | text editor          |
+|stow     | config files manager |
