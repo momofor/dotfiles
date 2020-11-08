@@ -10,6 +10,7 @@
 * __polybar__ the status bar  
 * __neo(vim)__ the text editor  
 * __stow__ to put everything in a symlink
+* __alacritty__ as terminal emulator
 
 ### for debian use this command to download the dependancies except polybar
 
@@ -41,3 +42,4 @@ see in reddit
 |polybar  | status bar           |
 |(neo)vim | text editor          |
 |stow     | config files manager |
+|alacritty|terminal emulator     |
