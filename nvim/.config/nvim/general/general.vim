@@ -84,3 +84,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#434C5E ctermbg=4 "nor
 "hi Normal guibg=NONE ctermbg=NONE closes as it doesn't work
 "rainbow
 let g:rainbow_active = 1
+"no brackets in nerdtree
+let g:webdevicons_conceal_nerdtree_brackets = 1
