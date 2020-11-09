@@ -24,16 +24,3 @@ end
 #exports
 set -x EDITOR nvim
 ###############END OF EXPORTS############################################
-
-##################START OF ABREVIATIONS##################################
-
-SETUVAR _fish_abbr__2E_2E_:cd\x20\x2e\x2e   
-SETUVAR _fish_abbr_cl:clear
-SETUVAR _fish_abbr_ct:colorscript\x20\x2de\x20colortest
-SETUVAR _fish_abbr_g:git
-SETUVAR _fish_abbr_gs:git\x20status
-SETUVAR _fish_abbr_ht:htop
-SETUVAR _fish_abbr_l:ls\x20\x2dcolor\x20\x2dall
-SETUVAR _fish_abbr_n:nvim
-SETUVAR _fish_abbr_neo:neofetch
-####################END OF ABREVIATIONS##################################
