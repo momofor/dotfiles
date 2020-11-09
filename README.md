@@ -44,5 +44,7 @@ see in reddit
 |stow     | config files manager |
 |alacritty|terminal emulator     |
 
-### for neovim dependecies and how to install them see [this readme](nvim/.config/nvim/README.md)
+### for neovim dependecies and how to install them see [this readme][2]
+
+[2]: <(nvim/.config/nvim/README.md)>
 
