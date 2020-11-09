@@ -21,5 +21,7 @@
 *
   * use this command if on linux
   
- >shell```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
- g.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
+ ```shell
+ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plu
+ g.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ ```
