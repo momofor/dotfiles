@@ -13,7 +13,7 @@
 #### how to install
 
 * _Fira Code Font_:
-  * install from there repository [1][Fira Code Font]
+  * install from there repository [Fira Code][1]
 
 [1]: <https://github.com/tonsky/FiraCode>
 
