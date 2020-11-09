@@ -18,7 +18,7 @@
 
 #### note
 
-#### for polybar go to the **[polybar github][1]**  to download it
+##### for polybar go to the **[polybar github][1]**  to download it
 
 [1]: <https://github.com/polybar/polybar> "a nice bar"
 
