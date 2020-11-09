@@ -43,3 +43,6 @@ see in reddit
 |(neo)vim | text editor          |
 |stow     | config files manager |
 |alacritty|terminal emulator     |
+
+### for neovim dependecies and how to install them see [this readme](nvim/.config/nvim/README.md)
+
