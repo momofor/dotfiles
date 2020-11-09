@@ -46,5 +46,5 @@ see in reddit
 
 ### for neovim dependecies and how to install them see [this readme][2]
 
-[2]: <(nvim/.config/nvim/README.md)>
+[2]: <(nvim/.config/nvim/README.md)> "just a readme file"
 
