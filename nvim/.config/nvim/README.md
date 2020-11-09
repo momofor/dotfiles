@@ -15,6 +15,8 @@
 * _Fira Code Font_:
   * install from there repository [1][Fira Code Font]
 
+[1]: <https://github.com/tonsky/FiraCode>
+
 * _vim-plug_:
 *
   * use this command if on linux
