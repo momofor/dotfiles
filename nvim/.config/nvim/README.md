@@ -4,8 +4,8 @@
 
 ### what to install
 
-#### * Fira Code font
+* Fira Code font
 
-#### * vim-plug
+* vim-plug
 
-#### * fzf finder
+* fzf finder
