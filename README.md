@@ -22,7 +22,7 @@
 
 [1]: <https://github.com/polybar/polybar> "a nice bar"
 
-### download the dependancies then do `git clone https://www.github.com/dotfiles`
+##### download the dependancies then do `git clone https://www.github.com/dotfiles`
 
 #### inside dotfiles do `stow *` to symlink all the config files to their right places
 
