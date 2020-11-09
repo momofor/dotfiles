@@ -15,7 +15,7 @@
 # "autostart"
 function fish_greeting
 test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
-echo its working 
+colorscript -e colortest
 end
 
 #nord dir_colors
