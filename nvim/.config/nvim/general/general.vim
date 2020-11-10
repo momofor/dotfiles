@@ -86,3 +86,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#434C5E ctermbg=4 "nor
 let g:rainbow_active = 1
 "nerdfonts for nerdtree git 
 let g:NERDTreeGitStatusUseNerdFonts = 1
+"close nerdtree if its the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
