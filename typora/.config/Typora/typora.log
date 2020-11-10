@@ -102,3 +102,14 @@ INFO 11/10/2020, 11:23:50 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6
 INFO 11/10/2020, 11:23:50 AM  [focus] 1
 INFO 11/10/2020, 11:24:39 AM  ----------------before-quit-----------------
 INFO 11/10/2020, 11:24:39 AM  ------------------will-quit------------------
+INFO 11/10/2020, 1:08:11 PM  ------------------start------------------
+INFO 11/10/2020, 1:08:11 PM  typora version: 0.9.96
+DEBUG 11/10/2020, 1:08:11 PM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 1:08:11 PM  [Raven] instanceKey = 3bd1fd67-3142-424a-b8cd-4563436406b5
+DEBUG 11/10/2020, 1:08:11 PM  app.openFile
+INFO 11/10/2020, 1:08:11 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 1:08:11 PM  [focus] 1
+INFO 11/10/2020, 1:08:13 PM  [blur] 1
+INFO 11/10/2020, 1:08:13 PM  [focus] 1
+INFO 11/10/2020, 1:08:14 PM  ----------------before-quit-----------------
+INFO 11/10/2020, 1:08:14 PM  ------------------will-quit------------------
