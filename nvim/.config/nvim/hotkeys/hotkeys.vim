@@ -1,14 +1,16 @@
 "leaderkey
 let mapleader=' '
+"git fugitive 
+map <leader>g :Git<cr> 
 "fzf
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
-map <C-f> :Files<CR>
+map <leader>f :Files<CR>
 map <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
+nnoremap <leader>r :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 " Nerdcommenter
