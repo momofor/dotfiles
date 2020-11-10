@@ -552,6 +552,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
               {description = "run prompt", group = "launcher"}),
 
+    awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
+              {description = "run typora ", group = "launcher"}),
 
     awful.key({ modkey }, "f", function () awful.spawn.with_shell("pcmanfm")end,
               {description = "run pcmanfm", group = "launcher"}),

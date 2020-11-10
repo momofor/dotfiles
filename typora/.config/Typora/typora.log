@@ -84,3 +84,21 @@ INFO 11/10/2020, 11:11:38 AM  [blur] 1
 INFO 11/10/2020, 11:12:13 AM  [focus] 1
 INFO 11/10/2020, 11:12:14 AM  ----------------before-quit-----------------
 INFO 11/10/2020, 11:12:14 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:14:14 AM  ------------------start------------------
+INFO 11/10/2020, 11:14:14 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:14:14 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:14:14 AM  [Raven] instanceKey = ff1a6f38-a4c1-484a-bc81-59aaf49cc305
+DEBUG 11/10/2020, 11:14:14 AM  app.openFile
+INFO 11/10/2020, 11:14:14 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:14:14 AM  [focus] 1
+INFO 11/10/2020, 11:15:03 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:15:03 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:23:50 AM  ------------------start------------------
+INFO 11/10/2020, 11:23:50 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:23:50 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:23:50 AM  [Raven] instanceKey = a43d1953-afdc-4b21-8003-0393b3be81f1
+DEBUG 11/10/2020, 11:23:50 AM  app.openFile
+INFO 11/10/2020, 11:23:50 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:23:50 AM  [focus] 1
+INFO 11/10/2020, 11:24:39 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:24:39 AM  ------------------will-quit------------------
