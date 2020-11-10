@@ -17,7 +17,6 @@ Plug 'airblade/vim-gitgutter/'
 Plug 'tpope/vim-surround'
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 "Plug 'sheerun/vim-polyglot'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'SirVer/ultisnips'
 Plug 'vim-python/python-syntax'
@@ -26,6 +25,7 @@ Plug 'preservim/nerdtree' |
             \ Plug 'ryanoasis/vim-devicons'
 Plug 'gabrielelana/vim-markdown'
 Plug 'liuchengxu/vim-which-key'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 let g:NERDTreeGitStatusConcealBrackets = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
