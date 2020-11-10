@@ -1,0 +1,86 @@
+INFO 11/10/2020, 11:03:23 AM  luanchFromDiffVersion, pre version is undefined
+INFO 11/10/2020, 11:03:23 AM  overwriteThemeFolder
+INFO 11/10/2020, 11:03:23 AM  ------------------start------------------
+INFO 11/10/2020, 11:03:23 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:03:23 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:03:23 AM  [Raven] instanceKey = 8456f630-d64c-49bd-9cfd-461ad15d7963
+DEBUG 11/10/2020, 11:03:23 AM  app.openFile
+INFO 11/10/2020, 11:03:23 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:03:23 AM  [focus] 1
+INFO 11/10/2020, 11:04:01 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:04:01 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:05:31 AM  ------------------start------------------
+INFO 11/10/2020, 11:05:35 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:05:36 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:05:37 AM  [Raven] instanceKey = ce9ae704-3987-43b1-914b-61f3baab57f4
+INFO 11/10/2020, 11:05:37 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 11/10/2020, 11:05:38 AM  app.openFile
+INFO 11/10/2020, 11:05:39 AM  [focus] 1
+INFO 11/10/2020, 11:05:41 AM  [blur] 1
+INFO 11/10/2020, 11:05:41 AM  [focus] 1
+INFO 11/10/2020, 11:05:53 AM  [blur] 1
+INFO 11/10/2020, 11:05:59 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:37 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:37 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:37 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:37 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:37 AM  [focus] 1
+INFO 11/10/2020, 11:07:37 AM  [blur] 1
+INFO 11/10/2020, 11:07:38 AM  [focus] 1
+INFO 11/10/2020, 11:08:29 AM  [blur] 1
+INFO 11/10/2020, 11:08:29 AM  [focus] 1
+INFO 11/10/2020, 11:08:29 AM  [blur] 1
+INFO 11/10/2020, 11:08:29 AM  [focus] 1
+INFO 11/10/2020, 11:08:29 AM  [blur] 1
+INFO 11/10/2020, 11:08:29 AM  [focus] 1
+INFO 11/10/2020, 11:08:29 AM  [blur] 1
+INFO 11/10/2020, 11:08:29 AM  [focus] 1
+INFO 11/10/2020, 11:09:04 AM  [blur] 1
+INFO 11/10/2020, 11:09:04 AM  [focus] 1
+INFO 11/10/2020, 11:09:07 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:09:07 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:09:10 AM  ------------------start------------------
+INFO 11/10/2020, 11:09:10 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:09:11 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:09:11 AM  [Raven] instanceKey = 1bfdfa44-b124-41d1-b62e-627de0dc383f
+DEBUG 11/10/2020, 11:09:11 AM  app.openFile
+INFO 11/10/2020, 11:09:11 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:09:11 AM  [focus] 1
+INFO 11/10/2020, 11:09:19 AM  [blur] 1
+INFO 11/10/2020, 11:09:20 AM  [focus] 1
+INFO 11/10/2020, 11:09:21 AM  [blur] 1
+INFO 11/10/2020, 11:09:33 AM  [focus] 1
+INFO 11/10/2020, 11:09:38 AM  [blur] 1
+INFO 11/10/2020, 11:09:45 AM  [focus] 1
+INFO 11/10/2020, 11:10:32 AM  [blur] 1
+INFO 11/10/2020, 11:10:32 AM  [focus] 1
+INFO 11/10/2020, 11:10:33 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:10:33 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:10:38 AM  ------------------start------------------
+INFO 11/10/2020, 11:10:38 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:10:38 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:10:38 AM  [Raven] instanceKey = 0f57b82c-da67-41a9-ae1e-6109b8b1b9fd
+DEBUG 11/10/2020, 11:10:38 AM  app.openFile
+INFO 11/10/2020, 11:10:38 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:10:38 AM  [focus] 1
+INFO 11/10/2020, 11:10:49 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:10:49 AM  ------------------will-quit------------------
+INFO 11/10/2020, 11:11:27 AM  ------------------start------------------
+INFO 11/10/2020, 11:11:27 AM  typora version: 0.9.96
+DEBUG 11/10/2020, 11:11:27 AM  [ '/usr/share/typora/Typora' ]
+INFO 11/10/2020, 11:11:27 AM  [Raven] instanceKey = 76dac7c8-0dc8-42f7-b2bd-2e4e07de8e67
+DEBUG 11/10/2020, 11:11:27 AM  app.openFile
+INFO 11/10/2020, 11:11:27 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/10/2020, 11:11:27 AM  [focus] 1
+INFO 11/10/2020, 11:11:36 AM  updateTheme
+INFO 11/10/2020, 11:11:37 AM  [blur] 1
+INFO 11/10/2020, 11:11:37 AM  [focus] 1
+INFO 11/10/2020, 11:11:38 AM  [blur] 1
+INFO 11/10/2020, 11:12:13 AM  [focus] 1
+INFO 11/10/2020, 11:12:14 AM  ----------------before-quit-----------------
+INFO 11/10/2020, 11:12:14 AM  ------------------will-quit------------------
