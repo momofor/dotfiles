@@ -23,4 +23,5 @@ end
 ################START OF EXPORTS##################################
 #exports
 set -x EDITOR nvim
+set -x BROWSER firefox
 ###############END OF EXPORTS############################################
