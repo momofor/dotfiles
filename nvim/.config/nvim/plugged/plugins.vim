@@ -25,7 +25,7 @@ Plug 'preservim/nerdtree' |
             \ Plug 'ryanoasis/vim-devicons'
 Plug 'gabrielelana/vim-markdown'
 Plug 'liuchengxu/vim-which-key'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 let g:NERDTreeGitStatusConcealBrackets = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1

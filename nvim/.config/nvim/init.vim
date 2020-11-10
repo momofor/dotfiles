@@ -7,4 +7,7 @@ source $HOME/.config/nvim/theme-config/themeconfig.vim
 source $HOME/.config/nvim/theme-config/airline.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
+source $HOME/.config/nvim/plug-config/markdown-preview.vim
+source $HOME/.config/nvim/plug-config/whichkey.vim 
+
 "hello boys
