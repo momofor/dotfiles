@@ -22,6 +22,7 @@
 
 set number relativenumber
 syntax enable
+set background=dark
 set noswapfile
 set scrolloff=7
 set backspace=eol,indent,start 

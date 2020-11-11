@@ -113,3 +113,68 @@ INFO 11/10/2020, 1:08:13 PM  [blur] 1
 INFO 11/10/2020, 1:08:13 PM  [focus] 1
 INFO 11/10/2020, 1:08:14 PM  ----------------before-quit-----------------
 INFO 11/10/2020, 1:08:14 PM  ------------------will-quit------------------
+INFO 11/11/2020, 3:49:58 PM  ------------------start------------------
+INFO 11/11/2020, 3:49:58 PM  typora version: 0.9.96
+DEBUG 11/11/2020, 3:49:58 PM  [ '/usr/share/typora/Typora' ]
+INFO 11/11/2020, 3:49:58 PM  [Raven] instanceKey = 624265c2-7e91-4dde-88d8-02b759e1c8b2
+INFO 11/11/2020, 3:49:58 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 11/11/2020, 3:49:58 PM  app.openFile
+INFO 11/11/2020, 3:49:59 PM  got argv [typora] from secondary instance
+DEBUG 11/11/2020, 3:49:59 PM  app.openFile
+INFO 11/11/2020, 3:49:59 PM  [focus] 1
+INFO 11/11/2020, 3:49:59 PM  [blur] 1
+INFO 11/11/2020, 3:49:59 PM  [focus] 2
+INFO 11/11/2020, 3:49:59 PM  secondary instance would exit
+INFO 11/11/2020, 3:50:00 PM  [blur] 2
+INFO 11/11/2020, 3:50:00 PM  [focus] 1
+INFO 11/11/2020, 3:50:00 PM  [blur] 1
+INFO 11/11/2020, 3:50:00 PM  [focus] 2
+INFO 11/11/2020, 3:50:02 PM  [focus] 1
+INFO 11/11/2020, 3:50:02 PM  ----------------before-quit-----------------
+INFO 11/11/2020, 3:50:02 PM  ------------------will-quit------------------
+INFO 11/11/2020, 3:50:04 PM  ------------------start------------------
+INFO 11/11/2020, 3:50:04 PM  typora version: 0.9.96
+DEBUG 11/11/2020, 3:50:04 PM  [ '/usr/share/typora/Typora' ]
+INFO 11/11/2020, 3:50:04 PM  [Raven] instanceKey = 3a7abe18-b113-40b4-86b7-3153abfd1d0f
+DEBUG 11/11/2020, 3:50:04 PM  app.openFile
+INFO 11/11/2020, 3:50:04 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/11/2020, 3:50:04 PM  [focus] 1
+INFO 11/11/2020, 3:50:20 PM  [blur] 1
+DEBUG 11/11/2020, 3:50:47 PM  false
+INFO 11/11/2020, 3:50:47 PM  addRecentDocument
+INFO 11/11/2020, 3:50:49 PM  [focus] 1
+INFO 11/11/2020, 3:51:11 PM  [blur] 1
+INFO 11/11/2020, 3:51:12 PM  [focus] 1
+INFO 11/11/2020, 3:51:18 PM  [blur] 1
+INFO 11/11/2020, 3:51:21 PM  [focus] 1
+INFO 11/11/2020, 3:51:22 PM  [blur] 1
+INFO 11/11/2020, 3:51:22 PM  [focus] 1
+INFO 11/11/2020, 3:51:23 PM  [blur] 1
+INFO 11/11/2020, 3:51:35 PM  [focus] 1
+INFO 11/11/2020, 3:51:35 PM  [blur] 1
+INFO 11/11/2020, 3:51:36 PM  [focus] 1
+INFO 11/11/2020, 3:51:37 PM  [blur] 1
+INFO 11/11/2020, 3:51:37 PM  [focus] 1
+INFO 11/11/2020, 3:51:37 PM  [blur] 1
+INFO 11/11/2020, 3:51:38 PM  [focus] 1
+INFO 11/11/2020, 3:51:38 PM  [blur] 1
+INFO 11/11/2020, 3:51:39 PM  [focus] 1
+INFO 11/11/2020, 3:51:39 PM  [blur] 1
+INFO 11/11/2020, 3:52:06 PM  [focus] 1
+INFO 11/11/2020, 3:52:13 PM  ----------------before-quit-----------------
+INFO 11/11/2020, 3:52:13 PM  ------------------will-quit------------------
+INFO 11/11/2020, 4:02:22 PM  ------------------start------------------
+INFO 11/11/2020, 4:02:22 PM  typora version: 0.9.96
+DEBUG 11/11/2020, 4:02:22 PM  [ '/usr/share/typora/Typora' ]
+INFO 11/11/2020, 4:02:22 PM  [Raven] instanceKey = f5cf1678-d4f2-46d5-b229-50f1c10ca046
+DEBUG 11/11/2020, 4:02:23 PM  app.openFile
+INFO 11/11/2020, 4:02:23 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 11/11/2020, 4:02:23 PM  [focus] 1
+INFO 11/11/2020, 4:02:29 PM  [blur] 1
+DEBUG 11/11/2020, 4:02:31 PM  false
+INFO 11/11/2020, 4:02:31 PM  addRecentDocument
+INFO 11/11/2020, 4:02:31 PM  [focus] 1
+INFO 11/11/2020, 4:02:40 PM  [blur] 1
+INFO 11/11/2020, 4:02:41 PM  [focus] 1
+INFO 11/11/2020, 4:02:58 PM  ----------------before-quit-----------------
+INFO 11/11/2020, 4:02:58 PM  ------------------will-quit------------------
