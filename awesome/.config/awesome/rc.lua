@@ -515,8 +515,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
         {description = "mpc on/off", group = "widgets"}),
 
     -- Copy primary to clipboard (terminals to gtk)
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
-              {description = "copy terminal to gtk", group = "hotkeys"}),
+    --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
     -- Copy clipboard to primary (gtk to terminals)
     awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
               {description = "copy gtk to terminal", group = "hotkeys"}),
@@ -551,6 +550,10 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     -- Prompt
     awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
               {description = "run prompt", group = "launcher"}),
+
+
+    awful.key({ modkey }, "q", function () awful.spawn.with_shell("qutebrowser")end,
+              {description = "run qutebrowser", group = "launcher"}),
 
     awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
               {description = "run typora ", group = "launcher"}),
