@@ -11,6 +11,7 @@
 * __neo(vim)__ the text editor  
 * __stow__ to put everything in a symlink
 * __alacritty__ as terminal emulator
+* __duckduckgo__ as search engine
 
 ### for debian use this command to download the dependancies except polybar
 
@@ -27,21 +28,22 @@
 #### inside dotfiles do `stow *` to symlink all the config files to their right places
 
 ***
-
+#### for my duckduckgo config use this passphrase after doing load setting 
+>MomoforDotfiles
 ## screenshots
 
 see in reddit
 
 ## table example
 
-| program | role                 |
-|:------: |:--------------------:|
-| awesome | window manager       |
-|rofi     | run prompt           |
-|fish     | shell                |
-|polybar  | status bar           |
-|(neo)vim | text editor          |
-|stow     | config files manager |
-|alacritty|terminal emulator     |
-
+| program  | role                 |
+|:--------:|:--------------------:|
+| awesome  | window manager       |
+|rofi      | run prompt           |
+|fish      | shell                |
+|polybar   | status bar           |
+|(neo)vim  | text editor          |
+|stow      | config files manager |
+|alacritty |terminal emulator     |
+|duckduckgo|seach engine          |
 ### for neovim dependecies and how to install them see [this readme](nvim/.config/nvim/README.md)
