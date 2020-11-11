@@ -187,3 +187,12 @@ DEBUG 11/11/2020, 5:44:02 PM  app.openFile
 INFO 11/11/2020, 5:44:03 PM  [focus] 1
 INFO 11/11/2020, 5:44:50 PM  ----------------before-quit-----------------
 INFO 11/11/2020, 5:44:50 PM  ------------------will-quit------------------
+INFO 11/11/2020, 8:37:07 PM  ------------------start------------------
+INFO 11/11/2020, 8:37:07 PM  typora version: 0.9.96
+DEBUG 11/11/2020, 8:37:08 PM  [ '/usr/share/typora/Typora' ]
+INFO 11/11/2020, 8:37:08 PM  [Raven] instanceKey = bd1d0632-2692-433f-b63a-e4b3ec54a40f
+INFO 11/11/2020, 8:37:08 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 11/11/2020, 8:37:08 PM  app.openFile
+INFO 11/11/2020, 8:37:08 PM  [focus] 1
+INFO 11/11/2020, 8:38:09 PM  ----------------before-quit-----------------
+INFO 11/11/2020, 8:38:09 PM  ------------------will-quit------------------

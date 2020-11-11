@@ -27,6 +27,8 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'liuchengxu/vim-which-key'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

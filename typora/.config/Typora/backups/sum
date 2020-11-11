@@ -1,1 +1,1 @@
-{"innormalQuit":false,"windows":[{"hasUnsaved":true,"scrollPos":0,"useCRLF":false,"syncDate":1605113087376,"content":"","id":0}]}
+{"innormalQuit":false,"windows":[{"hasUnsaved":true,"scrollPos":0,"useCRLF":false,"syncDate":1605123486725,"content":"```python\nclass student:\n    def __init__(self,name,age):\n        name = self.name\n        age = self.age\n\n```\n\n","id":0}]}
