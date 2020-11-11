@@ -12,7 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-fugitive'
-Plug 'frazrepo/vim-rainbow'
+"Plug 'frazrepo/vim-rainbow'
 Plug 'airblade/vim-gitgutter/'
 Plug 'tpope/vim-surround'
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
