@@ -20,7 +20,7 @@ nmap <C-_> <plug>NERDCommenterToggle
 
 "NERDTree
 let NERDTreeQuitOnOpen=1
-nmap <F2> :NERDTreeToggle <cr>
+nmap <leader>t :NERDTreeToggle <cr>
 
 "Tabs
 let g:airline#extensions#tabline#enabled=1
