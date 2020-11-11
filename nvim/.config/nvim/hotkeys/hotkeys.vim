@@ -21,7 +21,8 @@ nmap <C-_> <plug>NERDCommenterToggle
 "NERDTree
 let NERDTreeQuitOnOpen=1
 nmap <leader>t :NERDTreeToggle <cr>
-
+"Prettier 
+nnoremap <leader>ff :Prettier<CR>
 "Tabs
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#framemode=':t'
