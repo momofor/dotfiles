@@ -26,8 +26,10 @@ Plug 'preservim/nerdtree' |
 Plug 'gabrielelana/vim-markdown'
 Plug 'liuchengxu/vim-which-key'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
 
 let g:webdevicons_conceal_nerdtree_brackets = 1
+

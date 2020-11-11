@@ -8,6 +8,7 @@ if (has('termguicolors'))
   set termguicolors
 endif
 hi Normal guibg=NONE ctermbg=NONE
+lua require'colorizer'.setup()
 "airline
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
