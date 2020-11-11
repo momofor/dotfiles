@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter/'
 Plug 'tpope/vim-surround'
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-"Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'SirVer/ultisnips'
 Plug 'vim-python/python-syntax'
