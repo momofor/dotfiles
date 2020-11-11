@@ -13,6 +13,7 @@ map <leader>b :Buffers<CR>
 nnoremap <leader>r :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
+nnoremap <leader>cm :CocList marketplace<CR>
 " Nerdcommenter
 "
 nmap <C-_> <plug>NERDCommenterToggle
