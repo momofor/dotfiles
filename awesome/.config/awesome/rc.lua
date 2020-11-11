@@ -552,7 +552,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run prompt", group = "launcher"}),
 
 
-    awful.key({ modkey }, "q", function () awful.spawn.with_shell("qutebrowser")end,
+    awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
               {description = "run qutebrowser", group = "launcher"}),
 
     awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
