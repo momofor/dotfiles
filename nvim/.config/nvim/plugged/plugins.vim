@@ -31,6 +31,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'easymotion/vim-easymotion'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
