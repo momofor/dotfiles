@@ -30,6 +30,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

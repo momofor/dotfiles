@@ -93,3 +93,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeMinimalUI = 1
 "activate prettier 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"easymotion
