@@ -89,5 +89,7 @@ let g:rainbow_active = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 "close nerdtree if its the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"nerdtree minimal ui 
+let g:NERDTreeMinimalUI = 1
 "activate prettier 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

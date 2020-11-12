@@ -8,5 +8,12 @@
     "typescript.tsx",
     "html",
     "css"
+  ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
   ]
 }
