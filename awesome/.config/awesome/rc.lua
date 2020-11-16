@@ -16,7 +16,6 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
-require("collision")()
 --local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
@@ -797,5 +796,5 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 --auto start 
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("compton")
 awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
