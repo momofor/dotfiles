@@ -32,6 +32,7 @@ Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'easymotion/vim-easymotion'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
