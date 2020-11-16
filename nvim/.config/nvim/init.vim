@@ -9,5 +9,5 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/whichkey.vim 
-
+source $HOME/.config/nvim/plug-config/firenvim.vim
 "hello boys
