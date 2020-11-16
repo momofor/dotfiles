@@ -33,11 +33,11 @@ module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = FiraCode NerdFont 
 
 modules-left =xwindow 
 modules-center = mpd date powermenu xbacklight  
-modules-right = xkeyboard memory-info cpu
+modules-right = xkeyboard memory-info  
 tray-position = left 
 tray-padding = 3
  
