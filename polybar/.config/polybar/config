@@ -36,8 +36,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FiraCode NerdFont 
 
 modules-left =xwindow 
-modules-center = mpd date powermenu xbacklight  
-modules-right = xkeyboard memory-info  
+modules-center = date 
+modules-right = pulseaudio xkeyboard memory-info  
 tray-position = left 
 tray-padding = 3
  
@@ -258,10 +258,10 @@ format-underline = #5E81AC
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
+format-volume =   <label-volume> 
+label-volume =  %percentage%% 
+label-volume-underline = #5E81AC
+label-volume-foreground = #88C0D0
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
