@@ -257,7 +257,7 @@ format-underline = #5E81AC
 type = internal/pulseaudio
 
 format-volume =   <label-volume> 
-label-volume =  蓼audio: %percentage%% 
+label-volume =  蓼 audio: %percentage%% 
 label-volume-underline = #5E81AC
 label-volume-foreground = #88C0D0
 label-muted = 遼 
