@@ -15,7 +15,6 @@ height = 20
 ;offset-y = 1%
 radius = 6.0
 fixed-center = true
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -190,7 +189,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #5E81AC
 format-foreground = #A3BE8C 
-label = %percentage:2%%
+label = ﬙ cpu: %percentage:2%%
 
 [module/memory-info]
 type = custom/script
@@ -198,7 +197,6 @@ exec = ~/.config/polybar/scripts/memory.sh
 click-left = ~/.config/polybar/scripts/memory.sh --popup &
 format-underline = #5E81AC
 format-foreground = #8FBCBB
-separator = |
 
 [module/memory]
 type = internal/memory
@@ -259,10 +257,10 @@ format-underline = #5E81AC
 type = internal/pulseaudio
 
 format-volume =   <label-volume> 
-label-volume =  %percentage%% 
+label-volume =  蓼audio: %percentage%% 
 label-volume-underline = #5E81AC
 label-volume-foreground = #88C0D0
-label-muted = 🔇 muted
+label-muted = 遼 
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -373,8 +371,6 @@ label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
