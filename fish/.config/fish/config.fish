@@ -15,7 +15,7 @@
 ##################################START OF AUTOSTART ###############
 # "autostart"
 function fish_greeting
-test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
+ln -sr "$PWD/src/dir_colors" "~/.dir_colors"
 colorscript -e colortest
 end
 #################################END OF AUTOSTART########################
