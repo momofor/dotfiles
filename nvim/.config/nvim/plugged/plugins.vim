@@ -12,7 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-fugitive'
-Plug 'frazrepo/vim-rainbow'
+"Plug 'frazrepo/vim-rainbow'
 Plug 'airblade/vim-gitgutter/'
 Plug 'tpope/vim-surround'
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
@@ -33,6 +33,9 @@ Plug 'szw/vim-maximizer'
 Plug 'easymotion/vim-easymotion'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'pangloss/vim-javascript'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

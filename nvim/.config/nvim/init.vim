@@ -10,4 +10,6 @@ source $HOME/.config/nvim/plug-config/python-syntax.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/whichkey.vim 
 source $HOME/.config/nvim/plug-config/firenvim.vim
+source $HOME/.config/nvim/plug-config/concealing.vim
+source $HOME/.config/nvim/plug-config/bracey.vim
 "hello boys
