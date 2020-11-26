@@ -72,7 +72,7 @@ colors:
  #Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 13
+  size: 12
   # The normal (roman) font face to use.
   normal:
     family: FiraCode Nerd Font   
