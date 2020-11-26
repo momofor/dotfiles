@@ -53,11 +53,11 @@ end
 -- This function will run once every time Awesome is started
 local function run_once(cmd_arr)
     for _, cmd in ipairs(cmd_arr) do
-        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
+        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd , "alacritty"))
     end
 end
 
-run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
+run_once({ "Alacritty", "unclutter -root" }) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
 --[[
@@ -709,8 +709,12 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },
+
+    { rule = { class = "About Mozilla Firefox" },
+      properties = { floating = true } },
+
+    { rule = { class = "Gimp" },
+      properties = {  maximized = true } },
 }
 -- }}}
 
@@ -790,7 +794,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- useless gaps 
 
-beautiful.useless_gap = 3
+beautiful.useless_gap = 1
 --rounded corners 
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
