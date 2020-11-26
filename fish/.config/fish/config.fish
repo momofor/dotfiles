@@ -23,4 +23,5 @@ end
 #exports
 set -x EDITOR nvim
 set -x BROWSER firefox
+export TERM=xterm-256color
 ###############END OF EXPORTS############################################

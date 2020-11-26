@@ -11,12 +11,12 @@ let g:fzf_action = {
 map <leader>f :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>r :Rg<CR>
-nnoremap <leader>t :Tags<CR>
+nnoremap <leader>T :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>cmm :CocList marketplace<CR>
 nnoremap <leader>co :CocList outline<CR>
 "tag bar 
-nnoremap <leader>tb :TagbarToggle<CR>
+nnoremap <leader>Tb :TagbarToggle<CR>
 "Git
 map <leader>gh :GitGutterLineHighlightsToggle<CR>
 " Nerdcommenter
