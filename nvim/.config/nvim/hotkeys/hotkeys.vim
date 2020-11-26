@@ -15,6 +15,8 @@ nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>cmm :CocList marketplace<CR>
 nnoremap <leader>co :CocList outline<CR>
+"tag bar 
+nnoremap <leader>tb :TagbarToggle<CR>
 "Git
 map <leader>gh :GitGutterLineHighlightsToggle<CR>
 " Nerdcommenter
@@ -38,10 +40,10 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Use alt + hjkl to resize windows
-nnoremap <leader>j    :resize -2<CR>
-nnoremap <leader>k    :resize +2<CR>
-nnoremap <leader>h    :vertical resize -2<CR>
-nnoremap <leader>l    :vertical resize +2<CR>
+nnoremap <leader>k    :resize -2<CR>
+nnoremap <leader>j    :resize +2<CR>
+nnoremap <leader>l    :vertical resize -2<CR>
+nnoremap <leader>h    :vertical resize +2<CR>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
