@@ -14,6 +14,7 @@ nnoremap <leader>r :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>cmm :CocList marketplace<CR>
+nnoremap <leader>co :CocList outline<CR>
 "Git
 map <leader>gh :GitGutterLineHighlightsToggle<CR>
 " Nerdcommenter

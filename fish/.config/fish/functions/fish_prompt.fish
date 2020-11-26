@@ -1,1 +1,1 @@
-/home/momofor/.local/share/omf/themes/sashimi/fish_prompt.fish
+/home/momofor/.local/share/omf/themes/robbyrussell/fish_prompt.fish
