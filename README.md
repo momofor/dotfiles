@@ -5,8 +5,7 @@
 ## dependancies
 
 * __awesome__ the window manager  
-* __rofi__ the run prompt  
-* __fish__ or zsh the shell  
+* __rofi__ the run prompt  * __fish__ or zsh the shell  
 * __polybar__ the status bar  
 * __neo(vim)__ the text editor  
 * __stow__ to put everything in a symlink
@@ -57,4 +56,5 @@ see in reddit
 |stow      | config files manager |
 |alacritty |terminal emulator     |
 |duckduckgo|seach engine          |
+|tmux      |terminal multiplexer  |
 ### for neovim dependecies and how to install them see [this readme](nvim/.config/nvim/README.md)
