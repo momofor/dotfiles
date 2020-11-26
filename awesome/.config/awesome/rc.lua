@@ -800,5 +800,4 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 --auto start 
-awful.spawn.with_shell("compton")
 awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
