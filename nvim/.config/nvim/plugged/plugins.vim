@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'vim-airline/vim-airline-themes'
 
-"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+"Plug 'kaicataldo/material.vim', { 'branch': 'main' } 
     Plug 'preservim/nerdcommenter'
 
     Plug 'mhinz/vim-startify'
@@ -66,6 +66,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 Plug 'preservim/tagbar'
+
+Plug 'dag/vim-fish'
 
 call plug#end()
 
