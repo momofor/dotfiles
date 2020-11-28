@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    Plug 'justinmk/vim-sneak'
+    "Plug 'justinmk/vim-sneak'
 
     Plug 'arcticicestudio/nord-vim'
 
@@ -45,21 +45,21 @@ call plug#begin('~/.vim/plugged')
             \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'gabrielelana/vim-markdown'
 
-    Plug 'liuchengxu/vim-which-key'
+    "Plug 'liuchengxu/vim-which-key'
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
     Plug 'norcalli/nvim-colorizer.lua'
 
-    Plug 'puremourning/vimspector'
+    "Plug 'puremourning/vimspector'
 
-    Plug 'szw/vim-maximizer'
+    "Plug 'szw/vim-maximizer'
 
-    Plug 'easymotion/vim-easymotion'
+    "Plug 'easymotion/vim-easymotion'
 
-    Plug 'OmniSharp/omnisharp-vim'
+    "Plug 'OmniSharp/omnisharp-vim'
 
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 Plug 'pangloss/vim-javascript'
 
@@ -67,7 +67,7 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 Plug 'preservim/tagbar'
 
-Plug 'dag/vim-fish'
+"Plug 'dag/vim-fish'
 
 call plug#end()
 
