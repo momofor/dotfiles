@@ -1,11 +1,11 @@
 call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs'
-
     Plug 'vim-airline/vim-airline'
 
     Plug 'vim-airline/vim-airline-themes'
 
 "Plug 'kaicataldo/material.vim', { 'branch': 'main' } 
+
     Plug 'preservim/nerdcommenter'
 
     Plug 'mhinz/vim-startify'
@@ -25,13 +25,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
 
 "Plug 'frazrepo/vim-rainbow'
-"
+
     Plug 'airblade/vim-gitgutter/'
 
     Plug 'tpope/vim-surround'
 
 "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-"
+
     Plug 'sheerun/vim-polyglot'
 
     Plug 'nathanaelkane/vim-indent-guides'
@@ -61,13 +61,18 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-Plug 'pangloss/vim-javascript'
+    Plug 'pangloss/vim-javascript'
 
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-Plug 'preservim/tagbar'
+    Plug 'preservim/tagbar'
 
+    Plug 'vimwiki/vimwiki'
+    "Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
 "Plug 'dag/vim-fish'
+"Plug 'christianchiarulli/nvcode-color-schemes.vim'
+
+    Plug 'arzg/vim-sh'
 
 call plug#end()
 

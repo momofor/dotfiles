@@ -7,7 +7,8 @@
 		"javascriptreact",
 		"typescript.tsx",
 		"html",
-		"css"
+		"css",
+		"python"
 	],
 	"eslint.filetypes": [
 		"javascript",
@@ -18,5 +19,7 @@
 	],
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
-	"prettier.printWidth": 80
+	"prettier.printWidth": 80,
+
+	"python.formatting.provider": "black"
 }

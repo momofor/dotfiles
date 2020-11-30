@@ -1,6 +1,7 @@
 "make airline theme nord
 let g:airline_theme = 'nord'
-let g:material_theme_style = 'ocean'
+
+"let g:material_theme_style = 'ocean'
 colorscheme nord
 "colorscheme material
 
