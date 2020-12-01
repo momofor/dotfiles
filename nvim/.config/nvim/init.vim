@@ -12,5 +12,6 @@ source $HOME/.config/nvim/plug-config/whichkey.vim
 source $HOME/.config/nvim/plug-config/firenvim.vim
 source $HOME/.config/nvim/plug-config/concealing.vim
 source $HOME/.config/nvim/plug-config/bracey.vim
-source $HOME/.config/nvim/plug-config/themees.vim
+source $HOME/.config/nvim/theme-config/nordConfig.vim
+source $HOME/.config/nvim/theme-config/semshi.vim
 "hello boys

@@ -30,7 +30,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-surround'
 
-"Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
     Plug 'sheerun/vim-polyglot'
 
@@ -70,7 +70,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vimwiki/vimwiki'
     "Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
 "Plug 'dag/vim-fish'
-"Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
 

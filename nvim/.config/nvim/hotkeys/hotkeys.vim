@@ -33,7 +33,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#framemode=':t'
 nmap <leader>1 :bp <cr>
 nmap <leader>2 :bn <cr>
-nmap <C-w> :bd <cr>
+nmap <leader>w :bd <cr>
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
