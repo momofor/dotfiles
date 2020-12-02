@@ -223,6 +223,12 @@ highlights:
   htmlTagName: "nord7"
   htmlTitle: "nord9 - b"
 
+  # Css 
+  cssAttributeSelector: "nord7"
+  cssDefinition: "nord7"
+  cssIdentifier: "nord7"
+  cssStringQ: "nord7"
+
   # Markdown (keep consistent with HTML, above)
   markdownBlockquote: "line_grey"
   markdownBold: "nord8 - b"
