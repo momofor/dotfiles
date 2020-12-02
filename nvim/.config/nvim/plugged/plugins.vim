@@ -30,14 +30,14 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-surround'
 
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
-    Plug 'sheerun/vim-polyglot'
+    "Plug 'sheerun/vim-polyglot'
 
     Plug 'nathanaelkane/vim-indent-guides'
 
 "Plug 'SirVer/ultisnips'
-    Plug 'vim-python/python-syntax'
+    "Plug 'vim-python/python-syntax'
 
     Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
@@ -68,12 +68,13 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'preservim/tagbar'
 
     Plug 'vimwiki/vimwiki'
-    "Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
-"Plug 'dag/vim-fish'
+    Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
+    Plug 'dag/vim-fish'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
 
+    "Plug 'mhartington/oceanic-next'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

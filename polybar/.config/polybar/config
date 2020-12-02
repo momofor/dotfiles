@@ -1,6 +1,6 @@
 [colors]
-background = #CC2e3440
-background-alt = #CC2e3440
+background = #2e3440
+background-alt = #2e3440
 foreground = #ECEFF4
 foreground-alt = #ECEFF4
 primary = #ffb52a
