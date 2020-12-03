@@ -99,13 +99,17 @@ highlights:
   Character: "nord14"
   Comment: "nord3_gui_bright - i"
   Conditional: "nord9"
-  Constant: "nord8"
+  # css after :
+  Constant: "nord8 - i "
+  #end
   Define: "nord9"
   Delimeter: "nord7 - b "
   Exception: "nord9"
   Float: "nord15"
   Function: "nord8"
+  #tested
   Identifier: "nord7"
+  #ended
   Include: "nord9"
   Keyword: "nord9"
   Label: "nord9"
@@ -113,7 +117,9 @@ highlights:
   Operator: "nord9"
   PreProc: "nord9"
   Repeat: "nord9"
+  # tested
   Special: "nord7"
+  # ended
   SpecialChar: "nord13"
   SpecialComment: "nord8 - i"
   Statement: "nord9 - b"
@@ -146,7 +152,7 @@ highlights:
   # -- Start Treesitter --
   # Misc
   # css
-  TSSelector: "nord7 - i"
+  TSSelector: "nord7 - b"
   # css end
   TSError: "nord11 - u"
   TSPunctDelimiter: "nord9"
@@ -164,17 +170,26 @@ highlights:
   TSBoolean: "nord9"
   TSFloat: "nord15"
   TSAnnotation: "nord12"
+  # test
   TSAttribute: "nord7"
+  #end
+  # tested
   TSNamespace: "#FF00FF"
   # Functions
+  # test
   TSFuncBuiltin: "nord8"
-  TSFunction: "nord8"
+  TSFunction: "nord6"
   TSFuncMacro: "nord8"
+  #end
   TSParameter: "nord7 - b"
   TSParameterReference: "nord9"
-  TSMethod: "nord8"
+  #test
+  TSMethod: "nord7"
+  #test
   TSField: "nord7 - i"
+  #test 
   TSProperty: "nord7 - i "
+  #test
   TSConstructor: "nord7"
   # Keywords
   TSConditional: "nord9"
@@ -191,6 +206,7 @@ highlights:
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
   # Variable
+  # test
   TSVariable: "nord7"
   TSVariableBuiltin: "nord9"
   # Text
@@ -231,30 +247,37 @@ highlights:
   htmlClass: "nord7 - i"
 
   # Css 
-  cssAttributeSelector: "nord7"
-  cssDefinition: "nord7"
+  #cssAttributeSelector: "nord15 - b"
+  #cssDefinition: "nord15 - b"
+  # Id name
   cssIdentifier: "nord14 - b"
-  cssStringQ: "nord7"
-  cssRuleset: "nord7 "
+  # end
+  #cssStringQ: "nord14 - b"
+  #cssRuleset: "nord15 - b "
   cssColor: "nord10 - b - i"
-  cssAttributeSpecificity: "nord10"
+  #cssPropertyName: "nord15 - b - i"
+  #cssPlain: "nord15 - b - i"
+  # css class name
+  cssAttributeSpecificity: "nord10 - b"
+  #cssSelectorOp: "nord15 - b"
+  # end
   # name of css definition
-  cssSpecificity: "nord7 - b - i"
+  #cssSpecificity: "nord14 - b - i"
   #end
-  cssSelectorSpecificity: "nord13"
-  cssDeclaration: "nord15"
-  cssClassSelector: "nord14"
-  cssTSType: "nord3"
-  cssClassName: "nord8 - b"
-  cssAttr: "nord4"
-  cssVendor: "nord10"
+  #cssSelectorSpecificity: "nord13"
+  #cssDeclaration: "nord15"
+  #cssClassSelector: "nord14"
+  #cssTSType: "nord3"
+  #cssClassName: "nord8 - b"
+  #cssAttr: "nord4"
+  #cssVendor: "nord10"
   # css thing
-  cssProp: "nord7 - i"
+  cssProp: "nord9 - i "
   #end
-  cssPseudoClass: "nord12"
-  cssPseudoClassId: "nord13 - b"
-  cssIdSelector: "nord14"
-  cssIdName: "nord14"
+  #cssPseudoClass: "nord12"
+  #cssPseudoClassId: "nord13 - b"
+  #cssIdSelector: "nord14"
+  #cssIdName: "nord14"
 
   #  Markdown (keep consistent with HTML, above)
   markdownBlockquote: "line_grey"

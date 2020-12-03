@@ -2,7 +2,7 @@
 let g:airline_theme = 'nord'
 
 "let g:material_theme_style = 'ocean'
-colorscheme nord
+colorscheme nord-treesitter
 "colorscheme material
 
 if (has('termguicolors'))
