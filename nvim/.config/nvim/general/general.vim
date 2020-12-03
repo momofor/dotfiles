@@ -20,6 +20,8 @@
                 \ |   wincmd w
                 \ | endif
 
+"if plugin is missing
+let g:coc_global_extensions=[ 'coc-omnisharp']
 set number relativenumber
 syntax enable
 set background=dark

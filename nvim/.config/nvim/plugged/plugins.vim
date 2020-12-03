@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-fugitive'
 
-"Plug 'frazrepo/vim-rainbow'
+    "Plug 'frazrepo/vim-rainbow'
 
     Plug 'airblade/vim-gitgutter/'
 
@@ -36,7 +36,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'nathanaelkane/vim-indent-guides'
 
-"Plug 'SirVer/ultisnips'
+    "Plug 'SirVer/ultisnips'
     "Plug 'vim-python/python-syntax'
 
     Plug 'preservim/nerdtree' |
@@ -57,11 +57,11 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'easymotion/vim-easymotion'
 
-    "Plug 'OmniSharp/omnisharp-vim'
+    Plug 'OmniSharp/omnisharp-vim'
 
     "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-    Plug 'pangloss/vim-javascript'
+    "Plug 'pangloss/vim-javascript'
 
     Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
@@ -73,6 +73,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
+
 
     "Plug 'mhartington/oceanic-next'
 call plug#end()
