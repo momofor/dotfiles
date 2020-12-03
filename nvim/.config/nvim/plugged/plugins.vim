@@ -57,7 +57,7 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'easymotion/vim-easymotion'
 
-    Plug 'OmniSharp/omnisharp-vim'
+    "Plug 'OmniSharp/omnisharp-vim'
 
     "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -65,9 +65,9 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-    Plug 'preservim/tagbar'
+    "Plug 'preservim/tagbar'
 
-    Plug 'vimwiki/vimwiki'
+    "Plug 'vimwiki/vimwiki'
     Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
     Plug 'dag/vim-fish'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
