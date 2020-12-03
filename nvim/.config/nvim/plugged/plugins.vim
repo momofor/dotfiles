@@ -74,6 +74,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
 
+    Plug 'nvim-treesitter/playground' 
 
     "Plug 'mhartington/oceanic-next'
 call plug#end()
