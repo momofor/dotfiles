@@ -46,8 +46,8 @@ highlights:
   SpecialKey: "nord3"
   SpellBad: "nord11 nord0 u"
   SpellCap: "nord13 nord8 u"
-  SpellLocal: "nord5 nord0 u"
-  SpellRare: "nord6 nord0 u"
+  SpellLocal: "nord7 nord0 u" # nord5
+  SpellRare: "nord9 nord0 u" # nord 6
   Visual: "- nord2"
   VisualNOS: "- nord2"
   QuickFixLine: "bg nord13"
@@ -156,7 +156,7 @@ highlights:
   # css end
   TSError: "nord11 - u"
   TSPunctDelimiter: "nord9"
-  TSPunctBracket: "nord6"
+  TSPunctBracket: "nord7" # nord6
   TSPunctSpecial: "nord7"
   # Constants
   TSConstant: "nord8"
@@ -272,7 +272,7 @@ highlights:
   #cssAttr: "nord4"
   #cssVendor: "nord10"
   # css thing
-  cssProp: "nord9 - i "
+  cssProp: "nord7 - i "
   #end
   #cssPseudoClass: "nord12"
   #cssPseudoClassId: "nord13 - b"

@@ -74,6 +74,9 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
     Plug 'nvim-treesitter/playground' 
 
     "Plug 'mhartington/oceanic-next'
+    "
+
+    Plug 'dracula/vim'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
