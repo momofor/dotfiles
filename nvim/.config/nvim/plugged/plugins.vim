@@ -10,10 +10,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'mhinz/vim-startify'
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    "Plug 'justinmk/vim-sneak'
-
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "Plug 'justinmk/vim-sneak'
     Plug 'arcticicestudio/nord-vim'
 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

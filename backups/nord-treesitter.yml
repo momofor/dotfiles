@@ -106,7 +106,7 @@ highlights:
   Delimeter: "nord7 - b "
   Exception: "nord9"
   Float: "nord15"
-  Function: "nord8"
+  Function: "nord7 - b - i"
   #tested
   Identifier: "nord7"
   #ended
@@ -178,7 +178,7 @@ highlights:
   # Functions
   # test
   TSFuncBuiltin: "nord8"
-  TSFunction: "nord6"
+  TSFunction: "nord7"
   TSFuncMacro: "nord8"
   #end
   TSParameter: "nord7 - b"
