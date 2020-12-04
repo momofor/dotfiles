@@ -19,6 +19,7 @@ nnoremap <leader>co :CocList outline<CR>
 nnoremap <leader>Tb :TagbarToggle<CR>
 "Git
 map <leader>gh :GitGutterLineHighlightsToggle<CR>
+nnoremap <leader>n :nohlsearch<CR>
 " Nerdcommenter
 "
 nmap <C-_> <plug>NERDCommenterToggle
