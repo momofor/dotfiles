@@ -174,6 +174,7 @@ hi cssColor guifg=#b48ead ctermfg=139 guibg=NONE ctermbg=NONE gui=bold cterm=bol
 hi cssAttributeSpecificity guifg=#5e81ac ctermfg=67 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi cssProp guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi cssClassName guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi cssPseudoClassId guifg=#ebcb8b ctermfg=222 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi markdownBlockquote guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi markdownBold guifg=#88c0d0 ctermfg=110 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi markdownCode guifg=#a3be8c ctermfg=144 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

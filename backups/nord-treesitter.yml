@@ -277,7 +277,7 @@ highlights:
   cssClassName: "nord9 "
   #end
   #cssPseudoClass: "nord12"
-  #cssPseudoClassId: "nord13 - b"
+  cssPseudoClassId: "nord13 - b"
   #cssIdSelector: "nord14"
   #cssIdName: "nord14"
 
