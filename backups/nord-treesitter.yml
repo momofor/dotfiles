@@ -229,6 +229,7 @@ highlights:
 
   htmlArg: "nord7"
   htmlBold: "nord8 - b"
+  htmlB: "nord10 - b"
   htmlEndTag: "nord8"
   htmlH1: "nord7"
   htmlH2: "nord7"
@@ -254,7 +255,7 @@ highlights:
   # end
   #cssStringQ: "nord14 - b"
   #cssRuleset: "nord15 - b "
-  cssColor: "nord10 - b - i"
+  cssColor: "nord15 - b - i"
   #cssPropertyName: "nord15 - b - i"
   #cssPlain: "nord15 - b - i"
   # css class name
@@ -273,6 +274,7 @@ highlights:
   #cssVendor: "nord10"
   # css thing
   cssProp: "nord7 - i "
+  cssClassName: "nord9 "
   #end
   #cssPseudoClass: "nord12"
   #cssPseudoClassId: "nord13 - b"
