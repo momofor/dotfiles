@@ -20,10 +20,6 @@ hi PmenuSbar guifg=#d8dee9 ctermfg=254 guibg=#434c5e ctermbg=239 gui=NONE cterm=
 hi PmenuSel guifg=#88c0d0 ctermfg=110 guibg=#4c566a ctermbg=240 gui=NONE cterm=NONE
 hi PmenuThumb guifg=#88c0d0 ctermfg=110 guibg=#4c566a ctermbg=240 gui=NONE cterm=NONE
 hi SpecialKey guifg=#4c566a ctermfg=240 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi SpellBad guifg=#bf616a ctermfg=131 guibg=#2e3440 ctermbg=237 gui=underline cterm=underline
-hi SpellCap guifg=#ebcb8b ctermfg=222 guibg=#88c0d0 ctermbg=110 gui=underline cterm=underline
-hi SpellLocal guifg=#8fbcbb ctermfg=109 guibg=#2e3440 ctermbg=237 gui=underline cterm=underline
-hi SpellRare guifg=#81a1c1 ctermfg=109 guibg=#2e3440 ctermbg=237 gui=underline cterm=underline
 hi Visual guifg=NONE ctermfg=NONE guibg=#434c5e ctermbg=239 gui=NONE cterm=NONE
 hi VisualNOS guifg=NONE ctermfg=NONE guibg=#434c5e ctermbg=239 gui=NONE cterm=NONE
 hi QuickFixLine guifg=#2e3440 ctermfg=237 guibg=#ebcb8b ctermbg=222 gui=NONE cterm=NONE
@@ -65,7 +61,7 @@ hi Delimeter guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=bold cterm=bo
 hi Exception guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Float guifg=#b48ead ctermfg=139 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Function guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=bold cterm=bold guisp=NONE
-hi Identifier guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Identifier guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi Include guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Keyword guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Label guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -175,6 +171,7 @@ hi cssAttributeSpecificity guifg=#5e81ac ctermfg=67 guibg=NONE ctermbg=NONE gui=
 hi cssProp guifg=#8fbcbb ctermfg=109 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi cssClassName guifg=#81a1c1 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi cssPseudoClassId guifg=#ebcb8b ctermfg=222 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi luaIdentifier guifg=#88c0d0 ctermfg=110 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi markdownBlockquote guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi markdownBold guifg=#88c0d0 ctermfg=110 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi markdownCode guifg=#a3be8c ctermfg=144 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

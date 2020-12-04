@@ -8,3 +8,5 @@ endfunction
 
 " Keymapping for grep word under cursor with interactive mode
 nnoremap <silent> <Leader>cf :exe "CocList -I --input=".expand('<cword>').' grep'<CR>
+let g:fzf_install = 'yes | ./install'
+Plug 'junegunn/fzf', { 'do': g:fzf_install }

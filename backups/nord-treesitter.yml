@@ -44,10 +44,12 @@ highlights:
   PmenuSel: "nord8 nord3"
   PmenuThumb: "nord8 nord3"
   SpecialKey: "nord3"
-  SpellBad: "nord11 nord0 u"
-  SpellCap: "nord13 nord8 u"
-  SpellLocal: "nord7 nord0 u" # nord5
-  SpellRare: "nord9 nord0 u" # nord 6
+  #spell chekcs
+  #SpellBad: "nord11 nord0 u"
+  #SpellCap: "nord13 nord8 u"
+  #SpellLocal: "nord7 nord0 u" # nord5
+  #SpellRare: "nord9 nord0 u" # nord 6
+  #spell checks
   Visual: "- nord2"
   VisualNOS: "- nord2"
   QuickFixLine: "bg nord13"
@@ -108,7 +110,7 @@ highlights:
   Float: "nord15"
   Function: "nord7 - b - i"
   #tested
-  Identifier: "nord7"
+  Identifier: "nord7  - i"
   #ended
   Include: "nord9"
   Keyword: "nord9"
@@ -280,6 +282,7 @@ highlights:
   cssPseudoClassId: "nord13 - b"
   #cssIdSelector: "nord14"
   #cssIdName: "nord14"
+  luaIdentifier: "nord8 - b"
 
   #  Markdown (keep consistent with HTML, above)
   markdownBlockquote: "line_grey"
