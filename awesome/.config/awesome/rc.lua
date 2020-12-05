@@ -424,8 +424,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "restore minimized", group = "client"}),
 
     -- Dropdown application
-    awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
-              {description = "dropdown application", group = "launcher"}),
+    --awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
+              --{description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
     awful.key({ altkey, }, "c", function () if beautiful.cal then beautiful.cal.show(7) end end,
@@ -561,6 +561,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
 
     awful.key({ modkey }, "w", function () awful.spawn.with_shell("rofi -show window")end,
               {description = "run pcmanfm", group = "launcher"}),
+    awful.key({ modkey }, "z", function () awful.spawn.with_shell("zathura")end,
+              {description = "run zathura", group = "launcher"}),
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {

@@ -230,24 +230,24 @@ highlights:
   # HTML (keep consistent with Markdown, below)
 
   htmlArg: "nord7"
-  htmlBold: "nord8 - b"
+  htmlBold: "nord10 - b"
   htmlB: "nord10 - b"
-  htmlEndTag: "nord8"
+  htmlEndTag: "nord10"
   htmlH1: "nord7"
   htmlH2: "nord7"
   htmlH3: "nord7"
   htmlH4: "nord7"
   htmlH5: "nord7"
   htmlH6: "nord7"
-  htmlItalic: "nord15 - i"
+  htmlItalic: "nord9 - i"
   htmlLink: "nord7 - u"
-  htmlSpecialChar: "nord10 - b"
+  htmlSpecialChar: "nord4 - b"
   htmlSpecialTagName: "nord7"
-  htmlTag: "nord8"
-  htmlTagN: "nord9"
-  htmlTagName: "nord9"
+  htmlTag: "nord7"
+  htmlTagN: "nord14"
+  htmlTagName: "nord9 - b "
   htmlTitle: "nord9 - b"
-  htmlClass: "nord7 - i"
+  htmlClass: "nord15 - i"
 
   # Css 
   #cssAttributeSelector: "nord15 - b"
@@ -257,7 +257,7 @@ highlights:
   # end
   #cssStringQ: "nord14 - b"
   #cssRuleset: "nord15 - b "
-  cssColor: "nord15 - b - i"
+  cssColor: "nord15"
   #cssPropertyName: "nord15 - b - i"
   #cssPlain: "nord15 - b - i"
   # css class name
