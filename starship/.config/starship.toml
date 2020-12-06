@@ -13,12 +13,12 @@ disabled = true
 # git status
 [git_status]
 conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count}"
-behind = "🐢 ×${count}"
+ahead = "  ×${count}"
+behind = " ×${count}"
 diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
 untracked = "🛤️  ×${count}"
 stashed = "📦 "
-modified = "m ×${count}"
+modified = "* ×${count}"
 staged = "s  ×${count}"
 renamed = "r ×${count}"
 deleted = "x  ×${count}"
