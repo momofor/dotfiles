@@ -40,11 +40,11 @@ call plug#begin('~/.vim/plugged')
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons' |
             \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'gabrielelana/vim-markdown'
+    "Plug 'gabrielelana/vim-markdown'
 
     "Plug 'liuchengxu/vim-which-key'
 
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
     Plug 'norcalli/nvim-colorizer.lua'
 
@@ -66,17 +66,21 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'vimwiki/vimwiki'
     Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
-    Plug 'dag/vim-fish'
+    "Plug 'dag/vim-fish'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-    Plug 'arzg/vim-sh'
+    "Plug 'arzg/vim-sh'
 
     Plug 'nvim-treesitter/playground' 
 
     "Plug 'mhartington/oceanic-next'
-    "
+    
 
-    Plug 'dracula/vim'
+    "Plug 'dracula/vim'
+    
+    "Plug 'lervag/vimtex'
+
+    "Plug 'yggdroot/indentline'
 call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

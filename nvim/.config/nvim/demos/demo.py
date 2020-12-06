@@ -46,3 +46,10 @@ class teacher:
 
 ahmed = teacher("cool", 15)
 print(ahmed.name, ahmed.age)
+
+
+class HelloWorld:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
