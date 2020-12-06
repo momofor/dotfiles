@@ -10,3 +10,17 @@ add_newline = false
 #disabled = true
 [line_break]
 disabled = true
+# git status
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "m ×${count}"
+staged = "s  ×${count}"
+renamed = "r ×${count}"
+deleted = "x  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
