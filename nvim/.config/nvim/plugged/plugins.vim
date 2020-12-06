@@ -40,11 +40,11 @@ call plug#begin('~/.vim/plugged')
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons' |
             \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    "Plug 'gabrielelana/vim-markdown'
+    Plug 'gabrielelana/vim-markdown'
 
     "Plug 'liuchengxu/vim-which-key'
 
-    "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
     Plug 'norcalli/nvim-colorizer.lua'
 
