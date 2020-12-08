@@ -66,10 +66,10 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'vimwiki/vimwiki'
     Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
-    "Plug 'dag/vim-fish'
+    Plug 'dag/vim-fish'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-    "Plug 'arzg/vim-sh'
+    Plug 'arzg/vim-sh'
 
     Plug 'nvim-treesitter/playground' 
 
@@ -78,7 +78,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     "Plug 'dracula/vim'
     
-    "Plug 'lervag/vimtex'
+    Plug 'lervag/vimtex'
 
     "Plug 'yggdroot/indentline'
 call plug#end()

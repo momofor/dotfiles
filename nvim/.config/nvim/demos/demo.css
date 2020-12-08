@@ -1,7 +1,6 @@
-h1 {
-  color: white;
-  text-align: center;
+:root {
+	--nord1: #000;
 }
-body {
-  background-color: black;
+h1 {
+	color: var(--nord1);
 }

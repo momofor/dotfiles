@@ -273,10 +273,10 @@ globalkeys = my_table.join(
               {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
-              {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+    --awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+              --{description = "view  previous nonempty", group = "tag"}),
+    --awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
+              --{description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
@@ -442,13 +442,13 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
-    awful.key({ altkey }, "Up",
+    awful.key({ modkey }, "Up",
         function ()
             os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
-    awful.key({ altkey }, "Down",
+    awful.key({ modkey }, "Down",
         function ()
             os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
             beautiful.volume.update()
@@ -553,8 +553,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
               {description = "run qutebrowser", group = "launcher"}),
 
-    awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
-              {description = "run typora ", group = "launcher"}),
+    --awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
+              --{description = "run typora ", group = "launcher"}),
 
     awful.key({ modkey }, "f", function () awful.spawn.with_shell("pcmanfm")end,
               {description = "run pcmanfm", group = "launcher"}),
@@ -794,7 +794,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- useless gaps 
 
-beautiful.useless_gap = 1
+beautiful.useless_gap = 1.5
 --rounded corners 
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect

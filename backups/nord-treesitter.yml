@@ -173,7 +173,7 @@ highlights:
   TSFloat: "nord15"
   TSAnnotation: "nord12"
   # test
-  TSAttribute: "nord7"
+  TSAttribute: "nord8 - i"
   #end
   # tested
   TSNamespace: "#FF00FF"
@@ -204,7 +204,7 @@ highlights:
   TSException: "nord9"
   # css odd attribute
   TSType: "nord7 - b"
-  TSTypeBuiltin: "nord9"
+  TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
   # Variable
@@ -221,7 +221,7 @@ highlights:
   TSURI: "#FFFF00"
   # Tags
   # Tag Name
-  TSTag: "nord8 "
+  TSTag: "nord9 "
   #Tag Sign
   TSTagDelimiter: "nord9 "
   # -- END Treesitter --
@@ -243,11 +243,13 @@ highlights:
   htmlLink: "nord7 - u"
   htmlSpecialChar: "nord4 - b"
   htmlSpecialTagName: "nord7"
-  htmlTag: "nord7"
+  htmlTag: "nord9"
   htmlTagN: "nord14"
-  htmlTagName: "nord9 - b "
+  htmlTagName: "nord9 "
   htmlTitle: "nord9 - b"
   htmlClass: "nord15 - i"
+
+  #typescript
 
   # Css 
   #cssAttributeSelector: "nord15 - b"
@@ -278,7 +280,7 @@ highlights:
   cssProp: "nord7 - i "
   cssClassName: "nord9 "
   #end
-  #cssPseudoClass: "nord12"
+  cssPseudoClass: "nord12"
   cssPseudoClassId: "nord13 - b"
   #cssIdSelector: "nord14"
   #cssIdName: "nord14"

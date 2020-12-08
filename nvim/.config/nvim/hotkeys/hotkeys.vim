@@ -10,11 +10,12 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 map <leader>f :Files<CR>
 map <leader>b :Buffers<CR>
-nnoremap <leader>r :Rg<CR>
+"nnoremap <leader>r :Rg<CR>
 nnoremap <leader>T :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>cmm :CocList marketplace<CR>
 nnoremap <leader>co :CocList outline<CR>
+nnoremap <leader>r :CocCommand document.renameCurrentWord<CR> 
 "tag bar 
 nnoremap <leader>Tb :TagbarToggle<CR>
 "Git
