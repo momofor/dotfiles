@@ -84,9 +84,10 @@ local themes = {
     "rainbow",         -- 8
     "steamburn",       -- 9
     "vertex",          -- 10
+    "nord-powerarrow"  -- 11
 }
 
-local chosen_theme = themes[6]
+local chosen_theme = themes[11]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "alacritty"
@@ -800,4 +801,4 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 --auto start 
-awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
+--awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
