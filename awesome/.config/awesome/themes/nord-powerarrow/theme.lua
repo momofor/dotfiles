@@ -17,7 +17,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Terminus 9"
+theme.font                                      = "FiraCode Nerd Font 9"
 theme.fg_normal                                 = "#d8dee9"
 theme.fg_focus                                  = "#81a1c1"
 theme.fg_urgent                                 = "#CC9393"
@@ -106,7 +106,7 @@ theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
         font = "Terminus 10",
-        fg   = theme.fg_normal,
+        fg   = "#8fbcbb",
         bg   = theme.bg_normal
     }
 })
@@ -193,7 +193,7 @@ local cpu = lain.widget.cpu({
 --})
 
 -- / fs
-local fsicon = wibox.widget.imagebox(theme.widget_hdd)
+--local fsicon = wibox.widget.imagebox(theme.widget_hdd)
 --[[ commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
     notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },
@@ -317,7 +317,7 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            keyboardlayout,
+            --keyboardlayout,
             spr,
             arrl_ld,
             --wibox.container.background(mpdicon, theme.bg_focus),
