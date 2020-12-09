@@ -254,15 +254,15 @@ theme.volume.widget:buttons(awful.util.table.join(
 ))
 
 -- Net
-local neticon = wibox.widget.imagebox(theme.widget_net)
-local net = lain.widget.net({
-    settings = function()
-        widget:set_markup(markup.font(theme.font,
-                          markup("#7AC82E", " " .. string.format("%06.1f", net_now.received))
-                          .. " " ..
-                          markup("#46A8C3", " " .. string.format("%06.1f", net_now.sent) .. " ")))
-    end
-})
+--local neticon = wibox.widget.imagebox(theme.widget_net)
+--local net = lain.widget.net({
+    --settings = function()
+        --widget:set_markup(markup.font(theme.font,
+                          --markup("#7AC82E", " " .. string.format("%06.1f", net_now.received))
+                          --.. " " ..
+                          --markup("#46A8C3", " " .. string.format("%06.1f", net_now.sent) .. " ")))
+    --end
+--})
 
 -- Separators
 local spr     = wibox.widget.textbox(' ')
@@ -344,8 +344,8 @@ function theme.at_screen_connect(s)
             --baticon,
             --bat.widget,
             arrl_ld,
-            wibox.container.background(neticon, theme.bg_focus),
-            wibox.container.background(net.widget, theme.bg_focus),
+            --wibox.container.background(neticon, theme.bg_focus),
+            --wibox.container.background(net.widget, theme.bg_focus),
             arrl_dl,
             clock,
             spr,
