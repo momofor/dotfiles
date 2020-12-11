@@ -368,3 +368,12 @@ INFO 12/11/2020, 10:58:00 PM  [blur] 1
 INFO 12/11/2020, 10:58:02 PM  [focus] 1
 INFO 12/11/2020, 10:58:05 PM  ----------------before-quit-----------------
 INFO 12/11/2020, 10:58:05 PM  ------------------will-quit------------------
+INFO 12/12/2020, 12:27:03 AM  ------------------start------------------
+INFO 12/12/2020, 12:27:03 AM  typora version: 0.9.96
+DEBUG 12/12/2020, 12:27:03 AM  [ '/usr/share/typora/Typora' ]
+INFO 12/12/2020, 12:27:03 AM  [Raven] instanceKey = bb669144-3b47-4649-b9a9-ffc9f4250a84
+INFO 12/12/2020, 12:27:03 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 12/12/2020, 12:27:03 AM  app.openFile
+INFO 12/12/2020, 12:27:04 AM  [focus] 1
+INFO 12/12/2020, 12:27:05 AM  ----------------before-quit-----------------
+INFO 12/12/2020, 12:27:05 AM  ------------------will-quit------------------
