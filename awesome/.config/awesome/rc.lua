@@ -802,3 +802,6 @@ client.connect_signal("manage", function (c)
 end)
 --auto start 
 --awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
+--
+awful.spawn.with_shell("kitty")
+awful.spawn.with_shell("firefox")
