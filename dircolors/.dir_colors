@@ -172,10 +172,11 @@ STICKY 04;37;44
 .xlsx 32
 .py 32
 .md 32
+.txt 32
 .html 01;03;4;46
 .js 01;36
 .json 03;36
-
+.yml 03;34
 #+--- Executables ---+
 .app 01;36
 .bat 01;36
@@ -187,7 +188,9 @@ STICKY 04;37;44
 .css 01;36;4
 .tex 01;36
 .vim 01;36
-
+.ts 01;36
+.flow 01;36
+.map 01;36
 #+--- Ignores ---+
 *~ 02;37
 .bak 02;37
@@ -262,3 +265,4 @@ STICKY 04;37;44
 .vob 32
 .webm 32
 .wmv 32
+.woff2 32
