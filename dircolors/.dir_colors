@@ -177,6 +177,8 @@ STICKY 04;37;44
 .js 01;36
 .json 03;36
 .yml 03;34
+.sh 02;36
+.lua 02;36
 #+--- Executables ---+
 .app 01;36
 .bat 01;36

@@ -106,3 +106,11 @@ config.set("content.javascript.enabled", True, "qute://*/*")
 config.source("nord-qutebrowser.py")
 # dark mode
 # config.set("colors.webpage.darkmode.enabled", True)
+config.bind(
+    ",ap",
+    'config-cycle content.user_stylesheets ~/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
+)
+config.bind(
+    ",sd",
+    'config-cycle content.user_stylesheets ~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
+)
