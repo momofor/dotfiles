@@ -551,14 +551,24 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run prompt", group = "launcher"}),
 
 
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
-              {description = "run qutebrowser", group = "launcher"}),
+    awful.key({ modkey }, "c", function () awful.spawn.with_shell("chromium")end,
+              {description = "run chromium", group = "launcher"}),
+
+
+    awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
+              {description = "run inkscape", group = "launcher"}),
+
+
+    awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
+              {description = "run inkscape", group = "launcher"}),
+
+
+    awful.key({ modkey }, "f", function () awful.spawn.with_shell("figma-linux")end,
+              {description = "run figma", group = "launcher"}),
 
     --awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
               --{description = "run typora ", group = "launcher"}),
 
-    awful.key({ modkey }, "f", function () awful.spawn.with_shell("pcmanfm")end,
-              {description = "run pcmanfm", group = "launcher"}),
 
     awful.key({ modkey }, "w", function () awful.spawn.with_shell("rofi -show window")end,
               {description = "run pcmanfm", group = "launcher"}),
@@ -806,6 +816,7 @@ end)
 --auto start 
 --awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
 --
-awful.spawn.with_shell("kitty")
+awful.spawn.with_shell("kitty -e tmux")
 awful.spawn.with_shell("firefox")
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
+awful.spawn.with_shell("figma-linux")

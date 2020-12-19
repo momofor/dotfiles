@@ -377,3 +377,24 @@ DEBUG 12/12/2020, 12:27:03 AM  app.openFile
 INFO 12/12/2020, 12:27:04 AM  [focus] 1
 INFO 12/12/2020, 12:27:05 AM  ----------------before-quit-----------------
 INFO 12/12/2020, 12:27:05 AM  ------------------will-quit------------------
+INFO 12/16/2020, 11:10:02 PM  luanchFromDiffVersion, pre version is 0.9.96
+INFO 12/16/2020, 11:10:03 PM  overwriteThemeFolder
+INFO 12/16/2020, 11:10:03 PM  ------------------start------------------
+INFO 12/16/2020, 11:10:03 PM  typora version: 0.9.98
+DEBUG 12/16/2020, 11:10:03 PM  [ '/usr/share/typora/Typora', 'speedtest.md' ]
+DEBUG 12/16/2020, 11:10:03 PM  app.openFile
+INFO 12/16/2020, 11:10:03 PM  addRecentDocument
+INFO 12/16/2020, 11:10:03 PM  [Raven] instanceKey = 6916c259-e3ee-4f20-831f-fc1395531b10
+INFO 12/16/2020, 11:10:03 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+INFO 12/16/2020, 11:10:03 PM  [focus] 1
+INFO 12/16/2020, 11:10:05 PM  [blur] 1
+INFO 12/16/2020, 11:10:05 PM  [focus] 1
+INFO 12/16/2020, 11:10:06 PM  handle document.loadInitData
+INFO 12/16/2020, 11:10:08 PM  [blur] 1
+INFO 12/16/2020, 11:10:09 PM  [focus] 1
+INFO 12/16/2020, 11:10:10 PM  [blur] 1
+INFO 12/16/2020, 11:10:10 PM  [focus] 1
+INFO 12/16/2020, 11:10:10 PM  [blur] 1
+INFO 12/16/2020, 11:10:11 PM  [focus] 1
+INFO 12/16/2020, 11:10:41 PM  ----------------before-quit-----------------
+INFO 12/16/2020, 11:10:41 PM  ------------------will-quit------------------

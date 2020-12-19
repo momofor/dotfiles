@@ -110,7 +110,7 @@ highlights:
   Float: "nord15"
   Function: "nord7 - b - i"
   #tested
-  Identifier: "nord7  - i"
+  Identifier: "nord8 "
   #ended
   Include: "nord9"
   Keyword: "nord9"
@@ -180,7 +180,7 @@ highlights:
   # Functions
   # test
   TSFuncBuiltin: "nord8"
-  TSFunction: "nord7"
+  TSFunction: "nord8"
   TSFuncMacro: "nord8"
   #end
   TSParameter: "nord7 - b"
@@ -278,7 +278,7 @@ highlights:
   #cssVendor: "nord10"
   # css thing
   cssProp: "nord7 - i "
-  cssClassName: "nord9 "
+  cssClassName: "nord9 - b"
   #end
   cssPseudoClass: "nord12"
   cssPseudoClassId: "nord13 - b"

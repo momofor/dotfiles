@@ -81,7 +81,9 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
     Plug 'lervag/vimtex'
 
     "Plug 'yggdroot/indentline'
-call plug#end()
+    
+    Plug 'ChristianChiarulli/codi.vim'
+    call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
 
