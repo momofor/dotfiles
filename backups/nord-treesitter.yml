@@ -102,7 +102,7 @@ highlights:
   Comment: "nord3_gui_bright - i"
   Conditional: "nord9"
   # css after :
-  Constant: "nord8 - i "
+  Constant: "nord8 - i"
   #end
   Define: "nord9"
   Delimeter: "nord7 - b "
@@ -110,7 +110,8 @@ highlights:
   Float: "nord15"
   Function: "nord7 - b - i"
   #tested
-  Identifier: "nord8 "
+  #nord8
+  Identifier: "nord8"
   #ended
   Include: "nord9"
   Keyword: "nord9"
@@ -179,8 +180,9 @@ highlights:
   TSNamespace: "#FF00FF"
   # Functions
   # test
-  TSFuncBuiltin: "nord8"
+  TSFuncBuiltin: "nord9"
   TSFunction: "nord8"
+  #nord 8
   TSFuncMacro: "nord8"
   #end
   TSParameter: "nord7 - b"
