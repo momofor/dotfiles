@@ -572,8 +572,13 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
 
     awful.key({ modkey }, "w", function () awful.spawn.with_shell("rofi -show window")end,
               {description = "run pcmanfm", group = "launcher"}),
+
     awful.key({ modkey }, "z", function () awful.spawn.with_shell("zathura")end,
               {description = "run zathura", group = "launcher"}),
+
+    awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
+              {description = "run zathura", group = "launcher"}),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
@@ -806,17 +811,16 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
--- useless gaps 
+-- useless gaps
 
 beautiful.useless_gap = 1.5
---rounded corners 
+--rounded corners
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
---auto start 
+--auto start
 --awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
 --
-awful.spawn.with_shell("kitty -e tmux")
+awful.spawn.with_shell("tmux kill-server")
 awful.spawn.with_shell("firefox")
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
-awful.spawn.with_shell("figma-linux")

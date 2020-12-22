@@ -71,7 +71,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
 
-    Plug 'nvim-treesitter/playground' 
+    "Plug 'nvim-treesitter/playground' 
 
     "Plug 'mhartington/oceanic-next'
     
@@ -82,7 +82,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     "Plug 'yggdroot/indentline'
     
-    Plug 'ChristianChiarulli/codi.vim'
+    "Plug 'ChristianChiarulli/codi.vim'
     call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
