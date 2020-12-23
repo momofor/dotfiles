@@ -211,8 +211,8 @@ highlights:
   TSInclude: "nord9"
   # Variable
   # test
-  TSVariable: "nord7"
-  TSVariableBuiltin: "nord9"
+  TSVariable: "nord8 - i"
+  TSVariableBuiltin: "nord9 - i"
   # Text
   TSText: "#FFFF00"
   TSStrong: "#FFFF00"
