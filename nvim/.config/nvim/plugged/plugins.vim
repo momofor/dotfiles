@@ -54,7 +54,7 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'easymotion/vim-easymotion'
 
-    "Plug 'OmniSharp/omnisharp-vim'
+    Plug 'OmniSharp/omnisharp-vim'
 
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 

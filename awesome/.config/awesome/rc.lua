@@ -563,8 +563,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run inkscape", group = "launcher"}),
 
 
-    awful.key({ modkey }, "f", function () awful.spawn.with_shell("figma-linux")end,
-              {description = "run figma", group = "launcher"}),
+    --awful.key({ modkey }, "f", function () awful.spawn.with_shell("figma-linux")end,
+              --{description = "run figma", group = "launcher"}),
 
     --awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
               --{description = "run typora ", group = "launcher"}),

@@ -398,3 +398,19 @@ INFO 12/16/2020, 11:10:10 PM  [blur] 1
 INFO 12/16/2020, 11:10:11 PM  [focus] 1
 INFO 12/16/2020, 11:10:41 PM  ----------------before-quit-----------------
 INFO 12/16/2020, 11:10:41 PM  ------------------will-quit------------------
+INFO 12/25/2020, 11:13:01 PM  ------------------start------------------
+INFO 12/25/2020, 11:13:01 PM  typora version: 0.9.98
+DEBUG 12/25/2020, 11:13:01 PM  [ '/usr/share/typora/Typora' ]
+INFO 12/25/2020, 11:13:01 PM  [Raven] instanceKey = 3caa4e87-50af-4d67-a4d7-842ba02a531e
+INFO 12/25/2020, 11:13:01 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 12/25/2020, 11:13:02 PM  app.openFile
+INFO 12/25/2020, 11:13:02 PM  [focus] 1
+INFO 12/25/2020, 11:13:03 PM  [blur] 1
+INFO 12/25/2020, 11:13:05 PM  [focus] 1
+INFO 12/25/2020, 11:13:05 PM  handle document.loadInitData
+INFO 12/25/2020, 11:13:42 PM  [blur] 1
+INFO 12/25/2020, 11:13:42 PM  [focus] 1
+INFO 12/25/2020, 11:13:55 PM  [blur] 1
+INFO 12/25/2020, 11:13:58 PM  [focus] 1
+INFO 12/25/2020, 11:14:13 PM  ----------------before-quit-----------------
+INFO 12/25/2020, 11:14:13 PM  ------------------will-quit------------------

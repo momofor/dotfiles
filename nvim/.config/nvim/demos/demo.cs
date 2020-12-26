@@ -8,8 +8,9 @@ namespace HelloWorld
     {
       Console.WriteLine("Hello World!");    
       Console.WriteLine("What is your name");
-      username = Console.ReadLine("")
+      username = Console.ReadLine("");
       Console.WriteLine("Hello World!");    
+      Console.WriteLine("Hello world 2");
     }
   }
 }
