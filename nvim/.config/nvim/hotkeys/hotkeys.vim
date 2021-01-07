@@ -15,7 +15,7 @@ nnoremap <leader>T :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>cmm :CocList marketplace<CR>
 nnoremap <leader>co :CocList outline<CR>
-nnoremap <leader>r :CocCommand document.renameCurrentWord<CR> 
+"nnoremap <leader>r :CocCommand document.renameCurrentWord<CR> 
 "tag bar 
 nnoremap <leader>Tb :TagbarToggle<CR>
 "Git
@@ -80,3 +80,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+"actoin
+nnoremap <leader>z  :CocAction<CR>
+"color
+nnoremap <leader>cll :CocCommand editor.action.pickColor<CR>

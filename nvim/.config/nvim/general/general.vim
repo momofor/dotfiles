@@ -98,3 +98,5 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 set conceallevel=1
 "syntax highlighting for rasi files
 au BufReadPost *.rasi set syntax=css
+"ctags 
+set tags+=tags;$HOME

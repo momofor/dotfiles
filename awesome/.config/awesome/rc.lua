@@ -813,7 +813,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- useless gaps
 
-beautiful.useless_gap = 1.5
+beautiful.useless_gap = 3
 --rounded corners
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
