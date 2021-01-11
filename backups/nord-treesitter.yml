@@ -99,7 +99,7 @@ highlights:
   # Language Base Groups
   Boolean: "nord9"
   Character: "nord14"
-  Comment: "nord3_gui_bright - i"
+  Comment: "nord3_gui_bright " 
   Conditional: "nord9"
   # css after :
   Constant: "nord7 "
@@ -108,7 +108,7 @@ highlights:
   Delimeter: "nord7 - b "
   Exception: "nord9"
   Float: "nord15"
-  Function: "nord7 - b - i"
+  Function: "nord7 - bi"
   #tested
   #nord8
   Identifier: "nord9"
@@ -206,8 +206,8 @@ highlights:
   TSOperator: "nord9"
   TSException: "nord9"
   # css odd attribute
-  TSType: "nord7 - i "
-  TSTypeBuiltin: "nord9 - b - i"
+  TSType: "nord7 - bi"
+  TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
   # Variable
