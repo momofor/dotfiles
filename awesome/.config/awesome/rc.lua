@@ -822,5 +822,4 @@ end)
 --awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
 --
 awful.spawn.with_shell("tmux kill-server")
-awful.spawn.with_shell("firefox")
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
