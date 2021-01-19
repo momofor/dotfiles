@@ -16,6 +16,7 @@
 	"prettier.printWidth": 100,
 	"python.formatting.provider": "black",
 	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
+		"javascript": "javascriptreact",
+		"vue-html": "html"
 	}
 }

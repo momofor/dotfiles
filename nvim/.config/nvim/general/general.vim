@@ -100,3 +100,5 @@ set conceallevel=1
 au BufReadPost *.rasi set syntax=css
 "ctags 
 set tags+=tags;$HOME
+"limit column
+set colorcolumn =100

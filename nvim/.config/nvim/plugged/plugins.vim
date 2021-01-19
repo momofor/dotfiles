@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
+
     Plug 'jiangmiao/auto-pairs'
+
     Plug 'vim-airline/vim-airline'
 
     Plug 'vim-airline/vim-airline-themes'
@@ -40,11 +42,11 @@ call plug#begin('~/.vim/plugged')
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons' |
             \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'gabrielelana/vim-markdown'
+    "Plug 'gabrielelana/vim-markdown'
 
     "Plug 'liuchengxu/vim-which-key'
 
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
     Plug 'norcalli/nvim-colorizer.lua'
 
@@ -54,22 +56,24 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'easymotion/vim-easymotion'
 
-    Plug 'OmniSharp/omnisharp-vim'
+    "Plug 'OmniSharp/omnisharp-vim'
 
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
     "Plug 'pangloss/vim-javascript'
 
-    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    "Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
     "Plug 'preservim/tagbar'
 
     "Plug 'vimwiki/vimwiki'
-    Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
     Plug 'dag/vim-fish'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
+
+
+    Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
 
     Plug 'nvim-treesitter/playground' 
 
@@ -78,11 +82,14 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     "Plug 'dracula/vim'
     
-    Plug 'lervag/vimtex'
+    "Plug 'lervag/vimtex'
 
     "Plug 'yggdroot/indentline'
     
     "Plug 'ChristianChiarulli/codi.vim'
+    "
+    "Plug 'posva/vim-vue' 
+
     call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1
