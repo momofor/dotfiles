@@ -428,3 +428,34 @@ INFO 1/12/2021, 10:20:01 PM  [blur] 1
 INFO 1/12/2021, 10:20:02 PM  [focus] 1
 INFO 1/12/2021, 10:20:07 PM  ----------------before-quit-----------------
 INFO 1/12/2021, 10:20:07 PM  ------------------will-quit------------------
+INFO 1/21/2021, 12:21:22 AM  ------------------start------------------
+INFO 1/21/2021, 12:21:22 AM  typora version: 0.9.98
+DEBUG 1/21/2021, 12:21:23 AM  [ '/usr/share/typora/Typora' ]
+INFO 1/21/2021, 12:21:23 AM  [Raven] instanceKey = e9ebc6c5-0771-48ba-862f-29e02cdd10e5
+INFO 1/21/2021, 12:21:23 AM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 1/21/2021, 12:21:23 AM  app.openFile
+INFO 1/21/2021, 12:21:23 AM  [focus] 1
+INFO 1/21/2021, 12:21:26 AM  handle document.loadInitData
+DEBUG 1/21/2021, 12:21:37 AM  app.openFile
+INFO 1/21/2021, 12:21:37 AM  [blur] 1
+INFO 1/21/2021, 12:21:37 AM  [focus] 2
+INFO 1/21/2021, 12:21:38 AM  handle document.loadInitData
+INFO 1/21/2021, 12:21:39 AM  [blur] 2
+INFO 1/21/2021, 12:21:39 AM  [focus] 1
+INFO 1/21/2021, 12:21:40 AM  [blur] 1
+INFO 1/21/2021, 12:21:40 AM  [focus] 2
+INFO 1/21/2021, 12:21:41 AM  [blur] 2
+INFO 1/21/2021, 12:21:41 AM  [focus] 1
+INFO 1/21/2021, 12:21:42 AM  [blur] 1
+INFO 1/21/2021, 12:21:42 AM  [focus] 2
+INFO 1/21/2021, 12:21:45 AM  [blur] 2
+INFO 1/21/2021, 12:21:58 AM  [focus] 2
+INFO 1/21/2021, 12:21:59 AM  [blur] 2
+INFO 1/21/2021, 12:22:13 AM  [focus] 2
+INFO 1/21/2021, 12:22:15 AM  [blur] 2
+INFO 1/21/2021, 12:22:38 AM  [focus] 2
+INFO 1/21/2021, 12:22:38 AM  [blur] 2
+INFO 1/21/2021, 12:22:39 AM  [focus] 2
+INFO 1/21/2021, 12:22:39 AM  addRecentDocument
+INFO 1/21/2021, 12:23:46 AM  ----------------before-quit-----------------
+INFO 1/21/2021, 12:23:46 AM  ------------------will-quit------------------

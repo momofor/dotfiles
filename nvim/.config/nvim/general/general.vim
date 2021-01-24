@@ -102,3 +102,26 @@ au BufReadPost *.rasi set syntax=css
 set tags+=tags;$HOME
 "limit column
 set colorcolumn =100
+
+
+"codi 
+" Change the color
+highlight CodiVirtualText guifg=cyan
+
+let g:codi#virtual_text_prefix = "❯ "
+
+
+"
+let g:codi#aliases = {
+                   \ 'javascript.jsx': 'javascript',
+                   \ }
+
+"codi 
+" Change the color
+ highlight CodiVirtualText guifg=cyan
+
+ let g:codi#virtual_text_prefix = "❯ "
+
+ let g:codi#aliases = {
+                    \ 'javascript.jsx': 'javascript',
+                                       \ }

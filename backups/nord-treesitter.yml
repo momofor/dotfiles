@@ -99,19 +99,19 @@ highlights:
   # Language Base Groups
   Boolean: "nord9"
   Character: "nord14"
-  Comment: "nord3_gui_bright " 
+  Comment: "nord3_gui_bright - i"
   Conditional: "nord9"
   # css after :
-  Constant: "nord7 "
+  Constant: "nord8 - i"
   #end
   Define: "nord9"
   Delimeter: "nord7 - b "
   Exception: "nord9"
   Float: "nord15"
-  Function: "nord7 - bi"
+  Function: "nord7 - b - i"
   #tested
   #nord8
-  Identifier: "nord9"
+  Identifier: "nord8"
   #ended
   Include: "nord9"
   Keyword: "nord9"
@@ -162,7 +162,6 @@ highlights:
   TSPunctBracket: "nord7" # nord6
   TSPunctSpecial: "nord7"
   # Constants
-  #
   TSConstant: "nord8"
   TSConstBuiltin: "nord9"
   TSConstMacro: "nord7"
@@ -175,7 +174,7 @@ highlights:
   TSFloat: "nord15"
   TSAnnotation: "nord12"
   # test
-  TSAttribute: "nord8 "
+  TSAttribute: "nord8 - i"
   #end
   # tested
   TSNamespace: "#FF00FF"
@@ -183,7 +182,7 @@ highlights:
   # test
   TSFuncBuiltin: "nord9"
   TSFunction: "nord8"
-  
+  #nord 8
   TSFuncMacro: "nord8"
   #end
   TSParameter: "nord7 - b"
@@ -193,7 +192,7 @@ highlights:
   #test
   TSField: "nord7 - i"
   #test 
-  TSProperty: "nord8 "
+  TSProperty: "nord7 - i "
   #test
   TSConstructor: "nord7"
   # Keywords
@@ -206,14 +205,14 @@ highlights:
   TSOperator: "nord9"
   TSException: "nord9"
   # css odd attribute
-  TSType: "nord7 - bi"
+  TSType: "nord7 - b"
   TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
   # Variable
   # test
-  TSVariable: "nord8 - i"
-  TSVariableBuiltin: "nord9 "
+  TSVariable: "nord7"
+  TSVariableBuiltin: "nord9"
   # Text
   TSText: "#FFFF00"
   TSStrong: "#FFFF00"
@@ -281,7 +280,7 @@ highlights:
   #cssVendor: "nord10"
   # css thing
   cssProp: "nord7 - i "
-  cssClassName: "nord9 - b" 
+  cssClassName: "nord9 - b"
   #end
   cssPseudoClass: "nord12"
   cssPseudoClassId: "nord13 - b"

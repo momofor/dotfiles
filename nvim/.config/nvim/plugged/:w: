@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "Plug 'justinmk/vim-sneak'
-
     Plug 'arcticicestudio/nord-vim'
 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -35,7 +34,8 @@ call plug#begin('~/.vim/plugged')
     "Plug 'sheerun/vim-polyglot'
 
     Plug 'nathanaelkane/vim-indent-guides'
-    
+
+    "Plug 'SirVer/ultisnips'
     "Plug 'vim-python/python-syntax'
 
     Plug 'preservim/nerdtree' |
@@ -50,7 +50,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'norcalli/nvim-colorizer.lua'
 
-    Plug 'puremourning/vimspector'
+    "Plug 'puremourning/vimspector'
 
     "Plug 'szw/vim-maximizer'
 
@@ -64,13 +64,11 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-    Plug 'preservim/tagbar'
+    "Plug 'preservim/tagbar'
 
     "Plug 'vimwiki/vimwiki'
-    
     Plug 'dag/vim-fish'
-
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'arzg/vim-sh'
 
@@ -102,8 +100,7 @@ call plug#begin('~/.vim/plugged')
 
     " Ultisnips
     "Plug 'SirVer/ultisnips'
-    
-    Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile& yarn compile' }
+   :w:w: 
 
     call plug#end()
 
