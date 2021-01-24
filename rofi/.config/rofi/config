@@ -1,4 +1,4 @@
 rofi.theme: nord
 rofi.font: Fira Code Nerd Font 16
 
-rofi.theme: ~/.config/rofi/slate.rasi
+rofi.theme: ~/.config/rofi/arthur-nord.rasi
