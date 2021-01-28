@@ -103,7 +103,7 @@ call plug#begin('~/.vim/plugged')
     " Ultisnips
     "Plug 'SirVer/ultisnips'
     
-    Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile& yarn compile' }
+    "Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile& yarn compile' }
 
     call plug#end()
 

@@ -26,6 +26,7 @@ set -x BROWSER firefox
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
 alias deno "/home/momofor/.deno/bin/deno"
+alias l "exa-linux-x86_64 -la"  
 
 ###############END OF EXPORTS############################################
 starship init fish | source
