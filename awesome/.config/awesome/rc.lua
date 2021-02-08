@@ -813,7 +813,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- useless gaps
 
-beautiful.useless_gap = 3
+beautiful.useless_gap = 4
 --rounded corners
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
@@ -822,4 +822,6 @@ end)
 --awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
 --
 awful.spawn.with_shell("tmux kill-server")
+awful.spawn.with_shell('/usr/bin/setxkbmap -layout dvp')
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
+awful.spawn.with_shell('~/picom/build/src/picom ')

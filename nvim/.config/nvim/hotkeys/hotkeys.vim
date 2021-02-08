@@ -84,3 +84,4 @@ nnoremap <Leader>O O<Esc>^Da
 nnoremap <leader>z  :CocAction<CR>
 "color
 nnoremap <leader>cll :CocCommand editor.action.pickColor<CR>
+nnoremap ; : 
