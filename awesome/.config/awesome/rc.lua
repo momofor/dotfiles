@@ -84,7 +84,8 @@ local themes = {
     "rainbow",         -- 8
     "steamburn",       -- 9
     "vertex",          -- 10
-    "nord-powerarrow"  -- 11
+    "nord-powerarrow", -- 11
+    "nord-copland"     --12
 }
 
 local chosen_theme = themes[11]
@@ -824,4 +825,4 @@ end)
 awful.spawn.with_shell("tmux kill-server")
 awful.spawn.with_shell('/usr/bin/setxkbmap -layout dvp')
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
-awful.spawn.with_shell('~/picom/build/src/picom ')
+awful.spawn.with_shell('~/picom/build/src/picom --experimental-backends')
