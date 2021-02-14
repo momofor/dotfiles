@@ -459,3 +459,17 @@ INFO 1/21/2021, 12:22:39 AM  [focus] 2
 INFO 1/21/2021, 12:22:39 AM  addRecentDocument
 INFO 1/21/2021, 12:23:46 AM  ----------------before-quit-----------------
 INFO 1/21/2021, 12:23:46 AM  ------------------will-quit------------------
+INFO 2/13/2021, 1:50:57 PM  ------------------start------------------
+INFO 2/13/2021, 1:50:58 PM  typora version: 0.9.98
+DEBUG 2/13/2021, 1:50:58 PM  [ '/usr/share/typora/Typora' ]
+INFO 2/13/2021, 1:50:58 PM  [Raven] instanceKey = d806f098-6c7a-4b2e-88b4-b72474dd5210
+INFO 2/13/2021, 1:50:58 PM  [Raven] userId = 65ddfd55-58f1-4fe3-ac9d-c26ecb3f6cff
+DEBUG 2/13/2021, 1:50:58 PM  app.openFile
+INFO 2/13/2021, 1:50:59 PM  [focus] 1
+INFO 2/13/2021, 1:50:59 PM  [blur] 1
+INFO 2/13/2021, 1:51:01 PM  [focus] 1
+INFO 2/13/2021, 1:51:01 PM  handle document.loadInitData
+INFO 2/13/2021, 1:51:09 PM  [blur] 1
+INFO 2/13/2021, 1:51:10 PM  [focus] 1
+INFO 2/13/2021, 1:51:38 PM  ----------------before-quit-----------------
+INFO 2/13/2021, 1:51:38 PM  ------------------will-quit------------------
