@@ -22,6 +22,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
+
 -- }}}
 
 -- {{{ Error handling
@@ -548,20 +549,21 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
-              {description = "run prompt", group = "launcher"}),
 
+
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
+                {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("chromium")end,
-              {description = "run chromium", group = "launcher"}),
+                {description = "run chromium", group = "launcher"}),
 
 
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
-              {description = "run inkscape", group = "launcher"}),
+                {description = "run inkscape", group = "launcher"}),
 
 
     awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
-              {description = "run inkscape", group = "launcher"}),
+                {description = "run inkscape", group = "launcher"}),
 
 
     --awful.key({ modkey }, "f", function () awful.spawn.with_shell("figma-linux")end,
@@ -572,13 +574,20 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
 
 
     awful.key({ modkey }, "w", function () awful.spawn.with_shell("rofi -show window")end,
-              {description = "run pcmanfm", group = "launcher"}),
+                {description = "run pcmanfm", group = "launcher"}),
 
     awful.key({ modkey }, "z", function () awful.spawn.with_shell("zathura")end,
-              {description = "run zathura", group = "launcher"}),
+                {description = "run zathura", group = "launcher"}),
 
     awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
-              {description = "run zathura", group = "launcher"}),
+                {description = "run zathura", group = "launcher"}),
+
+    awful.key({modkey}, "c" ,function () awful.spawn.with_shell("qutebrowser")end,
+            {description = "run qutebrowser", group = "launcher"}),
+
+    awful.key({altkey}, "n" ,function () awful.spawn.with_shell(terminal .. " -e neofetch")end,
+            {description = "flex with your neofetch", group = "launcher"}),
+
 
     awful.key({ modkey }, "x",
               function ()
@@ -728,14 +737,12 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { class = "Spotify Free" },
-      properties = { screen = 1, tag = awful.util.tagnames[3] } },
+    { rule = { class = "Spotify" },
+      properties = { screen = 1, tag = awful.util.tagnames[1] , maximized = true } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
 }
--- }}}
-    -- Set Firefox to always map on the first tag on screen 1.
 -- }}}
 
 -- {{{ Signals
