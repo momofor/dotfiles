@@ -1,7 +1,7 @@
 --[[
 
-     Nord Powerarrow Awesome WM theme
-     github.com/momofor/dotfiles
+     Powerarrow Dark Awesome WM theme
+     github.com/lcpz
 
 --]]
 
@@ -301,13 +301,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    --
-    function Custom_shape(cr, width, height)
-
-        gears.shape.rounded_rect(cr, width, height, 10)
-
-    end
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal, opacity = 0.9 , width = dpi(1250) , y = 75 , shape = Custom_shape })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal, opacity = 0.9 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {

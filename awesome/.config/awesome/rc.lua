@@ -101,7 +101,7 @@ local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "  ", "  ", "  ", "  ", "  " }
+awful.util.tagnames = { " ", "  ", "  ", "  ", "  " }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
@@ -824,9 +824,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 4
 --rounded corners
 client.connect_signal("manage", function (c)
-    c.shape = Custom_shape
+    c.shape = gears.shape.rounded_rect
 end)
 --auto start
+--awful.spawn.with_shell("/home/momofor/.config/polybar/launch.sh")
+--
 awful.spawn.with_shell("tmux kill-server")
 awful.spawn.with_shell('/usr/bin/setxkbmap -layout dvp')
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
