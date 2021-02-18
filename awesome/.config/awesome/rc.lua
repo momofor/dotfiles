@@ -580,6 +580,9 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
               {description = "run zathura", group = "launcher"}),
 
+    awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
+              {description = "run qutebrowser", group = "launcher"}),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
