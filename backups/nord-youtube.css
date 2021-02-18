@@ -1,0 +1,30 @@
+html:not(.style-scope)[dark],
+:not(.style-scope)[dark] {
+	--yt-spec-general-background-a: #2e3440;
+	--yt-spec-brand-background-solid: #3b4252;
+	--ytd-searchbox-legacy-border-shadow-color: #4c566a;
+	--ytd-searchbox-legacy-button-color: #3b4252;
+	--ytd-searchbox-legacy-button-hover-color: #4c566a;
+	--ytd-searchbox-legacy-button-hover-border-color: #2e3440;
+}
+ytd-mini-guide-renderer,
+ytd-active-account-header-renderer {
+	background-color: #3b4252;
+}
+.yt-simple-endpoint:hover {
+	background-color: #4c566a;
+}
+#sections.ytd-multi-page-menu-renderer > .ytd-multi-page-menu-renderer:not(:last-child) {
+	background-color: #3b4252;
+}
+#items.yt-multi-page-menu-section-renderer
+	> .yt-multi-page-menu-section-renderer:not([compact-link-style="compact-link-style-type-disclaimer"]).yt-multi-page-menu-section-renderer {
+	background-color: #3b4252;
+}
+#items.yt-multi-page-menu-section-renderer
+	> .yt-multi-page-menu-section-renderer:not([compact-link-style="compact-link-style-type-disclaimer"]).yt-multi-page-menu-section-renderer:hover {
+	background-color: #4c566a;
+}
+ytd-simple-menu-header-renderer {
+	background-color: #4c566a;
+}
