@@ -114,3 +114,4 @@ config.bind(
     ",sd",
     'config-cycle content.user_stylesheets ~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
 )
+config.set("scrolling.smooth", True)

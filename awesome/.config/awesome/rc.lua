@@ -22,6 +22,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 -- }}}
 
 -- {{{ Error handling
@@ -31,6 +32,19 @@ if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
                      title = "Oops, there were errors during startup!",
                      text = awesome.startup_errors })
+end
+
+ -- changing layouts
+Layouts = {"dvp" , "ar"}
+I = 1
+function ChangeLayout ()
+    if I == 1 then
+        I = 2
+        elseif I == 2 then
+            I = 1
+    end
+    CurrentLayout = Layouts[I]
+    return CurrentLayout
 end
 
 -- Handle runtime errors after startup
@@ -553,8 +567,8 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run prompt", group = "launcher"}),
 
 
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("chromium")end,
-              {description = "run chromium", group = "launcher"}),
+    --awful.key({ modkey }, "c", function () awful.spawn.with_shell("chromium")end,
+              --{description = "run chromium", group = "launcher"}),
 
 
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
@@ -582,6 +596,9 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run zathura", group = "launcher"}),
 
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
+              {description = "run qutebrowser", group = "launcher"}),
+
+    awful.key({ modkey , "Control" }, "l", function () awful.spawn.with_shell("setxkbmap -layout " .. ChangeLayout())end,
               {description = "run qutebrowser", group = "launcher"}),
 
     awful.key({ modkey }, "x",

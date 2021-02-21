@@ -6,6 +6,7 @@
 --]]
 
 local gears = require("gears")
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
@@ -353,7 +354,9 @@ function theme.at_screen_connect(s)
             --wibox.container.background(neticon, theme.bg_focus),
             --wibox.container.background(net.widget, theme.bg_focus),
             --arrl_dl,
-            clock,
+            logout_popup.widget{},
+            arrl_ld,
+            wibox.container.background(clock , theme.bg_focus),
             spr,
             arrl_ld,
             wibox.container.background(s.mylayoutbox, theme.bg_focus),
