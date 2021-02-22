@@ -324,7 +324,6 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            --keyboardlayout,
             spr,
             arrl_ld,
             --wibox.container.background(mpdicon, theme.bg_focus),
@@ -354,12 +353,16 @@ function theme.at_screen_connect(s)
             --wibox.container.background(neticon, theme.bg_focus),
             --wibox.container.background(net.widget, theme.bg_focus),
             --arrl_dl,
-            logout_popup.widget{},
+            logout_popup.widget{
+                phrases = {"Don't forget to be awesome!", "Keep up the hard work!"}
+            },
             arrl_ld,
             wibox.container.background(clock , theme.bg_focus),
-            spr,
+            arrl_dl,
+            keyboardlayout,
             arrl_ld,
-            wibox.container.background(s.mylayoutbox, theme.bg_focus),
+            wibox.container.background(s.mylayoutbox , theme.bg_focus),
+            spr,
         },
     }
 end

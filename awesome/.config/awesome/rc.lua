@@ -22,7 +22,6 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
-local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 -- }}}
 
 -- {{{ Error handling
