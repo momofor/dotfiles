@@ -16,9 +16,13 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'arcticicestudio/nord-vim'
 
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-    Plug 'junegunn/fzf.vim'
+    "Plug 'junegunn/fzf.vim'
+    "
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 
     Plug 'airblade/vim-rooter'
 

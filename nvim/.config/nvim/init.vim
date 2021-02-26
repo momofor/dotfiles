@@ -16,4 +16,5 @@ source $HOME/.config/nvim/theme-config/nordConfig.vim
 source $HOME/.config/nvim/theme-config/semshi.vim
 source $HOME/.config/nvim/theme-config/nord-treesitter.vim
 source $HOME/.config/nvim/theme-config/themeconfig.vim
+source $HOME/.config/nvim/plug-config/tele.lua
 "hello boys
