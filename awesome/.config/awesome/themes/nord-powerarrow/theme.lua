@@ -11,6 +11,8 @@ local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
 local dpi   = require("beautiful.xresources").apply_dpi
+local beautiful = require("beautiful")
+local naughty = require("naughty")
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -101,6 +103,11 @@ local clock = awful.widget.watch(
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end
 )
+    local function custom_shape(cr, width, height)
+
+        gears.shape.rounded_rect(cr, width, height, 10)
+
+    end
 
 -- Calendar
 theme.cal = lain.widget.cal({
@@ -109,9 +116,15 @@ theme.cal = lain.widget.cal({
         font = theme.font,
         fg   = "#8fbcbb",
         bg   = theme.bg_normal,
-        shape = Custom_shape
+        shape = custom_shape,
+        margin = 5
     }
 })
+
+naughty.config.defaults.icon_size = 35
+naughty.config.defaults.shape = custom_shape
+naughty.config.defaults.margin = 3
+naughty.config.defaults.opacity = .90
 
 -- Mail IMAP check
 --local mailicon = wibox.widget.imagebox(theme.widget_mail)

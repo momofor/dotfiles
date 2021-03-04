@@ -24,6 +24,7 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 require("CustomNotify")
 require("ChangeLayout")
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 -- }}}
 
 -- {{{  Error handling
@@ -589,7 +590,10 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run qutebrowser", group = "launcher"}),
 
     awful.key({ modkey , "Control" }, "l", function () awful.spawn.with_shell("setxkbmap -layout " .. ChangeLayout())end,
-              {description = "run qutebrowser", group = "launcher"}),
+              {description = "run change layout keyboard", group = "launcher"}),
+
+    awful.key({ "Control" , "Shift" }, "l", function() logout_popup.launch() end,
+        {description = "Show logout screen", group = "custom"}),
 
     awful.key({ modkey }, "x",
               function ()

@@ -99,19 +99,19 @@ highlights:
   # Language Base Groups
   Boolean: "nord9"
   Character: "nord14"
-  Comment: "nord3_gui_bright - i"
+  Comment: "nord3_gui_bright " 
   Conditional: "nord9"
   # css after :
-  Constant: "nord8 - i"
+  Constant: "nord7 - i "
   #end
   Define: "nord9"
   Delimeter: "nord7 - b "
   Exception: "nord9"
   Float: "nord15"
-  Function: "nord7 - b - i"
+  Function: "nord7 - bi"
   #tested
   #nord8
-  Identifier: "nord8"
+  Identifier: "nord9 - i"
   #ended
   Include: "nord9"
   Keyword: "nord9"
@@ -162,7 +162,8 @@ highlights:
   TSPunctBracket: "nord7" # nord6
   TSPunctSpecial: "nord7"
   # Constants
-  TSConstant: "nord8"
+  #
+  TSConstant: "nord8 - i"
   TSConstBuiltin: "nord9"
   TSConstMacro: "nord7"
   TSStringRegex: "nord14"
@@ -174,15 +175,15 @@ highlights:
   TSFloat: "nord15"
   TSAnnotation: "nord12"
   # test
-  TSAttribute: "nord8 - i"
+  TSAttribute: "nord8 "
   #end
   # tested
   TSNamespace: "#FF00FF"
   # Functions
   # test
   TSFuncBuiltin: "nord9"
-  TSFunction: "nord8"
-  #nord 8
+  TSFunction: "nord8 - i "
+  
   TSFuncMacro: "nord8"
   #end
   TSParameter: "nord7 - b"
@@ -192,7 +193,7 @@ highlights:
   #test
   TSField: "nord7 - i"
   #test 
-  TSProperty: "nord7 - i "
+  TSProperty: "nord8 "
   #test
   TSConstructor: "nord7"
   # Keywords
@@ -205,14 +206,14 @@ highlights:
   TSOperator: "nord9"
   TSException: "nord9"
   # css odd attribute
-  TSType: "nord7 - b"
+  TSType: "nord7 - bi "
   TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
   # Variable
   # test
-  TSVariable: "nord7"
-  TSVariableBuiltin: "nord9"
+  TSVariable: "nord8 - i"
+  TSVariableBuiltin: "nord9 - i"
   # Text
   TSText: "#FFFF00"
   TSStrong: "#FFFF00"
@@ -280,7 +281,7 @@ highlights:
   #cssVendor: "nord10"
   # css thing
   cssProp: "nord7 - i "
-  cssClassName: "nord9 - b"
+  cssClassName: "nord9 - b" 
   #end
   cssPseudoClass: "nord12"
   cssPseudoClassId: "nord13 - b"
@@ -372,4 +373,23 @@ highlights:
   LspDiagnosticsUnderlineError: "nord11"
   LspDiagnosticsUnderlineInformation: "nord8"
   LspDiagnosticsUnderlineHint: "nord10"
+
+  # Telesope
+
+  TelescopeSelection: "nord9"        # selected item
+  TelescopeSelectionCaret: "nord4"  # selection caret
+  TelescopeMultiSelection: "nord9"   # multisections
+  TelescopeNormal: "nord7"           # floating windows created by telescope.
+
+   # Border highlight groups.
+  TelescopeBorder: "nord1"
+  TelescopePromptBorder: "nord1"
+  TelescopeResultsBorder: "nord1"
+  TelescopePreviewBorder: "nord1"
+
+  # Used for highlighting characters that you match.
+  TelescopeMatching: "nord8"
+
+  # Used for the prompt prefix
+  TelescopePromptPrefix: "nord7"
 
