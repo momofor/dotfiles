@@ -5,7 +5,6 @@ vim.api.nvim_set_keymap('' , '<leader>g' , ':Git<cr>' , {})
 --noremap <leader>r :Rg<CR>
 --tag bar
 
-vim.api.nvim_set_keymap('n', '<leader>T' , ':Tags<CR>' , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>m' , ':Marks<CR>' , {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 
@@ -29,7 +28,8 @@ vim.api.nvim_set_keymap('n' , '<leader>w' , ':bd <cr>' , {})
 
 -- Better nav for omnicomplete
 vim.api.nvim_set_keymap('i' , '<c-j> ' , [[("\<C-n>")]] , {noremap = true , expr = true})
-vim.api.nvim_set_keymap('i' , '<c-k> ' , [[("\<C-p>")]] , {noremap = true , expr = true})
+vim.api.nvim_set_keymap('i' , '<c-k> ' , [[\<C-p>]] , {noremap = true , expr = true})
+
 
 -- Use alt + hjkl to resize windows
 vim.api.nvim_set_keymap('n' , '<leader>j' , ':resize -2<CR>' , {noremap = true})

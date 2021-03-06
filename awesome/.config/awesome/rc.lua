@@ -36,7 +36,7 @@ if awesome.startup_errors then
     text = awesome.startup_errors })
 end
 -- your keyboard layouts
-Layouts = {"dvp" , "ar"}
+Layouts = {"dvp" , "us"}
 
 -- Handle runtime errors after startup
 do
