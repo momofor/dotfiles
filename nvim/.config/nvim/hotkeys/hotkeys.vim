@@ -1,7 +1,7 @@
 "leaderkey
 let mapleader=' '
 "git fugitive 
-map <leader>g :Git<cr> 
+"map <leader>g :Git<cr> 
 "fzf
 " This is the default extra key bindings
 let g:fzf_action = {
@@ -27,7 +27,7 @@ nmap <C-_> <plug>NERDCommenterToggle
 
 "NERDTree
 let NERDTreeQuitOnOpen=1
-nmap <leader>t :NERDTreeToggle <cr>
+"nmap <leader>t :NERDTreeToggle <cr>
 "Prettier 
 nnoremap <leader>ff :Prettier<CR>
 "Tabs

@@ -156,3 +156,9 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>e
 "auto format imports for typescript
 nmap <leader>i :CocCommand tsserver.organizeImports<cr>
+ "<TAB>: completion.
+"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+ "Better tabbing
+vnoremap < <gv
+vnoremap > >gv

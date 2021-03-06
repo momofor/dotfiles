@@ -4,6 +4,7 @@
 	text-color: #eceff4;
 	spacing: 0;
 	width: 512px;
+    border-radius: 9px;
 }
 
 inputbar {

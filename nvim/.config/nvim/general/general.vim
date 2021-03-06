@@ -125,3 +125,8 @@ let g:codi#aliases = {
  let g:codi#aliases = {
                     \ 'javascript.jsx': 'javascript',
                                        \ }
+let mapleader=' '
+
+let NERDTreeQuitOnOpen=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#framemode=':t'

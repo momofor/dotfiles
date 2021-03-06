@@ -29,7 +29,6 @@ alias deno "/home/momofor/.deno/bin/deno"
 alias l "exa-linux-x86_64 -la"  
 alias obsidian "~/Applications/Obsidian-0.10.13_0632d66a95a85ab51525bd7325b85c39.AppImage"
 alias runescapeu "flatpak run com.jagex.RuneScape "
-
 ###############END OF EXPORTS############################################
 starship init fish | source
 
