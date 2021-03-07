@@ -5,7 +5,7 @@ utils.map('' , '<leader>g' , ':Git<cr>' , {})
 --noremap <leader>r :Rg<CR>
 --tag bar
 
-utils.map('n', '<leader>m' , ':Marks<CR>' , {noremap = true})
+--utils.map('n', '<leader>m' , ':Marks<CR>' , {noremap = true})
 utils.map('n', '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 
 utils.map('n' , '<leader>cmm' , ':CocList marketplace<CR>' , {noremap = true})
@@ -70,3 +70,5 @@ utils.map('n' , '<leader>z' , ':CocAction<CR>' , {noremap = true})
 utils.map('n' , '<leader>cll' , ':CocCommand editor.action.pickColor<CR>' , {noremap = true})
 utils.map('n' , ';' , ':' , {noremap = true})
 utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true} )
+-- folding
+utils.map('' , '<Leader>F' , "'<,'>fold ")

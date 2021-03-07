@@ -25,7 +25,7 @@ let g:coc_global_extensions=[ 'coc-omnisharp']
 filetype plugin on
 " set leader key
 let g:mapleader = "\<Space>"
-
+set clipboard =unnamedplus 
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
 set t_Co=256                            " Support 256 colors

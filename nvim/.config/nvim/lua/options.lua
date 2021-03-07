@@ -28,6 +28,8 @@ local options_window = {
     colorcolumn = "100" ,
     scrolloff = 7 ,
     cursorline = true ,
+    foldmethod = expr ,
+    foldexpr = "nvim_treesitter#foldexpr()"
 }
 
 local options_buffer = {
