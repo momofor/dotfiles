@@ -1,2 +1,0 @@
-# these are my colors
-
