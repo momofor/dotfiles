@@ -19,6 +19,7 @@ source $HOME/.config/nvim/theme-config/themeconfig.vim
 
 lua <<EOF
 require("init")
+require("options")
 EOF
 
 "hello boys
