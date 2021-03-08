@@ -1,9 +1,6 @@
 local utils = require("_utils")
-local o = vim.o
-local b = vim.bo
-local w = vim.wo
 
-local options_global  = {
+local options= {
     ignorecase = true  ,
     smartcase = true ,
     laststatus = 0 ,
@@ -20,30 +17,19 @@ local options_global  = {
     splitright = true ,
     autochdir = true ,
     showmode = false ,
-}
-
-local options_window = {
-    number = true ,
-    relativenumber = true ,
-    colorcolumn = "100" ,
-    scrolloff = 7 ,
-    cursorline = true ,
-    foldmethod = expr ,
-    foldexpr = "nvim_treesitter#foldexpr()"
-}
-
-local options_buffer = {
     swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
     tabstop = 4 ,
     smartindent = true ,
     expandtab = true ,
+    number = true ,
+    relativenumber = true ,
+    colorcolumn = "100" ,
+    scrolloff = 7 ,
+    cursorline = true ,
+    foldmethod = expr ,
+    foldexpr = "nvim_treesitter#foldexpr()" ,
 }
-
-
-
-utils.set_options(o,options_global)
-utils.set_options(w,options_window)
-utils.set_options(b,options_buffer)
+utils.set_options(options)
 
