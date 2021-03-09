@@ -1,26 +1,29 @@
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
-local awful         = require("awful")
-local beautiful     = require("beautiful")
-local hotkeys_popup = require("awful.hotkeys_popup").widget
-local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
-                    require("awful.autofocus")
+
 local gears         = require("gears")
+local awful         = require("awful")
+                      require("awful.autofocus")
+local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
 --local menubar       = require("menubar")
---
-modkey       = "Mod4"
-altkey       = "Mod1"
-terminal     = "kitty"
-terminal_exec     = terminal .. " -e "
-cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-util.terminal = terminal
-editor       = os.getenv("EDITOR") or "nvim"
-gui_editor   = os.getenv("GUI_EDITOR") or "emacs"
-browser      = os.getenv("BROWSER") or "firefox"
-scrlocker    = "slock"
+local hotkeys_popup = require("awful.hotkeys_popup").widget
+                      require("awful.hotkeys_popup.keys")
+local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
+require("CustomNotify")
+require("ChangeLayout")
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 
+local modkey       = "Mod4"
+local altkey       = "Mod1"
+local terminal     = "kitty"
+local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
+local gui_editor   = os.getenv("GUI_EDITOR") or "emacs"
+local browser      = os.getenv("BROWSER") or "firefox"
+local scrlocker    = "slock"
+local utils = require("utils._utils")
+-- }}}
 globalkeys = my_table.join(
     -- Take a screenshot
     -- https://github.com/lcpz/dots/blob/master/bin/screenshot
@@ -289,53 +292,15 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
-    awful.key({ modkey }, "a", function () awful.spawn(gui_editor) end,
-              {description = "run gui editor", group = "launcher"}),
 
-    -- Default
-    --[[ Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
-    --]]
-    --[[ dmenu
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
-            beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-        end,
-        {description = "show dmenu", group = "launcher"})
-    --]]
-    -- alternatively use rofi, a dmenu-like application with more features
-    -- check https://github.com/DaveDavenport/rofi for more details
-    --[[ rofi
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("rofi -show %s -theme %s",
-            'run', 'dmenu'))
-        end,
-        {description = "show rofi", group = "launcher"}),
-    --]]
-    -- Prompt
     awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
               {description = "run prompt", group = "launcher"}),
-
-
-    --awful.key({ modkey }, "c", function () awful.spawn.with_shell("chromium")end,
-              --{description = "run chromium", group = "launcher"}),
-
 
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
               {description = "run inkscape", group = "launcher"}),
 
-
     awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
               {description = "run inkscape", group = "launcher"}),
-
-
-    --awful.key({ modkey }, "f", function () awful.spawn.with_shell("figma-linux")end,
-              --{description = "run figma", group = "launcher"}),
-
-    --awful.key({ modkey }, "t", function () awful.spawn.with_shell("typora")end,
-              --{description = "run typora ", group = "launcher"}),
-
 
     awful.key({ modkey }, "w", function () awful.spawn.with_shell("rofi -show window")end,
               {description = "run pcmanfm", group = "launcher"}),
@@ -343,17 +308,17 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "z", function () awful.spawn.with_shell("zathura")end,
               {description = "run zathura", group = "launcher"}),
 
-    --awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
-              --{description = "run zathura", group = "launcher"}),
+    awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
+              {description = "run zathura", group = "launcher"}),
 
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
               {description = "run qutebrowser", group = "launcher"}),
 
-    awful.key({ modkey , "Control" }, "l" or "ح", function () awful.spawn.with_shell("setxkbmap -layout " .. ChangeLayout())end,
-              {description = "Change keyboard layout", group = "launcher"}),
+    awful.key({ modkey , "Control" }, "l", function () awful.spawn.with_shell("setxkbmap -layout " .. ChangeLayout())end,
+              {description = "run change layout keyboard", group = "launcher"}),
 
-    awful.key({ modkey }, "e", function () awful.spawn.with_shell(terminal_exec .. editor)end,
-              {description = "run editor", group = "launcher"}),
+    awful.key({ "Control" , "Shift" }, "l", function() logout_popup.launch() end,
+        {description = "Show logout screen", group = "custom"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -368,118 +333,3 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     --]]
 )
 
-clientkeys = my_table.join(
-    awful.key({ altkey, "Shift"   }, "m",      lain.util.magnify_client,
-              {description = "magnify client", group = "client"}),
-    awful.key({ modkey,           }, "f",
-        function (c)
-            c.fullscreen = not c.fullscreen
-            c:raise()
-        end,
-        {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
-              {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"}),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
-              {description = "move to master", group = "client"}),
-    awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
-              {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "maximize", group = "client"})
-)
-
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it works on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
-    -- Hack to only show tags 1 and 9 in the shortcut window (mod+s)
-    local descr_view, descr_toggle, descr_move, descr_toggle_focus
-    if i == 1 or i == 9 then
-        descr_view = {description = "view tag #", group = "tag"}
-        descr_toggle = {description = "toggle tag #", group = "tag"}
-        descr_move = {description = "move focused client to tag #", group = "tag"}
-        descr_toggle_focus = {description = "toggle focused client on tag #", group = "tag"}
-    end
-    globalkeys = my_table.join(globalkeys,
-        -- View tag only.
-        awful.key({ modkey }, "#" .. i + 9,
-                  function ()
-                        local screen = awful.screen.focused()
-                        local tag = screen.tags[i]
-                        if tag then
-                           tag:view_only()
-                        end
-                  end,
-                  descr_view),
-        -- Toggle tag display.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
-                  function ()
-                      local screen = awful.screen.focused()
-                      local tag = screen.tags[i]
-                      if tag then
-                         awful.tag.viewtoggle(tag)
-                      end
-                  end,
-                  descr_toggle),
-        -- Move client to tag.
-        awful.key({ modkey, "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:move_to_tag(tag)
-                          end
-                     end
-                  end,
-                  descr_move),
-        -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:toggle_tag(tag)
-                          end
-                      end
-                  end,
-                  descr_toggle_focus)
-    )
-end
-
-clientbuttons = gears.table.join(
-    awful.button({ }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-    end),
-    awful.button({ modkey }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.move(c)
-    end),
-    awful.button({ modkey }, 3, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.resize(c)
-    end)
-)
--- mouse bindings
-root.buttons(my_table.join(
-    awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
-
--- Set keys
-root.keys(globalkeys)
--- }}}

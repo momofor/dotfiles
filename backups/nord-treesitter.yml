@@ -215,13 +215,13 @@ highlights:
   TSVariable: "nord8 - i"
   TSVariableBuiltin: "nord9 - i"
   # Text
-  TSText: "#FFFF00"
+  TSText: "nord9 - b"
   TSStrong: "#FFFF00"
   TSEmphasis: "#FFFF00"
   TSUnderline: "#FFFF00"
   TSTitle: "#FFFF00"
-  TSLiteral: "#FFFF00"
-  TSURI: "#FFFF00"
+  TSLiteral: "nord14 - b"
+  TSURI: "nord7 - u"
   # Tags
   # Tag Name
   TSTag: "nord9 "
@@ -379,7 +379,7 @@ highlights:
   TelescopeSelection: "nord9"        # selected item
   TelescopeSelectionCaret: "nord4"  # selection caret
   TelescopeMultiSelection: "nord9"   # multisections
-  TelescopeNormal: "nord7"           # floating windows created by telescope.
+  TelescopeNormal: "nord4"           # floating windows created by telescope.
 
    # Border highlight groups.
   TelescopeBorder: "nord1"

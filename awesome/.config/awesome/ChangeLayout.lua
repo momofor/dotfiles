@@ -17,3 +17,4 @@ function ChangeLayout()
         text = "To Change you layout again press mod ctl l" .. CurrentLayout})
     return CurrentLayout
 end
+

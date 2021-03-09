@@ -13,8 +13,10 @@ function M.set_option_advanced(option , optionValue)
     local scope = options_info[option].scope
     if scope == 'win' then
             vim.wo[option] = optionValue
+            vim.o[option] = optionValue
         elseif scope == 'buf' then
             vim.bo[option] = optionValue
+            vim.o[option] = optionValue
     end
     end
 
