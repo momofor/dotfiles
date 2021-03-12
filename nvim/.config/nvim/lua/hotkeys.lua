@@ -72,3 +72,14 @@ utils.map('n' , ';' , ':' , {noremap = true})
 utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true} )
 -- folding
 utils.map('' , '<Leader>F' , "'<,'>fold ")
+
+
+utils.map("n" , "gd" , ":lua vim.lsp.buf.definition()<CR>" ,  {noremap = true , silent = true} )
+utils.map("n" , "gD" , ":lua vim.lsp.buf.declaration()<CR>" , {noremap = true , silent = true} )
+utils.map("n" , "gr" , ":lua vim.lsp.buf.references()<CR>" , {noremap = true , silent = true} )
+utils.map("n" , "gi" , ":lua vim.lsp.buf.implementation()<CR>" , {noremap = true , silent = true} )
+utils.map("n" , "K" , ":lua vim.lsp.buf.hover()<CR>" , {noremap = true , silent = true} )
+utils.map("n" , "<C-k> " , ":lua vim.lsp.buf.signature_help()<CR>" , {noremap = true , silent = true} ) 
+utils.map("n" , "<C-n> " , ":lua vim.lsp.diagnostic.goto_prev()<CR>" , {noremap = true , silent = true} )
+utils.map("n" , "<C-p> " , ":lua vim.lsp.diagnostic.goto_next()<CR>" , {noremap = true , silent = true} )
+

@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 
-    Plug 'airblade/vim-rooter'
+    "Plug 'airblade/vim-rooter'
 
     Plug 'tpope/vim-fugitive'
 
@@ -54,7 +54,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'norcalli/nvim-colorizer.lua'
 
-    Plug 'puremourning/vimspector'
+    "Plug 'puremourning/vimspector'
 
     "Plug 'szw/vim-maximizer'
 
@@ -68,15 +68,15 @@ call plug#begin('~/.vim/plugged')
 
     "Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-    Plug 'preservim/tagbar'
+    "Plug 'preservim/tagbar'
 
     "Plug 'vimwiki/vimwiki'
     
-    Plug 'dag/vim-fish'
+    "Plug 'dag/vim-fish'
 
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-    Plug 'arzg/vim-sh'
+    "Plug 'arzg/vim-sh'
 
 
     Plug 'nvim-treesitter/nvim-treesitter'   " We recommend updating the parsers on update
@@ -98,7 +98,7 @@ call plug#begin('~/.vim/plugged')
     
     Plug 'metakirby5/codi.vim'
 
-    Plug 'kassio/neoterm'
+    "Plug 'kassio/neoterm'
 
 
     " React code snippets
@@ -109,8 +109,15 @@ call plug#begin('~/.vim/plugged')
     
     "Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile& yarn compile' }
     "
-    Plug 'rafcamlet/coc-nvim-lua'
+    "Plug 'rafcamlet/coc-nvim-lua'
 
+    "Plug 'neovim/nvim-lspconfig'
+
+    "Plug 'hrsh7th/nvim-compe'
+
+    "Plug 'nvim-lua/completion-nvim'
+    
+    "Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
     call plug#end()
 
 let g:NERDTreeGitStatusConcealBrackets = 1

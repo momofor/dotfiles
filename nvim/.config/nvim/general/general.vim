@@ -21,7 +21,6 @@
                 \ | endif
 
 "if plugin is missing
-let g:coc_global_extensions=[ 'coc-omnisharp']
 filetype plugin on
 " set leader key
 let g:mapleader = "\<Space>"
@@ -53,7 +52,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "nerdtree minimal ui 
 let g:NERDTreeMinimalUI = 1
 "activate prettier 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "tmux
 "concieling
 set conceallevel=1
@@ -91,3 +89,19 @@ let mapleader=' '
 "let NERDTreeQuitOnOpen=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#framemode=':t'
+
+" auto-format
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+" Use completion-nvim in every buffer
+"autocmd BufEnter * lua require'completion'.on_attach()
+"autocmd BufEnter * ts require'completion'.on_attach()
+
+
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+set completeopt=menuone,noinsert,noselect
