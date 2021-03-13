@@ -91,9 +91,9 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#framemode=':t'
 
 " auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 " Use completion-nvim in every buffer
 "autocmd BufEnter * lua require'completion'.on_attach()
 "autocmd BufEnter * ts require'completion'.on_attach()
@@ -104,4 +104,4 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-set completeopt=menuone,noinsert,noselect
+"set completeopt=menuone,noinsert,noselect

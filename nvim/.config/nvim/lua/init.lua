@@ -5,5 +5,5 @@ require("variables")
 require("treesitteru")
 --require("compe-config")
 --require("mehu")
+--require("lsp-hotkeys")
 --require("tsserveru")
---lua require'lspconfig'.lua.setup{on_attach=require'completion'.on_attach}

@@ -109,7 +109,7 @@ call plug#begin('~/.vim/plugged')
     
     "Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile& yarn compile' }
     "
-    "Plug 'rafcamlet/coc-nvim-lua'
+    Plug 'rafcamlet/coc-nvim-lua'
 
     "Plug 'neovim/nvim-lspconfig'
 

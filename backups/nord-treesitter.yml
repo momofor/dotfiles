@@ -1,7 +1,7 @@
 information:
   name: nord
   background: dark
-  author: "Christian Chiarulli <chrisatmachine@gmail.com>"
+  author: "momofor"
 
 palette:
   fg: "#D8DEE9"
@@ -233,7 +233,7 @@ highlights:
   # HTML (keep consistent with Markdown, below)
 
   htmlArg: "nord7"
-  htmlBold: "nord10 - b"
+  htmlBold: "nord9 - b"
   htmlB: "nord10 - b"
   htmlEndTag: "nord10"
   htmlH1: "nord7"
@@ -328,6 +328,11 @@ highlights:
   CocExplorerFileHidden: "line_grey"
   CocExplorerHelpLine: "nord15"
 
+  CocErrorSign: "nord11"
+  CocWarningSign: "nord13"
+  CocInfoSign: "nord9"
+  CocHintSign: "nord13"
+
   # -- START Easymotion --
   EasyMotionTarget: "nord11 - b"
   EasyMotionTarget2First: "nord11 - b"
@@ -341,8 +346,8 @@ highlights:
   StartifyBracket: "nord4"
   StartifySpecial: "nord7"
   StartifyVar: "nord7"
-  StartifyPath: "nord8 "
-  StartifyFile: "nord4"
+  StartifyPath: "nord8"
+  StartifyFile: "nord9"
   StartifySlash: "nord4"
   StartifyHeader: "nord8"
   StartifySection: "nord4"
