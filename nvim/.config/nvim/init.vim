@@ -6,7 +6,7 @@ source $HOME/.config/nvim/theme-config/nordConfig.vim
 source $HOME/.config/nvim/theme-config/nord-treesitter.vim
 source $HOME/.config/nvim/theme-config/themeconfig.vim
 luafile $HOME/.config/nvim/lua/init.lua
-source $HOME/.config/nvim/nord.vim
-source $HOME/.config/nvim/nord-treesitter.vim
+source $HOME/dotfiles/backups/nord-treesitter.vim
+source $HOME/.vim/plugged/nord-vim/colors/nord.vim
 
 "hello boys
