@@ -1,17 +1,11 @@
 local utils = require("_utils")
 --git fugitive
 utils.map('' , '<leader>g' , ':Git<cr>' , {})
--- This is the default extra key bindings
---noremap <leader>r :Rg<CR>
---tag bar
-
---utils.map('n', '<leader>m' , ':Marks<CR>' , {noremap = true})
 utils.map('n', '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 
 utils.map('n' , '<leader>cmm' , ':CocList marketplace<CR>' , {noremap = true})
 utils.map('n' , '<leader>co' , ':CocList outline<CR>' , {noremap = true})
 utils.map('n' , '<leader>r' , ':CocCommand document.renameCurrentWord<CR> ' , {noremap = true})
-utils.map('n' , '<leader>Tb' , ':TagbarToggle<CR>' , {noremap = true})
 --Git
 utils.map('' , '<leader>gh' , ':GitGutterLineHighlightsToggle<CR>' , {})
 utils.map('n' , '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
@@ -31,7 +25,7 @@ utils.map('i' , '<c-j> ' , [[("\<C-n>")]] , {noremap = true , expr = true})
 utils.map('i' , '<c-k> ' , [[\<C-p>]] , {noremap = true , expr = true})
 
 
--- Use alt + hjkl to resize windows
+-- Use leader + hjkl to resize windows
 utils.map('n' , '<leader>j' , ':resize -2<CR>' , {noremap = true})
 utils.map('n' , '<leader>k' , ':resize +2<CR>' , {noremap = true})
 utils.map('n' , '<leader>h' , ':vertical resize -2<CR>' , {noremap = true})
@@ -41,8 +35,8 @@ utils.map('n' , '<leader>l' , ':vertical resize +2<CR>' , {noremap = true})
 utils.map('i' , 'jk' , '<Esc>' , {noremap = true})
 utils.map('i' , 'kj' , '<Esc>' , {noremap = true})
 -- Easy CAPS
-utils.map('i' , '<c-u>' , '<ESC>viwUi' , {noremap = true})
-utils.map('n' , '<c-u>' , 'viwU<Esc>' , {noremap = true})
+--utils.map('i' , '<c-u>' , '<ESC>viwUi' , {noremap = true})
+--utils.map('n' , '<c-u>' , 'viwU<Esc>' , {noremap = true})
 
 -- TAB in general mode will move to text buffer
 utils.map('n' , '<TAB>' , ':bnext<CR>' , {noremap = true})

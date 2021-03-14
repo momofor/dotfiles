@@ -87,8 +87,6 @@ globalkeys = my_table.join(
             if client.focus then client.focus:raise() end
         end,
         {description = "focus right", group = "client"}),
-    awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
               --kill all notifications
 awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
@@ -292,7 +290,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
 
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show run ")end,
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show drun ")end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,

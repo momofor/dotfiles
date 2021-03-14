@@ -25,7 +25,6 @@ local dpi           = require("beautiful.xresources").apply_dpi
 require("CustomNotify")
 require("ChangeLayout")
 require("hot")
-local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 -- }}}
 
 -- {{{  Error handling

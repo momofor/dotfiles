@@ -65,26 +65,26 @@ set tags+=tags;$HOME
 
 "codi 
 " Change the color
-highlight CodiVirtualText guifg=cyan
+"highlight CodiVirtualText guifg=cyan
 
-let g:codi#virtual_text_prefix = "❯ "
+"let g:codi#virtual_text_prefix = "❯ "
 
 
-"
-let g:codi#aliases = {
-                   \ 'javascript.jsx': 'javascript',
-                   \ }
+""
+"let g:codi#aliases = {
+                   "\ 'javascript.jsx': 'javascript',
+                   "\ }
 
 "codi 
-" Change the color
- highlight CodiVirtualText guifg=cyan
+"" Change the color
+ "highlight CodiVirtualText guifg=cyan
 
- let g:codi#virtual_text_prefix = "❯ "
+ "let g:codi#virtual_text_prefix = "❯ "
 
- let g:codi#aliases = {
-                    \ 'javascript.jsx': 'javascript',
-                                       \ }
-let mapleader=' '
+ "let g:codi#aliases = {
+                    "\ 'javascript.jsx': 'javascript',
+                                       "\ }
+"let mapleader=' '
 
 "let NERDTreeQuitOnOpen=1
 let g:airline#extensions#tabline#enabled=1
@@ -99,9 +99,9 @@ let g:airline#extensions#tabline#framemode=':t'
 "autocmd BufEnter * ts require'completion'.on_attach()
 
 
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+"inoremap <silent><expr> <C-Space> compe#complete()
+"inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+"inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+"inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+"inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 "set completeopt=menuone,noinsert,noselect
