@@ -3,7 +3,6 @@ let g:nvcode_termcolors=256
 
 syntax on
 "colorscheme nord-treesitter " Or whatever colorscheme you make
-colorscheme nord-treesitter
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

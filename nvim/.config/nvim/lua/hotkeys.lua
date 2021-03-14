@@ -67,7 +67,6 @@ utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true}
 -- folding
 utils.map('' , '<Leader>F' , "'<,'>fold ")
 
-
 --utils.map("n" , "gd" , ":lua vim.lsp.buf.definition()<CR>" ,  {noremap = true , silent = true} )
 --utils.map("n" , "gD" , ":lua vim.lsp.buf.declaration()<CR>" , {noremap = true , silent = true} )
 --utils.map("n" , "gr" , ":lua vim.lsp.buf.references()<CR>" , {noremap = true , silent = true} )

@@ -489,7 +489,6 @@ client.connect_signal("manage", function (c)
     c.shape = Custom_shape
 end)
 --auto start
-awful.spawn.with_shell("tmux kill-server")
 awful.spawn.with_shell('/usr/bin/setxkbmap -layout dvp')
 awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
 awful.spawn.with_shell('~/picom/build/src/picom --experimental-backends')

@@ -11,7 +11,6 @@ local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
 local dpi   = require("beautiful.xresources").apply_dpi
-local beautiful = require("beautiful")
 local naughty = require("naughty")
 
 local os = os
@@ -321,7 +320,7 @@ function theme.at_screen_connect(s)
         gears.shape.rounded_rect(cr, width, height, 10)
     end
 
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal, opacity = 0.9 , width = dpi(1250) , y = 75 , shape = Custom_shape })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal , width = dpi(1250) , y = 75 , shape = Custom_shape })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -352,6 +351,7 @@ function theme.at_screen_connect(s)
                 phrases = {"Don't forget to be awesome!", "Keep up the hard work!"}
             },
             arrl_ld,
+            wibox.container.background(clockicon , theme.bg_focus),
             wibox.container.background(clock , theme.bg_focus),
             arrl_dl,
             keyboardlayout,
