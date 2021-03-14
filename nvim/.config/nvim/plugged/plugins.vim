@@ -120,7 +120,3 @@ call plug#begin('~/.vim/plugged')
     "Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
     call plug#end()
 
-let g:NERDTreeGitStatusConcealBrackets = 1
-
-let g:webdevicons_conceal_nerdtree_brackets = 1
-

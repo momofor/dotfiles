@@ -108,12 +108,6 @@ local binclock = require("themes.powerarrow.binclock"){
     color_inactive = theme.bg_focus
 }
 
-    local function custom_shape(cr, width, height)
-
-        gears.shape.rounded_rect(cr, width, height, 10)
-
-    end
-
 -- Calendar
 theme.cal = lain.widget.cal({
     --cal = "cal --color=always",
@@ -127,7 +121,7 @@ theme.cal = lain.widget.cal({
 
 
 naughty.config.defaults.icon_size = 35
-naughty.config.defaults.shape = custom_shape
+naughty.config.defaults.shape = Custom_shape
 naughty.config.defaults.margin = 3
 naughty.config.defaults.opacity = .90
 
@@ -352,7 +346,7 @@ function theme.at_screen_connect(s)
 
     -- Create the wibox
     --
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(16), bg = theme.bg_normal, fg = theme.fg_normal, width = dpi(1250)  , shape = custom_shape() })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(16), bg = theme.bg_normal, fg = theme.fg_normal, width = dpi(1250)  })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
