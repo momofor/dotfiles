@@ -44,7 +44,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#434C5E ctermbg=4 "nor
 "add transparency 
 "hi Normal guibg=NONE ctermbg=NONE closes as it doesn't work
 "rainbow
-let g:rainbow_active = 1
+"let g:rainbow_active = 1
 "nerdfonts for nerdtree git 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 "close nerdtree if its the last window open
@@ -54,11 +54,11 @@ let g:NERDTreeMinimalUI = 1
 "activate prettier 
 "tmux
 "concieling
-set conceallevel=1
+"set conceallevel=1
 "syntax highlighting for rasi files
-au BufReadPost *.rasi set syntax=css
+"au BufReadPost *.rasi set syntax=css
 "ctags 
-set tags+=tags;$HOME
+"set tags+=tags;$HOME
 "limit column
 "set colorcolumn =100
 

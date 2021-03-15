@@ -60,6 +60,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nord-vim"
+  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"

@@ -29,11 +29,11 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter' ,
         run = ':TSUpdate'
-        } -- We recommend updating the parsers on update 
+        } -- We recommend updating the parsers on update
 
     use 'nvim-treesitter/playground'
     use 'metakirby5/codi.vim'
-    use 'rafcamlet/coc-nvim-lua'
+    --use 'rafcamlet/coc-nvim-lua'
 
     use {
         'preservim/nerdtree' ,
@@ -43,5 +43,9 @@ return require('packer').startup(function(use)
             'tiagofumo/vim-nerdtree-syntax-highlight'
         }
     }
-    use {'neoclide/coc.nvim', branch = 'release' }
+    --use {'neoclide/coc.nvim', branch = 'release' }
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-compe'
+    use 'glepnir/lspsaga.nvim'
+    use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
 end)

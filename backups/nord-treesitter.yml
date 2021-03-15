@@ -380,21 +380,50 @@ highlights:
   LspDiagnosticsUnderlineHint: "nord10"
 
   # Telesope
-
   TelescopeSelection: "nord9"        # selected item
   TelescopeSelectionCaret: "nord4"  # selection caret
   TelescopeMultiSelection: "nord9"   # multisections
   TelescopeNormal: "nord4"           # floating windows created by telescope.
-
    # Border highlight groups.
   TelescopeBorder: "nord1"
   TelescopePromptBorder: "nord1"
   TelescopeResultsBorder: "nord1"
   TelescopePreviewBorder: "nord1"
-
   # Used for highlighting characters that you match.
   TelescopeMatching: "nord8"
-
   # Used for the prompt prefix
   TelescopePromptPrefix: "nord7"
 
+  # lspsaga
+  #LspSagaFinderSelection: ""
+  #LspFloatWinBorder : ""
+  #LspSagaBorderTitle: ""
+  #TargetWord: ""
+  #ReferencesCount: ""
+  #DefinitionCount: ""
+  #TargetFileName: ""
+  #DefinitionIcon: ""
+  #ReferencesIcon: ""
+  #ProviderTruncateLine: ""
+  #SagaShadow: ""
+  #LspSagaFinderSelection: ""
+  #DiagnosticTruncateLine: ""
+  #DiagnosticError: ""
+  #DiagnosticWarning : ""
+  #DiagnosticInformation : ""
+  #DiagnosticHint: ""
+  #DefinitionPreviewTitle: ""
+  #LspSagaShTruncateLine : ""
+  #LspSagaDocTruncateLine: ""
+  #LineDiagTuncateLine: ""
+  #LspSagaCodeActionTitle: ""
+  #LspSagaCodeActionTruncateLine : ""
+  #LspSagaCodeActionContent: ""
+  #LspSagaRenamePromptPrefix : ""
+  #LspSagaRenameBorder: ""
+  #LspSagaHoverBorder: ""
+  #LspSagaSignatureHelpBorder: ""
+  #LspSagaCodeActionBorder: ""
+  #LspSagaAutoPreview: ""
+  #LspSagaDefPreviewBorder: ""
+  #LspLinesDiagBorde: ""

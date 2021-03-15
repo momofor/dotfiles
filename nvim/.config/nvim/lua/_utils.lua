@@ -9,8 +9,8 @@ end
 local options_info = vim.api.nvim_get_all_options_info()
 
 function M.set_option_advanced(option , optionValue)
-    vim.o[option] = optionValue
     local scope = options_info[option].scope
+    vim.o[option] = optionValue
     if scope == 'win' then
             vim.wo[option] = optionValue
             vim.o[option] = optionValue

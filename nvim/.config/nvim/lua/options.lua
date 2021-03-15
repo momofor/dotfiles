@@ -10,13 +10,13 @@ local options= {
     --ttimeoutlen= 500 ,
     --clipboard = unnamedplus ,
     hidden = true ,
-    pumheight=10 ,
+    pumheight=20 ,
     cmdheight=2 ,
     mouse = "a" ,
     splitbelow = true ,
     splitright = true ,
     autochdir = true ,
-    showmode = false ,
+    showmode = true ,
     swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
@@ -28,8 +28,9 @@ local options= {
     colorcolumn = "100" ,
     scrolloff = 7 ,
     cursorline = true ,
-    foldmethod = expr ,
+    foldmethod = "expr" ,
     foldexpr = "nvim_treesitter#foldexpr()" ,
+    signcolumn = "yes" -- can be set to number
 }
 utils.set_options(options)
 

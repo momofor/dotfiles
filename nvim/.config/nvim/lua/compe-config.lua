@@ -1,4 +1,4 @@
---vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menuone,noselect"
 
 require'compe'.setup {
     enabled = true;
@@ -25,8 +25,10 @@ require'compe'.setup {
         tags = true;
         snippets_nvim = true;
         treesitter = true;
+        tabnine = true;
   };
 }
+
 
 local t = function(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -39,6 +41,15 @@ _G.s_tab_complete = function()
         else
             return t "<S-Tab>"
   end
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
 end
 
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
