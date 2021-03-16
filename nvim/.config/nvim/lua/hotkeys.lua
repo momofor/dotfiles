@@ -1,5 +1,7 @@
 local utils = require("_utils")
 --git fugitive
+utils.map('n', '<Space>', '<NOP>', { noremap = true, silent = true })
+vim.g.mapleader = ' '
 utils.map('' , '<leader>g' , ':Git<cr>' , {})
 utils.map('n', '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 
@@ -72,8 +74,8 @@ utils.map("n" , "gh" , ":Lspsaga lsp_finder<CR>" , {noremap = true , silent = tr
 utils.map("n" , "<Leader>gr" , ":lua require('lspsaga.rename').rename()<CR>" , {noremap = true , silent = true})
 utils.map("n" , "gp" , ":Lspsaga preview_definition<CR>" , {noremap = true , silent = true})
 
---utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
---utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = true , expr = true})
---utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
---utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
---utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
+utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
+utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = true , expr = true})
+utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
+utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
+utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})

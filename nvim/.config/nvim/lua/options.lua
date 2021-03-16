@@ -6,9 +6,7 @@ local options= {
     laststatus = 0 ,
     showtabline = 4 ,
     backup = false ,
-    --updatetime= 300 ,
-    --ttimeoutlen= 500 ,
-    --clipboard = unnamedplus ,
+    clipboard = "unnamedplus" ,
     hidden = true ,
     pumheight=20 ,
     cmdheight=2 ,
@@ -16,7 +14,7 @@ local options= {
     splitbelow = true ,
     splitright = true ,
     autochdir = true ,
-    showmode = true ,
+    showmode = false ,
     swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
@@ -30,8 +28,9 @@ local options= {
     cursorline = true ,
     foldmethod = "expr" ,
     foldexpr = "nvim_treesitter#foldexpr()" ,
-    signcolumn = "yes" -- can be set to number
+    signcolumn = "yes" , -- can be set to number
+    termguicolors = true ,
 }
 utils.set_options(options)
-
-
+vim.cmd("set shortmess+=c")
+vim.o.t_co = "256"

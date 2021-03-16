@@ -1,5 +1,5 @@
 " configure nvcode-color-schemes
-let g:nvcode_termcolors=256
+"let g:nvcode_termcolors=256
 
 syntax on
 "colorscheme nord-treesitter " Or whatever colorscheme you make
