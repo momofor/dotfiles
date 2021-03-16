@@ -1,0 +1,16 @@
+{
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"typescript.format.enabled": true,
+	"javascript.format.enabled": true,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"javascriptreact",
+		"json",
+		"html",
+		"css",
+		"markdown"
+	]
+}
