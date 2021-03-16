@@ -80,6 +80,7 @@ awful.spawn.with_shell(
 
 local themes = {
     "nord-powerarrow", -- 1
+    "nord-powerarrow-colorful" -- 2
 }
 
 local chosen_theme = themes[1]
