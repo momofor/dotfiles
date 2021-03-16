@@ -21,6 +21,8 @@ local variables_glabal = {
     } ,
     airline_theme = "nord" ,
     nvcode_termcolors = 256 ,
+    nord_cursor_line_number_background = 1 ,
+    nord_italic = 1 ,
 }
 
 utils.set_var(vim.g , variables_glabal)
