@@ -13,8 +13,8 @@ function ChangeLayout()
         I = 1
     end
     naughty.notify({
-        title = "You Changed you layout to " ,
-        text = "To Change you layout again press mod ctl l" .. CurrentLayout})
+        title = "You Changed you layout to " .. CurrentLayout ,
+        text = "To Change you layout again press mod ctl l" })
     return CurrentLayout
 end
 
