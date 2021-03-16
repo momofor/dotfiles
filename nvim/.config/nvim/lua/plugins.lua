@@ -43,9 +43,10 @@ return require('packer').startup(function(use)
             'tiagofumo/vim-nerdtree-syntax-highlight'
         }
     }
-    --use {'neoclide/coc.nvim', branch = 'release' }
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-compe'
-    use 'glepnir/lspsaga.nvim'
-    use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
+    use {'neoclide/coc.nvim', branch = 'release' }
+    --use 'neovim/nvim-lspconfig'
+    --use 'hrsh7th/nvim-compe'
+    --use 'glepnir/lspsaga.nvim'
+    --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
+    --use 'mattn/emmet-vim'
 end)
