@@ -22,9 +22,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
-require("CustomNotify")
-require("ChangeLayout")
-require("hot")
+require("my_utils")
 -- }}}
 
 -- {{{  Error handling
@@ -454,6 +452,3 @@ client.connect_signal("manage", function (c)
     c.shape = Custom_shape
 end)
 --auto start
-awful.spawn.with_shell('/usr/bin/setxkbmap -layout dvp')
-awful.spawn.with_shell('/usr/bin/setxkbmap -option "caps:swapescape"')
-awful.spawn.with_shell('~/picom/build/src/picom --experimental-backends')

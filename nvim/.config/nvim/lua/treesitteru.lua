@@ -16,8 +16,10 @@ require'nvim-treesitter.configs'.setup {
     refactor = {
         highlight_definitions = {
             enable = false
+    },
+    rainbow = {
+        enable = true
     }
-
 }
 }
 utils.map("n" , "<Leader>m" , ":lua print(require'nvim-treesitter.ts_utils'.get_node_at_cursor()) <CR>"  , {})

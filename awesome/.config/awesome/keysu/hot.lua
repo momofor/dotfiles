@@ -10,18 +10,17 @@ local lain          = require("lain")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
-require("CustomNotify")
-require("ChangeLayout")
+require("my_utils.CustomNotify")
+require("my_utils.ChangeLayout")
 local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
+--require("my_utils.apps_keybind")
 
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "kitty"
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-local gui_editor   = os.getenv("GUI_EDITOR") or "emacs"
 local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
-local utils = require("utils._utils")
 -- }}}
 globalkeys = my_table.join(
     -- Take a screenshot
@@ -290,11 +289,11 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
 
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show drun ")end,
-              {description = "run prompt", group = "launcher"}),
-
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
               {description = "run inkscape", group = "launcher"}),
+
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show durn")end,
+              {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
               {description = "run inkscape", group = "launcher"}),

@@ -120,6 +120,7 @@ theme.cal = lain.widget.cal({
     }
 })
 
+
 naughty.config.defaults.icon_size = 35
 naughty.config.defaults.shape = custom_shape
 naughty.config.defaults.margin = 3
