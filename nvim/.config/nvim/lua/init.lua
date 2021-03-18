@@ -1,10 +1,8 @@
 require("tele")
 require("hotkeys")
 require("options")
-require("variables")
 require("treesitteru")
 require("plugins")
-require("groupsu")
 
 --require("compe-config")
 --require("mehu")
@@ -12,3 +10,6 @@ require("groupsu")
 --require("tsserveru")
 --require("lspsaga-config")
 require'colorizer'.setup()
+
+require("variables")
+require("groupsu")

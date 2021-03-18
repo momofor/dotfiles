@@ -25,7 +25,8 @@ require'compe'.setup {
         tags = true;
         snippets_nvim = true;
         treesitter = true;
-        tabnine = true;
+        tabnine = {menu = "tab"};
+        omni = true
   };
 }
 

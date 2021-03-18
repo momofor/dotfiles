@@ -27,7 +27,6 @@ local variables_glabal = {
     gist_open_browser_after_post = 1 ,
     gist_detect_filetype = 1 ,
     gist_browser_command = 'firefox %URL%' ,
-    --gist_token = '9b92562c53ce197ce4aefe72b1371f11049f4df1'
 }
 
 utils.set_var(vim.g , variables_glabal)
