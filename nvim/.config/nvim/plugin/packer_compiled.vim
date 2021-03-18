@@ -104,6 +104,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
+  ["vim-be-good"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-be-good"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-devicons"
@@ -111,6 +116,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-gist"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-gist"
   },
   ["vim-gitgutter"] = {
     loaded = true,
@@ -131,6 +140,10 @@ _G.packer_plugins = {
   ["vim-surround"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["webapi-vim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/webapi-vim"
   }
 }
 

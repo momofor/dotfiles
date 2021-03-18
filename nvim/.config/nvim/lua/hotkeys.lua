@@ -16,7 +16,7 @@ utils.map('n' , '<C-_>' , '<plug>NERDCommenterToggle' , {})
 --NERDTree
 utils.map('n' , '<leader>t' , ':NERDTreeToggle <cr>' , {})
 --Prettier
-utils.map('n' , '<leader>ff' , ':Prettier<CR>' , {noremap = true})
+--utils.map('n' , '<leader>ff' , ':Prettier<CR>' , {noremap = true})
 --Tabs
 utils.map('n' , '<leader>1' , ':bp <cr>' , {})
 utils.map('n' , '<leader>2' , ':bn <cr>' , {})
@@ -79,3 +79,4 @@ utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = tr
 utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
 utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
 utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
+utils.map("n" , "<Leader>f" , ":Telescope find_files <CR>" , {noremap = true} )

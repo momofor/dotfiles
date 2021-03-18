@@ -322,6 +322,7 @@ function theme.at_screen_connect(s)
 
     s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal , width = dpi(1250) , y = 75 , shape = Custom_shape })
 
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,

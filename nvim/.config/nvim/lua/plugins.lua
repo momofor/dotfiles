@@ -27,13 +27,13 @@ return require('packer').startup(function(use)
     use 'OmniSharp/omnisharp-vim'
     use 'christianchiarulli/nvcode-color-schemes.vim'
     use {
-        'nvim-treesitter/nvim-treesitter' ,
-        run = ':TSUpdate'
+        'nvim-treesitter/nvim-treesitter'
+        --run = ':TSUpdate'
         } -- We recommend updating the parsers on update
 
     use 'nvim-treesitter/playground'
     use 'metakirby5/codi.vim'
-    --use 'rafcamlet/coc-nvim-lua'
+    use 'rafcamlet/coc-nvim-lua'
 
     use {
         'preservim/nerdtree' ,
@@ -44,9 +44,12 @@ return require('packer').startup(function(use)
         }
     }
     use {'neoclide/coc.nvim', branch = 'release' }
+    use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
+
     --use 'neovim/nvim-lspconfig'
     --use 'hrsh7th/nvim-compe'
     --use 'glepnir/lspsaga.nvim'
     --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
     --use 'mattn/emmet-vim'
 end)
+
