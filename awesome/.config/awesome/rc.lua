@@ -360,7 +360,7 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { class = "Spotify Free" },
+    { rule = { name = "Spotify Free" , class = "Spotify" },
       properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },

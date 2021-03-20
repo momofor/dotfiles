@@ -13,7 +13,6 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 require("my_utils.CustomNotify")
 require("my_utils.ChangeLayout")
 local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
---require("my_utils.apps_keybind")
 
 local modkey       = "Mod4"
 local altkey       = "Mod1"
@@ -21,6 +20,9 @@ local terminal     = "kitty"
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
 local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
+local term_exec = terminal .. " -e "
+
+
 -- }}}
 globalkeys = my_table.join(
     -- Take a screenshot
@@ -292,7 +294,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
               {description = "run inkscape", group = "launcher"}),
 
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show durn")end,
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show drun")end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
@@ -304,7 +306,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "z", function () awful.spawn.with_shell("zathura")end,
               {description = "run zathura", group = "launcher"}),
 
-    awful.key({ modkey }, "e", function () awful.spawn.with_shell("kitty -e nvim ~/.config/awesome/rc.lua")end,
+    awful.key({ modkey }, "e", function () awful.spawn.with_shell(term_exec .. "nvim ~/.config/awesome/rc.lua")end,
               {description = "run zathura", group = "launcher"}),
 
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("qutebrowser")end,
