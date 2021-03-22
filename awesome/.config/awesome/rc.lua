@@ -360,6 +360,7 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
+
     { rule = { name = "Spotify Free" , class = "Spotify" },
       properties = { screen = 1, tag = awful.util.tagnames[3] } },
 
