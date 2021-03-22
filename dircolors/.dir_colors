@@ -178,7 +178,7 @@ STICKY 04;37;44
 .json 03;36
 .yml 03;34
 .sh 02;36
-.lua 02;36
+.lua 01;36
 #+--- Executables ---+
 .app 01;36
 .bat 01;36
@@ -191,7 +191,7 @@ STICKY 04;37;44
 .scss 01;36;4
 .cs 01;36;4
 .tex 01;36
-.vim 01;36
+.vim 02;36
 .ts 01;36
 .flow 01;36
 .map 01;36
