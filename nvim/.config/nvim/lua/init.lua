@@ -13,3 +13,4 @@ require'colorizer'.setup()
 
 require("variables")
 require("groupsu")
+require("nvimtree-config")

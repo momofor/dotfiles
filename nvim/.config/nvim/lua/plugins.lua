@@ -35,14 +35,16 @@ return require('packer').startup(function(use)
     use 'metakirby5/codi.vim'
     use 'rafcamlet/coc-nvim-lua'
 
-    use {
-        'preservim/nerdtree' ,
-        requires = {
-            'Xuyuanp/nerdtree-git-plugin' ,
-            'ryanoasis/vim-devicons' ,
-            'tiagofumo/vim-nerdtree-syntax-highlight'
-        }
-    }
+    --use {
+        --'preservim/nerdtree' ,
+        --requires = {
+            --'Xuyuanp/nerdtree-git-plugin' ,
+            --'ryanoasis/vim-devicons' ,
+            --'tiagofumo/vim-nerdtree-syntax-highlight'
+        --}
+    --}
+    use { 'kyazdani42/nvim-tree.lua' , requires = 'kyazdani42/nvim-web-devicons'}
+
     use {'neoclide/coc.nvim', branch = 'release' }
     use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
     use 'p00f/nvim-ts-rainbow'

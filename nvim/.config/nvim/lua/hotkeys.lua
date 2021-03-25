@@ -13,8 +13,6 @@ utils.map('' , '<leader>gh' , ':GitGutterLineHighlightsToggle<CR>' , {})
 utils.map('n' , '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 -- Nerdcommenter
 utils.map('n' , '<C-_>' , '<plug>NERDCommenterToggle' , {})
---NERDTree
-utils.map('n' , '<leader>t' , ':NERDTreeToggle <cr>' , {})
 --Prettier
 --utils.map('n' , '<leader>ff' , ':Prettier<CR>' , {noremap = true})
 --Tabs
@@ -67,7 +65,7 @@ utils.map('n' , '<leader>cll' , ':CocCommand editor.action.pickColor<CR>' , {nor
 utils.map('n' , ';' , ':' , {noremap = true})
 utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true} )
 -- folding
-utils.map('' , '<Leader>F' , "'<,'>fold ")
+--utils.map('' , '<Leader>F' , "'<,'>fold ")
 
 -- lspsaga
 utils.map("n" , "gh" , ":Lspsaga lsp_finder<CR>" , {noremap = true , silent = true} )
@@ -79,4 +77,4 @@ utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = tr
 utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
 utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
 utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
-utils.map("n" , "<Leader>f" , ":Telescope find_files <CR>" , {noremap = true} )
+--utils.map("n" , "<Leader>f" , ":Telescope find_files <CR>" , {noremap = true} )
