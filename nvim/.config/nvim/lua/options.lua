@@ -15,7 +15,7 @@ local options= {
     splitright = true ,
     autochdir = true ,
     showmode = false ,
-    swapfile = false ,
+    --swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
     tabstop = 4 ,
@@ -27,10 +27,8 @@ local options= {
     scrolloff = 7 ,
     cursorline = true ,
     foldmethod = "expr" ,
-    foldexpr = "nvim_treesitter#foldexpr()" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
 }
 utils.set_options(options)
 vim.cmd("set shortmess+=c")
-vim.o.t_co = "256"

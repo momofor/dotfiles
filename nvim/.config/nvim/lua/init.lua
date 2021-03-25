@@ -1,7 +1,6 @@
 require("tele")
 require("hotkeys")
 require("options")
-require("treesitteru")
 require("plugins")
 
 --require("compe-config")
@@ -14,3 +13,5 @@ require'colorizer'.setup()
 require("variables")
 require("groupsu")
 require("nvimtree-config")
+require("treesitteru")
+vim.cmd('colorscheme nord-treesitter')

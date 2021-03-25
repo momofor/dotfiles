@@ -26,10 +26,7 @@ return require('packer').startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'OmniSharp/omnisharp-vim'
     use 'christianchiarulli/nvcode-color-schemes.vim'
-    use {
-        'nvim-treesitter/nvim-treesitter'
-        --run = ':TSUpdate'
-        } -- We recommend updating the parsers on update
+    use 'nvim-treesitter/nvim-treesitter' -- We recommend updating the parsers on update
 
     use 'nvim-treesitter/playground'
     use 'metakirby5/codi.vim'
@@ -43,7 +40,8 @@ return require('packer').startup(function(use)
             --'tiagofumo/vim-nerdtree-syntax-highlight'
         --}
     --}
-    use { 'kyazdani42/nvim-tree.lua' , requires = 'kyazdani42/nvim-web-devicons'}
+    use { 'kyazdani42/nvim-tree.lua' }
+    use { 'kyazdani42/nvim-web-devicons'}
 
     use {'neoclide/coc.nvim', branch = 'release' }
     use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
