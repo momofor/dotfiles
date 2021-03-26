@@ -52,14 +52,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nerdcommenter"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nerdtree"
-  },
-  ["nerdtree-git-plugin"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin"
-  },
   ["nord-vim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nord-vim"
@@ -72,9 +64,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["omnisharp-vim"] = {
     loaded = true,
@@ -104,15 +104,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
-  ["vim-be-good"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-be-good"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-devicons"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-fugitive"
@@ -128,10 +119,6 @@ _G.packer_plugins = {
   ["vim-indent-guides"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides"
-  },
-  ["vim-nerdtree-syntax-highlight"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight"
   },
   ["vim-startify"] = {
     loaded = true,

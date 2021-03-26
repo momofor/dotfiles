@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     use 'OmniSharp/omnisharp-vim'
     use 'christianchiarulli/nvcode-color-schemes.vim'
     use 'nvim-treesitter/nvim-treesitter' -- We recommend updating the parsers on update
-
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'nvim-treesitter/playground'
     use 'metakirby5/codi.vim'
 

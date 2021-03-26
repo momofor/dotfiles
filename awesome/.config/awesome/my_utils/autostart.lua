@@ -5,7 +5,8 @@ local auto_apps = {
     '~/picom/build/src/picom --experimental-backends' ,
     'tmux kill-server' ,
     'kitty -e tmux' ,
-    'qutebrowser'
+    'qutebrowser' ,
+    'firefox-trunk'
 }
 for _, app in pairs(auto_apps) do
     awful.spawn.with_shell(app .. " &")
