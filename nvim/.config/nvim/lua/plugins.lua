@@ -30,7 +30,6 @@ return require('packer').startup(function(use)
 
     use 'nvim-treesitter/playground'
     use 'metakirby5/codi.vim'
-    use 'rafcamlet/coc-nvim-lua'
 
     --use {
         --'preservim/nerdtree' ,
@@ -40,12 +39,13 @@ return require('packer').startup(function(use)
             --'tiagofumo/vim-nerdtree-syntax-highlight'
         --}
     --}
-    use { 'kyazdani42/nvim-tree.lua' }
-    use { 'kyazdani42/nvim-web-devicons'}
+    use 'kyazdani42/nvim-tree.lua'
+    use 'kyazdani42/nvim-web-devicons'
+    use 'rafcamlet/coc-nvim-lua'
 
     use {'neoclide/coc.nvim', branch = 'release' }
     use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
-    use 'p00f/nvim-ts-rainbow'
+    --use 'p00f/nvim-ts-rainbow'
 
     --use 'neovim/nvim-lspconfig'
     --use 'hrsh7th/nvim-compe'
