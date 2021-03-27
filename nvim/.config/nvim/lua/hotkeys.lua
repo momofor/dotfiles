@@ -40,6 +40,10 @@ utils.map('i' , 'kj' , '<Esc>' , {noremap = true})
 
 -- TAB in general mode will move to text buffer
 utils.map('n' , '<TAB>' , ':bnext<CR>' , {noremap = true})
+
+--barbar
+utils.map('n' , '<Leader>P' , ':BufferPick<CR>' , {noremap = true , silent = true})
+utils.map('n' , '<Leader>bl' , ':BufferOrderByLanguage<CR>' , {noremap = true , silent = true})
 -- SHIFT-TAB will go back
 utils.map('n' , '<S-TAB>' , ':bprevious<CR>' , {noremap = true})
 

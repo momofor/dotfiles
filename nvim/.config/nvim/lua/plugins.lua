@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
 
     use {'neoclide/coc.nvim', branch = 'release' }
     use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
+    use 'romgrk/barbar.nvim'
     --use 'p00f/nvim-ts-rainbow'
 
     --use 'neovim/nvim-lspconfig'

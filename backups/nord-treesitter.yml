@@ -1,5 +1,5 @@
 information:
-  name: nord
+  name: nord-treesitter
   background: dark
   author: "momofor"
 
@@ -393,6 +393,9 @@ highlights:
   TelescopeMatching: "nord8"
   # Used for the prompt prefix
   TelescopePromptPrefix: "nord7"
+
+  # barbar
+  BufferCurrentMod: "nord14"
 
   # lspsaga
   #LspSagaFinderSelection: ""
