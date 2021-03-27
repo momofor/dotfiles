@@ -31,5 +31,3 @@ require'nvim-treesitter.configs'.setup {
 }
 --utils.map("n" , "<Leader>m" , ":lua print(require'nvim-treesitter.ts_utils'.get_node_at_cursor()) <CR>"  , {})
 utils.map("n" , "<Leader>cg" , ':TSHighlightCapturesUnderCursor<CR>' , {noremap = true} )
-
-local function hello(hi , bye)
