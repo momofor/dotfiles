@@ -23,6 +23,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 require("my_utils")
+--require("my_widgets.button_widget")
 -- }}}
 
 -- {{{  Error handling
