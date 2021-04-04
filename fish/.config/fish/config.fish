@@ -22,13 +22,14 @@ end
 ################START OF EXPORTS##################################
 #exports
 set -x EDITOR nvim
-set -x BROWSER firefox
+set -x BROWSER firefox-trunk
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
 alias deno "/home/momofor/.deno/bin/deno"
 alias l "exa-linux-x86_64 -la"  
 alias obsidian "~/Applications/Obsidian-0.10.13_0632d66a95a85ab51525bd7325b85c39.AppImage"
 alias runescapeu "flatpak run com.jagex.RuneScape "
+alias devdocs "~/scripts/devdocs-run.sh"
 ###############END OF EXPORTS############################################
 starship init fish | source
 
