@@ -9,18 +9,18 @@ add_newline = false
 #[package]
 #disabled = true
 [line_break]
-disabled = true
+disabled = false
 # git status
 [git_status]
 conflicted = "⚔️ "
 ahead = "×${count}  "
 behind = "×${count} "
 diverged = " ×${ahead_count} 🐢 ×${behind_count}🔱 🏎️ 💨"
-untracked = " ?×${count} "
+untracked = "${count}? "
 stashed = "📦 "
-modified = "${count}*m  "
-staged = "${count}*s  "
-renamed = "${count}*r "
-deleted = "${count}*x  "
-style = "bright-white"
-format = "$all_status$ahead_behind"
+modified = "${count}! "
+staged = "${count}s "
+renamed = "${count}r "
+deleted = "${count}✘ "
+style = "bold red"
+format = "[$all_status$ahead_behind]($style)"
