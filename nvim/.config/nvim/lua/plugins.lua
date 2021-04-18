@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
     use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
     use 'romgrk/barbar.nvim'
     use 'tversteeg/registers.nvim'
+    use 'dag/vim-fish'
     --use 'p00f/nvim-ts-rainbow'
 
     --use 'neovim/nvim-lspconfig'
