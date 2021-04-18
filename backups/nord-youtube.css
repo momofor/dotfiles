@@ -364,3 +364,7 @@ ytd-simple-menu-header-renderer {
 #vote-count-middle.ytd-comment-action-buttons-renderer {
 	color: #d8dee9;
 }
+
+ytd-search.style-scope {
+	background: #2e3440 !important;
+}

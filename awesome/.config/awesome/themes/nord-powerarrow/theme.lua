@@ -187,7 +187,7 @@ theme.mail = lain.widget.imap({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. mem_now.used .. "MB ")) 
+        widget:set_markup(markup.font(theme.font, " " .. mem_now.used .. "MB "))
     end
 })
 

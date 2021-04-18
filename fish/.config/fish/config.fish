@@ -33,6 +33,9 @@ alias obsidian "~/Applications/Obsidian-0.10.13_0632d66a95a85ab51525bd7325b85c39
 alias runescapeu "flatpak run com.jagex.RuneScape "
 alias devdocs "~/scripts/devdocs-run.sh"
 alias c z
+alias gp "git pull"
+alias gpo "git pull origin master"
+alias gcl "git clone"
 ###############END OF EXPORTS############################################
 starship init fish | source
 
