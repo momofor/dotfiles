@@ -450,7 +450,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- useless gaps
 
-beautiful.useless_gap = 4
+beautiful.useless_gap = 2
 --rounded corners
 client.connect_signal("manage", function (c)
     c.shape = Custom_shape

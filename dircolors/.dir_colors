@@ -176,6 +176,7 @@ STICKY 04;37;44
 .html 01;03;4;46
 .js 01;36
 .json 03;36
+*dockerFile 03;36
 .yml 03;34
 .sh 02;36
 .lua 01;36
@@ -201,6 +202,8 @@ STICKY 04;37;44
 .BAK 02;37
 .log 02;37
 .log 02;37
+.gitignore 02;37
+.dockerignore 02;37
 .old 02;37
 .OLD 02;37
 .orig 02;37

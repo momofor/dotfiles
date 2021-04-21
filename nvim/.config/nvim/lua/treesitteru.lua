@@ -6,6 +6,7 @@ require'nvim-treesitter.configs'.setup {
         enable = true,
         disable = { "html", "css" },
     },
+    fold = {enable = true} ,
     incremental_selection = {enable = true },
     textobjects = {
         select = {

@@ -24,6 +24,7 @@ local variables_glabal = {
     gist_open_browser_after_post = 1 ,
     gist_detect_filetype = 1 ,
     gist_browser_command = 'firefox %URL%' ,
+    vimtex_view_method = "zathura.vim"
 }
 
 utils.set_var(vim.g , variables_glabal)
