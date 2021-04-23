@@ -1,10 +1,10 @@
-#!/usr/bin/mcs
+using System
 namespace HelloWorld
 {
 class App {
     public static void Main(string[] args) {
         int addition = AddNumbers(1 , 2);
-        System.Console.WriteLine(addition);
+        Console.WriteLine(addition);
     }
     public static int AddNumbers(int num1 , int num2)
     {

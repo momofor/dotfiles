@@ -58,5 +58,9 @@ function M.lines_match(regexp, path)
     end
     return lines
 end
+--copy files
+function M.cp(file , dest)
+    M.exec("cp " .. file .. " " .. dest)
+end
 
 return M

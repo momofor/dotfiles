@@ -1,5 +1,3 @@
 #! /usr/bin/fish
-
-echo "where do you want to cd"
-read  text
-cd $text
+set me (echo woot | lolcat)
+$me
