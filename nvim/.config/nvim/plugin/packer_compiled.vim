@@ -79,23 +79,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["coc-nvim-lua"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/coc-nvim-lua"
+  },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/coc.nvim"
+  },
   ["codi.vim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/codi.vim"
-  },
-  ["compe-tabnine"] = {
-    after_files = { "/home/momofor/.local/share/nvim/site/pack/packer/opt/compe-tabnine/after/plugin/compe_tabnine.vim" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/compe-tabnine"
-  },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/emmet-vim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   nerdcommenter = {
     loaded = true,
@@ -112,14 +106,6 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
-  },
-  ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-compe"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
