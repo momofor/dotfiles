@@ -8,11 +8,13 @@ function M.is_nil(opt)
 end
 
 -- returns user input
-function M.input(opts)
+function M.input(opts , message )
+    message = message or ""
     if (M.is_nil(opts)) then
+        io.write(message)
         return io.read()
     end
-
+    io.write(message)
     return io.read(opts)
 end
 
