@@ -62,5 +62,11 @@ end
 function M.cp(file , dest)
     M.exec("cp " .. file .. " " .. dest)
 end
+--get output of command
+function M.get_output(command)
+    local first = io.popen(command)
+    local output = first:read("*all")
+    return output
+end
 
 return M
