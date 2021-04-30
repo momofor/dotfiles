@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     --use 'neovim/nvim-lspconfig'
     --use 'hrsh7th/nvim-compe'
     --use 'glepnir/lspsaga.nvim'
+    --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
     --use 'mattn/emmet-vim'
 end)

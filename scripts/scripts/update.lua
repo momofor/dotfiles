@@ -2,9 +2,12 @@
 
 local _ = require("_helpers")
 local current_user = os.getenv("USER")
-print("Welcome " .. current_user .. " to my install script what do you to do")
-print("(U)pdate , (U)date&(C)lean , (C)lean , (P)urge a program , (L)ist programs , (L)ook for (P)ackage")
-local user_choice = _.input(nil , "command: ")
+local args = {...}
+if args[1] == nil then
+    print("Welcome " .. current_user .. " to my install script what do you to do")
+    print("(U)pdate , (U)date&(C)lean , (C)lean , (P)urge a program , (L)ist programs , (L)ook for (P)ackage")
+    User_choice = _.input(nil , "command: ")
+end
 
 local function update()
     print("updating all software \n\n")
@@ -18,34 +21,39 @@ local function clean()
 end
 
 local function purge()
-    local app = _.input(nil , "name the program")
+    local app = _.input(nil , "name the program:")
     _.exec("sudo apt purge " .. app)
     print("Cleaning cache\n\n")
     _.exec("sudo apt autoremove")
     _.exec("sudo apt autoclean")
 end
 
-if user_choice == "UC" then
+if User_choice == "UC" or args[1] == "UC" then
     print("cleaninig cache")
     update()
     clean()
 
-    elseif user_choice == "U" then
+    elseif User_choice == "U" or args[1] == "U" then
         update()
 
-    elseif user_choice == "P" then
+    elseif User_choice == "P" or args[1] == "P" then
         purge()
 
-    elseif user_choice == "C" then
+    elseif User_choice == "C" or args[1] == "C" then
         clean()
 
-    elseif user_choice == "L" then
+    elseif User_choice == "L" or args[1] == "L" then
         local output = _.get_output("sudo apt list --installed 2>/dev/null | wc -l")
         print(string.format("you have %d packages" , output))
-    elseif user_choice == "LP" then
-        --io.write("name the package:")
-        local package = _.input(nil , "name it: ")
-        local found = _.get_output("sudo apt list --installed | rg " .. package)
-        print(string.format("found the following packages %s" , found))
 
+    elseif User_choice == "LP" or args[1] == "LP" then
+        if args[2] ~= nil then
+            local package = args[2]
+            local found = _.get_output("sudo apt list --installed | rg " .. package)
+            print(string.format("found the following packages %s" , found))
+        else
+            local package = _.input(nil , "name it: ")
+            local found = _.get_output("sudo apt list --installed | rg " .. package)
+            print(string.format("found the following packages %s" , found))
+        end
 end

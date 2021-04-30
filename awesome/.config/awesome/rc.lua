@@ -361,15 +361,14 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { name = "About Firefox Nightly" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] , properties = {floating = true} } },
-
-    { rule = { name = "Spotify Free" , class = "Spotify" },
-      properties = { screen = 1, tag = awful.util.tagnames[3] } },
-
-    { rule = { class = "Gimp", role = "gimp-image-window" },
+    { rule = { class = "Gimp"},
           properties = { maximized = true } },
-}
+
+    { rule = { class = "Spotify"},
+          properties = { maximized = true } },
+},
+
+
 -- }}}
     -- Set Firefox to always map on the first tag on screen 1.
 -- }}}

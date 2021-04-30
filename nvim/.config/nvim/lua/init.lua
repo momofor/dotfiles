@@ -8,6 +8,7 @@ require("plugins")
 --require("lsp-hotkeys")
 --require("tsserveru")
 --require("lspsaga-config")
+--require("navigator").setup()
 require'colorizer'.setup()
 
 require("variables")
