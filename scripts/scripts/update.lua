@@ -20,8 +20,7 @@ local function clean()
     _.exec("sudo apt autoclean")
 end
 
-local function purge()
-    local app = _.input(nil , "name the program:")
+local function purge(app)
     _.exec("sudo apt purge " .. app)
     print("Cleaning cache\n\n")
     _.exec("sudo apt autoremove")
@@ -37,7 +36,12 @@ if User_choice == "UC" or args[1] == "UC" then
         update()
 
     elseif User_choice == "P" or args[1] == "P" then
-        purge()
+        if args[2] ~= nil then
+            purge(args[2])
+        else
+            local app = _.input(nil ,"name the app: ")
+            purge(app)
+        end
 
     elseif User_choice == "C" or args[1] == "C" then
         clean()
@@ -50,10 +54,12 @@ if User_choice == "UC" or args[1] == "UC" then
         if args[2] ~= nil then
             local package = args[2]
             local found = _.get_output("sudo apt list --installed | rg " .. package)
-            print(string.format("found the following packages %s" , found))
+            _.format("found the following packages %s" , found)
         else
             local package = _.input(nil , "name it: ")
             local found = _.get_output("sudo apt list --installed | rg " .. package)
-            print(string.format("found the following packages %s" , found))
+            _.format("found the following packages %s" , found)
         end
-end
+    else
+        print("please enter a valid value")
+    end

@@ -70,5 +70,9 @@ function M.get_output(command)
     local output = first:read("*all")
     return output
 end
+-- write formated message
+function M.format(message , vars)
+    print(string.format(message , vars))
+end
 
 return M
