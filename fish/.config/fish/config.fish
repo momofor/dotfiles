@@ -26,7 +26,6 @@ set -x EDITOR nvim
 set -x BROWSER firefox-trunk
 
 set -U fish_user_paths /home/momofor/.cargo/bin/
-set -U LUA_PATH "/home/momofor/.config/awesome/?.lua;;"
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
 alias deno "/home/momofor/.deno/bin/deno"
