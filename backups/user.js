@@ -22,4 +22,4 @@ user_pref("toolkit.telemetry.shutdownpingsender.enabled ", false);
 user_pref("ontent.notify.interval ", 500000);
 user_pref("content.notify.ontimer ", true);
 user_pref("content.switch.threshold ", 250000);
-user_pref("browser.cache.memory.capacity ", 65536);
+user_pref("browser.cache.memory.capacity ", 2048000);
