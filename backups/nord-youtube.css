@@ -170,9 +170,10 @@ ytd-rich-grid-renderer {
 	background-color: #2e3340;
 }
 
-.html5-video-player.ytp-autonav-endscreen-cancelled-state {
+/* .html5-video-player.ytp-autonav-endscreen-cancelled-state {
 	border-radius: 20px;
 }
+*/
 
 #content.ytd-rich-section-renderer > .ytd-rich-section-renderer {
 	display: none;
@@ -367,4 +368,7 @@ ytd-simple-menu-header-renderer {
 
 ytd-search.style-scope {
 	background: #2e3440 !important;
+}
+ytd-page-manager > .ytd-page-manager {
+	background-color: #2e3440 !important;
 }
