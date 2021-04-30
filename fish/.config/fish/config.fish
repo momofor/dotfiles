@@ -25,7 +25,7 @@ zoxide init fish | source
 set -x EDITOR nvim
 set -x BROWSER firefox-trunk
 
-set -U fish_user_paths /home/momofor/.cargo/bin/
+set -U fish_user_paths /home/momofor/.cargo/bin/ $fish_user_paths
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
 alias deno "/home/momofor/.deno/bin/deno"
