@@ -25,6 +25,10 @@ user_pref("content.switch.threshold ", 250000);
 user_pref("browser.cache.memory.capacity ", 2048000);
 user_pref("network.prefetch-next", true);
 user_pref("gfx.webrender.all ", true);
+/* performance */
+user_pref("dom.ipc.processCount", 16);
+user_pref("network.http.max-persistent-connections-per-server", 10);
+user_pref("network.http.max-connections", 1500);
 
 /*
  * fast fox
