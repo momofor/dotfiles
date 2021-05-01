@@ -80,5 +80,16 @@ function M.map(arr)
         arr[#arr+1] = key
     end
 end
+-- check if element exists in array
+function M.is_in_array(element , array)
+    if element == nil then return nil end
+    for _,item in pairs(array) do
+        if item == element then
+            return element
+        else
+            return nil
+    end
+end
+end
 
 return M
