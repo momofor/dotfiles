@@ -74,5 +74,11 @@ end
 function M.format(message , vars)
     print(string.format(message , vars))
 end
+--map over array
+function M.map(arr)
+    for _,key in pairs(arr) do
+        arr[#arr+1] = key
+    end
+end
 
 return M

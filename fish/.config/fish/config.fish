@@ -38,7 +38,7 @@ alias gp "git pull"
 alias gpo "git pull origin master"
 alias gcl "git clone"
 alias please "sudo"
-alias myip "ip -4 -brief address"
+alias myip "ip -4 -brief -c address"
 alias mydns "nslookup gnu.org"
 ###############END OF EXPORTS############################################
 starship init fish | source

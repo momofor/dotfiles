@@ -60,6 +60,7 @@ if User_choice == "UC" or args[1] == "UC" then
             local found = _.get_output("sudo apt list --installed | rg " .. package)
             _.format("found the following packages %s" , found)
         end
+
     else
         print("please enter a valid value")
     end
