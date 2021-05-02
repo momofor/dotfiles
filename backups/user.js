@@ -19,9 +19,12 @@ user_pref("toolkit.telemetry.newprofileping.enabled ", false);
 user_pref("toolkit.telemetry.unified ", false);
 user_pref("toolkit.telemetry.updateping.enabled ", false);
 user_pref("toolkit.telemetry.shutdownpingsender.enabled ", false);
-user_pref("ontent.notify.interval ", 500000);
+
+user_pref("content.notify.interval ", 200000);
 user_pref("content.notify.ontimer ", true);
 user_pref("content.switch.threshold ", 250000);
+user_pref("content.max.tokenizing.time", 600000);
+user_pref("browser.display.show_image_placeholders ", false);
 user_pref("browser.cache.memory.capacity ", 2048000);
 user_pref("network.prefetch-next", true);
 user_pref("gfx.webrender.all ", true);

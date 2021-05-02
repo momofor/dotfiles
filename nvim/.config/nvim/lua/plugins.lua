@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
     use 'tversteeg/registers.nvim'
     use 'dag/vim-fish'
     use 'lervag/vimtex'
+    use 'sindrets/diffview.nvim'
     --use 'p00f/nvim-ts-rainbow'
 
     --use 'neovim/nvim-lspconfig'

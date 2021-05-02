@@ -40,6 +40,7 @@ alias gcl "git clone"
 alias please "sudo"
 alias myip "ip -4 -brief -c address"
 alias mydns "nslookup gnu.org"
+abbr cht curl cht.sh/
 ###############END OF EXPORTS############################################
 starship init fish | source
 
