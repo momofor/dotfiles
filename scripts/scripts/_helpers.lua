@@ -91,5 +91,13 @@ function M.is_in_array(element , array)
     end
 end
 end
+-- kind of a fake switch statement from clang
+function M.switch(choice , case)
+    if case[choice] then
+        case[choice]()
+    else
+        case["default"]()
+    end
+end
 
 return M

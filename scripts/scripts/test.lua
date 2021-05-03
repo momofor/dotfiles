@@ -1,10 +1,16 @@
 #! /usr/bin/env luajit
 local _h = require("_helpers")
+local args = {...}
+local choice = args[1] or _h.input(nil , "write your choice: ")
 
-local test = {
-    "nice" ,
-    "cool" ,
-    "man " ,
-    "wow"
+local function niceu()
+        print("hello world")
+    end
+local cases = {
+    hello = niceu ,
+    nice = function ()
+        print("nice person")
+    end ,
 }
-print(_h.is_in_array("man" , test))
+
+_h.switch(choice , cases)
