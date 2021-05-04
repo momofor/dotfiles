@@ -111,5 +111,14 @@ function M.switch(choice , case)
         case["default"]()
     end
 end
+-- this was very hard
+local function contact(stringu , arr)
+    new_kid = stringu
+    for words in string.gmatch(new_kid, "${%a+}") do
+        local testvar = string.gsub(words , "[${}]" , "")
+        new_kid = new_kid:gsub("${" .. testvar .. "}" , arr[testvar])
+    end
+    print(new_kid)
+end
 
 return M
