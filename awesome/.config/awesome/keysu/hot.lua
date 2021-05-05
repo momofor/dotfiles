@@ -166,6 +166,13 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
+    --test
+    awful.key({ altkey, "Shift"   }, "k",     function () awful.client.incwfact(-0.025)          end,
+              {description = "increase master width factor", group = "layout"}),
+
+    awful.key({ altkey, "Shift"   }, "j",     function () awful.client.incwfact(0.025)          end,
+              {description = "increase master width factor", group = "layout"}),
+
     awful.key({ altkey, "Shift"   }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,

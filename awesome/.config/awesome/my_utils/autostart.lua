@@ -3,7 +3,6 @@ local auto_apps = {
     '/usr/bin/setxkbmap -layout dvp' ,
     '/usr/bin/setxkbmap -option "caps:swapescape"' ,
     '~/picom/build/src/picom --experimental-backends' ,
-    'tmux kill-server' ,
     'kitty -e tmux' ,
     'firefox-trunk'
 }
