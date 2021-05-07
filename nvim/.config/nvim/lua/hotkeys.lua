@@ -75,6 +75,7 @@ utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true}
 utils.map("n" , "gh" , ":Lspsaga lsp_finder<CR>" , {noremap = true , silent = true} )
 utils.map("n" , "<Leader>gr" , ":lua require('lspsaga.rename').rename()<CR>" , {noremap = true , silent = true})
 utils.map("n" , "gp" , ":Lspsaga preview_definition<CR>" , {noremap = true , silent = true})
+utils.map("n" , "<Leader>AU" , ":ArduinoUpload<CR>" , {noremap = true })
 
 --utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
 --utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = true , expr = true})

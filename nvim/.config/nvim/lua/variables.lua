@@ -18,13 +18,13 @@ local variables_glabal = {
     } ,
     airline_theme = "nord" ,
     nvcode_termcolors = 256 ,
-    nord_cursor_line_number_background = 1 ,
-    nord_italic = 1 ,
+    --nord_cursor_line_number_background = 1 ,
+    --nord_italic = 1 ,
     --gist_use_password_in_gitconfig = 1 ,
-    gist_open_browser_after_post = 1 ,
-    gist_detect_filetype = 1 ,
-    gist_browser_command = 'firefox %URL%' ,
-    OmniSharp_highlighting = 0
+    --gist_open_browser_after_post = 1 ,
+    --gist_detect_filetype = 1 ,
+    --gist_browser_command = 'firefox %URL%' ,
+    --OmniSharp_highlighting = 0
 }
 
 utils.set_var(vim.g , variables_glabal)

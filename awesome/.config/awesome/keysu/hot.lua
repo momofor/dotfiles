@@ -168,10 +168,10 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "increase master width factor", group = "layout"}),
     --test
     awful.key({ altkey, "Shift"   }, "k",     function () awful.client.incwfact(-0.025)          end,
-              {description = "increase master width factor", group = "layout"}),
+              {description = "increase current client height factor", group = "layout"}),
 
     awful.key({ altkey, "Shift"   }, "j",     function () awful.client.incwfact(0.025)          end,
-              {description = "increase master width factor", group = "layout"}),
+              {description = "decrease current client height factor", group = "layout"}),
 
     awful.key({ altkey, "Shift"   }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),

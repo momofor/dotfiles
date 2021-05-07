@@ -1,7 +1,7 @@
 #! /usr/bin/env luajit
 
 local _ = require("_helpers")
-local colors , bgs = require("_colors")
+local colors = require("_colors")
 
 local ui = {Current = 1 , words = {} , functions = {}}
 

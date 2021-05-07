@@ -10,7 +10,8 @@ end
 
 
 return require('packer').startup(function(use)
-    use 'jiangmiao/auto-pairs'
+    --use 'jiangmiao/auto-pairs'
+    --
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'arcticicestudio/nord-vim'
@@ -24,12 +25,17 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
     use 'nathanaelkane/vim-indent-guides'
     use 'norcalli/nvim-colorizer.lua'
-    use 'OmniSharp/omnisharp-vim'
+
+    --use 'OmniSharp/omnisharp-vim'
+    --
     use 'christianchiarulli/nvcode-color-schemes.vim'
+
     use 'nvim-treesitter/nvim-treesitter' -- We recommend updating the parsers on update
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    --use 'nvim-treesitter/nvim-treesitter-textobjects'
+    --
     use 'nvim-treesitter/playground'
-    use 'metakirby5/codi.vim'
+
+    --use 'metakirby5/codi.vim'
 
     --use {
         --'preservim/nerdtree' ,
@@ -39,17 +45,25 @@ return require('packer').startup(function(use)
             --'tiagofumo/vim-nerdtree-syntax-highlight'
         --}
     --}
-    use 'kyazdani42/nvim-tree.lua'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'rafcamlet/coc-nvim-lua'
+    --
+    --use 'kyazdani42/nvim-tree.lua'
+    --use 'kyazdani42/nvim-web-devicons'
+    --use 'rafcamlet/coc-nvim-lua'
 
     use {'neoclide/coc.nvim', branch = 'release' }
-    use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
-    use 'romgrk/barbar.nvim'
-    use 'tversteeg/registers.nvim'
-    use 'dag/vim-fish'
-    use 'lervag/vimtex'
-    use 'sindrets/diffview.nvim'
+
+    --use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
+    --use 'romgrk/barbar.nvim'
+    --use 'tversteeg/registers.nvim'
+    --use 'dag/vim-fish'
+    --
+    --use 'lervag/vimtex'
+    --
+    --use 'sindrets/diffview.nvim'
+    --
+    use 'stevearc/vim-arduino'
+    use 'jpalardy/vim-slime'
+
     --use 'p00f/nvim-ts-rainbow'
 
     --use 'neovim/nvim-lspconfig'
