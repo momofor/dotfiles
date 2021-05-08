@@ -112,7 +112,7 @@ function M.switch(choice , case)
     end
 end
 -- this was very hard
-function M.contact(stringu , arr)
+local function contact(stringu , arr)
     new_kid = stringu
     for words in string.gmatch(new_kid, "${%a+}") do
         local testvar = string.gsub(words , "[${}]" , "")

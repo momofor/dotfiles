@@ -8,7 +8,7 @@ int hello(lua_State *L) {
 }
 
         // takes file names as arguments to the program
-int main(int argc, char ** argv){
+int main(int argc, char **argv){
 //iterate all files and execute
     // makes a pointer for each file
     const char *file = argv[1];
