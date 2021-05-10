@@ -17,10 +17,17 @@
 --local niceu = t:new(nil , cur , wordsu , func)
 --niceu()
 --
+
 local bigboi = {
     nice = "test complete" ,
     testu = "oh noo"
 }
 local test = "hello ${nice} you are cool like ${testu}"
 I = 1
-contact(test , bigboi)
+local _h = require("_helpers")
+
+local function testu(a , b)
+    return a + b
+end
+testu(1 , 2)
+

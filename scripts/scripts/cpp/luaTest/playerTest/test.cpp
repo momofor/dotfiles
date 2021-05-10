@@ -1,16 +1,7 @@
 #include <lua5.3/lua.hpp>
 #include <iostream>
 #include <stdio.h>
-
-bool checkLua(lua_State *L , int r) {
-    if (r != LUA_OK) 
-    {
-        std::string errormsg = lua_tostring(L, -1);
-        std::cout << errormsg <<  std::endl;
-        return false;
-    }
-    return true;
-}
+#include "luaLib/headers/luaLib.hpp"
 
 std::string getPlayer(lua_State *L , char *field ) 
 {
@@ -19,14 +10,20 @@ std::string getPlayer(lua_State *L , char *field )
     if (lua_isstring(L, -1))
     {
         return lua_tostring(L, -1);
-        lua_remove(L, -2);
+        lua_pop(L, 1);
     }else if (lua_isinteger(L, -1))
     {
         int rtn = lua_tointeger(L, -1);
         return lua_tostring(L, rtn);
-        lua_remove(L, -2);
+        lua_pop(L, 1);
     }
     return "";
+}
+
+int hello(lua_State *L)
+{
+    std::cout << "Hello World I mean lua from C++" << std::endl;
+    return 0;
 }
 
 int main() 
@@ -37,17 +34,21 @@ int main()
         int age;
         int level;
     }player;
+    luaLib Lib;
 
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
 
-    if (checkLua(L, luaL_dofile(L, "player.lua")))
+    lua_register(L, "nice", hello);
+
+    if (Lib.checkLua(L, luaL_dofile(L, "player.lua")))
     {
         player.name = getPlayer(L, (char *)"name");
         player.age = std::stoi(getPlayer(L, (char *)"age"));
         player.level = std::stoi(getPlayer(L, (char * )"level"));
 
-        std::cout <<"you are " << player.name << " and you are this old " << player.age << " and your level is " << player.level << std::endl;
+        std::cout <<"you are " << player.name << " and you are " << player.age  << " years old and your level is " << player.level << std::endl;
+
     }
     return 0;
 }

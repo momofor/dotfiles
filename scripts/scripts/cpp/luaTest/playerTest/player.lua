@@ -1,5 +1,6 @@
 player = {
-    name = "mohammed" ,
-    age = 14 ,
-    level = 100
+    name = "mohammed WHO?" ,
+    age = 90 ,
+    level = 10000
 }
+nice()
