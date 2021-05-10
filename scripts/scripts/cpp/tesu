@@ -1,4 +1,4 @@
-#include <Arduino.h>
+#include "Arduino.h"
 
 int led1 = 9;
 int led2 = 10;
@@ -22,13 +22,13 @@ void blinkTwo(int firstLed , int secondLed , int time)
 
     digitalWrite(firstLed, LOW);
     digitalWrite(secondLed, HIGH);
-    delay(300);
+    delay(time);
     digitalWrite(firstLed, LOW);
     digitalWrite(secondLed, LOW);
 }
 
 void loop()
 {
-    blinkTwo(led1, led2, 300);
-    blinkTwo(led3, led4, 300);
+    blinkTwo(led1, led2, 500);
+    blinkTwo(led3, led4, 500);
 }

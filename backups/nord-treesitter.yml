@@ -178,7 +178,7 @@ highlights:
   TSAttribute: "nord8 "
   #end
   # tested
-  TSNamespace: "#FF00FF"
+  TSNamespace: "nord9"
   # Functions
   # test
   TSFuncBuiltin: "nord9"
@@ -206,7 +206,7 @@ highlights:
   TSOperator: "nord9"
   TSException: "nord9"
   # css odd attribute
-  TSType: "nord7 - bi "
+  TSType: "nord7 - i "
   TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
