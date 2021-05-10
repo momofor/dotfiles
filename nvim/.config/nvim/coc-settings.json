@@ -12,27 +12,6 @@
 		"html",
 		"css",
 		"markdown"
-	],
-
-	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": [
-				"c",
-				"cc",
-				"cpp",
-				"c++",
-				"objc",
-				"objcpp",
-				"ino",
-				"arduino"
-			],
-			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/ccls"
-				}
-			}
-		}
-	}
+  ],
+  "clangd.path": "/home/momofor/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 }
