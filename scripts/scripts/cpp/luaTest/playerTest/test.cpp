@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include "luaLib/headers/luaLib.hpp"
 
-std::string getPlayer(lua_State *L , char *field ) 
+std::string getPlayer(lua_State *L , char *field ,char* globalName ) 
 {
-    lua_getglobal(L, "player");
+    lua_getglobal(L, globalName);
     lua_getfield(L , -1 , field);
     if (lua_isstring(L, -1))
     {
@@ -43,9 +43,9 @@ int main()
 
     if (Lib.checkLua(L, luaL_dofile(L, "player.lua")))
     {
-        player.name = getPlayer(L, (char *)"name");
-        player.age = std::stoi(getPlayer(L, (char *)"age"));
-        player.level = std::stoi(getPlayer(L, (char * )"level"));
+        player.name = getPlayer(L, (char *)"name",(char *)"player");
+        player.age = std::stoi(getPlayer(L, (char *)"age",(char *)"player"));
+        player.level = std::stoi(getPlayer(L, (char * )"level",(char *)"player"));
 
         std::cout <<"you are " << player.name << " and you are " << player.age  << " years old and your level is " << player.level << std::endl;
 

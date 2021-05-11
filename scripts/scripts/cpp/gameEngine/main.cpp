@@ -1,10 +1,30 @@
 #include "imports.hpp"
-#include "gameLib/headers/test.hpp"
+#include "gameLib/headers/gameLib.hpp"
 
 int main() 
 {
-    testu noice;
-    cout << "Hello world !" << endl;
-    cout << noice.Who(1, 2) << endl;
+    GameLib lib;
+    std::vector<std::string> noice {
+        "coolu yes " ,
+        "No yes nice"
+    };
+
+    std::string no = "You only have two options be nice no";
+    lib.choice(no, noice);
+    char userChoice;
+    //std::cin >> userChoice;
+    //if (userChoice == 1)
+    //{
+        //std::cout << "You are Very Very cool" << std::endl;
+    //}else if (userChoice == 2) {
+        //std::cout << "You are Laaame" << std::endl;
+    //}
+    for (int i = 1; i < 10; i++)
+    {
+        std::cin >> userChoice;
+        lib.move(noice, userChoice);
+    }
+    
+
     return 0;
 }

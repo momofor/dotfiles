@@ -1,3 +1,4 @@
+#include <cctype>
 #include <iostream>
 #include <stdio.h>
 #include "../get.hpp"
@@ -11,5 +12,14 @@ string Lib::ask_get(string text)
     string noice;
     getline(cin, noice);
     return noice;
+}
+
+string Lib::CaPiTaLiZe(string word) {
+    for (int i = 0; i < word.length(); i++) {
+        if (i % 2 == 0) {
+            word[i] = toupper(word[i]);
+        }
+    }
+    return word;
 }
 

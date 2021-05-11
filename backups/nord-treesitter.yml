@@ -206,7 +206,7 @@ highlights:
   TSOperator: "nord9"
   TSException: "nord9"
   # css odd attribute
-  TSType: "nord7 - i "
+  TSType: "nord7"
   TSTypeBuiltin: "nord9 - bi"
   TSStructure: "#FF00FF"
   TSInclude: "nord9"
