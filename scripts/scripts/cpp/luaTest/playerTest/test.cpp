@@ -13,11 +13,10 @@ std::string getPlayer(lua_State *L , char *field ,char* globalName )
         lua_pop(L, 1);
     }else if (lua_isinteger(L, -1))
     {
-        int rtn = lua_tointeger(L, -1);
-        return lua_tostring(L, rtn);
+        return lua_tostring(L, -1);
         lua_pop(L, 1);
     }
-    return "";
+    return " ";
 }
 
 int hello(lua_State *L)

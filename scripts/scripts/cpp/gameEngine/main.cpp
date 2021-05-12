@@ -19,12 +19,8 @@ int main()
     //}else if (userChoice == 2) {
         //std::cout << "You are Laaame" << std::endl;
     //}
-    for (int i = 1; i < 10; i++)
-    {
-        std::cin >> userChoice;
-        lib.move(noice, userChoice);
-    }
-    
-
+    std::cin >> userChoice;
+    lib.move(noice, userChoice);
+    std::cout << userChoice;
     return 0;
 }

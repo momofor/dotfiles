@@ -12,6 +12,11 @@
 		"html",
 		"css",
 		"markdown"
-  ],
-  "clangd.path": "/home/momofor/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+	],
+	"clangd.path": "/home/momofor/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
+	"Lua.diagnostics.globals": ["vim"],
+	"Lua.workspace.library": {
+		"vim-lsp": "/usr/local/share/nvim/runtime/lua/vim/lsp",
+		"vim-runtime": "/usr/local/share/nvim/runtime/lua"
+	}
 }
