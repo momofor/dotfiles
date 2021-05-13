@@ -1,5 +1,4 @@
-#include "imports.hpp"
-#include <ostream>
+#include "./imports.hpp"
 
 struct test {
     float x;
@@ -18,6 +17,7 @@ struct test {
         return add(other);
     }
 };
+
 std::ostream& operator<<(std::ostream &stream , const test &other)
 {
     stream << other.x << " " << "noice " << other.y << std::endl;
