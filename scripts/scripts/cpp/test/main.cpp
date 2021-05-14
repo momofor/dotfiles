@@ -39,6 +39,8 @@ int main() {
     std::cout << yayeet;
     std::cout << "Hello world this is addition" << 1 + 13 << std::endl;
     std::vector<int> noice;
+    std::string nono = lib.CaPiTaLiZe("premake is very noice");
+    std::cout << nono << "OH NONO" << std::endl;
 
     std::cout << nice << std::endl;
     return 0;

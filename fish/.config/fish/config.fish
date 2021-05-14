@@ -26,6 +26,7 @@ set -x EDITOR nvim
 set -x BROWSER firefox-trunk
 set -x PATH ~/.platformio/penv/bin $PATH
 set -x PATH ~/premake-core/bin/release/ $PATH
+set -x PATH ~/.other/programs/bin $path
 
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
