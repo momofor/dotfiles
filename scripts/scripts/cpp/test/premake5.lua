@@ -1,19 +1,21 @@
 -- premake5.lua
 workspace "test"
-    configurations { "Debug", "Release" }
-    links {"/home/momofor/scripts/cpp/test/libs/Lib.a"}
+    configurations { "Debug", "noice" }
+    links {"MYLIB"}
 
 project "test"
     kind "ConsoleApp"
     language "C++"
-    targetdir "build"
 
     files { "**.hpp", "**.cpp" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }
         symbols "On"
+        libdirs {"libs"}
 
-    filter "configurations:Release"
+    filter "configurations:noice"
         defines { "NDEBUG" }
         optimize "On"
+        libdirs {"libs"}
+

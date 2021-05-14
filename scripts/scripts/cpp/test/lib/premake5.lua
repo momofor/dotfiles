@@ -1,10 +1,11 @@
 -- premake5.lua
-workspace "MYLIB"
+workspace "test"
     configurations { "Release" }
 
 project "MYLIB"
     kind "StaticLib"
     language "C++"
+    targetdir "../libs"
 
     files { "**.hpp", "**.cpp" }
 

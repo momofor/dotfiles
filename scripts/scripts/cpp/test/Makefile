@@ -11,8 +11,8 @@ endif
 ifeq ($(config),debug)
   test_config = debug
 
-else ifeq ($(config),release)
-  test_config = release
+else ifeq ($(config),noice)
+  test_config = noice
 
 else
   $(error "invalid configuration $(config)")
@@ -38,7 +38,7 @@ help:
 	@echo ""
 	@echo "CONFIGURATIONS:"
 	@echo "  debug"
-	@echo "  release"
+	@echo "  noice"
 	@echo ""
 	@echo "TARGETS:"
 	@echo "   all (default)"
