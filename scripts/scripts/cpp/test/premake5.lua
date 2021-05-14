@@ -7,7 +7,7 @@ project "test"
     kind "ConsoleApp"
     language "C++"
 
-    files { "**.hpp", "**.cpp" }
+    files { "src/**.hpp", "src/**.cpp" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }

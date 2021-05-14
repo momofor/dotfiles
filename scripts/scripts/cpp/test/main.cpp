@@ -1,4 +1,4 @@
-#include "./imports.hpp"
+#include "imports.hpp"
 
 struct test {
     float x;
@@ -26,7 +26,7 @@ std::ostream& operator<<(std::ostream &stream , const test &other)
 
 
 int main() {
-    Lib lib;
+    MYLIB::Lib lib;
     std::cout << "hello world" << std::endl;
     string userInput;
     getline(std::cin, userInput);

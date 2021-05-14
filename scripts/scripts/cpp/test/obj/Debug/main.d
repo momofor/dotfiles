@@ -1,5 +1,5 @@
-obj/Debug/main.o: main.cpp imports.hpp ../lib/Lib.hpp
+obj/Debug/main.o: main.cpp imports.hpp lib/Lib.hpp
 
 imports.hpp:
 
-../lib/Lib.hpp:
+lib/Lib.hpp:
