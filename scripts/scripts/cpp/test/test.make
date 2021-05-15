@@ -63,7 +63,9 @@ endif
 GENERATED :=
 OBJECTS :=
 
+GENERATED += $(OBJDIR)/Lib.o
 GENERATED += $(OBJDIR)/main.o
+OBJECTS += $(OBJDIR)/Lib.o
 OBJECTS += $(OBJDIR)/main.o
 
 # Rules
@@ -128,7 +130,10 @@ endif
 # File Rules
 # #############################################
 
-$(OBJDIR)/main.o: src/main.cpp
+$(OBJDIR)/Lib.o: lib/Lib.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/main.o: main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 
