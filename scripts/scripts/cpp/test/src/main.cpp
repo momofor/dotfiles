@@ -5,8 +5,8 @@ struct test {
     float y;
     test(float x, float y)
     {
-        this->x = x;
-        this->y = y;
+        (*this).x = x;
+        (*this).y = y;
     }
     test add(test other)
     {

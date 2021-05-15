@@ -1,5 +1,5 @@
-obj/noice/main.o: main.cpp imports.hpp lib/Lib.hpp
+obj/noice/main.o: src/main.cpp src/imports.hpp src/../lib/Lib.hpp
 
-imports.hpp:
+src/imports.hpp:
 
-lib/Lib.hpp:
+src/../lib/Lib.hpp:

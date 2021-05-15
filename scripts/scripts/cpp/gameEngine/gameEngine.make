@@ -23,7 +23,7 @@ INCLUDES +=
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-LIBS += -lMYLIB
+LIBS += -lgameEngineLib
 LDDEPS +=
 LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
 define PREBUILDCMDS
@@ -35,7 +35,7 @@ endef
 
 ifeq ($(config),debug)
 TARGETDIR = bin/Debug
-TARGET = $(TARGETDIR)/test
+TARGET = $(TARGETDIR)/gameEngine
 OBJDIR = obj/Debug
 DEFINES += -DDEBUG
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -g
@@ -44,7 +44,7 @@ ALL_LDFLAGS += $(LDFLAGS) -Llibs
 
 else ifeq ($(config),noice)
 TARGETDIR = bin/noice
-TARGET = $(TARGETDIR)/test
+TARGET = $(TARGETDIR)/gameEngine
 OBJDIR = obj/noice
 DEFINES += -DNDEBUG
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -O2
@@ -74,7 +74,7 @@ all: $(TARGET)
 
 $(TARGET): $(GENERATED) $(OBJECTS) $(LDDEPS) | $(TARGETDIR)
 	$(PRELINKCMDS)
-	@echo Linking test
+	@echo Linking gameEngine
 	$(SILENT) $(LINKCMD)
 	$(POSTBUILDCMDS)
 
@@ -95,7 +95,7 @@ else
 endif
 
 clean:
-	@echo Cleaning test
+	@echo Cleaning gameEngine
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) rm -f  $(TARGET)
 	$(SILENT) rm -rf $(GENERATED)

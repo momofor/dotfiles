@@ -1,9 +1,9 @@
 -- premake5.lua
-workspace "test"
+workspace "gameEngine"
     configurations { "Debug", "noice" }
-    links {"MYLIB"}
+    links {"gameEngineLib"}
 
-project "test"
+project "gameEngine"
     kind "ConsoleApp"
     language "C++"
 

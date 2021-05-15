@@ -13,17 +13,22 @@ void GameLib::choice(std::string message, std::vector<std::string> messages)
         std::cout << "[" << i+1 << "]" << messages[i] << std::endl;
     }
 }
-void GameLib::change() 
+void GameLib::change(std::vector<std::string> words) 
 {
+    char choice;
+    std::cin >> choice;
+    (*this).move(words , choice);
+
     for (int i = 0; i < (*this).words.size();i++) 
     {
         if ((*this).current == i )
         {
-            std::cout << (*this).words[i] << "is the current one " << std::endl;
+            std::cout << (*this).words[i] << " is the current one ohh yeah " << std::endl;
         }else {
             std::cout << (*this).words[i] << std::endl;
         }
     }
+    std::cout << (*this).current << std::endl;
 }
 
 void GameLib::move(std::vector<std::string> words , char choice)
@@ -32,17 +37,13 @@ void GameLib::move(std::vector<std::string> words , char choice)
     if (choice == 'j')
     {
         (*this).current = (*this).current++;
-        (*this).change();
     }else if (choice == 'k') {
         (*this).current = (*this).current--;
-        (*this).change();
     }else if (choice == 'k' && (*this).current == 0) {
         (*this).current = 0;
-        (*this).change();
         std::cout << "You big dumb" << std::endl;
     }else if (choice == 'j' && (*this).current == words.size()) {
         (*this).current = words.size();
         std::cout << "You small dumb";
-        (*this).change();
     }
 }
