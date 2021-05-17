@@ -8,8 +8,8 @@ utils.map("n" , "<C-k> " , "<cmd>lua vim.lsp.buf.signature_help()<CR>" , {norema
 utils.map("n" , "<C-n> " , "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" , {noremap = true , silent = true} )
 utils.map("n" , "<C-p> " , "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>" , {noremap = true , silent = true} )
 
---utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
---utils.map("i" , "<CR>" , "compe#confirm('<CR>')" , {noremap = true , silent = true , expr = true})
---utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
---utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
---utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
+utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
+utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
+utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
+utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
+

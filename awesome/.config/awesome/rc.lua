@@ -448,10 +448,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
 -- useless gaps
-
 beautiful.useless_gap = 2
 --rounded corners
 client.connect_signal("manage", function (c)
     c.shape = Custom_shape
 end)
---auto start
