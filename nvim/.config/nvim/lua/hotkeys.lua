@@ -7,7 +7,7 @@ utils.map('n', '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 
 utils.map('n' , '<leader>cmm' , ':CocList marketplace<CR>' , {noremap = true})
 utils.map('n' , '<leader>co' , ':CocList outline<CR>' , {noremap = true})
-utils.map('n' , '<leader>r' , ':CocCommand document.renameCurrentWord<CR> ' , {noremap = true})
+--utils.map('n' , '<leader>r' , ':CocCommand document.renameCurrentWord<CR> ' , {noremap = true})
 --Git
 utils.map('' , '<leader>gh' , ':GitGutterLineHighlightsToggle<CR>' , {})
 utils.map('n' , '<leader>n' , ':nohlsearch<CR>' , {noremap = true})

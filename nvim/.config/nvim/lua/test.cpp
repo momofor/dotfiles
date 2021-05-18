@@ -1,7 +1,12 @@
 #include <iostream>
 #include <stdio.h>
 
+void sorry()
+{
+    printf("Noice Booy");
+}
+
 int main()
 {
-    return 0;
+    sorry();
 }

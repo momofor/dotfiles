@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
     --use 'kyazdani42/nvim-web-devicons'
     --use 'rafcamlet/coc-nvim-lua'
 
-    use {'neoclide/coc.nvim', branch = 'release' }
+    --use {'neoclide/coc.nvim', branch = 'release' }
 
     --use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
     --use 'romgrk/barbar.nvim'
@@ -66,11 +66,11 @@ return require('packer').startup(function(use)
 
     --use 'p00f/nvim-ts-rainbow'
 
-    --use 'neovim/nvim-lspconfig'
-    --use 'hrsh7th/nvim-compe'
-    --use 'hrsh7th/vim-vsnip'
-    --use 'glepnir/lspsaga.nvim'
-    --use 'Raimondi/delimitMate'
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/vim-vsnip'
+    use 'glepnir/lspsaga.nvim'
+    use 'Raimondi/delimitMate'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
     --use 'mattn/emmet-vim'
