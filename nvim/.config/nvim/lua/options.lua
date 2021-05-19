@@ -3,18 +3,18 @@ local utils = require("_utils")
 local options= {
     ignorecase = true  ,
     smartcase = true ,
-    laststatus = 0 ,
+    --laststatus = 0 ,
     showtabline = 4 ,
     backup = false ,
     clipboard = "unnamedplus" ,
     hidden = true ,
-    pumheight=20 ,
-    cmdheight=2 ,
+    --pumheight=20 ,
+    --cmdheight=2 ,
     mouse = "a" ,
     splitbelow = true ,
     splitright = true ,
     autochdir = true ,
-    showmode = false ,
+    showmode = true ,
     --swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
@@ -30,5 +30,6 @@ local options= {
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
 }
+
 utils.set_options(options)
 vim.cmd("set shortmess+=c")

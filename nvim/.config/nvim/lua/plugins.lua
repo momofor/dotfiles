@@ -12,8 +12,8 @@ end
 return require('packer').startup(function(use)
     --use 'jiangmiao/auto-pairs'
     --
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    --use 'vim-airline/vim-airline'
+    --use 'vim-airline/vim-airline-themes'
     use 'arcticicestudio/nord-vim'
     use 'preservim/nerdcommenter'
     use 'mhinz/vim-startify'
@@ -47,13 +47,13 @@ return require('packer').startup(function(use)
     --}
     --
     --use 'kyazdani42/nvim-tree.lua'
-    --use 'kyazdani42/nvim-web-devicons'
+    use 'kyazdani42/nvim-web-devicons'
     --use 'rafcamlet/coc-nvim-lua'
 
     --use {'neoclide/coc.nvim', branch = 'release' }
 
     --use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
-    --use 'romgrk/barbar.nvim'
+    use 'romgrk/barbar.nvim'
     --use 'tversteeg/registers.nvim'
     --use 'dag/vim-fish'
     --
@@ -71,6 +71,12 @@ return require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
     use 'glepnir/lspsaga.nvim'
     use 'Raimondi/delimitMate'
+    use 'folke/which-key.nvim'
+    use 'ray-x/lsp_signature.nvim'
+
+    use {
+        'hoob3rt/lualine.nvim',
+    }
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
     --use 'mattn/emmet-vim'
