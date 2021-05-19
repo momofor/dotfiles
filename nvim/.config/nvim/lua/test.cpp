@@ -1,12 +1,12 @@
 #include <iostream>
 #include <stdio.h>
 
-void sorry()
+void sorry(std::string test , std::string doubleu)
 {
     printf("Noice Booy");
 }
 
 int main()
 {
-    sorry();
+    sorry("yes bro" , "okay");
 }

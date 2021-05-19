@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
     use 'Raimondi/delimitMate'
     use 'folke/which-key.nvim'
     use 'ray-x/lsp_signature.nvim'
+    use 'folke/trouble.nvim'
 
     use {
         'hoob3rt/lualine.nvim',
