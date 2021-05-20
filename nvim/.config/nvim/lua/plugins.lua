@@ -75,6 +75,8 @@ return require('packer').startup(function(use)
     use 'ray-x/lsp_signature.nvim'
     use 'folke/trouble.nvim'
 
+    --use 'famiu/feline.nvim'
+
     use {
         'hoob3rt/lualine.nvim',
     }

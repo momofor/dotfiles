@@ -1,4 +1,6 @@
-local function testu(no , yes)
+local function testuw(no , yes)
     print("either " .. yes .. " or " .. no)
 end
-testu("hello" , "world")
+testuw("hello" , "world")
+testuw("nice" , "okay")
+testuw("Yaaa" , "noo")

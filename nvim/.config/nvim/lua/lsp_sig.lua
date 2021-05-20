@@ -8,7 +8,7 @@ local cfg = {
     hint_scheme = "String",
     use_lspsaga = false,  -- set to true if you want to use lspsaga popup
     handler_opts = {
-        border = "single"   -- double, single, shadow, none
+        border = "none"   -- double, single, shadow, none
     },
     decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
 
