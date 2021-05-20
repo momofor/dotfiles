@@ -12,7 +12,7 @@ utils.map('n' , '<leader>co' , ':CocList outline<CR>' , {noremap = true})
 utils.map('' , '<leader>gh' , ':GitGutterLineHighlightsToggle<CR>' , {})
 utils.map('n' , '<leader>n' , ':nohlsearch<CR>' , {noremap = true})
 -- Nerdcommenter
-utils.map('n' , '<C-_>' , '<plug>NERDCommenterToggle' , {})
+--utils.map('n' , '<C-_>' , '<plug>NERDCommenterToggle' , {})
 --Prettier
 --utils.map('n' , '<leader>ff' , ':Prettier<CR>' , {noremap = true})
 --Tabs

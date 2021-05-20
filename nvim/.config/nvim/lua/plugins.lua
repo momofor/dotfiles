@@ -14,13 +14,12 @@ return require('packer').startup(function(use)
     --
     --use 'vim-airline/vim-airline'
     --use 'vim-airline/vim-airline-themes'
-    use 'arcticicestudio/nord-vim'
-    use 'preservim/nerdcommenter'
+    --use 'preservim/nerdcommenter'
     use 'mhinz/vim-startify'
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
-    use 'tpope/vim-fugitive'
+    --use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter/'
     use 'tpope/vim-surround'
     use 'nathanaelkane/vim-indent-guides'
@@ -46,7 +45,7 @@ return require('packer').startup(function(use)
         --}
     --}
     --
-    --use 'kyazdani42/nvim-tree.lua'
+    use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
     --use 'rafcamlet/coc-nvim-lua'
 
@@ -74,14 +73,18 @@ return require('packer').startup(function(use)
     use 'folke/which-key.nvim'
     use 'ray-x/lsp_signature.nvim'
     use 'folke/trouble.nvim'
+    --use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     --use 'famiu/feline.nvim'
 
     use {
         'hoob3rt/lualine.nvim',
     }
+    use 'folke/lsp-colors.nvim'
+    use "ahmedkhalf/lsp-rooter.nvim"
+    use 'b3nj5m1n/kommentary'
+    --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
-    --use {'tzachar/compe-tabnine' , run = './install.sh' , opt = true}
     --use 'mattn/emmet-vim'
 end)
 

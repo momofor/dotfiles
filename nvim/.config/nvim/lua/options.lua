@@ -29,6 +29,7 @@ local options= {
     foldmethod = "expr" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
+    timeoutlen = 0 ,
 }
 
 utils.set_options(options)

@@ -361,12 +361,16 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
+    { rule = { class = "Nightly" },
+      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+
+    { rule = { class = "Spotify" , name = "Spotify" or "Spotify Free" or "spotify" },
+      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+
     { rule = { class = "Gimp"},
           properties = { maximized = true } },
+          }
 
-    { rule = { class = "Spotify"},
-          properties = { maximized = true } },
-},
 
 
 -- }}}

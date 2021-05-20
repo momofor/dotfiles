@@ -15,3 +15,7 @@ local cfg = {
 }
 
 require'lsp_signature'.on_attach(cfg)
+
+--local function ImTesting(words , nono , aha)
+    --print(words .. nono .. aha)
+--end

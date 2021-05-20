@@ -14,10 +14,10 @@ require'colorizer'.setup()
 
 require("variables")
 require("groupsu")
---require("nvimtree-config")
+require("nvimtree-config")
 require("treesitteru")
 require("which-key").setup()
 require("lineu")
 require("lsp_sig")
 require("troubleu")
-
+require("whichWho")
