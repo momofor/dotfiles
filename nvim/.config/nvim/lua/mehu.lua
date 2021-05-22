@@ -25,7 +25,7 @@ require'lspconfig'.sumneko_lua.setup {
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'Lua5.3',
+        version = 'LuaJIT',
         -- Setup your lua path
         path = path,
       },
@@ -38,7 +38,7 @@ require'lspconfig'.sumneko_lua.setup {
         library = {
           [vim.fn.expand('$VIMRUNTIME/lua')] = true,
           [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-          ["~/.local/share/nvim/site/pack/packer/start/*"] = true ,
+          [vim.fn.expand('$HOME/.config/nvim/lua/luapi/lua-dev.nvim/types/*')] = true
         },
       },
     },

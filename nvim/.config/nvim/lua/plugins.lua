@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
         --}
     --}
     --
-    use 'kyazdani42/nvim-tree.lua'
+    -- use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
     --use 'rafcamlet/coc-nvim-lua'
 
@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
     use 'folke/which-key.nvim'
     use 'ray-x/lsp_signature.nvim'
     use 'folke/trouble.nvim'
+    use 'onsails/lspkind-nvim'
     --use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     --use 'famiu/feline.nvim'
@@ -81,8 +82,9 @@ return require('packer').startup(function(use)
         'hoob3rt/lualine.nvim',
     }
     use 'folke/lsp-colors.nvim'
-    use "ahmedkhalf/lsp-rooter.nvim"
+    -- use 'ahmedkhalf/lsp-rooter.nvim'
     use 'b3nj5m1n/kommentary'
+    use 'folke/lua-dev.nvim'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'

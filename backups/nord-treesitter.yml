@@ -356,7 +356,8 @@ highlights:
   # -- START WhichKey --
   WhichKey: "nord15"
   WhichKeySeperator: "nord14"
-  WhichKeyGroup: "nord10"
+  WhichKeyGroup: "nord7"
+  WhichKeyDesc: "nord7"
 
   # GitGutter
   GitGutterAdd: "nord14"
@@ -399,7 +400,7 @@ highlights:
 
   # lspsaga
   #LspSagaFinderSelection: ""
-  #LspFloatWinBorder : ""
+  #LspFloatWinBorder : "nord3"
   #LspSagaBorderTitle: ""
   TargetWord: "nord9"
   #ReferencesCount: ""
@@ -430,3 +431,6 @@ highlights:
   #LspSagaAutoPreview: ""
   #LspSagaDefPreviewBorder: ""
   #LspLinesDiagBorde: ""
+  #makefiles
+  makeCommands: "nord9"
+  makeSpecial: "nord15"
