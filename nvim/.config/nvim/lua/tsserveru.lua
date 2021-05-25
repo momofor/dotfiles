@@ -14,7 +14,7 @@ nvim_lsp.tsserver.setup {
             -- eslint
             eslint_enable_code_actions = true,
             eslint_bin = "eslint_d",
-            eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME"},
+            eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME" , "--cache"},
             eslint_enable_disable_comments = true,
 
 	    -- experimental settings!
@@ -24,8 +24,9 @@ nvim_lsp.tsserver.setup {
 
             -- formatting
             enable_formatting = true,
-            formatter = "prettier",
-            formatter_args = {"--stdin-filepath", "$FILENAME"},
+            formatter = "prettierd",
+            formatter_args = {"$FILENAME"},
+            -- formatter_args = {"--stdin-filepath", "$FILENAME"},
             format_on_save = true,
             no_save_after_format = false,
 
