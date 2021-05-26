@@ -71,33 +71,37 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/auto-pairs"
-  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
-  ["coc-nvim-lua"] = {
+  delimitMate = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/coc-nvim-lua"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/delimitMate"
   },
-  ["coc.nvim"] = {
+  kommentary = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/coc.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/kommentary"
   },
-  ["codi.vim"] = {
+  ["lsp-colors.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/codi.vim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
-  nerdcommenter = {
+  ["lsp_signature.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nerdcommenter"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
-  ["nord-vim"] = {
+  ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nord-vim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -107,17 +111,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
-  ["nvim-tree.lua"] = {
+  ["nvim-compe"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-textobjects"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -139,33 +143,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
-  ["registers.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/registers.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["vim-airline"] = {
+  ["trouble.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-airline"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
-  ["vim-airline-themes"] = {
+  ["vim-arduino"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
-  },
-  ["vim-fish"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-fish"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
-  ["vim-gist"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-gist"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-arduino"
   },
   ["vim-gitgutter"] = {
     loaded = true,
@@ -175,6 +163,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides"
   },
+  ["vim-slime"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-slime"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-startify"
@@ -183,13 +175,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
-  vimtex = {
+  ["vim-vsnip"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vimtex"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
-  ["webapi-vim"] = {
+  ["which-key.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/webapi-vim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 

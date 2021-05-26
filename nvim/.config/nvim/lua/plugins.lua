@@ -86,6 +86,7 @@ return require('packer').startup(function(use)
     use 'b3nj5m1n/kommentary'
     -- use 'folke/lua-dev.nvim'
     use 'OmniSharp/omnisharp-vim'
+    use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'
