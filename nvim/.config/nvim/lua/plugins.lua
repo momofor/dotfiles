@@ -22,7 +22,6 @@ return require('packer').startup(function(use)
     --use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter/'
     use 'tpope/vim-surround'
-    use 'nathanaelkane/vim-indent-guides'
     use 'norcalli/nvim-colorizer.lua'
 
     --use 'OmniSharp/omnisharp-vim'
@@ -84,9 +83,10 @@ return require('packer').startup(function(use)
     use 'folke/lsp-colors.nvim'
     -- use 'ahmedkhalf/lsp-rooter.nvim'
     use 'b3nj5m1n/kommentary'
-    -- use 'folke/lua-dev.nvim'
+    use 'folke/lua-dev.nvim'
     use 'OmniSharp/omnisharp-vim'
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+    use 'nathanaelkane/vim-indent-guides'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'

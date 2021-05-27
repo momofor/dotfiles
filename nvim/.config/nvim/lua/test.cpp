@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include "test.hpp"
 
 void sorry(std::string test , std::string doubleu)
 {
@@ -12,7 +11,6 @@ struct testuwu {
 }testuw;
 int main()
 {
-    test testuu;
 
     std::cout << testuw.nice;
 

@@ -38,7 +38,7 @@ require'lspconfig'.sumneko_lua.setup {
         library = {
           [vim.fn.expand('$VIMRUNTIME/lua')] = true,
           [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-          [vim.fn.expand('$HOME/.config/nvim/lua/luapi/lua-dev.nvim/types/*')] = true
+          -- [vim.fn.expand('$HOME/.config/nvim/lua/types/')] = true
         },
       },
     },

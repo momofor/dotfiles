@@ -30,5 +30,3 @@ local function testu(a , b)
     return a + b
 end
 testu(1 , 2)
-macro.define("nano('x') print("Hello" .. x )" )
-nono("test")
