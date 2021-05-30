@@ -17,16 +17,23 @@
 --local niceu = t:new(nil , cur , wordsu , func)
 --niceu()
 --
-
+--- @type table<string,number>
+--
 local bigboi = {
-    nice = "test complete" ,
-    testu = "oh noo"
+    nice = 1,
+    testu = 2
 }
+
 local test = "hello ${nice} you are cool like ${testu}"
 I = 1
 local _h = require("_helpers")
-
-local function testu(a , b)
-    return a + b
+--- @param a number
+--- @param b number
+--
+function ImSpecial(a , b)
+    local result = a + b
+    return result
 end
-testu(1 , 2)
+vim.highlight.create()
+
+ImSpecial(1,2)

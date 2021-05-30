@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     --use 'tpope/vim-fugitive'
-    use 'airblade/vim-gitgutter/'
+    -- use 'airblade/vim-gitgutter/'
     use 'tpope/vim-surround'
     use 'norcalli/nvim-colorizer.lua'
 

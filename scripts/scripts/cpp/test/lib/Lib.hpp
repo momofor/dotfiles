@@ -1,10 +1,11 @@
 #include <iostream>
 #include <stdio.h>
+#include <thread>
+#include <chrono>
 using std::string;
-namespace MYLIB {
-    class Lib {
-        public: 
-            string ask_get(string text);
-            string CaPiTaLiZe(string word);
-    };
-}
+
+class Lib {
+    public: 
+        string ask_get(string text);
+        string CaPiTaLiZe(string word);
+};

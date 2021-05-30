@@ -1,4 +1,7 @@
 #include "imports.hpp"
+#include <chrono>
+#include <iostream>
+#include <thread>
 
 struct test {
     float x;
@@ -24,9 +27,19 @@ std::ostream& operator<<(std::ostream &stream , const test &other)
     return stream;
 }
 
+void pb() {
+    std::string bar = "";
+    for (int i = 0; i < 100; i++) {
+        bar += "|";
+        int percent = i;
+        std::cout << "\r" << percent << "% completed: " ;
+        std::cout << bar << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+}
 
 int main() {
-    MYLIB::Lib lib;
+    Lib lib;
     std::cout << "hello world" << std::endl;
     string userInput;
     getline(std::cin, userInput);
@@ -43,5 +56,6 @@ int main() {
     std::cout << nono << "OH NONO" << std::endl;
 
     std::cout << nice << std::endl;
+    pb();
     return 0;
 }

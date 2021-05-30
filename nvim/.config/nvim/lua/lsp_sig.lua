@@ -10,7 +10,7 @@ local cfg = {
     handler_opts = {
         border = "none"   -- double, single, shadow, none
     },
-    decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
+    decorator = {"**", "**"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
 
 }
 

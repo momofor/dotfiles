@@ -1,4 +1,9 @@
+-- return a string: either yes or no
+--- @param no string no value
+--- @param yes string yes value
+--- @return string
 local function testuw(no , yes)
-    print("either " .. yes .. " or " .. no)
+    return("either " .. yes .. " or " .. no)
 end
-testuw()
+
+testuw("not nice" , "nice")

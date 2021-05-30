@@ -13,9 +13,12 @@ project "test"
         defines { "DEBUG" }
         symbols "On"
         libdirs {"libs"}
+        links {"MYLIB"}
 
     filter "configurations:noice"
         defines { "NDEBUG" }
         optimize "On"
         libdirs {"libs"}
+        links {"MYLIB"}
+        
 
