@@ -38,7 +38,7 @@ void pb() {
     }
 }
 
-int main() {
+int main(int argc, char** args) {
     Lib lib;
     std::cout << "hello world" << std::endl;
     string userInput;

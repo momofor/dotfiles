@@ -6,11 +6,10 @@ local cfg = {
     hint_enable = true, -- virtual hint enable
     hint_prefix = "🐼 ",  -- Panda for parameter
     hint_scheme = "String",
-    use_lspsaga = false,  -- set to true if you want to use lspsaga popup
+    use_lspsaga = true,  -- set to true if you want to use lspsaga popup
     handler_opts = {
         border = "none"   -- double, single, shadow, none
     },
-    decorator = {"**", "**"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
 
 }
 

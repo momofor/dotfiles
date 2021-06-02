@@ -2,6 +2,7 @@
 workspace "test"
     configurations { "Debug", "noice" }
     links {"MYLIB"}
+    links {"SDL2"}
 
 project "test"
     kind "ConsoleApp"

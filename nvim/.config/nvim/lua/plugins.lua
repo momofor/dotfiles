@@ -87,6 +87,7 @@ return require('packer').startup(function(use)
     use 'OmniSharp/omnisharp-vim'
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     use 'nathanaelkane/vim-indent-guides'
+    use 'Pocco81/AbbrevMan.nvim'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'
