@@ -22,16 +22,17 @@ std::string getPlayer(lua_State *L , char *field ,char* globalName )
 
 template<typename T>
 T nono(lua_State *L, char *field, char *globalName) {
+    T thing;
     lua_getglobal(L, globalName);
     lua_getfield(L , -1, field);
     if (lua_isstring(L , -1)) {
-        return lua_tostring(L , -1);
+        thing =  lua_tostring(L , -1);
         lua_pop(L , 1);
     }else if (lua_isinteger(L , -1)) {
-        return lua_tointeger(L , -1);
+        thing =  lua_tointeger(L , -1);
         lua_pop(L , 1);
     }
-    return " ";
+    return thing;
 }
 
 int hello(lua_State *L)
@@ -57,7 +58,7 @@ int main()
 
     if (Lib.checkLua(L, luaL_dofile(L, "player.lua")))
     {
-        player.name = nono<std::string>(L, (char *)"name",(char *)"player");
+        player.name = nono(L, (char *)"name",(char *)"player");
         player.age = std::stoi(getPlayer(L, (char *)"age",(char *)"player"));
         player.level = std::stoi(getPlayer(L, (char * )"level",(char *)"player"));
 

@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
 
-    --use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
+    use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
     use 'romgrk/barbar.nvim'
     --use 'tversteeg/registers.nvim'
     --use 'dag/vim-fish'

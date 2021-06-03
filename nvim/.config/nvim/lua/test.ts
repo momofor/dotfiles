@@ -1,1 +1,1 @@
-const test = e
+const test = "Hello world";
