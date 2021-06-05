@@ -6,4 +6,17 @@ local function testuw(no , yes)
     return("either " .. yes .. " or " .. no)
 end
 
-testuw("not nice" , "nice")
+local function yoink()
+    print("wo")
+end
+testuw("not nice" , "nice" );
+yoink();
+function foo()
+    local bin
+    if foo then
+        for bar in pairs(foo) do
+            bin = "Hello world! %s"
+        end
+    end
+    return string.format(bin, 'foo');
+end
