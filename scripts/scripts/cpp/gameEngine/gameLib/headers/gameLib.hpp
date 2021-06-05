@@ -8,15 +8,13 @@
 class GameLib 
 {
     public:
-        int current;
-        std::vector<std::string> words;
-        void change(std::vector<std::string> words);
-        void choice(std::string message , std::vector<std::string> messages);
-        void move(std::vector<std::string> words , char choice);
-        GameLib(int currentValue)
-        {
-            (*this).current = currentValue;
-        }
+    int Current = 1;
+    std::vector<std::string> words;
+
+    GameLib(int Currentu, std::vector<std::string> wordsu);
+    void start();
+    void CheckInput();
+
 };
 
 #endif

@@ -1,49 +1,57 @@
-#include <stdio.h>
+#include <vector>
 #include <iostream>
 #include <stdio.h>
-#include <vector>
 #include "../headers/gameLib.hpp"
 
-void GameLib::choice(std::string message, std::vector<std::string> messages)
-{
-    std::cout << "----------- Choose Carefuly ----------" << std::endl;
-    std::cout << message << std::endl;
-
-    for (int i = 0; i < messages.size(); i++) {
-        std::cout << "[" << i+1 << "]" << messages[i] << std::endl;
+GameLib::GameLib(int Currentu, std::vector<std::string> wordsu) {
+    this-> Current = Currentu;
+    this->words = wordsu;
+    this->start();
+    while (true) {
+        this->CheckInput();
     }
-}
-void GameLib::change(std::vector<std::string> words) 
-{
-    char choice;
-    std::cin >> choice;
-    (*this).move(words , choice);
 
-    for (int i = 0; i < (*this).words.size();i++) 
-    {
-        if ((*this).current == i )
-        {
-            std::cout << (*this).words[i] << " is the current one ohh yeah " << std::endl;
-        }else {
-            std::cout << (*this).words[i] << std::endl;
+}
+void GameLib::start() {
+    for (int i = 0; i < this->words.size();i++) {
+        std::string word = this->words[i];
+        if (word == this->words[this->Current]){
+            std::cout << "\033[1;36m" << "[" << i << "]" << word << std::endl << std::flush;
         }
+        else {
+            std::cout << "\33[1;37m" << "[" << i << "]" << word << std::endl << std::flush;
+        }
+        if (i == this->words.size()) {
+            i = 0;
+        }
+    }    
+}
+void GameLib::CheckInput() {
+    std::string choice;
+    std::cin >> choice;
+    if (choice == "k" && this->Current == 0) {
+        this->Current = 0;
+        this->start();
     }
-    std::cout << (*this).current << std::endl;
+    else if(choice == "j" && this->Current == this->words.size())  {
+        this->Current = this->words.size();
+        this->start();
+    }
+    else if (choice == "k" && this->Current != 0) {
+        this->Current = this->Current - 1;
+        this->start();
+    }
+    else if( choice == "j" && this->Current != this->words.size()) {
+        this->Current = this->Current + 1;
+        this->start();
+    }
+    else if (std::stoi(choice) <= this->words.size()){
+        this->Current = std::stoi(choice);
+        this->start();
+    }
+    else {
+        this->start();
+        std::cout << "Haha dumb";
+    }
 }
 
-void GameLib::move(std::vector<std::string> words , char choice)
-{
-    (*this).words = words;
-    if (choice == 'j')
-    {
-        (*this).current = (*this).current++;
-    }else if (choice == 'k') {
-        (*this).current = (*this).current--;
-    }else if (choice == 'k' && (*this).current == 0) {
-        (*this).current = 0;
-        std::cout << "You big dumb" << std::endl;
-    }else if (choice == 'j' && (*this).current == words.size()) {
-        (*this).current = words.size();
-        std::cout << "You small dumb";
-    }
-}

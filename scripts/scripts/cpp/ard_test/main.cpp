@@ -3,10 +3,9 @@
 class Led {public: 
     int pin;
     boolean is_on = false;
-
     Led(int led_pin) {
-        this->pin = led_pin;
-    }
+            this->pin = led_pin;
+        }
 
     void on() {
         digitalWrite(pin , HIGH);
@@ -26,13 +25,11 @@ class Led {public:
         }
         delay(delay_time);
     }
-
     void flash_wait(int delay_time) {
         this->switch_state(delay_time);
         this->switch_state(delay_time);
     }
 };
-
 
 void setup() {
     pinMode(13, OUTPUT);
@@ -40,5 +37,5 @@ void setup() {
 Led noice(13);
 
 void loop() {
-    noice.flash_wait(500);
+    noice.flash_wait(2000);
 }
