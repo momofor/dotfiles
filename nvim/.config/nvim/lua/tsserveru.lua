@@ -1,4 +1,5 @@
 local nvim_lsp = require("lspconfig")
+require("null-ls").setup {}
 
 nvim_lsp.tsserver.setup {
     on_attach = function(client, bufnr)
@@ -25,8 +26,8 @@ nvim_lsp.tsserver.setup {
             -- formatting
             enable_formatting = true,
             formatter = "prettierd",
-            formatter_args = {"$FILENAME"},
-            -- formatter_args = {"--stdin-filepath", "$FILENAME"},
+            formatter_config_fallback = nil,
+             formatter_args = {"$FILENAME"},
             format_on_save = true,
             no_save_after_format = false,
 
@@ -42,6 +43,15 @@ nvim_lsp.tsserver.setup {
 
         -- required to enable ESLint code actions and formatting
         ts_utils.setup_client(client)
+
+        -- disable tsserver formatting
+        client.resolved_capabilities.document_formatting = false
+
+        -- define an alias
+        vim.cmd("command -buffer Formatting lua vim.lsp.buf.formatting()")
+
+        -- format on save
+        vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
 
         -- no default maps, so you may want to define some here
         --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", {silent = true})

@@ -16,9 +16,11 @@ return require('packer').startup(function(use)
     --use 'vim-airline/vim-airline-themes'
     --use 'preservim/nerdcommenter'
     use 'mhinz/vim-startify'
+
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
+
     --use 'tpope/vim-fugitive'
     -- use 'airblade/vim-gitgutter/'
     use 'tpope/vim-surround'
@@ -59,8 +61,8 @@ return require('packer').startup(function(use)
     --
     --use 'sindrets/diffview.nvim'
     --
-    use 'stevearc/vim-arduino'
-    use 'jpalardy/vim-slime'
+    --[[ use 'stevearc/vim-arduino'
+    use 'jpalardy/vim-slime' ]]
 
     --use 'p00f/nvim-ts-rainbow'
 
@@ -88,6 +90,7 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     use 'nathanaelkane/vim-indent-guides'
     use 'Pocco81/AbbrevMan.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'

@@ -8,11 +8,11 @@
 class GameLib 
 {
     public:
-    int Current = 1;
+    int currentIndex = 1;
     std::vector<std::string> words;
 
     GameLib(int Currentu, std::vector<std::string> wordsu);
-    void start();
+    void printWords();
     void CheckInput();
 
 };

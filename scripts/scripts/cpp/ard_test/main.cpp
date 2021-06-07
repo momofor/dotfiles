@@ -37,5 +37,5 @@ void setup() {
 Led noice(13);
 
 void loop() {
-    noice.flash_wait(2000);
+    noice.flash_wait(1000);
 }

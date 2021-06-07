@@ -4,53 +4,54 @@
 #include "../headers/gameLib.hpp"
 
 GameLib::GameLib(int Currentu, std::vector<std::string> wordsu) {
-    this-> Current = Currentu;
+    this-> currentIndex = Currentu;
     this->words = wordsu;
-    this->start();
+    this->printWords();
     while (true) {
         this->CheckInput();
     }
 
 }
-void GameLib::start() {
+void GameLib::printWords() {
     for (int i = 0; i < this->words.size();i++) {
         std::string word = this->words[i];
-        if (word == this->words[this->Current]){
-            std::cout << "\033[1;36m" << "[" << i << "]" << word << std::endl << std::flush;
+        if (word == this->words[this->currentIndex]){
+            std::cout << "\r\033[0;36m" << "[" << i << "]" << word << std::endl << std::flush;
         }
         else {
-            std::cout << "\33[1;37m" << "[" << i << "]" << word << std::endl << std::flush;
+            std::cout << "\r\33[0;37m" << "[" << i << "]" << word << std::endl << std::flush;
         }
         if (i == this->words.size()) {
             i = 0;
         }
     }    
 }
+
 void GameLib::CheckInput() {
-    std::string choice;
-    std::cin >> choice;
-    if (choice == "k" && this->Current == 0) {
-        this->Current = 0;
-        this->start();
+    std::string keyPressed;
+    std::cin >> keyPressed;
+    if (keyPressed == "k" && this->currentIndex == 0) {
+        this->currentIndex = 0;
+        this->printWords();
     }
-    else if(choice == "j" && this->Current == this->words.size())  {
-        this->Current = this->words.size();
-        this->start();
+    else if(keyPressed == "j" && this->currentIndex == this->words.size())  {
+        this->currentIndex = this->words.size();
+        this->printWords();
     }
-    else if (choice == "k" && this->Current != 0) {
-        this->Current = this->Current - 1;
-        this->start();
+    else if (keyPressed == "k" && this->currentIndex != 0) {
+        this->currentIndex = this->currentIndex - 1;
+        this->printWords();
     }
-    else if( choice == "j" && this->Current != this->words.size()) {
-        this->Current = this->Current + 1;
-        this->start();
+    else if( keyPressed == "j" && this->currentIndex != this->words.size()) {
+        this->currentIndex = this->currentIndex + 1;
+        this->printWords();
     }
-    else if (std::stoi(choice) <= this->words.size()){
-        this->Current = std::stoi(choice);
-        this->start();
+    else if (std::stoi(keyPressed) < this->words.size()){
+        this->currentIndex = std::stoi(keyPressed);
+        this->printWords();
     }
     else {
-        this->start();
+        this->printWords();
         std::cout << "Haha dumb";
     }
 }
