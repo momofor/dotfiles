@@ -24,3 +24,6 @@ string Lib::CaPiTaLiZe(string word) {
     return word;
 }
 
+void testFun() {
+    std::cout << "Hmm not working is it" << std::endl;
+}

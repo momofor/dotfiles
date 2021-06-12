@@ -32,5 +32,6 @@ local options= {
     timeoutlen = 0 ,
 }
 
+vim.opt.shortmess:append "c";
+
 utils.set_options(options)
-vim.cmd("set shortmess+=c")

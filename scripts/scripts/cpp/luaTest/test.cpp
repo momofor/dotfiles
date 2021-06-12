@@ -1,11 +1,13 @@
+#include <lua5.3/lua.h>
 #include <lua5.3/lua.hpp>
 #include <iostream>
 #include <stdio.h>
 
-int hello(lua_State *L) {
-    printf("C++ says hello world \n");
-    return 1;
+int noice(int num) {
+    return num * 2;
 }
+
+
 
         // takes file names as arguments to the program
 int main(int argc, char **argv){

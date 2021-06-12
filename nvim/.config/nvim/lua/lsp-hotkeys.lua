@@ -12,6 +12,7 @@ utils.map("n" , "<Leader>a" , ":Lspsaga code_action<CR>" , {noremap = true } )
 utils.map('n' , '<leader>r' , ':Lspsaga rename<CR>' , {noremap = true})
 utils.map('n' , '<leader>pd' , ':Lspsaga preview_definition<CR>' , {noremap = true})
 utils.map('n' , '<leader>t' , ':NvimTreeToggle<CR>' , {noremap = true})
+utils.map('n' , '<leader>f' , ':Format<CR>' , {noremap = true})
 
 --utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
 --utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})

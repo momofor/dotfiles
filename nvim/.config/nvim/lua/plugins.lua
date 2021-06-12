@@ -91,6 +91,8 @@ return require('packer').startup(function(use)
     use 'nathanaelkane/vim-indent-guides'
     use 'Pocco81/AbbrevMan.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use 'rmagatti/goto-preview'
+    use 'mhartington/formatter.nvim'
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'

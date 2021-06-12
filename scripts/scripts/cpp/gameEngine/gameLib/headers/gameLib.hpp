@@ -5,9 +5,7 @@
 #ifndef gameLib_HPP
 #define gameLib_HPP
 
-class GameLib 
-{
-    public:
+class GameLib { public:
     int currentIndex = 1;
     std::vector<std::string> words;
 

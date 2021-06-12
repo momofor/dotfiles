@@ -1,5 +1,5 @@
 print("Hello World! ps:from lua")
-nice()
+nice("noice boys")
 
 function f(a , b)
     return a + b

@@ -8,7 +8,7 @@ end
 
 local options_info = vim.api.nvim_get_all_options_info()
 
-function M.set_option_advanced(option , optionValue)
+--[[ function M.set_option_advanced(option , optionValue)
     local scope = options_info[option].scope
     vim.o[option] = optionValue
     if scope == 'win' then
@@ -18,11 +18,12 @@ function M.set_option_advanced(option , optionValue)
             vim.bo[option] = optionValue
             vim.o[option] = optionValue
     end
-    end
+    end ]]
 
 function M.set_options(options)
     for key, value in pairs(options) do
-        M.set_option_advanced(key , value)
+        -- M.set_option_advanced(key , value)
+        vim.opt[key] = value
     end
 end
 

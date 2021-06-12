@@ -50,6 +50,9 @@ void GameLib::CheckInput() {
         this->currentIndex = std::stoi(keyPressed);
         this->printWords();
     }
+    else if (keyPressed == "no") {
+        std::cout << this->currentIndex;
+    }
     else {
         this->printWords();
         std::cout << "Haha dumb";
