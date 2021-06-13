@@ -1,9 +1,11 @@
+#include <cstdlib>
 #include <vector>
 #include <iostream>
 #include <stdio.h>
+#include <iostream>
 #include "../headers/gameLib.hpp"
 
-GameLib::GameLib(int Currentu, std::vector<std::string> wordsu) {
+GameLib::GameLib(int Currentu, std::vector<std::string> wordsu , std::vector<void (*)()> funs) {
     this-> currentIndex = Currentu;
     this->words = wordsu;
     this->printWords();
@@ -27,35 +29,48 @@ void GameLib::printWords() {
     }    
 }
 
+char getKeyPressed() {
+    char c;
+
+    while(1) {
+        system("stty raw");
+        c = getchar(); 
+        // terminate when "." is pressed
+        system("stty cooked");
+        system("clear");
+        return c;
+    }
+}
+
 void GameLib::CheckInput() {
-    std::string keyPressed;
-    std::cin >> keyPressed;
-    if (keyPressed == "k" && this->currentIndex == 0) {
+    char  keyPressed;
+    keyPressed = getKeyPressed();
+    if (keyPressed == 'k' && this->currentIndex == 0) {
         this->currentIndex = 0;
         this->printWords();
     }
-    else if(keyPressed == "j" && this->currentIndex == this->words.size())  {
-        this->currentIndex = this->words.size();
+    else if(keyPressed == 'j' && this->currentIndex == this->words.size()-1)  {
+        this->currentIndex = 0;
         this->printWords();
     }
-    else if (keyPressed == "k" && this->currentIndex != 0) {
+    else if (keyPressed == 'k' && this->currentIndex != 0) {
         this->currentIndex = this->currentIndex - 1;
         this->printWords();
     }
-    else if( keyPressed == "j" && this->currentIndex != this->words.size()) {
+    else if( keyPressed == 'j' && this->currentIndex != this->words.size()) {
         this->currentIndex = this->currentIndex + 1;
         this->printWords();
     }
-    else if (std::stoi(keyPressed) < this->words.size()){
-        this->currentIndex = std::stoi(keyPressed);
+    else if ((int)(keyPressed) < this->words.size()){
+        this->currentIndex = (int)(keyPressed);
         this->printWords();
     }
-    else if (keyPressed == "no") {
-        std::cout << this->currentIndex;
+    else if (keyPressed == 'a') {
+        this->funs[this->currentIndex]();
+        this -> printWords();
     }
-    else {
-        this->printWords();
-        std::cout << "Haha dumb";
+    else if (keyPressed == 'q') {
+        std::exit(0);
     }
 }
 

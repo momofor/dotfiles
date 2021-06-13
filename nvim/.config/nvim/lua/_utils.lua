@@ -6,7 +6,25 @@ function M.map(mode , keys , action , options)
     vim.api.nvim_set_keymap(mode , keys , action , options)
 end
 
-local options_info = vim.api.nvim_get_all_options_info()
+function M.TableConcat(t1,t2)
+    for key, value in pairs(t2)do
+        t1[key] = value
+    end
+    return t1
+end
+--- @param keys string key to trigger action
+---@param action string action to be triggered
+---@param options table || nil table of option can be nil
+function M.nnoremap(keys,action,options)
+    if options == nil then
+            options = {noremap = true}
+        else
+            options = M.TableConcat(options, {noremap = true})
+        end
+    M.map("n" , keys, action, options)
+end
+
+-- local options_info = vim.api.nvim_get_all_options_info()
 
 --[[ function M.set_option_advanced(option , optionValue)
     local scope = options_info[option].scope

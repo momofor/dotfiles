@@ -62,8 +62,9 @@ time("try_loadstring definition", true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
-    print('Error running ' .. component .. ' for ' .. name)
-    error(result)
+    vim.schedule(function()
+      vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
+    end)
   end
   return result
 end
@@ -82,6 +83,14 @@ _G.packer_plugins = {
   delimitMate = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/delimitMate"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
+  ["goto-preview"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/goto-preview"
   },
   kommentary = {
     loaded = true,
@@ -111,6 +120,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
@@ -134,6 +147,10 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -163,17 +180,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
-  ["vim-arduino"] = {
+  ["vim-gist"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-arduino"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-gist"
   },
   ["vim-indent-guides"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides"
-  },
-  ["vim-slime"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-slime"
   },
   ["vim-startify"] = {
     loaded = true,
@@ -186,6 +199,10 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["webapi-vim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/webapi-vim"
   },
   ["which-key.nvim"] = {
     loaded = true,

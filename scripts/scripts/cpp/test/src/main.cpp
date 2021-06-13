@@ -37,9 +37,15 @@ void pb() {
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }
+void border() {
+    std::string border = "";
+    for (int i = 0; i < 100; i++) {
+
+    }
+}
 
 int main(int argc, char** args) {
-    Lib lib;
+    /* Lib lib;
     std::cout << "hello world" << std::endl;
     string userInput;
     getline(std::cin, userInput);
@@ -55,7 +61,9 @@ int main(int argc, char** args) {
     std::string nono = lib.CaPiTaLiZe("premake is very noice");
     std::cout << nono << "OH NONO" << std::endl;
 
-    std::cout << nice << std::endl;
+    std::cout << nice << std::endl; */
     pb();
+
+
     return 0;
 }
