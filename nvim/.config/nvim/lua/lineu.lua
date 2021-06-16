@@ -2,6 +2,8 @@ local custom_nord = require 'lualine.themes.nord'
 -- Chnage the background of lualine_c section for normal mode
 custom_nord.normal.b.bg = '#81a1c1'-- rgb colors are supported
 custom_nord.normal.b.fg = '#3b4252'
+custom_nord.insert.a.bg = '#a3be8c'
+custom_nord.insert.a.fg = '#3b4252'
 
 require'lualine'.setup {
     options = {
@@ -13,7 +15,7 @@ require'lualine'.setup {
     },
     sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch'},
+        lualine_b = {'branch' , 'b:gitsigns_status' },
         lualine_c = {'filename'},
         lualine_x = {'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},

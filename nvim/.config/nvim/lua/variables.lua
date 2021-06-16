@@ -25,6 +25,7 @@ local variables_glabal = {
     gist_detect_filetype = 1 ,
     gist_browser_command = 'firefox-trunk %URL%' ,
     OmniSharp_highlighting = 0 ,
+    slime_target = "tmux"
 }
 
 utils.set_var(vim.g , variables_glabal)

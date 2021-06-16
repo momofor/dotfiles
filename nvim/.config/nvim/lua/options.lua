@@ -6,6 +6,7 @@ local options= {
     --laststatus = 0 ,
     showtabline = 4 ,
     backup = false ,
+	writebackup = false ,
     clipboard = "unnamedplus" ,
     hidden = true ,
     pumheight=20 ,
@@ -14,13 +15,13 @@ local options= {
     splitbelow = true ,
     splitright = true ,
     autochdir = true ,
-    showmode = true ,
+    showmode = false ,
     --swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
     tabstop = 4 ,
     smartindent = true ,
-    expandtab = true ,
+    expandtab = false ,
     number = true ,
     relativenumber = true ,
     colorcolumn = "100" ,
@@ -29,7 +30,8 @@ local options= {
     foldmethod = "expr" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
-    timeoutlen = 0 ,
+    timeoutlen = 300 ,
+    updatetime = 300 -- Faster completion
 }
 
 vim.opt.shortmess:append "c";

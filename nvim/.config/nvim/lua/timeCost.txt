@@ -1089,3 +1089,109 @@ times in msec
 169.588  000.261: before starting main loop
 172.043  002.455: first screen update
 172.047  000.003: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.017  000.017: --- NVIM STARTING ---
+000.486  000.469: locale set
+000.805  000.320: inits 1
+000.824  000.019: window checked
+000.867  000.042: parsing arguments
+000.976  000.109: expanding arguments
+001.055  000.078: inits 2
+001.521  000.466: init highlight
+001.523  000.002: waiting for UI
+002.472  000.949: done waiting for UI
+002.500  000.028: initialized screen early for UI
+003.223  000.315  000.315: sourcing /usr/local/share/nvim/runtime/syntax/syncolor.vim
+003.821  000.990  000.675: sourcing /usr/local/share/nvim/runtime/syntax/synload.vim
+012.081  000.017  000.017: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+012.123  000.014  000.014: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+012.169  000.026  000.026: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+012.205  000.013  000.013: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/cake.vim
+012.235  000.012  000.012: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/csx.vim
+012.270  000.014  000.014: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/omnisharplog.vim
+013.253  009.368  009.271: sourcing /usr/local/share/nvim/runtime/filetype.vim
+015.083  000.556  000.556: sourcing /usr/local/share/nvim/runtime/scripts.vim
+017.780  015.041  004.128: sourcing /usr/local/share/nvim/runtime/syntax/syntax.vim
+017.800  015.090  000.049: sourcing /home/momofor/.config/nvim/theme-config/nord-treesitter.vim
+097.948  080.106  080.106: sourcing /home/momofor/.config/nvim/lua/init.lua
+099.442  000.471  000.471: sourcing /usr/local/share/nvim/runtime/syntax/syncolor.vim
+101.957  000.216  000.216: sourcing /usr/local/share/nvim/runtime/syntax/syncolor.vim
+103.182  000.195  000.195: sourcing /usr/local/share/nvim/runtime/syntax/syncolor.vim
+105.402  006.810  005.927: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim/colors/nord-treesitter.vim
+106.196  103.522  001.516: sourcing /home/momofor/.config/nvim/init.vim
+106.202  000.180: sourcing vimrc file(s)
+106.298  000.041  000.041: sourcing /usr/local/share/nvim/runtime/ftplugin.vim
+106.808  000.035  000.035: sourcing /usr/local/share/nvim/runtime/indent.vim
+110.564  000.545  000.545: sourcing /home/momofor/.config/nvim/plugin/packer_compiled.vim
+111.227  000.316  000.316: sourcing /usr/local/share/nvim/runtime/plugin/gzip.vim
+111.262  000.012  000.012: sourcing /usr/local/share/nvim/runtime/plugin/health.vim
+111.354  000.074  000.074: sourcing /usr/local/share/nvim/runtime/plugin/man.vim
+112.238  000.245  000.245: sourcing /usr/local/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+112.366  000.991  000.746: sourcing /usr/local/share/nvim/runtime/plugin/matchit.vim
+112.552  000.167  000.167: sourcing /usr/local/share/nvim/runtime/plugin/matchparen.vim
+113.008  000.437  000.437: sourcing /usr/local/share/nvim/runtime/plugin/netrwPlugin.vim
+113.263  000.011  000.011: sourcing /home/momofor/.local/share/nvim/rplugin.vim
+113.272  000.180  000.169: sourcing /usr/local/share/nvim/runtime/plugin/rplugin.vim
+113.399  000.107  000.107: sourcing /usr/local/share/nvim/runtime/plugin/shada.vim
+113.461  000.027  000.027: sourcing /usr/local/share/nvim/runtime/plugin/spellfile.vim
+113.639  000.153  000.153: sourcing /usr/local/share/nvim/runtime/plugin/tarPlugin.vim
+113.768  000.096  000.096: sourcing /usr/local/share/nvim/runtime/plugin/tohtml.vim
+113.817  000.022  000.022: sourcing /usr/local/share/nvim/runtime/plugin/tutor.vim
+114.034  000.194  000.194: sourcing /usr/local/share/nvim/runtime/plugin/zipPlugin.vim
+114.344  004.745: loading plugins
+119.603  004.794  004.794: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/AbbrevMan.nvim/plugin/amcmds.vim
+120.278  000.019  000.019: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim/autoload/bufferline.vim
+136.859  000.077  000.077: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim/autoload/bufferline/highlight.vim
+141.305  021.516  021.420: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim/plugin/bufferline.vim
+142.522  000.371  000.371: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/delimitMate/autoload/delimitMate.vim
+145.596  004.100  003.729: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/delimitMate/plugin/delimitMate.vim
+145.839  000.046  000.046: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/formatter.nvim/plugin/formatter.vim
+148.594  002.536  002.536: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/kommentary/plugin/kommentary.vim
+149.304  000.531  000.531: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim/plugin/lsp-colors.vim
+149.982  000.424  000.424: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/lspsaga.nvim/plugin/lspsaga.vim
+150.352  000.040  000.040: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua/plugin/colorizer.vim
+150.600  000.115  000.115: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-compe/plugin/compe.vim
+150.889  000.095  000.095: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+151.165  000.127  000.127: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/tree.vim
+152.032  000.722  000.722: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+152.172  000.015  000.015: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+152.211  000.014  000.014: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gomod.vim
+152.257  000.022  000.022: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+154.214  001.855  001.855: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects/plugin/nvim-treesitter-textobjects.vim
+154.427  000.048  000.048: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+155.774  001.207  001.207: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/plugin/OmniSharp.vim
+155.900  000.014  000.014: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/cake.vim
+155.936  000.012  000.012: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/csx.vim
+155.972  000.014  000.014: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim/ftdetect/omnisharplog.vim
+156.413  000.298  000.298: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/playground/plugin/nvim-treesitter-playground.vim
+156.599  000.041  000.041: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+157.187  000.404  000.404: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+157.458  000.131  000.131: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/trouble.nvim/plugin/trouble.vim
+157.639  000.043  000.043: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-gist/plugin/gist.vim
+158.018  000.142  000.142: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides/autoload/indent_guides.vim
+158.340  000.564  000.422: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides/plugin/indent_guides.vim
+158.617  000.126  000.126: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-startify/plugin/startify.vim
+159.179  000.421  000.421: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-surround/plugin/surround.vim
+159.732  000.395  000.395: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/vim-vsnip/plugin/vsnip.vim
+159.966  000.024  000.024: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/which-key.nvim/plugin/which-key.vim
+160.227  005.187: loading packages
+167.446  007.106  007.106: sourcing /home/momofor/.local/share/nvim/site/pack/packer/start/nvim-compe/after/plugin/compe.vim
+168.383  001.050: loading after plugins
+168.414  000.031: inits 3
+172.134  003.720: reading ShaDa
+185.389  000.661  000.661: sourcing /usr/local/share/nvim/runtime/scripts.vim
+202.456  010.490  010.490: sourcing /usr/local/share/nvim/runtime/ftplugin/text.vim
+220.466  037.180: opening buffers
+238.527  018.062: BufEnter autocommands
+238.533  000.006: editing files in windows
+261.225  022.692: VimEnter autocommands
+261.230  000.005: UIEnter autocommands
+261.795  000.274  000.274: sourcing /usr/local/share/nvim/runtime/autoload/provider/clipboard.vim
+261.803  000.298: before starting main loop
+264.291  002.488: first screen update
+264.294  000.004: --- NVIM STARTED ---

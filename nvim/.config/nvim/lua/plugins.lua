@@ -46,8 +46,8 @@ return require('packer').startup(function(use)
         --}
     --}
     --
-    -- use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
+    -- use 'kyazdani42/nvim-tree.lua'
     --use 'rafcamlet/coc-nvim-lua'
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
@@ -61,8 +61,8 @@ return require('packer').startup(function(use)
     --
     --use 'sindrets/diffview.nvim'
     --
-    --[[ use 'stevearc/vim-arduino'
-    use 'jpalardy/vim-slime' ]]
+    -- use 'stevearc/vim-arduino'
+    use 'jpalardy/vim-slime'
 
     --use 'p00f/nvim-ts-rainbow'
 
@@ -79,9 +79,8 @@ return require('packer').startup(function(use)
 
     --use 'famiu/feline.nvim'
 
-    use {
-        'hoob3rt/lualine.nvim',
-    }
+    use 'hoob3rt/lualine.nvim'
+
     use 'folke/lsp-colors.nvim'
     -- use 'ahmedkhalf/lsp-rooter.nvim'
     use 'b3nj5m1n/kommentary'
@@ -93,6 +92,9 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'rmagatti/goto-preview'
     use 'mhartington/formatter.nvim'
+	use {
+		'lewis6991/gitsigns.nvim',
+	}
 
     --use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}

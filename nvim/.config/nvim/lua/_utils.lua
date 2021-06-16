@@ -40,7 +40,7 @@ end
 
 function M.set_options(options)
     for key, value in pairs(options) do
-        -- M.set_option_advanced(key , value)
+        -- M.set_option_advanced(key , value) legacy code used before the merge of vim.opt
         vim.opt[key] = value
     end
 end

@@ -11,7 +11,7 @@ local function yoink()
 end
 testuw("not nice" , "nice" );
 yoink();
-function foo()
+local function foo()
     local bin
     if foo then
         for bar in pairs(foo) do

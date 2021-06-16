@@ -1,5 +1,5 @@
 -- to fix lua highlighting for lua add (self) @variable.builtin to lua parser highlights.scm file
--- in treesitter folder
+-- in the treesitter plugin folder
 
 require "tele"
 require "hotkeys"
@@ -25,8 +25,8 @@ require "lsp_sig"
 require "whichWho"
 require "icons"
 require "omniBoy"
-require "format_config"
 require "emmetu"
 require "htmlu"
 require "preview-defs"
 require "formatting"
+require 'git-signs'
