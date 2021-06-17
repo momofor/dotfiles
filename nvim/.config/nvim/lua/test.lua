@@ -9,8 +9,10 @@ end
 local function yoink()
     print("wo")
 end
+
 testuw("not nice" , "nice" );
 yoink();
+
 local function foo()
     local bin
     if foo then

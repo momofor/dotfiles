@@ -29,4 +29,4 @@ require "emmetu"
 require "htmlu"
 require "preview-defs"
 require "formatting"
-require 'git-signs'
+require "git-signs"

@@ -96,7 +96,7 @@ return require('packer').startup(function(use)
 		'lewis6991/gitsigns.nvim',
 	}
 
-    --use 'shaunsingh/nord.nvim'
+    use 'shaunsingh/nord.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'
 end)

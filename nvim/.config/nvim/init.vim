@@ -1,4 +1,4 @@
-source $HOME/.config/nvim/theme-config/nord-treesitter.vim
+" source $HOME/.config/nvim/theme-config/nord-treesitter.vim
 source $HOME/.config/nvim/lua/init.lua
 colorscheme nord-treesitter
 let g:slime_target = "tmux"

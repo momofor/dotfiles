@@ -35,5 +35,6 @@ local options= {
 }
 
 vim.opt.shortmess:append "c";
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 utils.set_options(options)
