@@ -25,6 +25,8 @@ local bigboi = {
 }
 
 local test = "hello ${nice} you are cool like ${testu}"
+print(test)
+
 I = 1
 local _h = require("_helpers")
 --- @param a number
