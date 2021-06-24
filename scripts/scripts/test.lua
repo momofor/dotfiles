@@ -23,37 +23,7 @@ local bigboi = {
     nice = 1,
     testu = 2
 }
+local _h = require "_helpers"
+local UID = _h.do_tool({"search" , '"Nightly"'  , "|" , "head -1"})
 
-local test = "hello ${nice} you are cool like ${testu}"
-print(test)
-
-I = 1
-local _h = require("_helpers")
---- @param a number
---- @param b number
---
-function ImSpecial(a , b)
-    local result = a + b
-    return result
-end
--- vim.highlight.create()
-
-local test_str = "name: Romeo, Juliet"
-
--- split the string at ':'
-step_0 = _h.mysplit(test_str , ":")
-
--- get the first slice of the list
-step_1 = step_0[2]
-
--- split the string at ','
-step_2 = _h.mysplit(step_1 , ",")
-
--- strip leading and trailing edge spaces of each item of the list 
-
-for _, word in ipairs(step_2) do
-	string.gsub(word ,"%s" ,"")
-	print(word)
-end
-
-ImSpecial(1,2)
+_h.do_tool({"windowactivate" , "--sync" , UID })

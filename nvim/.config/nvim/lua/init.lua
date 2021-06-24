@@ -19,7 +19,7 @@ require "variables"
 require "groupsu"
 -- require("nvimtree-config")
 require "treesitteru"
-require("which-key").setup()
+require "which-key".setup()
 require "lineu"
 require "lsp_sig"
 require "whichWho"
@@ -30,3 +30,4 @@ require "htmlu"
 require "preview-defs"
 require "formatting"
 require "git-signs"
+require 'lspconfig'.jsonls.setup{}
