@@ -23,7 +23,8 @@ local bigboi = {
     nice = 1,
     testu = 2
 }
-local _h = require "_helpers"
-local UID = _h.do_tool({"search" , '"Nightly"'  , "|" , "head -1"})
 
-_h.do_tool({"windowactivate" , "--sync" , UID })
+local _h = require "_helpers"
+local UID = _h.do_tool {"search" , '"fish /home/momofor"'  , "|" , "head -1"}
+
+_h.do_tool {"windowactivate" , "--sync" , UID }
