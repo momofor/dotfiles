@@ -301,7 +301,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
     awful.key({ modkey }, "i", function () awful.spawn.with_shell("inkscape")end,
               {description = "run inkscape", group = "launcher"}),
 
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show drun")end,
+    awful.key({ modkey }, "r", function () awful.spawn("rofi -show drun")end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "g", function () awful.spawn.with_shell("gimp")end,
@@ -317,7 +317,7 @@ awful.key({ modkey, }, "\\", naughty.destroy_all_notifications,
               {description = "run zathura", group = "launcher"}),
 
     awful.key({ modkey }, "c", function () awful.spawn("luakit")end,
-              {description = "run qutebrowser", group = "launcher"}),
+              {description = "run luakit browser", group = "launcher"}),
 
     awful.key({ modkey , "Control" }, "l", function () awful.spawn.with_shell("setxkbmap -layout " .. ChangeLayout())end,
               {description = "run change layout keyboard", group = "launcher"}),

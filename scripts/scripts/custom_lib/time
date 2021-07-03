@@ -1,0 +1,8 @@
+luajit require
+Executed in   28.37 millis    fish           external 
+   usr time   10.98 millis  496.00 micros   10.49 millis 
+   sys time    3.60 millis  106.00 micros    3.50 millis 
+ffi require
+Executed in   25.22 millis    fish           external 
+   usr time    8.47 millis  793.00 micros    7.68 millis 
+   sys time    7.87 millis  198.00 micros    7.68 millis 

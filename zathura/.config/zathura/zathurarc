@@ -33,3 +33,4 @@ set recolor-darkcolor           "#ECEFF4"
 
 set recolor                     "false"
 set recolor-keephue             "false"
+set font "Fira Code Nerd Font 10"

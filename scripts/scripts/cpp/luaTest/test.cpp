@@ -8,7 +8,6 @@ int noice(int num) {
 }
 
 
-
         // takes file names as arguments to the program
 int main(int argc, char **argv){
 //iterate all files and execute
