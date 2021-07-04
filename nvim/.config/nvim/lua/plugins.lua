@@ -135,6 +135,15 @@ return require('packer').startup(function(use)
     --[[ use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     use 'jose-elias-alvarez/null-ls.nvim' ]]
 
+    use {
+        "jose-elias-alvarez/nvim-lsp-ts-utils",
+		requires = 'jose-elias-alvarez/null-ls.nvim' ,
+        ft = {
+            "javascript", "javascriptreact", "javascript.jsx", "typescript",
+            "typescriptreact", "typescript.tsx"
+        }
+    }
+
     use 'nathanaelkane/vim-indent-guides'
     -- use 'Pocco81/AbbrevMan.nvim'
     -- use 'rmagatti/goto-preview'
@@ -149,6 +158,20 @@ return require('packer').startup(function(use)
     -- use 'shaunsingh/nord.nvim'
 	-- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
 	use 'andweeb/presence.nvim'
+
+    use {
+        "ahmedkhalf/lsp-rooter.nvim",
+        event = "BufRead",
+        config = function()
+            require("lsp-rooter").setup()
+        end
+    }
+
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = 'cd app && npm install',
+        ft = 'markdown',
+    }
 
 	-- use 'pwntester/octo.nvim'
 
