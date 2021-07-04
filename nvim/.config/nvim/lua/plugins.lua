@@ -98,6 +98,7 @@ return require('packer').startup(function(use)
 
     use 'shaunsingh/nord.nvim'
 	use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
+	-- use 'andweeb/presence.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'
 end)

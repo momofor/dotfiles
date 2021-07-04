@@ -359,6 +359,7 @@ function theme.at_screen_connect(s)
             keyboardlayout,
             arrl_ld,
             wibox.container.background(s.mylayoutbox , theme.bg_focus),
+
             spr,
         },
     }

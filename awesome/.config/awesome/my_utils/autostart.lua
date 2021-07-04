@@ -7,5 +7,5 @@ local auto_apps = {
     'firefox-trunk'
 }
 for _, app in pairs(auto_apps) do
-    awful.spawn.with_shell(app .. " &")
+    awful.spawn.with_shell(app)
 end
