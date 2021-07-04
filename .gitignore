@@ -1,3 +1,6 @@
 login.txt
 gateway.json
 node_modules/
+obj/
+awesome-buttons/
+awesome-wm-widgets/
