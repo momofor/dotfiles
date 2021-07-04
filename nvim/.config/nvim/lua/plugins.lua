@@ -9,6 +9,25 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 
+local packer_ok, packer = pcall(require, "packer")
+if not packer_ok then return end
+
+packer.init {
+    -- compile_path = vim.fn.stdpath('data')..'/site/pack/loader/start/packer.nvim/plugin/packer_compiled.vim',
+    compile_path = require("packer.util").join_paths(vim.fn.stdpath('config'),
+                                                     'plugin',
+                                                     'packer_compiled.vim'),
+    git = {clone_timeout = 300},
+    display = {
+        open_fn = function()
+            return require("packer.util").float {border = "single"}
+        end
+    }
+}
+
+vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
+
+
 return require('packer').startup(function(use)
     --use 'jiangmiao/auto-pairs'
     --
@@ -52,7 +71,7 @@ return require('packer').startup(function(use)
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
 
-    use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
+    -- use {'mattn/vim-gist' , requires = 'mattn/webapi-vim' }
     use 'romgrk/barbar.nvim'
     --use 'tversteeg/registers.nvim'
     --use 'dag/vim-fish'
@@ -86,10 +105,12 @@ return require('packer').startup(function(use)
     use 'b3nj5m1n/kommentary'
     use 'folke/lua-dev.nvim'
     -- use 'OmniSharp/omnisharp-vim'
-    use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+	--typescript
+    --[[ use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+    use 'jose-elias-alvarez/null-ls.nvim' ]]
+
     use 'nathanaelkane/vim-indent-guides'
     -- use 'Pocco81/AbbrevMan.nvim'
-    use 'jose-elias-alvarez/null-ls.nvim'
     -- use 'rmagatti/goto-preview'
     -- use 'mhartington/formatter.nvim'
 	use {
@@ -100,7 +121,7 @@ return require('packer').startup(function(use)
 	-- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
 	use 'andweeb/presence.nvim'
 
-	use 'pwntester/octo.nvim'
+	-- use 'pwntester/octo.nvim'
 
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'

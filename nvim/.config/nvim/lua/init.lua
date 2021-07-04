@@ -32,5 +32,5 @@ require "icons"
 -- require "preview-defs"
 -- require "formatting"
 require "git-signs"
-require "octo-SAN"
+-- require "octo-SAN"
 -- require 'lspconfig'.jsonls.setup{}

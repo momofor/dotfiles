@@ -1,14 +1,17 @@
--- Automatically generated packer.nvim plugin loader code
+" Automatically generated packer.nvim plugin loader code
 
-if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
-  vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
-  return
-end
+if !has('nvim-0.5')
+  echohl WarningMsg
+  echom "Invalid Neovim version for packer.nvim!"
+  echohl None
+  finish
+endif
 
-vim.api.nvim_command('packadd packer.nvim')
+packadd packer.nvim
 
-local no_errors = pcall(function()
+try
 
+lua << END
   local time
   local profile_info
   local should_profile = false
@@ -109,10 +112,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
-  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
@@ -124,10 +123,6 @@ _G.packer_plugins = {
   ["nvim-compe"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-compe"
-  },
-  ["nvim-lsp-ts-utils"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -148,11 +143,6 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
-  },
-  ["octo.nvim"] = {
-    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0" },
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/octo.nvim"
   },
   playground = {
     loaded = true,
@@ -178,10 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
-  ["vim-gist"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-gist"
-  },
   ["vim-indent-guides"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides"
@@ -198,10 +184,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
-  ["webapi-vim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/webapi-vim"
-  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/which-key.nvim"
@@ -209,14 +191,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: octo.nvim
-time([[Config for octo.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
-time([[Config for octo.nvim]], false)
 if should_profile then save_profiles() end
 
-end)
+END
 
-if not no_errors then
-  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: ".v:exception | echom "Please check your config for correctness" | echohl None')
-end
+catch
+  echohl ErrorMsg
+  echom "Error in packer_compiled: " .. v:exception
+  echom "Please check your config for correctness"
+  echohl None
+endtry
