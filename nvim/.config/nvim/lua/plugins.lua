@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
     --}
     --
     use 'kyazdani42/nvim-web-devicons'
-    -- use 'kyazdani42/nvim-tree.lua'
+    use 'kyazdani42/nvim-tree.lua'
     --use 'rafcamlet/coc-nvim-lua'
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
@@ -62,7 +62,7 @@ return require('packer').startup(function(use)
     --use 'sindrets/diffview.nvim'
     --
     -- use 'stevearc/vim-arduino'
-    use 'jpalardy/vim-slime'
+    -- use 'jpalardy/vim-slime'
 
     --use 'p00f/nvim-ts-rainbow'
 
@@ -85,20 +85,20 @@ return require('packer').startup(function(use)
     -- use 'ahmedkhalf/lsp-rooter.nvim'
     use 'b3nj5m1n/kommentary'
     use 'folke/lua-dev.nvim'
-    use 'OmniSharp/omnisharp-vim'
+    -- use 'OmniSharp/omnisharp-vim'
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     use 'nathanaelkane/vim-indent-guides'
-    use 'Pocco81/AbbrevMan.nvim'
+    -- use 'Pocco81/AbbrevMan.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
-    use 'rmagatti/goto-preview'
-    use 'mhartington/formatter.nvim'
+    -- use 'rmagatti/goto-preview'
+    -- use 'mhartington/formatter.nvim'
 	use {
 		'lewis6991/gitsigns.nvim',
 	}
 
-    use 'shaunsingh/nord.nvim'
-	use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
-	-- use 'andweeb/presence.nvim'
+    -- use 'shaunsingh/nord.nvim'
+	-- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
+	use 'andweeb/presence.nvim'
     --use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     --use 'mattn/emmet-vim'
 end)

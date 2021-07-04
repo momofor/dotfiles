@@ -10,24 +10,26 @@ require "compe-config"
 require "mehu"
 require "lsp-hotkeys"
 require "ccGG"
- require "tsserveru"
+
+-- require "tsserveru"
+-- require "emmetu"
+-- require "htmlu"
+--
 require "lspsaga-config"
 -- require("navigator").setup()
 require'colorizer'.setup()
 
 require "variables"
 require "groupsu"
--- require("nvimtree-config")
+require("nvimtree-config")
 require "treesitteru"
 require "which-key".setup()
 require "lineu"
 require "lsp_sig"
 require "whichWho"
 require "icons"
-require "omniBoy"
-require "emmetu"
-require "htmlu"
-require "preview-defs"
-require "formatting"
+-- require "omniBoy"
+-- require "preview-defs"
+-- require "formatting"
 require "git-signs"
-require 'lspconfig'.jsonls.setup{}
+-- require 'lspconfig'.jsonls.setup{}

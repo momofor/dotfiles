@@ -1,17 +1,14 @@
-" Automatically generated packer.nvim plugin loader code
+-- Automatically generated packer.nvim plugin loader code
 
-if !has('nvim-0.5')
-  echohl WarningMsg
-  echom "Invalid Neovim version for packer.nvim!"
-  echohl None
-  finish
-endif
+if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
+  vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
+  return
+end
 
-packadd packer.nvim
+vim.api.nvim_command('packadd packer.nvim')
 
-try
+local no_errors = pcall(function()
 
-lua << END
   local time
   local profile_info
   local should_profile = false
@@ -72,10 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["AbbrevMan.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/AbbrevMan.nvim"
-  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/barbar.nvim"
@@ -84,17 +77,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/delimitMate"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/formatter.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
-  },
-  ["goto-preview"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/goto-preview"
   },
   kommentary = {
     loaded = true,
@@ -124,10 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nord.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
@@ -152,6 +133,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
@@ -164,10 +149,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  ["omnisharp-vim"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/omnisharp-vim"
-  },
   playground = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/playground"
@@ -179,6 +160,10 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/presence.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -195,10 +180,6 @@ _G.packer_plugins = {
   ["vim-indent-guides"] = {
     loaded = true,
     path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-indent-guides"
-  },
-  ["vim-slime"] = {
-    loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vim-slime"
   },
   ["vim-startify"] = {
     loaded = true,
@@ -225,11 +206,8 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 if should_profile then save_profiles() end
 
-END
+end)
 
-catch
-  echohl ErrorMsg
-  echom "Error in packer_compiled: " .. v:exception
-  echom "Please check your config for correctness"
-  echohl None
-endtry
+if not no_errors then
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: ".v:exception | echom "Please check your config for correctness" | echohl None')
+end

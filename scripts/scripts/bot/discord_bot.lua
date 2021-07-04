@@ -118,10 +118,6 @@ client:on("messageCreate", function (message)
 			message:reply("<@!" .. message.guild.owner.id .. "> niceu")
 		end
 
-		if args[1] == "mkrole" then
-			message.guild:createRole("helloWorld")
-		end
-
 		if args[1] == "roles" then
 			for key , value in message.guild.roles:__pairs() do
 				local role_guild = message.guild:getRole(value:__hash())

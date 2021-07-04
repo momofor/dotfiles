@@ -980,3 +980,7 @@
 2021-06-28 12:44:28 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2021-06-28 12:44:28 | [INFO]    | Shard 0 : Received HELLO
 2021-06-28 12:44:28 | [INFO]    | Shard 0 : Received READY
+2021-07-04 20:16:23 | [INFO]    | Discordia 2.9.1
+2021-07-04 20:16:23 | [INFO]    | Connecting to Discord...
+2021-07-04 20:16:24 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-07-04 20:16:24 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
