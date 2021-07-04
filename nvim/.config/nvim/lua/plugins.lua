@@ -38,7 +38,10 @@ return require('packer').startup(function(use)
 
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+    use {'nvim-telescope/telescope.nvim',
+			config = function ()
+				require "tele"
+			end}
 
     --use 'tpope/vim-fugitive'
     -- use 'airblade/vim-gitgutter/'
@@ -49,7 +52,10 @@ return require('packer').startup(function(use)
     --
     use 'christianchiarulli/nvcode-color-schemes.vim'
 
-    use 'nvim-treesitter/nvim-treesitter' -- We recommend updating the parsers on update
+    use {'nvim-treesitter/nvim-treesitter',
+			config = function ()
+				require "treesitteru"
+			end} -- We recommend updating the parsers on update
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     --
     use 'nvim-treesitter/playground'
@@ -66,7 +72,11 @@ return require('packer').startup(function(use)
     --}
     --
     use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
+    use {'kyazdani42/nvim-tree.lua',
+			config = function() 
+				require "nvimtree-config"
+			end
+		}
     --use 'rafcamlet/coc-nvim-lua'
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
@@ -87,18 +97,34 @@ return require('packer').startup(function(use)
 
      use 'neovim/nvim-lspconfig'
     use 'hrsh7th/vim-vsnip'
-    use 'hrsh7th/nvim-compe'
-    use 'glepnir/lspsaga.nvim'
+    use {'hrsh7th/nvim-compe',
+			config = function ()
+				require "compe-config"
+			end
+		}
+    use {'glepnir/lspsaga.nvim',
+			config = function ()
+				require "lspsaga-config"
+			end}
     use 'Raimondi/delimitMate'
-    use 'folke/which-key.nvim'
-    use 'ray-x/lsp_signature.nvim'
+    use {'folke/which-key.nvim',
+			config = function ()
+				require "whichWho"
+			end}
+    use {'ray-x/lsp_signature.nvim',
+			config = function ()
+				require "lsp_sig"
+			end}
     use 'folke/trouble.nvim'
     use 'onsails/lspkind-nvim'
     --use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     --use 'famiu/feline.nvim'
 
-    use 'hoob3rt/lualine.nvim'
+    use {'hoob3rt/lualine.nvim',
+			config = function ()
+				require "lineu"
+			end}
 
     use 'folke/lsp-colors.nvim'
     -- use 'ahmedkhalf/lsp-rooter.nvim'
@@ -115,6 +141,9 @@ return require('packer').startup(function(use)
     -- use 'mhartington/formatter.nvim'
 	use {
 		'lewis6991/gitsigns.nvim',
+		config = function ()
+			require "git-signs"
+		end
 	}
 
     -- use 'shaunsingh/nord.nvim'

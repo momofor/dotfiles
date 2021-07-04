@@ -1,12 +1,12 @@
 -- to fix lua highlighting for lua add (self) @variable.builtin to lua parser highlights.scm file
 -- in the treesitter plugin folder
 
-require "tele"
+-- require "tele"
 require "hotkeys"
 require "options"
 require "plugins"
 
-require "compe-config"
+-- require "compe-config"
 require "mehu"
 require "lsp-hotkeys"
 require "ccGG"
@@ -15,22 +15,23 @@ require "ccGG"
 -- require "emmetu"
 -- require "htmlu"
 --
-require "lspsaga-config"
+-- require "lspsaga-config"
 -- require("navigator").setup()
 require'colorizer'.setup()
 
 require "variables"
 require "groupsu"
-require("nvimtree-config")
-require "treesitteru"
-require "which-key".setup()
-require "lineu"
-require "lsp_sig"
-require "whichWho"
+-- require("nvimtree-config")
+-- require "treesitteru"
+-- require "which-key".setup()
+-- require "lineu"
+-- require "lsp_sig"
+-- require "whichWho"
 require "icons"
 -- require "omniBoy"
 -- require "preview-defs"
 -- require "formatting"
-require "git-signs"
+-- require "git-signs"
+
 -- require "octo-SAN"
 -- require 'lspconfig'.jsonls.setup{}
