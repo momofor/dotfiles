@@ -134,10 +134,14 @@ return require('packer').startup(function(use)
 	--typescript
     --[[ use 'jose-elias-alvarez/nvim-lsp-ts-utils'
     use 'jose-elias-alvarez/null-ls.nvim' ]]
+	use {'jose-elias-alvarez/null-ls.nvim',
+		ft = {
+            "javascript", "javascriptreact", "javascript.jsx", "typescript",
+            "typescriptreact", "typescript.tsx"
+		}}
 
     use {
         "jose-elias-alvarez/nvim-lsp-ts-utils",
-		requires = 'jose-elias-alvarez/null-ls.nvim' ,
         ft = {
             "javascript", "javascriptreact", "javascript.jsx", "typescript",
             "typescriptreact", "typescript.tsx"

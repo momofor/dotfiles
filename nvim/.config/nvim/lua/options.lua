@@ -36,6 +36,14 @@ local options= {
 
 vim.opt.shortmess:append "c";
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.shell = "/bin/dash"
+vim.opt.shell = "/bin/bash"
+
+-- highlight on yank
+vim.api.nvim_exec([[
+augroup YankHighlight
+autocmd!
+autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+augroup end
+]], false)
 
 utils.set_options(options)
