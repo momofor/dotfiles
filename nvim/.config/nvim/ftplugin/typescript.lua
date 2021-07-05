@@ -60,3 +60,4 @@ nvim_lsp.tsserver.setup {
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", {silent = true}) ]]
     end
 }
+vim.cmd("LspStart")
