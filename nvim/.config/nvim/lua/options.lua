@@ -37,6 +37,5 @@ local options= {
 vim.opt.shortmess:append "c";
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "/bin/dash"
-vim.cmd "filetype plugin on"
 
 utils.set_options(options)

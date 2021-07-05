@@ -7,9 +7,9 @@ require "options"
 require "plugins"
 
 -- require "compe-config"
-require "mehu"
+-- require "mehu"
 require "lsp-hotkeys"
-require "ccGG"
+-- require "ccGG"
 
 -- require "tsserveru"
 -- require "emmetu"
