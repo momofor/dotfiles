@@ -96,7 +96,7 @@ return require('packer').startup(function(use)
 			require "compe-config"
 		end,
 	}
-    use 'glepnir/lspsaga.nvim'
+    use {'glepnir/lspsaga.nvim', config = function () require "lspsaga-config" end}
     use 'Raimondi/delimitMate'
 	use {
 		"folke/which-key.nvim",
