@@ -54,16 +54,20 @@ require'nvim-treesitter.configs'.setup {
             },
         },
     },
-        --[[ swap = {
-            enable = true,
-            swap_next = {
-                ["[p"] = "@parameter.inner",
-            },
-            swap_previous = {
-                ["]p"] = "@parameter.inner",
-            },
-        }, ]]
-    }
+	refactor = {
+		highlight_definitions = { enable = true },
+		-- highlight_current_scope = { enable = true },
+	},
+	--[[ swap = {
+		enable = true,
+		swap_next = {
+			["[p"] = "@parameter.inner",
+		},
+		swap_previous = {
+			["]p"] = "@parameter.inner",
+		},
+	}, ]]
+}
 
 
 

@@ -38,27 +38,22 @@ return require('packer').startup(function(use)
 
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
-    use {'nvim-telescope/telescope.nvim',
-			config = function ()
-				require "tele"
-			end}
+    use 'nvim-telescope/telescope.nvim'
 
     --use 'tpope/vim-fugitive'
     -- use 'airblade/vim-gitgutter/'
     use 'tpope/vim-surround'
-    use 'norcalli/nvim-colorizer.lua'
+    use {'norcalli/nvim-colorizer.lua', config = function () require'colorizer'.setup() end ,
+			event = "BufWinEnter"}
 
     --use 'OmniSharp/omnisharp-vim'
     --
     use 'christianchiarulli/nvcode-color-schemes.vim'
 
-    use {'nvim-treesitter/nvim-treesitter',
-			config = function ()
-				require "treesitteru"
-			end} -- We recommend updating the parsers on update
+    use {'nvim-treesitter/nvim-treesitter', config = function () require "treesitteru" end}
     use 'nvim-treesitter/nvim-treesitter-textobjects'
-    --
     use 'nvim-treesitter/playground'
+	use 'nvim-treesitter/nvim-treesitter-refactor'
 
     --use 'metakirby5/codi.vim'
 
@@ -72,11 +67,7 @@ return require('packer').startup(function(use)
     --}
     --
     use 'kyazdani42/nvim-web-devicons'
-    use {'kyazdani42/nvim-tree.lua',
-			config = function() 
-				require "nvimtree-config"
-			end
-		}
+    use 'kyazdani42/nvim-tree.lua'
     --use 'rafcamlet/coc-nvim-lua'
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
@@ -96,35 +87,33 @@ return require('packer').startup(function(use)
     --use 'p00f/nvim-ts-rainbow'
 
      use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/vim-vsnip'
-    use {'hrsh7th/nvim-compe',
-			config = function ()
-				require "compe-config"
-			end
-		}
-    use {'glepnir/lspsaga.nvim',
-			config = function ()
-				require "lspsaga-config"
-			end}
+    use {'hrsh7th/vim-vsnip', event = "InsertEnter"}
+
+	use {
+		"hrsh7th/nvim-compe",
+		event = "InsertEnter",
+		config = function()
+			require "compe-config"
+		end,
+	}
+    use 'glepnir/lspsaga.nvim'
     use 'Raimondi/delimitMate'
-    use {'folke/which-key.nvim',
-			config = function ()
-				require "whichWho"
-			end}
+	use {
+		"folke/which-key.nvim",
+		config = function()
+			require "whichWho"
+		end,
+		event = "BufWinEnter",
+	}
     use {'ray-x/lsp_signature.nvim',
-			config = function ()
-				require "lsp_sig"
-			end}
+			config = function () require "lsp_sig" end}
     use 'folke/trouble.nvim'
-    use 'onsails/lspkind-nvim'
+    use {'onsails/lspkind-nvim', config = function() require "icons" end}
     --use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     --use 'famiu/feline.nvim'
 
-    use {'hoob3rt/lualine.nvim',
-			config = function ()
-				require "lineu"
-			end}
+    use {'hoob3rt/lualine.nvim', config = function () require "lineu" end}
 
     use 'folke/lsp-colors.nvim'
     -- use 'ahmedkhalf/lsp-rooter.nvim'
@@ -152,16 +141,11 @@ return require('packer').startup(function(use)
     -- use 'Pocco81/AbbrevMan.nvim'
     -- use 'rmagatti/goto-preview'
     -- use 'mhartington/formatter.nvim'
-	use {
-		'lewis6991/gitsigns.nvim',
-		config = function ()
-			require "git-signs"
-		end
-	}
-
+	use {'lewis6991/gitsigns.nvim', config = function () require "git-signs" end ,
+			event = "BufRead"}
     -- use 'shaunsingh/nord.nvim'
 	-- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
-	use 'andweeb/presence.nvim'
+	use {'andweeb/presence.nvim', event = "BufRead"}
 
     use {
         "ahmedkhalf/lsp-rooter.nvim",
