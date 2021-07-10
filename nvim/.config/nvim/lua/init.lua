@@ -30,8 +30,8 @@ require "treesitteru" ]]
 -- require "icons"
 -- require "omniBoy"
 -- require "preview-defs"
--- require "formatting"
 -- require "git-signs"
+require "formatting"
 
 -- require "octo-SAN"
 -- require 'lspconfig'.jsonls.setup{}
