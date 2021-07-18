@@ -1,4 +1,4 @@
-local opts = {
+require('rust-tools').setup {
     tools = { -- rust-tools options
         -- automatically set inlay hints (type hints)
         -- There is an issue due to which the hints are not applied on the first
@@ -70,4 +70,4 @@ local opts = {
     server = {} -- rust-analyer options
 }
 
-require('rust-tools').setup(opts)
+

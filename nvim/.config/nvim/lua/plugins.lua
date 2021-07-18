@@ -164,7 +164,9 @@ return require('packer').startup(function(use)
 
 			use 'pwntester/octo.nvim'
 			use {'mhartington/formatter.nvim'}
-			use {'simrat39/rust-tools.nvim', ft = { "rust"}}
+			use {'simrat39/rust-tools.nvim', ft = { "rust"}, config = function ()
+				require "cocoon"
+			end}
 
 			--use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 			--use 'mattn/emmet-vim'
