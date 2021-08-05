@@ -264,7 +264,7 @@ globalkeys =
         {modkey},
         "Return",
         function()
-            awful.spawn(terminal)
+            awful.spawn(terminal, {tag = awful.util.tagnames[2]})
         end,
         {description = "open a terminal", group = "launcher"}
     ),

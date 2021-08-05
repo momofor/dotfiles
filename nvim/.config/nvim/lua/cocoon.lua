@@ -19,6 +19,7 @@ require("rust-tools").setup {
 
             -- rest of the opts are forwarded to telescope
         },
+
         -- These apply to the default RustSetInlayHints command
         inlay_hints = {
             -- wheter to show parameter hints with the inlay hints or not
