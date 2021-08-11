@@ -2,6 +2,8 @@ login.txt
 gateway.json
 node_modules/
 obj/
+build/
+bin/
 awesome-buttons/
 awesome-wm-widgets/
 build-uno/
