@@ -647,7 +647,7 @@ client.connect_signal(
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
 -- useless gaps
-beautiful.useless_gap = 0.5
+beautiful.useless_gap = 1
 --rounded corners
 client.connect_signal(
     "manage",
