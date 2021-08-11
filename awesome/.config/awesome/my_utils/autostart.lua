@@ -1,6 +1,6 @@
 local awful = require("awful")
 local auto_apps = {
-    '/usr/bin/setxkbmap -layout dvp' ,
+    'setxkbmap -layout dvp' ,
     'setxkbmap -option "caps:swapescape"' ,
     '~/picom/build/src/picom --experimental-backends' ,
     'kitty' ,
