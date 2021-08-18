@@ -36,7 +36,7 @@ local options= {
 
 vim.opt.shortmess:append "c";
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.shell = "/bin/dash"
+vim.opt.shell = "dash"
 
 -- highlight on yank
 vim.api.nvim_exec([[
