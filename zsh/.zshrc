@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/momofor/.oh-my-zsh"
 export LIBVA_DRIVER_NAME=i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
+export BROWSER="luakit"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -15,10 +16,11 @@ alias c=z
 alias n=nvim
 alias nz="nvim ~/.zshrc"
 alias l=exa
-alias g=git
+# alias g=git
 alias naw="nvim ~/.config/awesome/rc.lua"
 alias t=tmux
 alias watchu="mpv --hwdec=auto --ytdl-format='(best[height<=720]/bestvideo+bestaudio)'"
+alias U="sudo apt update && sudo apt upgrade"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,10 +84,13 @@ alias watchu="mpv --hwdec=auto --ytdl-format='(best[height<=720]/bestvideo+besta
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git 
     zsh-autosuggestions
-	zoxide
 	z
 	vi-mode
 	zsh-syntax-highlighting
+	tmux
+	cargo
+	sudo
+	web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -95,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

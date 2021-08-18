@@ -193,7 +193,7 @@ return require("packer").startup(
             ft = "markdown"
         }
 
-        use "pwntester/octo.nvim"
+        -- use "pwntester/octo.nvim"
         use {"mhartington/formatter.nvim"}
         use {
             "simrat39/rust-tools.nvim",

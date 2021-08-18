@@ -518,6 +518,10 @@ awful.rules.rules = {
         rule = {class = "Firefox"},
         properties = {screen = 1, tag = awful.util.tagnames[1]}
     },
+	{
+		rule = {class = "luakit"},
+		properties = {screen = 1, tag = awful.util.tagnames[1]}
+	},
     {
         rule = {class = "Nightly"},
         properties = {screen = 1, tag = awful.util.tagnames[1]}
