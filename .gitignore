@@ -10,3 +10,4 @@ build-uno/
 *.log
 deps/
 scripts/
+noiceu/
