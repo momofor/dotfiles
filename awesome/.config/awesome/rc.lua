@@ -277,7 +277,7 @@ screen.connect_signal(
 )
 
 -- No borders when rearranging only 1 non-floating or maximized client
-screen.connect_signal(
+--[[ screen.connect_signal(
     "arrange",
     function(s)
         local only_one = #s.tiled_clients == 1
@@ -289,7 +289,7 @@ screen.connect_signal(
             end
         end
     end
-)
+) ]]
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(
     function(s)
@@ -651,7 +651,7 @@ client.connect_signal(
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
 -- useless gaps
-beautiful.useless_gap = 1
+beautiful.useless_gap = 2
 --rounded corners
 client.connect_signal(
     "manage",
