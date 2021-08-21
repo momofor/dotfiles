@@ -3,14 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/momofor/.oh-my-zsh"
-export LIBVA_DRIVER_NAME=i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
+export LIBVA_DRIVER_NAME="i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri"
 export BROWSER="luakit"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="nord"
+# ZSH_THEME="random"
 eval "$(starship init zsh)"
 alias c=z 
 alias n=nvim
@@ -21,6 +21,10 @@ alias naw="nvim ~/.config/awesome/rc.lua"
 alias t=tmux
 alias watchu="mpv --hwdec=auto --ytdl-format='(best[height<=720]/bestvideo+bestaudio)'"
 alias U="sudo apt update && sudo apt upgrade"
+alias ll="exa -la"
+alias sz="source ~/.zshrc"
+alias ft="freetube --use-gl=desktop --enable-features=VaapiVideoDecoder"
+alias C="sudo apt autoremove && sudo apt autoclean"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,14 +87,14 @@ alias U="sudo apt update && sudo apt upgrade"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git 
-    zsh-autosuggestions
 	z
-	vi-mode
-	zsh-syntax-highlighting
 	tmux
 	cargo
 	sudo
 	web-search
+    zsh-autosuggestions
+	zsh-syntax-highlighting
+	vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
