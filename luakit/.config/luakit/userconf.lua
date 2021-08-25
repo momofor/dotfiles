@@ -1,4 +1,5 @@
 local select = require "select"
+local styles = require "styles"
 
 select.label_maker = function()
     local chars = charset("asonetuh")
@@ -20,7 +21,6 @@ local actions = {
 local modes = require "modes"
 modes.add_cmds({{":noice", actions.test}})
 
-local modes = require("modes")
 local video_cmd_fmt = "mpv --hwdec=auto --ytdl '%s'"
 modes.add_binds(
     "ex-follow",

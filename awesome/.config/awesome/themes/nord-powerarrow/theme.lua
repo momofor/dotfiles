@@ -369,7 +369,7 @@ function theme.at_screen_connect(s)
 
     -- Create the wibox
     function Custom_shape(cr, width, height)
-        gears.shape.rounded_rect(cr, width, height, 10)
+        gears.shape.rounded_rect(cr, width, height, 5)
     end
 
     s.mywibox =

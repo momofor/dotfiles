@@ -3,8 +3,11 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/momofor/.oh-my-zsh"
-export LIBVA_DRIVER_NAME="i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri"
+# export LIBVA_DRIVER_NAME="i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri"
+# export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so
 export BROWSER="luakit"
+export LIBVA_DRIVER_NAME=i965 
+export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,7 +108,8 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
+setxkbmap -layout dvp 
+setxkbmap -option "caps:swapescape" 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'

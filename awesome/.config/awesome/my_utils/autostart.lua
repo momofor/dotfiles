@@ -1,10 +1,8 @@
 local awful = require("awful")
 local auto_apps = {
-    'setxkbmap -layout dvp' ,
-    'setxkbmap -option "caps:swapescape"' ,
-	'picom --experimental-backends',
-    'kitty'
-    -- 'firefox-trunk'
+    "picom --experimental-backends",
+    "kitty",
+    "luakit"
 }
 for _, app in pairs(auto_apps) do
     awful.spawn.with_shell(app)
