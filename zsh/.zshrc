@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/momofor/.oh-my-zsh"
+# export ZSH="/home/momofor/.oh-my-zsh"
 # export LIBVA_DRIVER_NAME="i965 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri"
 # export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so
 export BROWSER="luakit"
 export LIBVA_DRIVER_NAME=i965 
-export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
+export LIBVA_DRIVERS_PATH=/usr/lib/dri
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -18,7 +19,8 @@ eval "$(starship init zsh)"
 alias c=z 
 alias n=nvim
 alias nz="nvim ~/.zshrc"
-alias l=exa
+alias l=exa -a
+alias la=exa -la
 # alias g=git
 alias naw="nvim ~/.config/awesome/rc.lua"
 alias t=tmux
@@ -61,12 +63,12 @@ alias C="sudo apt autoremove && sudo apt autoclean"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
 # See https://github.com/ohmyzsh/ohmyzsh/issues/5765
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -89,18 +91,15 @@ alias C="sudo apt autoremove && sudo apt autoclean"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git 
-	z
-	tmux
-	cargo
-	sudo
-	web-search
-    zsh-autosuggestions
-	zsh-syntax-highlighting
-	vi-mode
-)
+source ~/.oh-my-zsh/plugins/z/z.plugin.zsh
+source ~/.oh-my-zsh/plugins/sudo/sudo.plugin.zsh
+source ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
+source ~/.config/zsh/colors.zsh
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 

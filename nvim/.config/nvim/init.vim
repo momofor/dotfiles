@@ -1,6 +1,7 @@
 " source $HOME/.config/nvim/theme-config/nord-treesitter.vim
 source $HOME/.config/nvim/lua/init.lua
 colorscheme nord-treesitter
+" source nord-treesitter.vim
 " let g:slime_target = "tmux"
 " let g:arduino_use_slime = 1
 " let g:slime_default_config = {"socket_name": "default", "target_pane": ":.1"}
