@@ -16,11 +16,13 @@ table.insert(path, "?.lua")
 table.insert(path, "?/init.lua")
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-local sumneko_root_path = vim.fn.stdpath("cache") .. "/lspconfig/sumneko_lua/lua-language-server"
-local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+-- local sumneko_root_path = vim.fn.stdpath("cache") .. "/lspconfig/sumneko_lua/lua-language-server"
+-- local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+local sumneko_binary = "lua-language-server"
 
 require "lspconfig".sumneko_lua.setup {
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+    -- cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+	cmd = {sumneko_binary},
     settings = {
         Lua = {
             runtime = {

@@ -18,7 +18,7 @@ local modkey = "Mod4"
 local altkey = "Mod1"
 local terminal = "kitty -e zsh"
 local cycle_prev = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-local browser = os.getenv("BROWSER") or "firefox-trunk"
+local browser = os.getenv("BROWSER") or "firefox"
 local scrlocker = "slock"
 local term_exec = terminal .. " -e "
 
@@ -533,7 +533,7 @@ globalkeys =
         {modkey},
         "q",
         function()
-            awful.spawn(browser)
+            awful.spawn.with_shell(browser)
         end,
         {description = "run browser", group = "launcher"}
     ),
