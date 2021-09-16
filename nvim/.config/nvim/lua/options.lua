@@ -34,7 +34,7 @@ local options= {
     updatetime = 300 -- Faster completion
 }
 
-vim.opt.shortmess:append "c";
+vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "dash"
 
