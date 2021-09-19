@@ -18,7 +18,7 @@ local modkey = "Mod4"
 local altkey = "Mod1"
 local terminal = "kitty -e zsh"
 local cycle_prev = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-local browser = os.getenv("BROWSER") or "firefox"
+local browser = os.getenv("BROWSER") or "firefox-nightly"
 local scrlocker = "slock"
 local term_exec = terminal .. " -e "
 
@@ -549,7 +549,7 @@ globalkeys =
         {modkey},
         "r",
         function()
-            awful.spawn("rofi -show drun")
+            awful.spawn("rofi -show drun -font \"FiraCode Nerd Font Mono 14\" ")
         end,
         {description = "run rofi", group = "launcher"}
     ),

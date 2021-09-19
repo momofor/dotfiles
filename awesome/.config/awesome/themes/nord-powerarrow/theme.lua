@@ -98,7 +98,7 @@ local clockicon = wibox.widget.imagebox(theme.widget_clock)
 local clock =
     awful.widget.watch(
     "date +'%A, %b %d %r  '",
-    60,
+    1,
     function(widget, stdout)
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end
@@ -206,12 +206,12 @@ local cpu =
 )
 
 -- Coretemp
---local tempicon = wibox.widget.imagebox(theme.widget_temp)
---local temp = lain.widget.temp({
---settings = function()
---widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
---end
---})
+local tempicon = wibox.widget.imagebox(theme.widget_temp)
+local temp = lain.widget.temp({
+settings = function()
+widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
+end
+})
 
 -- / fs
 --local fsicon = wibox.widget.imagebox(theme.widget_hdd)

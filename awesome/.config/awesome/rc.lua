@@ -528,7 +528,7 @@ awful.rules.rules = {
     },
     {
         rule = {class = "[Ss]potify", name = "Spotify" or "Spotify Free" or "spotify"},
-        properties = {screen = 1, tag = awful.util.tagnames[1]}
+        properties = {screen = 1, tag = awful.util.tagnames[3]}
     },
     {
         rule = {class = "Gimp"},
