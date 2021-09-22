@@ -183,4 +183,12 @@ return require("packer").startup(function(use)
         "norcalli/nvim-terminal.lua",
         config = function() require'terminal'.setup() end
     }
+    --[[ use {
+        "hrsh7th/nvim-cmp",
+        event = "InsertEnter",
+        config = function() require "cmp-config" end,
+        requires = {
+            "hrsh7th/vim-vsnip","hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-vsnip"
+        }
+    } ]]
 end)
