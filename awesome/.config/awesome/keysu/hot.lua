@@ -549,7 +549,7 @@ globalkeys =
         {modkey},
         "r",
         function()
-            awful.spawn("rofi -show drun -font \"FiraCode Nerd Font Mono 14\" ")
+            awful.spawn("rofi -show drun -font \"Dejavu Sans 14\" ")
         end,
         {description = "run rofi", group = "launcher"}
     ),
