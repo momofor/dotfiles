@@ -103,6 +103,18 @@ local clock =
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end
 )
+
+-- updatable packages
+
+local update_count =
+    awful.widget.watch(
+    "bash -c 'paru -Qu | wc -l'",
+    1,
+    function(widget, stdout)
+        widget:set_markup(" " .. markup.font(theme.font, stdout))
+    end
+)
+
 local function custom_shape(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, 10)
 end
@@ -422,7 +434,9 @@ function theme.at_screen_connect(s)
             arrl_dl,
             keyboardlayout,
             arrl_ld,
-            wibox.container.background(s.mylayoutbox, theme.bg_focus),
+			wibox.container.background(update_count, theme.bg_focus),
+			arrl_dl,
+            s.mylayoutbox,
             spr
         }
     }
