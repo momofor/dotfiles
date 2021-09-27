@@ -1,2 +1,17 @@
-@theme "/usr/share/rofi/themes/slate.rasi"
-@font Fira Code Nerd Font Mono 16
+configuration {
+  terminal: "kitty";
+  modi: "combi,window,drun,ssh,";
+  combi-modi: "drun,window";
+  font: "Dejavu Sans 10";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+  combi-hide-mode-prefix: true;
+  drun-show-actions: true;
+  drun-display-format: "{name}";
+  disable-history: false;
+  fullscreen: false;
+  hide-scrollbar: true;
+  sidebar-mode: false;
+  auto-select: false;
+  theme: "~/.local/share/rofi/themes/doom-one.rasi";
+}
