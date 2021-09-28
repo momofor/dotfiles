@@ -109,7 +109,7 @@ local clock =
 local update_count =
     awful.widget.watch(
     "bash -c 'paru -Qu | wc -l'",
-    1,
+    300,
     function(widget, stdout)
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end

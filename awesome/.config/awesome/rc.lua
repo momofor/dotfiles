@@ -90,7 +90,7 @@ awful.spawn.with_shell(
 
 local themes = {
     "nord-powerarrow", -- 1
-    "nord-powerarrow-colorful" -- 2
+    "nord-powerarrow-colorful", --2
 }
 
 local chosen_theme = themes[1]
@@ -651,7 +651,7 @@ client.connect_signal(
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
 -- useless gaps
-beautiful.useless_gap = 2
+beautiful.useless_gap = 3
 --rounded corners
 --[[ client.connect_signal(
     "manage",
