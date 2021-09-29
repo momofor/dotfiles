@@ -1,7 +1,7 @@
 local awful = require("awful")
 local auto_apps = {
     "picom --experimental-backends",
-    "kitty -e systemd-analyze",
+    "kitty",
     os.getenv("BROWSER") or "firefox-nightly"
 }
 for _, app in pairs(auto_apps) do
