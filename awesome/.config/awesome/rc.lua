@@ -516,7 +516,7 @@ awful.rules.rules = {
     -- Set Firefox to always map on the first tag on screen 1.
     {
         rule = {class = "Firefox"},
-        properties = {screen = 1, tag = awful.util.tagnames[1]}
+        properties = {screen = 1, tag = awful.util.tagnames[1], maximized = true}
     },
 	{
 		rule = {class = "luakit"},
