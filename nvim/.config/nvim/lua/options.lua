@@ -9,14 +9,14 @@ local options= {
 	writebackup = false ,
     clipboard = "unnamedplus" ,
     hidden = true ,
-    pumheight=20 ,
+    pumheight=25 ,
     cmdheight=2 ,
     mouse = "a" ,
     splitbelow = true ,
     splitright = true ,
     autochdir = true ,
     showmode = false ,
-    --swapfile = false ,
+    swapfile = false ,
     shiftwidth = 4 ,
     softtabstop = 4 ,
     tabstop = 4 ,
@@ -31,7 +31,7 @@ local options= {
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
     timeoutlen = 300 ,
-    updatetime = 300 -- Faster completion
+    updatetime = 50 -- Faster completion
 }
 
 vim.opt.shortmess:append "c"

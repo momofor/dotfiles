@@ -21,6 +21,7 @@ table.insert(path, "?/init.lua")
 local sumneko_binary = "lua-language-server"
 
 require "lspconfig".sumneko_lua.setup {
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
     -- cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
 	cmd = {sumneko_binary},
     settings = {
@@ -38,8 +39,8 @@ require "lspconfig".sumneko_lua.setup {
             workspace = {
                 -- Make the server aware of Neovim runtime files
                 library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                    --[[ [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true, ]]
                 }
             }
         }

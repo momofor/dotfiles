@@ -26,7 +26,6 @@ packer.init {
 }
 
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
-
 return require("packer").startup(function(use)
     -- use 'jiangmiao/auto-pairs'
     --
@@ -112,7 +111,7 @@ return require("packer").startup(function(use)
     }
     use {"ray-x/lsp_signature.nvim", config = function() require "lsp_sig" end}
     use "folke/trouble.nvim"
-    use {"onsails/lspkind-nvim", config = function() require "icons" end}
+    -- use {"onsails/lspkind-nvim", config = function() require "icons" end}
     -- use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     -- use 'famiu/feline.nvim'
@@ -153,7 +152,7 @@ return require("packer").startup(function(use)
         config = function() require "git-signs" end,
         event = "BufRead"
     }
-    -- use 'shaunsingh/nord.nvim'
+    use 'shaunsingh/nord.nvim'
     -- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
     use {"andweeb/presence.nvim", event = "BufRead"}
 
@@ -180,27 +179,15 @@ return require("packer").startup(function(use)
     -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     -- use 'mattn/emmet-vim'
     use {"fladson/vim-kitty", event = "BufRead"}
+
     use {
         "norcalli/nvim-terminal.lua",
         config = function() require'terminal'.setup() end
     }
-    --[[ use {
-        "hrsh7th/nvim-cmp",
-        event = "InsertEnter",
-        config = function() require "cmp-config" end,
-        requires = {
-            "hrsh7th/vim-vsnip","hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-vsnip"
-        }
-    } ]]
-	use {'hrsh7th/nvim-cmp', requires = {
-		'hrsh7th/cmp-nvim-lsp',
-		'hrsh7th/cmp-buffer'
-	},
-		config = function()
-			require "cmp-config"
-		end}
-
-	-- For vsnip user
-	use 'hrsh7th/cmp-vsnip'
-	use 'hrsh7th/vim-vsnip'
+    use {'L3MON4D3/LuaSnip'}
+    use {'hrsh7th/nvim-cmp', config = function() require "cmp-config" end}
+	use { 'saadparwaiz1/cmp_luasnip' }
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
 end)
