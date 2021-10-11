@@ -82,7 +82,7 @@ return require("packer").startup(function(use)
     -- use 'tversteeg/registers.nvim'
     -- use 'dag/vim-fish'
     --
-    -- use 'lervag/vimtex'
+    use {'lervag/vimtex', ft = "tex"}
     --
     -- use 'sindrets/diffview.nvim'
     --
@@ -92,13 +92,14 @@ return require("packer").startup(function(use)
     -- use 'p00f/nvim-ts-rainbow'
 
     use "neovim/nvim-lspconfig"
-    use {"hrsh7th/vim-vsnip", event = "InsertEnter"}
 
-    use {
+    --[[ use {
         "hrsh7th/nvim-compe",
         event = "InsertEnter",
         config = function() require "compe-config" end
     }
+    use {"hrsh7th/vim-vsnip", event = "InsertEnter"} ]]
+
     use {
         "glepnir/lspsaga.nvim",
         config = function() require "lspsaga-config" end
@@ -191,4 +192,15 @@ return require("packer").startup(function(use)
             "hrsh7th/vim-vsnip","hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-vsnip"
         }
     } ]]
+	use {'hrsh7th/nvim-cmp', requires = {
+		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/cmp-buffer'
+	},
+		config = function()
+			require "cmp-config"
+		end}
+
+	-- For vsnip user
+	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/vim-vsnip'
 end)
