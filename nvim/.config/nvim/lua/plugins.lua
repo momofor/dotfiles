@@ -184,9 +184,11 @@ return require("packer").startup(function(use)
         "norcalli/nvim-terminal.lua",
         config = function() require'terminal'.setup() end
     }
-    use {'L3MON4D3/LuaSnip'}
-    use {'hrsh7th/nvim-cmp', config = function() require "cmp-config" end}
-	use { 'saadparwaiz1/cmp_luasnip' }
+    use {'L3MON4D3/LuaSnip', requires = {'rafamadriz/friendly-snippets'}}
+    use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
+    use {'saadparwaiz1/cmp_luasnip'}
+    use "hrsh7th/vim-vsnip"
+    use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'

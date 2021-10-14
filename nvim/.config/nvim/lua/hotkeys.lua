@@ -45,7 +45,7 @@ utils.map('n' , '<TAB>' , ':bnext<CR>' , {noremap = true})
 utils.map('n' , '<Leader>P' , ':BufferPick<CR>' , {noremap = true , silent = true})
 utils.map('n' , '<Leader>bl' , ':BufferOrderByLanguage<CR>' , {noremap = true , silent = true})
 -- SHIFT-TAB will go back
-utils.map('n' , '<S-TAB>' , ':bprevious<CR>' , {noremap = true})
+utils.map('n' , '<C-S-TAB>' , ':bprevious<CR>' , {noremap = true})
 
 -- Alternate way to save
 utils.map('n' , '<C-s>' , ':w<CR>' , {noremap = true})
@@ -67,7 +67,7 @@ utils.map('n' , '<leader>z' , ':CocAction<CR>' , {noremap = true})
 --color
 utils.map('n' , '<leader>cll' , ':CocCommand editor.action.pickColor<CR>' , {noremap = true})
 utils.map('n' , ';' , ':' , {noremap = true})
-utils.map('i' , '<Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true} )
+utils.map('i' , '<C-Tab>' , [[pumvisible() ? "\<C-n>" : "\<TAB>"]] , {expr = true} )
 -- folding
 --utils.map('' , '<Leader>F' , "'<,'>fold ")
 

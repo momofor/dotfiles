@@ -31,12 +31,13 @@ local options= {
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
     timeoutlen = 300 ,
-    updatetime = 50 -- Faster completion
+    updatetime = 150 -- Faster completion
 }
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "dash"
+vim.opt.completeopt = "menu,menuone,noselect"
 
 -- highlight on yank
 vim.api.nvim_exec([[
