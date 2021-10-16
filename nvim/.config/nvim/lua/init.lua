@@ -5,6 +5,8 @@ require "hotkeys"
 require "options"
 require "plugins"
 
+
+
 require("lsp-colors").setup({
     Error = "#bf616a",
     Warning = "#ebcb8b",

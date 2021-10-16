@@ -111,7 +111,7 @@ return require("packer").startup(function(use)
     }
     use {"ray-x/lsp_signature.nvim", config = function() require "lsp_sig" end}
     use "folke/trouble.nvim"
-    -- use {"onsails/lspkind-nvim", config = function() require "icons" end}
+    use {"onsails/lspkind-nvim", config = function() require "icons" end}
     -- use {'tzachar/compe-tabnine' , run = './install.sh'}
 
     -- use 'famiu/feline.nvim'
@@ -126,13 +126,13 @@ return require("packer").startup(function(use)
     -- typescript
     --[[ use 'jose-elias-alvarez/nvim-lsp-ts-utils'
 			use 'jose-elias-alvarez/null-ls.nvim' ]]
-    use {
+    --[[ use {
         "jose-elias-alvarez/null-ls.nvim",
         ft = {
             "javascript", "javascriptreact", "javascript.jsx", "typescript",
             "typescriptreact", "typescript.tsx"
         }
-    }
+    } ]]
 
     use {
         "jose-elias-alvarez/nvim-lsp-ts-utils",
@@ -152,9 +152,9 @@ return require("packer").startup(function(use)
         config = function() require "git-signs" end,
         event = "BufRead"
     }
-    use 'shaunsingh/nord.nvim'
+    -- use 'shaunsingh/nord.nvim'
     -- use {'sakhnik/nvim-gdb' , run = ':!./install.sh' }
-    use {"andweeb/presence.nvim", event = "BufRead"}
+    -- use {"andweeb/presence.nvim", event = "BufRead"}
 
     use {
         "ahmedkhalf/lsp-rooter.nvim",
@@ -178,18 +178,24 @@ return require("packer").startup(function(use)
 
     -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     -- use 'mattn/emmet-vim'
-    use {"fladson/vim-kitty", event = "BufRead"}
+    use {"fladson/vim-kitty", event = "BufRead", ft= "config"}
 
-    use {
+    --[[ use {
         "norcalli/nvim-terminal.lua",
         config = function() require'terminal'.setup() end
-    }
-    use {'L3MON4D3/LuaSnip', requires = {'rafamadriz/friendly-snippets'}}
+    } ]]
+    -- use {'L3MON4D3/LuaSnip', requires = {'rafamadriz/friendly-snippets'}}
     use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
-    use {'saadparwaiz1/cmp_luasnip'}
+    -- use {'saadparwaiz1/cmp_luasnip'}
     use "hrsh7th/vim-vsnip"
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
+    use {
+        'saecki/crates.nvim',
+        ft = "toml",
+        config = function() require "crate" end
+    }
+    -- use 'jose-elias-alvarez/null-ls.nvim'
 end)

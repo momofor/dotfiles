@@ -1,39 +1,13 @@
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
-
-local cmp_kinds = {
-    Class = ' ',
-    Color = ' ',
-    Constant = 'ﲀ ',
-    Constructor = ' ',
-    Enum = '練',
-    EnumMember = ' ',
-    Event = ' ',
-    Field = ' ',
-    File = '',
-    Folder = ' ',
-    Function = ' ',
-    Interface = 'ﰮ ',
-    Keyword = ' ',
-    Method = ' ',
-    Module = ' ',
-    Operator = '',
-    Property = ' ',
-    Reference = ' ',
-    Snippet = ' ',
-    Struct = ' ',
-    Text = ' ',
-    TypeParameter = ' ',
-    Unit = '塞',
-    Value = ' ',
-    Variable = ' '
-}
+local lsp_kind = require "lspkind"
 
 cmp.setup({
     formatting = {
         format = function(entry, vim_item)
-            vim_item.kind = string.format('%s %s', cmp_kinds[vim_item.kind],
-                                          vim_item.kind)
+            --[[ vim_item.kind = string.format('%s %s', cmp_kinds[vim_item.kind],
+                                          vim_item.kind) ]]
+            vim_item.kind = lsp_kind.presets.default[vim_item.kind]
             vim_item.menu = ({
                 nvim_lsp = '[LSP]',
                 luasnip = '[Snp]',
@@ -41,7 +15,7 @@ cmp.setup({
                 nvim_lua = '[Lua]',
                 path = '[Pth]',
                 calc = '[Clc]',
-                emoji = '[Emj]'
+                emoji = '[Emj]',
             })[entry.source.name]
 
             return vim_item
@@ -75,9 +49,9 @@ cmp.setup({
     sources = {
         {name = 'nvim_lsp'}, -- For vsnip user.
         {name = 'vsnip'}, -- For luasnip user.
-        -- { name = 'luasnip' },
+        {name = 'crates'}, -- { name = 'luasnip' },
         -- For ultisnips user.
         -- { name = 'ultisnips' },
-        {name = 'buffer'}
+        {name = 'buffer'},
     }
 })

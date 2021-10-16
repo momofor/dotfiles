@@ -31,7 +31,7 @@ local options= {
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
     timeoutlen = 300 ,
-    updatetime = 150 -- Faster completion
+    updatetime = 150, -- Faster completion
 }
 
 vim.opt.shortmess:append "c"
