@@ -84,7 +84,7 @@ return require("packer").startup(function(use)
     -- use 'tversteeg/registers.nvim'
     -- use 'dag/vim-fish'
     --
-    -- use {'lervag/vimtex', ft = "tex"}
+    use {'lervag/vimtex', ft = "tex"}
     --
     -- use 'sindrets/diffview.nvim'
     --
@@ -104,6 +104,7 @@ return require("packer").startup(function(use)
 
     use {
         "glepnir/lspsaga.nvim",
+        config = function() require "lspsaga-config" end
     }
     use "Raimondi/delimitMate"
     use {
