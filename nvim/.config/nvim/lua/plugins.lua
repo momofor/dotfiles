@@ -71,7 +71,10 @@ return require("packer").startup(function(use)
     -- }
     --
     use "kyazdani42/nvim-web-devicons"
-    use "kyazdani42/nvim-tree.lua"
+    use {
+        "kyazdani42/nvim-tree.lua",
+        config = function() require "nvimtree-config" end
+    }
     -- use 'rafcamlet/coc-nvim-lua'
 
     -- use {'neoclide/coc.nvim', branch = 'release' }
@@ -136,6 +139,8 @@ return require("packer").startup(function(use)
 
     use {
         "jose-elias-alvarez/nvim-lsp-ts-utils",
+        requires = "jose-elias-alvarez/null-ls.nvim",
+
         ft = {
             "javascript", "javascriptreact", "javascript.jsx", "typescript",
             "typescriptreact", "typescript.tsx"
@@ -178,15 +183,13 @@ return require("packer").startup(function(use)
 
     -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
     -- use 'mattn/emmet-vim'
-    use {"fladson/vim-kitty", event = "BufRead", ft= "config"}
+    use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
 
     --[[ use {
         "norcalli/nvim-terminal.lua",
         config = function() require'terminal'.setup() end
     } ]]
-    -- use {'L3MON4D3/LuaSnip', requires = {'rafamadriz/friendly-snippets'}}
     use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
-    -- use {'saadparwaiz1/cmp_luasnip'}
     use "hrsh7th/vim-vsnip"
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -197,5 +200,4 @@ return require("packer").startup(function(use)
         ft = "toml",
         config = function() require "crate" end
     }
-    -- use 'jose-elias-alvarez/null-ls.nvim'
 end)

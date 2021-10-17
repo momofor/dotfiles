@@ -5,8 +5,6 @@ local lsp_kind = require "lspkind"
 cmp.setup({
     formatting = {
         format = function(entry, vim_item)
-            --[[ vim_item.kind = string.format('%s %s', cmp_kinds[vim_item.kind],
-                                          vim_item.kind) ]]
             vim_item.kind = lsp_kind.presets.default[vim_item.kind]
             vim_item.menu = ({
                 nvim_lsp = '[LSP]',
@@ -15,7 +13,7 @@ cmp.setup({
                 nvim_lua = '[Lua]',
                 path = '[Pth]',
                 calc = '[Clc]',
-                emoji = '[Emj]',
+                emoji = '[Emj]'
             })[entry.source.name]
 
             return vim_item
@@ -52,6 +50,6 @@ cmp.setup({
         {name = 'crates'}, -- { name = 'luasnip' },
         -- For ultisnips user.
         -- { name = 'ultisnips' },
-        {name = 'buffer'},
+        {name = 'buffer'}
     }
 })

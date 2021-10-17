@@ -5,8 +5,6 @@ require "hotkeys"
 require "options"
 require "plugins"
 
-
-
 require("lsp-colors").setup({
     Error = "#bf616a",
     Warning = "#ebcb8b",
@@ -39,11 +37,6 @@ require "treesitteru" ]]
 -- require "preview-defs"
 -- require "git-signs"
 require "formatting"
-
-require('lspconfig').texlab.setup {
-    --[[ capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol
-                                                                   .make_client_capabilities()) ]]
-}
 
 -- require "octo-SAN"
 -- require 'lspconfig'.jsonls.setup{}
