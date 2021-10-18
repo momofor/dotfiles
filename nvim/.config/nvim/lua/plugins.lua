@@ -1,33 +1,14 @@
-local execute = vim.api.nvim_command
 local fn = vim.fn
-
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-    execute("!git clone https://github.com/wbthomason/packer.nvim " ..
-                install_path)
-    execute "packadd packer.nvim"
+    packer_bootstrap = fn.system({
+        'git', 'clone', '--depth', '1',
+        'https://github.com/wbthomason/packer.nvim', install_path
+    })
 end
 
-local packer_ok, packer = pcall(require, "packer")
-if not packer_ok then return end
-
-packer.init {
-    -- compile_path = vim.fn.stdpath('data')..'/site/pack/loader/start/packer.nvim/plugin/packer_compiled.vim',
-    compile_path = require("packer.util").join_paths(vim.fn.stdpath("config"),
-                                                     "plugin",
-                                                     "packer_compiled.vim"),
-    git = {clone_timeout = 300},
-    display = {
-        open_fn = function()
-            return require("packer.util").float {border = "single"}
-        end
-    }
-}
-
-vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
-return require("packer").startup(function(use)
-    use "mhinz/vim-startify"
+return require('packer').startup(function(use)
+	    use "mhinz/vim-startify"
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
@@ -55,7 +36,7 @@ return require("packer").startup(function(use)
     use {"romgrk/barbar.nvim", event = "BufEnter"}
     use "neovim/nvim-lspconfig"
 
-    use {"glepnir/lspsaga.nvim"}
+    use "glepnir/lspsaga.nvim"
     use "Raimondi/delimitMate"
     use {
         "folke/which-key.nvim",
@@ -70,7 +51,7 @@ return require("packer").startup(function(use)
 
     use "folke/lsp-colors.nvim"
     use "b3nj5m1n/kommentary"
-    use "folke/lua-dev.nvim"
+    -- use "folke/lua-dev.nvim"
 
     use {
         "jose-elias-alvarez/nvim-lsp-ts-utils",
@@ -107,7 +88,7 @@ return require("packer").startup(function(use)
         config = function() require "cocoon" end
     }
 
-    use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
+    -- use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
     use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
     use "hrsh7th/vim-vsnip"
     use 'hrsh7th/cmp-vsnip'
@@ -119,5 +100,7 @@ return require("packer").startup(function(use)
         ft = "toml",
         config = function() require "crate" end
     }
-	use 'lervag/vimtex'
+    use 'lervag/vimtex'
+
+    if packer_bootstrap then require('packer').sync() end
 end)

@@ -21,7 +21,7 @@ require "lsp-hotkeys"
 -- require "emmetu"
 -- require "htmlu"
 --
--- require "lspsaga-config"
+require "lspsaga-config"
 -- require("navigator").setup()
 
 require "variables"
