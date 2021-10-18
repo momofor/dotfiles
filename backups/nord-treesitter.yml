@@ -31,6 +31,11 @@ palette:
 highlights:
 
   # Editor
+  CmpItemAbbr: "nord5"
+  CmpItemAbbrMatch: "nord8"
+  CmpItemAbbrMatchFuzzy: "nord7"
+  CmpItemKind: "nord4"
+  CmpItemMenu: "nord4"
   ColorColumn: "- nord1"
   Cursor: "nord0 nord4"
   CursorLine: "- nord1"
@@ -219,7 +224,7 @@ highlights:
   TSStrong: "#FFFF00"
   TSEmphasis: "#FFFF00"
   TSUnderline: "#FFFF00"
-  TSTitle: "#FFFF00"
+  TSTitle: "nord8"
   TSLiteral: "nord14 - b"
   TSURI: "nord7 - u"
   # Tags
