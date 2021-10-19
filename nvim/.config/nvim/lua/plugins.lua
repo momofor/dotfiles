@@ -16,41 +16,46 @@ return require('packer').startup(function(use)
     use "tpope/vim-surround"
     use {
         "norcalli/nvim-colorizer.lua",
-        config = function() require"colorizer".setup() end,
-        event = "BufWinEnter"
+        config = function() require"colorizer".setup() end
     }
     use "christianchiarulli/nvcode-color-schemes.vim"
 
     use {
         "nvim-treesitter/nvim-treesitter",
-        config = function() require "treesitteru" end
+        config = function() require "treesitteru" end,
+        requires = {
+            "nvim-treesitter/nvim-treesitter-textobjects",
+            "nvim-treesitter/playground",
+            "nvim-treesitter/nvim-treesitter-refactor"
+        },
     }
-    use "nvim-treesitter/nvim-treesitter-textobjects"
-    use "nvim-treesitter/playground"
-    use "nvim-treesitter/nvim-treesitter-refactor"
     use "kyazdani42/nvim-web-devicons"
     use {
         "kyazdani42/nvim-tree.lua",
-        config = function() require "nvimtree-config" end
+        config = function() require "nvimtree-config" end,
+		event = "BufWinEnter"
     }
     use {"romgrk/barbar.nvim", event = "BufEnter"}
     use "neovim/nvim-lspconfig"
 
-    -- use "glepnir/lspsaga.nvim"
     use {"Raimondi/delimitMate", event = "InsertEnter"}
-    --[[ use {
-        "folke/which-key.nvim",
-        config = function() require "whichWho" end,
+    use {
+        "ray-x/lsp_signature.nvim",
+        config = function() require "lsp_sig" end,
         event = "BufWinEnter"
-    } ]]
-    use {"ray-x/lsp_signature.nvim", config = function() require "lsp_sig" end, event = "BufRead"}
-    use {"folke/trouble.nvim", event = "BufRead"}
+    }
+    use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
 
-    use {"hoob3rt/lualine.nvim", config = function() require "lineu" end, event = "BufEnter"}
+    use {
+        "hoob3rt/lualine.nvim",
+        config = function() require "lineu" end,
+        event = "BufEnter"
+    }
 
     use {"folke/lsp-colors.nvim"}
     use {"b3nj5m1n/kommentary", event = "BufRead"}
+
     -- use "folke/lua-dev.nvim"
 
     use {
@@ -60,10 +65,11 @@ return require('packer').startup(function(use)
         ft = {
             "javascript", "javascriptreact", "javascript.jsx", "typescript",
             "typescriptreact", "typescript.tsx"
-        }
+        },
+		event = "BufRead"
     }
 
-    use {"nathanaelkane/vim-indent-guides", event = "BufRead"}
+    use {"nathanaelkane/vim-indent-guides", event = "BufWinEnter"}
     use {
         "lewis6991/gitsigns.nvim",
         config = function() require "git-signs" end,
@@ -71,17 +77,21 @@ return require('packer').startup(function(use)
     }
     use {
         "ahmedkhalf/lsp-rooter.nvim",
-        event = "BufEnter",
         config = function() require("lsp-rooter").setup() end
     }
 
     use {
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
-        ft = "markdown"
+        ft = "markdown",
+		event = "BufRead"
     }
 
-    use {"mhartington/formatter.nvim", event = "BufRead", config = function()  require "formatting"end }
+    use {
+        "mhartington/formatter.nvim",
+        config = function() require "formatting" end,
+		event = "BufRead"
+    }
 
     use {
         "simrat39/rust-tools.nvim",
@@ -95,18 +105,26 @@ return require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         config = function() require "test-cmp-config" end,
         requires = {
-            'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
-            'hrsh7th/cmp-nvim-lua', 'saadparwaiz1/cmp_luasnip'
-
+            'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-nvim-lua',
+            'hrsh7th/cmp-nvim-lua'
         }
     }
+
+    --[[ use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lua' ]]
+
     use {
         'saecki/crates.nvim',
         ft = "toml",
         config = function() require "crate" end,
-        event = "BufRead"
+		event = "BufRead"
     }
-    use {'lervag/vimtex', event = "BufEnter"}
+    use {'lervag/vimtex', event = "BufRead"}
 
     if packer_bootstrap then require('packer').sync() end
 end)
