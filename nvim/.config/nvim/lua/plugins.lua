@@ -8,6 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
     use "mhinz/vim-startify"
 
     use "nvim-lua/popup.nvim"
@@ -27,13 +28,13 @@ return require('packer').startup(function(use)
             "nvim-treesitter/nvim-treesitter-textobjects",
             "nvim-treesitter/playground",
             "nvim-treesitter/nvim-treesitter-refactor"
-        },
+        }
     }
     use "kyazdani42/nvim-web-devicons"
     use {
         "kyazdani42/nvim-tree.lua",
         config = function() require "nvimtree-config" end,
-		event = "BufWinEnter"
+        event = "BufWinEnter"
     }
     use {"romgrk/barbar.nvim", event = "BufEnter"}
     use "neovim/nvim-lspconfig"
@@ -42,7 +43,7 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
         config = function() require "lsp_sig" end,
-        -- event = "BufRead"
+        event = "BufWinEnter"
     }
     use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
@@ -66,7 +67,7 @@ return require('packer').startup(function(use)
             "javascript", "javascriptreact", "javascript.jsx", "typescript",
             "typescriptreact", "typescript.tsx"
         },
-		event = "BufRead"
+        event = "BufRead"
     }
 
     use {"nathanaelkane/vim-indent-guides", event = "BufWinEnter"}
@@ -84,13 +85,13 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
         ft = "markdown",
-		event = "BufRead"
+        event = "BufRead"
     }
 
     use {
         "mhartington/formatter.nvim",
         config = function() require "formatting" end,
-		event = "BufRead"
+        event = "BufRead"
     }
 
     use {
@@ -122,7 +123,7 @@ return require('packer').startup(function(use)
         'saecki/crates.nvim',
         ft = "toml",
         config = function() require "crate" end,
-		event = "BufRead"
+        event = "BufRead"
     }
     use {'lervag/vimtex', event = "BufRead"}
 
