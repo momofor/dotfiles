@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
         config = function() require "lsp_sig" end,
-        event = "BufWinEnter"
+        -- event = "BufRead"
     }
     use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
