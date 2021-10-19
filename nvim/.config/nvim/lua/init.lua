@@ -21,7 +21,7 @@ require "lsp-hotkeys"
 -- require "emmetu"
 -- require "htmlu"
 --
-require "lspsaga-config"
+-- require "lspsaga-config"
 -- require("navigator").setup()
 
 require "variables"
@@ -36,7 +36,7 @@ require "treesitteru" ]]
 -- require "omniBoy"
 -- require "preview-defs"
 -- require "git-signs"
-require "formatting"
+-- require "formatting"
 
 -- require "octo-SAN"
 -- require 'lspconfig'.jsonls.setup{}

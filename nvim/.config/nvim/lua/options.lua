@@ -30,14 +30,14 @@ local options= {
     foldmethod = "expr" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
-    timeoutlen = 300 ,
+    timeoutlen = 150 ,
     updatetime = 150, -- Faster completion
 }
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "dash"
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = "menuone,noselect,preview"
 
 -- highlight on yank
 vim.api.nvim_exec([[

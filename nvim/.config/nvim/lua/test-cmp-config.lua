@@ -72,7 +72,7 @@ cmp.setup({
         {name = 'nvim_lsp'}, -- For vsnip user.
         {name = 'luasnip'}, -- For luasnip user.
         {name = 'crates'}, -- { name = 'luasnip' },
-        -- For ultisnips user.
+        {name = 'nvim_lua'}, -- For ultisnips user.
         -- { name = 'ultisnips' },
         {name = 'buffer'}
     }

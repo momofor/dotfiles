@@ -8,7 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-	    use "mhinz/vim-startify"
+    use "mhinz/vim-startify"
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
@@ -36,21 +36,21 @@ return require('packer').startup(function(use)
     use {"romgrk/barbar.nvim", event = "BufEnter"}
     use "neovim/nvim-lspconfig"
 
-    use "glepnir/lspsaga.nvim"
-    use "Raimondi/delimitMate"
-    use {
+    -- use "glepnir/lspsaga.nvim"
+    use {"Raimondi/delimitMate", event = "InsertEnter"}
+    --[[ use {
         "folke/which-key.nvim",
         config = function() require "whichWho" end,
         event = "BufWinEnter"
-    }
-    use {"ray-x/lsp_signature.nvim", config = function() require "lsp_sig" end}
-    use "folke/trouble.nvim"
+    } ]]
+    use {"ray-x/lsp_signature.nvim", config = function() require "lsp_sig" end, event = "BufRead"}
+    use {"folke/trouble.nvim", event = "BufRead"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
 
-    use {"hoob3rt/lualine.nvim", config = function() require "lineu" end}
+    use {"hoob3rt/lualine.nvim", config = function() require "lineu" end, event = "BufEnter"}
 
-    use "folke/lsp-colors.nvim"
-    use "b3nj5m1n/kommentary"
+    use {"folke/lsp-colors.nvim"}
+    use {"b3nj5m1n/kommentary", event = "BufRead"}
     -- use "folke/lua-dev.nvim"
 
     use {
@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
         }
     }
 
-    use "nathanaelkane/vim-indent-guides"
+    use {"nathanaelkane/vim-indent-guides", event = "BufRead"}
     use {
         "lewis6991/gitsigns.nvim",
         config = function() require "git-signs" end,
@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
     }
     use {
         "ahmedkhalf/lsp-rooter.nvim",
-        event = "BufRead",
+        event = "BufEnter",
         config = function() require("lsp-rooter").setup() end
     }
 
@@ -81,7 +81,8 @@ return require('packer').startup(function(use)
         ft = "markdown"
     }
 
-    use {"mhartington/formatter.nvim"}
+    use {"mhartington/formatter.nvim", event = "BufRead", config = function()  require "formatting"end }
+
     use {
         "simrat39/rust-tools.nvim",
         ft = {"rust"},
@@ -89,21 +90,23 @@ return require('packer').startup(function(use)
     }
 
     -- use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
-	use { 'L3MON4D3/LuaSnip' }
-    use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
-	use { 'saadparwaiz1/cmp_luasnip' }
-	use "rafamadriz/friendly-snippets"
-    -- use "hrsh7th/vim-vsnip"
-    -- use 'hrsh7th/cmp-vsnip'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
+    use {'L3MON4D3/LuaSnip', requires = "rafamadriz/friendly-snippets"}
+    use {
+        'hrsh7th/nvim-cmp',
+        config = function() require "test-cmp-config" end,
+        requires = {
+            'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
+            'hrsh7th/cmp-nvim-lua', 'saadparwaiz1/cmp_luasnip'
+
+        }
+    }
     use {
         'saecki/crates.nvim',
         ft = "toml",
-        config = function() require "crate" end
+        config = function() require "crate" end,
+        event = "BufRead"
     }
-    use 'lervag/vimtex'
+    use {'lervag/vimtex', event = "BufEnter"}
 
     if packer_bootstrap then require('packer').sync() end
 end)
