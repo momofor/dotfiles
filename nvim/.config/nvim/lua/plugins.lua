@@ -89,9 +89,12 @@ return require('packer').startup(function(use)
     }
 
     -- use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
+	use { 'L3MON4D3/LuaSnip' }
     use {'hrsh7th/nvim-cmp', config = function() require "test-cmp-config" end}
-    use "hrsh7th/vim-vsnip"
-    use 'hrsh7th/cmp-vsnip'
+	use { 'saadparwaiz1/cmp_luasnip' }
+	use "rafamadriz/friendly-snippets"
+    -- use "hrsh7th/vim-vsnip"
+    -- use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
