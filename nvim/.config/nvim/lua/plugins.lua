@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
     }
     use "christianchiarulli/nvcode-color-schemes.vim"
 
-    use {
+	use {
         "nvim-treesitter/nvim-treesitter",
         config = function() require "treesitteru" end,
         requires = {
@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
             "nvim-treesitter/nvim-treesitter-refactor"
         }
     }
+
     use "kyazdani42/nvim-web-devicons"
     use {
         "kyazdani42/nvim-tree.lua",
@@ -43,7 +44,7 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
         config = function() require "lsp_sig" end,
-        event = "BufWinEnter"
+        -- event = "BufWinEnter"
     }
     use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
@@ -54,7 +55,7 @@ return require('packer').startup(function(use)
         event = "BufEnter"
     }
 
-    use {"folke/lsp-colors.nvim"}
+    -- use {"folke/lsp-colors.nvim"}
     use {"b3nj5m1n/kommentary", event = "BufRead"}
 
     -- use "folke/lua-dev.nvim"

@@ -4,13 +4,7 @@ require "tele"
 require "hotkeys"
 require "options"
 require "plugins"
-
-require("lsp-colors").setup({
-    Error = "#bf616a",
-    Warning = "#ebcb8b",
-    Information = "#d08770",
-    Hint = "#10B981"
-})
+require "lsp-icons"
 
 -- require "compe-config"
 -- require "mehu"

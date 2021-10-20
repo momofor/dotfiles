@@ -11,8 +11,8 @@ local function yoink()
 	local noice = "hello"
 end
 
-testuw("not nice" , "nice" );
-yoink();
+testuw("not nice" , "nice" )
+yoink()
 
 local function foo()
 	local bin
