@@ -7,8 +7,6 @@ lspSymbol("Information", "")
 lspSymbol("Hint", "")
 lspSymbol("Info", "")
 lspSymbol("Warning", "")
-local cool = "woo"
-print(cool)
 vim.lsp.handlers["textDocument/hover"] =
     vim.lsp.with(vim.lsp.handlers.hover, {
         -- see vim.api.nvim_open_win()
@@ -58,3 +56,22 @@ vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua Rename.rename()<CR>',
                         {silent = true})
 
 -- , "│", "─", , , , , "╰"
+vim.diagnostic.config({
+    underline = true,
+    update_in_insert = true,
+    virtual_text = {
+        spacing = 1,
+        source = 'always',
+        severity = {min = vim.diagnostic.severity.HINT}
+        -- todo: icons for diagnostics?
+        --[[ format = function(diagnostic)
+        if diagnostic.severity == vim.diagnostic.severity.ERROR then
+          return string.format('E: %s', diagnostic.message)
+        end
+        return diagnostic.message
+      end, ]]
+    },
+    signs = true,
+    severity_sort = true,
+    float = {show_header = false, source = 'always', border = 'single'}
+})
