@@ -77,5 +77,7 @@ utils.map("n" , "<Leader>gr" , ":lua require('lspsaga.rename').rename()<CR>" , {
 utils.map("n" , "gp" , ":Lspsaga preview_definition<CR>" , {noremap = true , silent = true})
 
 utils.map("n" , "<Leader>AU" , ":ArduinoUpload<CR>" , {noremap = true })
+utils.nnoremap("<leader>N", ":VimtexView<CR>");
+utils.nnoremap("<leader>c", ":VimtexCompile<CR>");
 
 --utils.map("n" , "<Leader>f" , ":Telescope find_files <CR>" , {noremap = true} )

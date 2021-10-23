@@ -9,19 +9,24 @@ end
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use "mhinz/vim-startify"
+    use {"mhinz/vim-startify", event = "VimEnter"}
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
-    use "nvim-telescope/telescope.nvim"
-    use "tpope/vim-surround"
+    use {
+        "nvim-telescope/telescope.nvim",
+        config = function() require("tele") end,
+		event = "BufRead"
+    }
+    use {"tpope/vim-surround", event = "InsertEnter"}
     use {
         "norcalli/nvim-colorizer.lua",
-        config = function() require"colorizer".setup() end
+        config = function() require"colorizer".setup() end,
+        event = "BufRead"
     }
     use "christianchiarulli/nvcode-color-schemes.vim"
 
-	use {
+    use {
         "nvim-treesitter/nvim-treesitter",
         config = function() require "treesitteru" end,
         requires = {
@@ -44,15 +49,15 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
         config = function() require "lsp_sig" end,
-        -- event = "BufWinEnter"
+        event = "BufEnter"
     }
     use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
 
     use {
-        "hoob3rt/lualine.nvim",
+        "nvim-lualine/lualine.nvim",
         config = function() require "lineu" end,
-        event = "BufEnter"
+        event = "BufRead"
     }
 
     -- use {"folke/lsp-colors.nvim"}
@@ -79,7 +84,8 @@ return require('packer').startup(function(use)
     }
     use {
         "ahmedkhalf/lsp-rooter.nvim",
-        config = function() require("lsp-rooter").setup() end
+        config = function() require("lsp-rooter").setup() end,
+        event = "BufEnter"
     }
 
     use {
@@ -126,7 +132,7 @@ return require('packer').startup(function(use)
         config = function() require "crate" end,
         event = "BufRead"
     }
-    use {'lervag/vimtex', event = "BufRead"}
+    use {'lervag/vimtex'}
 
     if packer_bootstrap then require('packer').sync() end
 end)

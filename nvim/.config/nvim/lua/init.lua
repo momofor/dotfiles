@@ -1,6 +1,6 @@
 -- to fix lua highlighting for lua add (self) @variable.builtin to lua parser highlights.scm file
 -- in the treesitter plugin folder
-require "tele"
+-- require "tele"
 require "hotkeys"
 require "options"
 require "plugins"

@@ -68,13 +68,15 @@ cmp.setup({
             end
         end, {"i", "s"})
     },
+    experimental = {
+		native_menu = false
+	},
     sources = {
         {name = 'nvim_lsp'}, -- For vsnip user.
         {name = 'luasnip'}, -- For luasnip user.
         {name = 'crates'}, -- { name = 'luasnip' },
         {name = 'nvim_lua'}, -- For ultisnips user.
-		{name = 'path'},
-        -- { name = 'ultisnips' },
-        {name = 'buffer'}
+        {name = 'path'}, -- { name = 'ultisnips' },
+        {name = 'buffer'}, {name = 'spell'}
     }
 })

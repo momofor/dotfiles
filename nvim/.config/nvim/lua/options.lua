@@ -38,6 +38,8 @@ vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "dash"
 vim.opt.completeopt = "menuone,noselect,preview"
+--[[ vim.opt.spell = true
+vim.opt.spelllang = {'en_us'} ]]
 
 -- highlight on yank
 vim.api.nvim_exec([[
