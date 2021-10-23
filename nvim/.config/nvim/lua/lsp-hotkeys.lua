@@ -17,7 +17,7 @@ utils.map("n", "<C-p> ", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
           {noremap = true, silent = true})
 
 utils.nnoremap("<Leader>a", ":Telescope lsp_code_actions<CR>")
-utils.nnoremap('<leader>R', ':lua vim.lsp.buf.rename()<CR>')
+utils.nnoremap('<leader>R', ':lua Rename.rename()<CR>')
 utils.nnoremap('<leader>pd', ':Lspsaga preview_definition<CR>')
 utils.nnoremap('<leader>t', ':NvimTreeToggle<CR>')
 -- utils.map('n' , '<leader>f' , ':Format<CR>' , {noremap = true})
@@ -29,7 +29,3 @@ utils.nnoremap("<leader>cft", ":Lspsaga close_floaterm<CR>")
 utils.nnoremap("<leader>cp", ":! gcc -g %<CR>")
 utils.nnoremap("<leader>e", ":Telescope lsp_document_diagnostics<CR>")
 
--- utils.map("i" , "<C-Space> " , "compe#complete()" , {noremap = true , silent = true , expr = true})
--- utils.map("i" , "<C-e>" , "compe#close('<C-e>')" , {noremap   = true , silent = true , expr = true})
--- utils.map("i" , "<C-f>" , "compe#scroll({ 'delta': +4 })" , {noremap= true , silent = true , expr = true})
--- utils.map("i" , "<C-d>" , "compe#scroll({ 'delta': -4 })" , {noremap= true , silent = true , expr = true})
