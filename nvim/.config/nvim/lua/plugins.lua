@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
     use {
         "kyazdani42/nvim-tree.lua",
         config = function() require "nvimtree-config" end,
-        event = "BufWinEnter"
+        event = "BufRead"
     }
     use {"romgrk/barbar.nvim", event = "BufEnter"}
     use "neovim/nvim-lspconfig"
@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
         config = function() require "lsp_sig" end,
         event = "BufEnter"
     }
-    use {"folke/trouble.nvim", event = "BufEnter"}
+    use {"folke/trouble.nvim", event = "BufRead"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
 
     use {

@@ -30,8 +30,8 @@ local options= {
     foldmethod = "expr" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
-    timeoutlen = 300 ,
-    updatetime = 150, -- Faster completion
+    timeoutlen = 200 ,
+    updatetime = 100, -- Faster completion
 }
 
 vim.opt.shortmess:append "c"
