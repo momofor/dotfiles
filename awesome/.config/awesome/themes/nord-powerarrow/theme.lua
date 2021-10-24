@@ -14,6 +14,7 @@ local naughty = require("naughty")
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/nord-powerarrow"
@@ -218,12 +219,12 @@ local cpu =
 )
 
 -- Coretemp
-local tempicon = wibox.widget.imagebox(theme.widget_temp)
+--[[ local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
 settings = function()
 widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
 end
-})
+}) ]]
 
 -- / fs
 --local fsicon = wibox.widget.imagebox(theme.widget_hdd)
@@ -258,7 +259,7 @@ theme.fs = lain.widget.fs({
 --})
 
 -- ALSA volume
-local volicon = wibox.widget.imagebox(theme.widget_vol)
+--[[ local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume =
     lain.widget.alsa(
     {
@@ -296,7 +297,7 @@ theme.volume.widget:buttons(
             end
         )
     )
-)
+) ]]
 
 -- Net
 --local neticon = wibox.widget.imagebox(theme.widget_net)
@@ -416,8 +417,9 @@ function theme.at_screen_connect(s)
             wibox.widget.systray(),
             spr,
             arrl_ld,
-            wibox.container.background(volicon, theme.bg_focus),
-            wibox.container.background(theme.volume.widget, theme.bg_focus),
+            --[[ wibox.container.background(volicon, theme.bg_focus),
+            wibox.container.background(theme.volume.widget, theme.bg_focus), ]]
+			volume_widget(),
             arrl_dl,
             memicon,
             mem.widget,
