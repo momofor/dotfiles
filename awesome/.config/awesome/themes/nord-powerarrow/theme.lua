@@ -419,7 +419,7 @@ function theme.at_screen_connect(s)
             arrl_ld,
             --[[ wibox.container.background(volicon, theme.bg_focus),
             wibox.container.background(theme.volume.widget, theme.bg_focus), ]]
-			volume_widget(),
+			wibox.container.background(volume_widget(), theme.bg_focus),
             arrl_dl,
             memicon,
             mem.widget,
