@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $mod2 Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -15,7 +16,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-
+default_border pixel 4 4c566a
 input "type:keyboard" {
     xkb_layout dvp
     xkb_options caps:swapescape
@@ -23,13 +24,11 @@ input "type:keyboard" {
     repeat_delay 200
     repeat_rate 40
 }
-
-gaps inner 10
-
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu ulauncher
+set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
+gaps inner 4
 
 ### Output configuration
 #
@@ -103,10 +102,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+	 bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
@@ -133,16 +130,16 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $mod2+1 move container to workspace number 1
+    bindsym $mod2+2 move container to workspace number 2
+    bindsym $mod2+3 move container to workspace number 3
+    bindsym $mod2+4 move container to workspace number 4
+    bindsym $mod2+5 move container to workspace number 5
+    bindsym $mod2+6 move container to workspace number 6
+    bindsym $mod2+7 move container to workspace number 7
+    bindsym $mod2+8 move container to workspace number 8
+    bindsym $mod2+9 move container to workspace number 9
+    bindsym $mod2+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
