@@ -7,6 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
+exec dunst
 set $mod Mod4
 set $mod2 Mod1
 # Home row direction keys, like vim
@@ -16,7 +17,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-default_border pixel 4 4c566a
+default_border pixel 4c566a
 input "type:keyboard" {
     xkb_layout dvp
     xkb_options caps:swapescape
@@ -24,11 +25,15 @@ input "type:keyboard" {
     repeat_delay 200
     repeat_rate 40
 }
+smart_borders on
+smart_gaps on
+hide_edge_borders smart
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
+# set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
 gaps inner 4
+set $menu rofi -show drun
 
 ### Output configuration
 #
@@ -81,6 +86,8 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    bindsym ctrl+alt+l exec swaylock
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -121,14 +128,14 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
     # Switch to workspace
     bindsym $mod+7 workspace number 1
     bindsym $mod+5 workspace number 2
-    # bindsym $mod+3 workspace number 3
-    # bindsym $mod+4 workspace number 4
-    # bindsym $mod+5 workspace number 5
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+1 workspace number 4
+    bindsym $mod+9 workspace number 5
     # bindsym $mod+6 workspace number 6
     # bindsym $mod+7 workspace number 7
     # bindsym $mod+8 workspace number 8
     # bindsym $mod+9 workspace number 9
-    # bindsym $mod+0 workspace number 10
+    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
     bindsym $mod2+1 move container to workspace number 1
     bindsym $mod2+2 move container to workspace number 2

@@ -6,6 +6,7 @@ require "options"
 require "plugins"
 require "lsp-icons"
 
+
 -- require "compe-config"
 -- require "mehu"
 require "lsp-hotkeys"

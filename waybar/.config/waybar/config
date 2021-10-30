@@ -1,62 +1,24 @@
-// vim:ft=json
 {
-  // General
   "layer": "top",
   "position": "top",
-  //"margin-left": 4,
-  //"margin-right": 4,
-  // Modules
   "modules-left": [
-    //"custom/name",
     "sway/workspaces",
-    //"custom/right-arrow-dark",
-    //"custom/right-arrow-light",
-    "custom/weather",
-    //"custom/right-arrow-dark",
-    //"custom/right-arrow-light",
     "sway/mode"
-    //"custom/right-arrow-dark"
   ],
-  "modules-center": [
-    //"custom/left-arrow-dark",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
-    "sway/window",
-    "custom/recorder"
-    //"custom/right-arrow-dark"
-    //"custom/right-arrow-light",
-    //"custom/right-arrow-dark"
-  ],
+  "modules-center": ["custom/spotify-monitor", "custom/spotify-metadata", "custom/spotify-next", "custom/spotify-play-pause", "custom/spotify-prev", "custom/spotify-quit"],
   "modules-right": [
-    //"custom/left-arrow-dark",
-    // "custom/watson",
     "pulseaudio",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
+	"sway/window",
     "memory",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
     "cpu",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
     "battery",
     "battery#bat1",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
     "custom/arch-updates",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
-    //"network",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
     "clock#4",
     "clock#3",
-    //"custom/left-arrow-light",
-    //"custom/left-arrow-dark",
     "tray",
     "idle_inhibitor"
   ],
-  // Module Config
   "custom/left-arrow-dark": {
     "format": "",
     "tooltip": false
@@ -72,13 +34,6 @@
   "custom/right-arrow-light": {
     "format": "",
     "tooltip": false
-  },
-  "clock#1": {
-    //"format": "{:%a}",
-    "tooltip": true,
-    "interval": 1,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a %Y-%m-%d %X}"
   },
   "clock#2": {
     "format": "{:%H:%M}",
@@ -172,43 +127,18 @@
   "tray": {
     "icon-size": 20
   },
-  "network": {
-    //"interface": "wlp4s0",
-    "format": "{ifname}",
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": " {ifname}",
-    "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": "{ifname}",
-    "tooltip-format-wifi": " {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": " {ifname}",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "on-click": "nm-connection-editor"
-  },
   "sway/window": {
     "format": "{}",
-    "max-length": 40
-  },
+    "max-length": 50,
+    "rewrite": {
+       "(.*) - Mozilla Firefox": "🌎 $1",
+       "(.*) - vim": " $1",
+       "(.*) - zsh": " [$1]"
+    }
+},
   "sway/mode": {
     "format": " {}",
     "max-length": 50
-  },
-  "custom/arch-updates": {
-    "format": " {}",
-    "interval": "900",
-    "exec": "checkupdates | wc -l",
-    //"exec": "checkupdates | wc -l",
-    //"exec-if": "exit 0",
-    //"signal": 8,
-    //"on-click": "pamac-manager",
-    "on-click": "alacritty --class floating_update -e yay --devel -Syu",
-    "on-click-right": "checkupdates | wc -l",
-    "tooltip": false
-  },
-  "custom/weather": {
-    "interval": "1800",
-    "exec": "weather.sh $WEATHER_LOC",
-    "on-click": "xdg-open https://wttr.in/$WEATHER_LOC"
   },
   "custom/scratchpad": {
     "format": "Scratchpad: {}",
@@ -217,29 +147,61 @@
     "exec": "swaymsg -t get_tree | jq '.nodes[].nodes[] | select(.name==\"__i3_scratch\").floating_nodes | length'",
     "exec-if": "swaymsg -t get_tree | jq '.nodes[].nodes[] | select(.name==\"__i3_scratch\").floating_nodes | length' | grep -v '^0$'"
   },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      //  "activated": "",
-      //  "deactivated": ""
-      "activated": "<span font='Font Awesome 5 Free 9'></span>",
-      "deactivated": "<span font='Font Awesome 5 Free 9'></span>"
-    }
-  },
-  /* "custom/watson": {
-    "format": " {}",
-    //"max-length": 15,
-    "interval": 10,
-    "exec": "watson status",
-    "on-click": "dmenuwatson.sh",
-    "on-click-right": "watson stop"
-  }, */
   "sway/workspaces": {
     "disable-scroll": false,
     "disable-scroll-wraparound": true,
     "format": "{index}:{name}"
   },
-  // From https://gist.github.com/ugursogukpinar/f390d9f4c829fb1b05fc74a12dd482bb
+    "custom/spotify-monitor": {
+        "interval": 30,
+        "exec": "~/.config/waybar/custom/spotify/monitor.sh",
+        "signal": 4
+    },
+    "custom/spotify-metadata": {
+        "format": " {}",
+        "max-length": 500,
+        "interval": "once",
+        "return-type": "json",
+        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
+        "on-click": "sway workspace music",
+        "rotate": 90,
+        "signal": 5
+    },
+    "custom/spotify-play-pause": {
+        "format": "{}",
+        "interval": "once",
+        "return-type": "json",
+        "exec": "~/.config/waybar/custom/spotify/play-pause.sh",
+        "on-click": "~/.config/waybar/custom/spotify/controls.sh",
+        "signal": 5
+    },
+    "custom/spotify-next": {
+        "format": "怜",
+        "return-type": "json",
+        "interval": "once",
+        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
+        "on-click": "~/.config/waybar/custom/spotify/controls.sh next",
+        "rotate": 90,
+        "signal": 5
+    },
+    "custom/spotify-prev": {
+        "format": "玲",
+        "interval": "once",
+        "return-type": "json",
+        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
+        "on-click": "~/.config/waybar/custom/spotify/controls.sh prev",
+        "rotate": 90,
+        "signal": 5
+    },
+    "custom/spotify-quit": {
+        "format": "",
+        "interval": "once",
+        "return-type": "json",
+        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
+        "on-click": "~/.config/waybar/custom/spotify/quit.sh ",
+        "rotate": 90,
+        "signal": 6
+    },
   "custom/recorder": {
     "format": "",
     "return-type": "json",
