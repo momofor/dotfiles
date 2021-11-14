@@ -133,6 +133,8 @@ return require('packer').startup(function(use)
         event = "BufRead"
     }
     use {'lervag/vimtex'}
+	use 'eraserhd/parinfer-rust'
+	use 'elkowar/yuck.vim'
 
     if packer_bootstrap then require('packer').sync() end
 end)

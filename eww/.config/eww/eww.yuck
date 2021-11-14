@@ -1,0 +1,30 @@
+(defwidget greeter [?text name]
+  (box :orientation "horizontal"
+        :halign "center"
+    text
+    (button :onclick "notify-send 'cool test' 'Hello, ${name}'"
+      "Greet")))
+
+(defvar time-visible false)   ; for :run-while property of below variable
+                              ; when this turns true, the polling starts and
+                              ; var gets updated with given interval
+
+(defpoll time :interval "1s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%H:%M:%S`)
+
+
+(defwindow example
+          :monitor 0
+          :geometry (geometry :x "0%"
+                          :y "00px"
+                          :width "90%"
+                          :height "30px"
+                          :anchor "bottom center")
+          :stacking "fg"
+          ; :reserve (struts :distance "40px" :side "top")
+          :windowtype "dock"
+  (greeter :text "Hello boys"
+        :name "MomoforBoy"))
+
