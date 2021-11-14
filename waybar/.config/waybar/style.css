@@ -3,6 +3,7 @@
 * {
 	font-size: 14px;
 	font-family: monospace;
+	color: #88c0d0;
 }
 
 window#waybar {
@@ -121,7 +122,7 @@ window#waybar.code-oss {
   color: #fdf6e3;*/
   border-radius: 0px;
   box-shadow: -2px 0px 0px 0px #3b4252;
-  color: @color3;	
+  color: #ffffff;	
 }
 #workspaces button.focused {
 	/*color: #268bd2;*/

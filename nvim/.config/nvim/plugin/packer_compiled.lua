@@ -71,33 +71,40 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["barbar.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-path"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["crates.nvim"] = {
     after_files = { "/home/momofor/.local/share/nvim/site/pack/packer/opt/crates.nvim/after/plugin/cmp_crates.lua" },
@@ -105,189 +112,218 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/crates.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/crates.nvim",
+    url = "https://github.com/saecki/crates.nvim"
   },
   delimitMate = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/delimitMate"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/delimitMate",
+    url = "https://github.com/Raimondi/delimitMate"
   },
   ["formatter.nvim"] = {
     config = { "\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15formatting\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/formatter.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14git-signs\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   kommentary = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/kommentary"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/kommentary",
+    url = "https://github.com/b3nj5m1n/kommentary"
   },
   ["lsp-rooter.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15lsp-rooter\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lsp-rooter.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lsp-rooter.nvim",
+    url = "https://github.com/ahmedkhalf/lsp-rooter.nvim"
   },
   ["lsp_signature.nvim"] = {
     config = { "\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\flsp_sig\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lsp_signature.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     config = { "\27LJ\2\n%\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\nicons\frequire\0" },
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lualine.nvim"] = {
     config = { "\27LJ\2\n%\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\nlineu\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lualine.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
+    url = "https://github.com/christianchiarulli/nvcode-color-schemes.vim"
   },
   ["nvim-cmp"] = {
     config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20test-cmp-config\frequire\0" },
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-ts-utils"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-lsp-ts-utils"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-lsp-ts-utils",
+    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20nvimtree-config\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16treesitteru\frequire\0" },
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-refactor"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/playground"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["rust-tools.nvim"] = {
     config = { "\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\vcocoon\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/rust-tools.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     config = { "\27LJ\2\n$\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\ttele\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/trouble.nvim"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-indent-guides"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-indent-guides"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-indent-guides",
+    url = "https://github.com/nathanaelkane/vim-indent-guides"
   },
   ["vim-startify"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-startify"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   },
   ["vim-surround"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-surround"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/opt/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   vimtex = {
     loaded = true,
-    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vimtex"
+    path = "/home/momofor/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16treesitteru\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20test-cmp-config\frequire\0", "config", "nvim-cmp")
@@ -296,27 +332,31 @@ time([[Config for nvim-cmp]], false)
 time([[Config for lspkind-nvim]], true)
 try_loadstring("\27LJ\2\n%\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\nicons\frequire\0", "config", "lspkind-nvim")
 time([[Config for lspkind-nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16treesitteru\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType toml ++once lua require("packer.load")({'crates.nvim'}, { ft = "toml" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript.jsx ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "javascript.jsx" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript.tsx ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescript.tsx" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType rust ++once lua require("packer.load")({'rust-tools.nvim'}, { ft = "rust" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript.tsx ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescript.tsx" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
-vim.cmd [[au FileType toml ++once lua require("packer.load")({'crates.nvim'}, { ft = "toml" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript.jsx ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "javascript.jsx" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "javascript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'nvim-lsp-ts-utils'}, { ft = "typescript" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-startify'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate', 'vim-surround'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'vim-indent-guides'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-tree.lua', 'crates.nvim', 'telescope.nvim', 'trouble.nvim', 'formatter.nvim', 'gitsigns.nvim', 'kommentary', 'lualine.nvim', 'markdown-preview.nvim', 'nvim-colorizer.lua', 'nvim-lsp-ts-utils'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufEnter * ++once lua require("packer.load")({'lsp-rooter.nvim', 'lsp_signature.nvim', 'barbar.nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-surround', 'delimitMate'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-colorizer.lua', 'nvim-lsp-ts-utils', 'nvim-tree.lua', 'crates.nvim', 'formatter.nvim', 'gitsigns.nvim', 'kommentary', 'telescope.nvim', 'trouble.nvim', 'lualine.nvim', 'markdown-preview.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-startify'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

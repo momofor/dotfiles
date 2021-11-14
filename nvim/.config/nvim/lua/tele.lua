@@ -57,6 +57,9 @@ utils.map("n", "<Leader>rc",
 utils.map("n", "<Leader>Aw",
           ":lua require'tele'.Search('< AwesomewmRC >' , '~/.config/awesome/' ) <CR>",
           {})
+utils.map("n", "<Leader>sr",
+          ":lua require'tele'.Search('< swayRC >' , '~/.config/sway' ) <CR>",
+          {})
 return M
 
 

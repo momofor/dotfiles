@@ -21,5 +21,5 @@ local function foo()
 			bin = "Hello world! %s"
 		end
 	end
-	return string.format(bin, 'foo');
+	return string.format(bin, 'foo')
 end

@@ -7,6 +7,13 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+seat seat0 xcursor_theme Breeze 24
+exec wl-paste -t text --watch clipman store
+
 exec dunst
 set $mod Mod4
 set $mod2 Mod1
@@ -15,9 +22,11 @@ set $left h
 set $down j
 set $up k
 set $right l
+set $screenshot grim
 # Your preferred terminal emulator
 set $term kitty
-default_border pixel 4c566a
+set $browser firefox-nightly
+default_border pixel 2
 input "type:keyboard" {
     xkb_layout dvp
     xkb_options caps:swapescape
@@ -28,12 +37,15 @@ input "type:keyboard" {
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
+
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
 gaps inner 4
-set $menu rofi -show drun
+set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
+set $menu2 wofi --conf .config/rofi/config.rasi --show drun
 
 ### Output configuration
 #
@@ -85,8 +97,11 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+e exec $menu2
+    bindsym $mod+s exec $screenshot
 
     bindsym ctrl+alt+l exec swaylock
+    bindsym ctrl+shift+l exec wlogout
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -157,11 +172,12 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
     # respectively.
     bindsym $mod+b splith
     bindsym $mod+v splitv
+    bindsym $mod+q exec $browser
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -185,7 +201,7 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+minus scratchpad show; floating disable
 #
 # Resizing containers:
 #

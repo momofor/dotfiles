@@ -5,20 +5,19 @@
     "sway/workspaces",
     "sway/mode"
   ],
-  "modules-center": ["custom/spotify-monitor", "custom/spotify-metadata", "custom/spotify-next", "custom/spotify-play-pause", "custom/spotify-prev", "custom/spotify-quit"],
+  "modules-center": [	"custom/sway-testing-with-ipc"],
   "modules-right": [
     "pulseaudio",
-	"sway/window",
     "memory",
     "cpu",
-    "battery",
-    "battery#bat1",
-    "custom/arch-updates",
     "clock#4",
     "clock#3",
     "tray",
-    "idle_inhibitor"
   ],
+  "custom/sway-testing-with-ipc": {
+	  "exec":"~/.config/waybar/custom/sway-testing-with-ipc",
+	  "format": "{}"
+  },
   "custom/left-arrow-dark": {
     "format": "",
     "tooltip": false
@@ -127,15 +126,6 @@
   "tray": {
     "icon-size": 20
   },
-  "sway/window": {
-    "format": "{}",
-    "max-length": 50,
-    "rewrite": {
-       "(.*) - Mozilla Firefox": "🌎 $1",
-       "(.*) - vim": " $1",
-       "(.*) - zsh": " [$1]"
-    }
-},
   "sway/mode": {
     "format": " {}",
     "max-length": 50
