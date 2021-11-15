@@ -1,30 +1,46 @@
-(defwidget greeter [?text name]
-  (box :orientation "horizontal"
-        :halign "center"
-    text
-    (button :onclick "notify-send 'cool test' 'Hello, ${name}'"
-      "Greet")))
-
-(defvar time-visible false)   ; for :run-while property of below variable
-                              ; when this turns true, the polling starts and
-                              ; var gets updated with given interval
-
 (defpoll time :interval "1s"
-              :initial "initial-value"  ; optional, defaults to poll at startup
-              :run-while time-visible   ; optional, defaults to 'true'
-  `date +%H:%M:%S`)
+  "date '+%H:%M:%S'")
 
+(deflisten windowName :initial "whatever"
+  `~/.config/eww/scripts/custom/sway-testing-with-ipc`)
+
+(deflisten workspaces_listen :initial "Yay"
+  "~/scripts/rust/sway-testing-with-ipc/target/release/sway-testing-with-ipc") 
+
+(defwidget widg [class value al]
+  (box :class "${class} widg" :space-evenly: false :style "margin-left: 1em;" :halign "${al}"
+    "${value}"))
+
+(defwidget workspaces []
+  (literal :content workspaces_listen))
+
+(defwidget windowName [] 
+  (box :orientation "h" :halign "center" :class "windowName"  :hexpand false :vexpand false
+    "${windowName}"))
+
+(defwidget sidestuff []
+  (box :orientation "h" :halign "end" :class "sidestuff"
+     (widg :value "${time}" :class "noice" :al "end") 
+    (widg :value "ram: ${EWW_RAM.used_mem_perc}%" :class "ram" :al "end"))) 
+    
+
+(defwidget bar []
+  (box :class "bar" :orientation "h" :space-evenly false :hexpand false :vexpand false
+    (workspaces)
+    (windowName)
+    (sidestuff)))
+    ; (widg :value "${windowName}" :class "windowName" :al "start")
+    
+   
 
 (defwindow example
           :monitor 0
           :geometry (geometry :x "0%"
                           :y "00px"
-                          :width "90%"
-                          :height "30px"
-                          :anchor "bottom center")
+                          :width "100%"
+                          :height "20px"
+                          :anchor "top center")
           :stacking "fg"
-          ; :reserve (struts :distance "40px" :side "top")
+          :exclusive true
           :windowtype "dock"
-  (greeter :text "Hello boys"
-        :name "MomoforBoy"))
-
+  (bar))

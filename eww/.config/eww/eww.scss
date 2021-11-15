@@ -1,0 +1,56 @@
+* {
+	all: unset;
+}
+
+.bar {
+	padding: 5px;
+	background-color: #2e3440;
+	border-radius: .5em;
+}
+
+.coolBoy button{
+	margin-left: 10px;
+	background-color: #4c566a;
+	color: #88c0d0;
+	border-radius: 1em;
+}
+.coolBoy button:hover {
+	background-color: green;
+}
+
+.noice.widg {
+	color: cyan;
+	background-color: darkblue;
+}
+
+.sidestuff {
+	margin-left: 2em;
+}
+
+.windowName {
+	color: red;
+	margin-left: 2em;
+	min-width: 30em;
+}
+
+.focusedWorkspace {
+	color: yellow;
+	background-color: blueviolet;
+	margin-left: .3em;
+}
+.normalWorkspace {
+	color: wheat;
+	background-color: darkblue;
+	margin-left: .3em;
+}
+
+.widg {
+	color: wheat;
+}
+
+.workspaces {
+	color: yellow;
+}
+.coolBoy {
+	color: wheat;
+}

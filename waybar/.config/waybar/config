@@ -5,7 +5,7 @@
     "sway/workspaces",
     "sway/mode"
   ],
-  "modules-center": [	"custom/sway-testing-with-ipc"],
+  "modules-center": ["sway/window"],
   "modules-right": [
     "pulseaudio",
     "memory",
