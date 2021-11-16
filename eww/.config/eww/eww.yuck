@@ -1,5 +1,5 @@
 (defpoll time :interval "1s"
-  "date '+%H:%M:%S'")
+  "date '+%H:%M:%S | %a %d %b '")
 
 (deflisten windowName :initial "whatever"
   `~/.config/eww/scripts/custom/sway-testing-with-ipc`)
@@ -19,9 +19,10 @@
     "${windowName}"))
 
 (defwidget sidestuff []
-  (box :orientation "h" :halign "end" :class "sidestuff"
-     (widg :value "${time}" :class "noice" :al "end") 
-    (widg :value "ram: ${EWW_RAM.used_mem_perc}%" :class "ram" :al "end"))) 
+  (box :orientation "h" :halign "baseline" :class "sidestuff"
+     (widg :value "${time}" :class "noice" :al "baseline") 
+    (widg :value "ram: ${EWW_RAM.used_mem_perc}%" :class "ram" :al "baseline")
+    (widg :value "cpu ${EWW_CPU.avg}%" :class "cpu" :al "baseline"))) 
     
 
 (defwidget bar []

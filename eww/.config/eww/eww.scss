@@ -1,5 +1,6 @@
 * {
 	all: unset;
+	// font-family: "DejavuSans Mono Book";
 }
 
 .bar {
@@ -19,8 +20,10 @@
 }
 
 .noice.widg {
-	color: cyan;
-	background-color: darkblue;
+	color: #a3be8c;
+	background-color: #3b4252;
+	padding: .2em;
+	border-radius: 1em;
 }
 
 .sidestuff {
@@ -31,16 +34,35 @@
 	color: red;
 	margin-left: 2em;
 	min-width: 30em;
+	color: #8fbcbb;
+	background-color: #3b4252;
+	padding: .2em;
+	border-radius: 1em;
+
 }
 
 .focusedWorkspace {
-	color: yellow;
-	background-color: blueviolet;
+	color: #88c0d0;
+	background-color: #4c566a;
+	border-radius: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
 	margin-left: .3em;
 }
+.widg.ram , .widg.cpu {
+	background-color: #3b4252;
+	border-radius: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+	color: #d8dee9;
+}
+
 .normalWorkspace {
-	color: wheat;
-	background-color: darkblue;
+	color: #e5e9f0;
+	background-color: #3b4252;
+	border-radius: .5em;
+	padding-right: .5em;
+	padding-left: .5em;
 	margin-left: .3em;
 }
 
