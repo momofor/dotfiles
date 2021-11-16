@@ -13,6 +13,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 seat seat0 xcursor_theme Breeze 24
 exec wl-paste -t text --watch clipman store
+exec_always ~/.config/sway/import-gsettings
 
 exec dunst
 set $mod Mod4
