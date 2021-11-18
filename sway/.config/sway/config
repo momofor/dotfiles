@@ -38,9 +38,9 @@ input "type:keyboard" {
     repeat_rate 40
 }
 # default_border pixel 2
-# smart_borders on
-# smart_gaps on
-# hide_edge_borders smart
+smart_borders on
+smart_gaps on
+hide_edge_borders smart
 
 gaps inner 24
 gaps outer -8

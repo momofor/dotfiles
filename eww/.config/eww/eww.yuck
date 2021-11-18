@@ -4,6 +4,9 @@
 (deflisten windowName :initial "whatever"
   `~/.config/eww/scripts/custom/sway-testing-with-ipc`)
 
+(defpoll volume :initial "sound" :interval "1s"
+  "~/.config/eww/scripts/getVol")
+
 (deflisten workspaces_listen :initial "Yay"
   "~/scripts/rust/sway-testing-with-ipc/target/release/sway-testing-with-ipc") 
 
@@ -22,6 +25,7 @@
   (box :orientation "h" :halign "baseline" :class "sidestuff" :space-evenly true
     (widg :value "${time}" :class "noice" :al "baseline") 
     (widg :value "ram: ${EWW_RAM.used_mem_perc}%" :class "ram" :al "baseline")
+    (widg :value "vol: ${volume}%" :class "vol" :al "baseline")
     (widg :value "cpu ${EWW_CPU.avg}%" :class "cpu" :al "baseline"))) 
     
 
