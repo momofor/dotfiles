@@ -39,7 +39,7 @@ input "type:keyboard" {
 }
 # default_border pixel 2
 smart_borders on
-smart_gaps on
+# smart_gaps on
 hide_edge_borders smart
 
 gaps inner 24
