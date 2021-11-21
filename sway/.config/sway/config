@@ -39,17 +39,17 @@ input "type:keyboard" {
 }
 # default_border pixel 2
 smart_borders on
-# smart_gaps on
+smart_gaps on
 hide_edge_borders smart
 
 gaps inner 24
 gaps outer -8
 default_border none
 
-border_images.focused ~/.config/sway/borders/focused.png
-border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
-border_images.unfocused ~/.config/sway/borders/unfocused.png
-border_images.urgent ~/.config/sway/borders/urgent.png
+# border_images.focused ~/.config/sway/borders/focused.png
+# border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
+# border_images.unfocused ~/.config/sway/borders/unfocused.png
+# border_images.urgent ~/.config/sway/borders/urgent.png
 
 
 
