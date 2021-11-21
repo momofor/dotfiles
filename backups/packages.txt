@@ -32,6 +32,7 @@ autoconf
 automake
 avahi
 awesome
+babl
 base
 bash
 bash-completion
@@ -43,6 +44,7 @@ bemenu-wayland
 bind
 binutils
 bison
+blas
 bluez-libs
 boost
 boost-libs
@@ -116,6 +118,7 @@ eslint_d
 evince
 eww-wayland-git
 exa
+exiv2
 expat
 faac
 faad2
@@ -158,11 +161,13 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
+gegl
 geoclue
 geocode-glib
 gettext
 ghostscript
 giflib
+gimp
 girara
 git
 glew
@@ -254,6 +259,7 @@ iputils
 iso-codes
 jack2
 jansson
+jasper
 java-runtime-common
 jbig2dec
 jq
@@ -274,9 +280,11 @@ krb5
 l-smash
 ladspa
 lame
+lapack
 lcms2
 ldb
 ldns
+lensfun
 less
 lib32-acl
 lib32-alsa-lib
@@ -474,6 +482,7 @@ libfreehand
 libgbinder
 libgccjit
 libgcrypt
+libgexiv2
 libgit2
 libglade
 libglibutil
@@ -524,6 +533,7 @@ libmpdclient
 libmpeg2
 libmspub
 libmwaw
+libmypaint
 libndp
 libnet
 libnetfilter_conntrack
@@ -557,6 +567,7 @@ libpsl
 libpulse
 libqxp
 libraqm
+libraw
 libraw1394
 libreoffice-fresh
 librevenge
@@ -613,6 +624,7 @@ libvpx
 libvterm
 libwacom
 libwebp
+libwmf
 libwpd
 libwpe
 libwpg
@@ -682,6 +694,7 @@ lua53-lgi
 luajit
 luakit
 lutris
+lv2
 lvm2
 lxappearance
 lxc
@@ -699,6 +712,7 @@ menu-cache
 mesa
 mesa-demos
 meson
+metis
 miniupnpc
 minizip
 mjpegtools
@@ -712,6 +726,7 @@ mpv-pipewire
 msgpack-c
 mtdev
 mujs
+mypaint-brushes1
 nasm
 ncpamixer
 ncurses
@@ -831,6 +846,7 @@ plymouth
 pm2ml
 polkit
 poppler
+poppler-data
 poppler-glib
 popt
 portaudio
@@ -870,6 +886,7 @@ python-gbinder
 python-gobject
 python-html5lib
 python-idna
+python-importlib-metadata
 python-jinja
 python-levenshtein
 python-lxml
@@ -908,6 +925,7 @@ python-webencodings
 python-websocket-client
 python-xlib
 python-yaml
+python-zipp
 python2
 python2-cairo
 python2-gobject2
@@ -1004,11 +1022,12 @@ starship
 startup-notification
 stow
 sudo
+suitesparse
 svt-av1
 svt-hevc
-sway-git
-swaybg-git
-swaylock
+swaybg
+swaylock-effects
+swayr
 sxiv
 sysfsutils
 systemd
