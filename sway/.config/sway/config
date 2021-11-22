@@ -46,10 +46,10 @@ gaps inner 24
 gaps outer -8
 default_border none
 
-# border_images.focused ~/.config/sway/borders/focused.png
-# border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
-# border_images.unfocused ~/.config/sway/borders/unfocused.png
-# border_images.urgent ~/.config/sway/borders/urgent.png
+border_images.focused ~/.config/sway/borders/focused.png
+border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
+border_images.unfocused ~/.config/sway/borders/unfocused.png
+border_images.urgent ~/.config/sway/borders/urgent.png
 
 
 
@@ -58,7 +58,6 @@ default_border none
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
-# gaps inner 4
 set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
 set $menu2 wofi --conf .config/rofi/config.rasi --show drun
 
