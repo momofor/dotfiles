@@ -2,16 +2,16 @@
 --- @param no string no value
 --- @param yes string yes value
 --- @return string
-local function testuw(no , yes)
-	return("either " .. yes .. " or " .. no)
+local function testuw(no, yes)
+	return ("either " .. yes .. " or " .. no)
 end
 
 local function yoink()
-	print("wo")
+	print "wo"
 	local noice = "hello"
 end
 
-testuw("not nice" , "nice" )
+testuw("not nice", "nice")
 yoink()
 
 local function foo()
@@ -21,5 +21,5 @@ local function foo()
 			bin = "Hello world! %s"
 		end
 	end
-	return string.format(bin, 'foo')
+	return string.format(bin, "foo")
 end

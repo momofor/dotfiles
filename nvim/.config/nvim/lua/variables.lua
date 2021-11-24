@@ -19,6 +19,8 @@ local variables_glabal = {
     nvcode_termcolors = 256,
     OmniSharp_highlighting = 0,
     vimtex_view_method = 'zathura',
+	rustfmt_autosave = 1
+
 }
 
 utils.set_var(vim.g, variables_glabal)
