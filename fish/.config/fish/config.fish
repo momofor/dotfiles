@@ -23,11 +23,19 @@ end
 #exports
 echo "Welcome To Fish"
 colorscript exec random
-set -x EDITOR nvim
-set -x BROWSER firefox-trunk
-set -x PATH ~/.platformio/penv/bin $PATH
-set -x PATH ~/premake-core/bin/release $PATH
-set -x PATH ~/.other/programs/bin $PATH
+set -x BROWSER "firefox-nightly"
+set -x LIBVA_DRIVER_NAME i965 
+set -x LIBVA_DRIVERS_PATH /usr/lib/dri
+set -x QT_PLUGIN_PATH /usr/lib/qt/plugins/
+set -x QT_QPA_PLATFORM wayland
+set -x XDG_CURRENT_DESKTOP sway
+set -x MOZ_ENABLE_WAYLAND 1
+set -x SWAY_CURSOR_THEME "Breeze"
+set -x GTK_THEME Nordic
+set -x PATH $HOME/.cargo/bin:$PATH
+set -x PATH $HOME/.local/bin:$PATH
+
+
 
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
