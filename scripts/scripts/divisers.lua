@@ -1,0 +1,1 @@
+local number = io.input();
