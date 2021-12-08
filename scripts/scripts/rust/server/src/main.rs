@@ -29,12 +29,12 @@ async fn connection_handler(mut socket: TcpStream) -> Result<()> {
         contents_of_file.len(),
         contents_of_file
     );
-    let (mut reader,mut writer) = socket.split();
+    let (mut reader, mut writer) = socket.split();
 
     writer.write(response.as_bytes()).await?;
     reader.read(&mut buffer).await?;
 
     socket.flush().await?;
-    println!("{}", String::from_utf8_lossy(&mut buffer[..]));
+    println!("{}", String::from_utf8_lossy(&buffer[..]));
     Ok(())
 }

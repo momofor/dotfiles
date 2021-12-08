@@ -12,7 +12,6 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 seat seat0 xcursor_theme Breeze 24
-exec wl-paste -t text --watch clipman store
 exec_always ~/.config/sway/import-gsettings
 exec_always "eww open example"
 
@@ -29,6 +28,7 @@ set $right l
 set $screenshot grim
 # Your preferred terminal emulator
 set $term kitty
+set $term2 alacritty
 set $browser firefox-nightly
 input "type:keyboard" {
     xkb_layout dvp
@@ -37,19 +37,18 @@ input "type:keyboard" {
     repeat_delay 200
     repeat_rate 40
 }
-# default_border pixel 2
+default_border pixel 3
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
+gaps inner 4
+# gaps inner 24
+# gaps outer -8
 
-gaps inner 24
-gaps outer -8
-default_border none
-
-border_images.focused ~/.config/sway/borders/focused.png
-border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
-border_images.unfocused ~/.config/sway/borders/unfocused.png
-border_images.urgent ~/.config/sway/borders/urgent.png
+# border_images.focused ~/.config/sway/borders/focused.png
+# border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
+# border_images.unfocused ~/.config/sway/borders/unfocused.png
+# border_images.urgent ~/.config/sway/borders/urgent.png
 
 
 
@@ -105,6 +104,7 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+shift+Return exec $term2
 
     # Kill focused window
     bindsym $mod+Shift+q kill

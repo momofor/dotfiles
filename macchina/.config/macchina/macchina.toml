@@ -1,0 +1,5 @@
+long_uptime = true
+long_kernel = true
+current_shell = true
+interface = "wlan0"
+show = ["Distribution","Kernel","Terminal","Packages","Shell","WindowManager","Uptime","Processor","ProcessorLoad","Memory","Host","LocalIP"]

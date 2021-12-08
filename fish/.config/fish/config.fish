@@ -34,11 +34,15 @@ set -x SWAY_CURSOR_THEME "Breeze"
 set -x GTK_THEME Nordic
 set -x PATH $HOME/.cargo/bin:$PATH
 set -x PATH $HOME/.local/bin:$PATH
+set -x EDITOR nvim
+set -x LD_LIBRARY_PATH /usr/local/lib/
+set -x LD_LIBRARY_PATH /usr/local/lib64/:$LD_LIBRARY_PATH
 
 
 
 export TERM=xterm-256color
 alias tsinit "/home/momofor/scripts/tsinit.fish"
+alias c "z"
 alias deno "/home/momofor/.deno/bin/deno"
 alias l "exa-linux-x86_64 -la"  
 alias obsidian "~/Applications/Obsidian-0.10.13_0632d66a95a85ab51525bd7325b85c39.AppImage"
@@ -54,7 +58,6 @@ abbr cht curl cht.sh/
 
 alias cl=clear
 alias neo=neofetch
-alias c=z 
 alias n=nvim
 alias nz="nvim ~/.zshrc"
 alias l=exa

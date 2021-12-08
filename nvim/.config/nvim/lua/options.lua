@@ -30,7 +30,7 @@ local options= {
     foldmethod = "expr" ,
     signcolumn = "yes" , -- can be set to number
     termguicolors = true ,
-    timeoutlen = 200 ,
+    timeoutlen = 300 ,
     updatetime = 100, -- Faster completion
 }
 

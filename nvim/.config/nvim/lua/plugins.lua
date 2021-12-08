@@ -61,7 +61,9 @@ return require('packer').startup(function(use)
     }
 
     -- use {"folke/lsp-colors.nvim"}
-    use {"b3nj5m1n/kommentary", event = "BufRead"}
+    use {"numToStr/Comment.nvim", event = "BufRead", config = function ()
+    	require "Comment".setup()
+    end}
 
     -- use "folke/lua-dev.nvim"
 

@@ -72,12 +72,14 @@ chaotic-mirrorlist
 chromaprint
 chrono-date
 cifs-utils
+clang
 clinfo
 clipman
 clucene
 cmake
 cmatrix
 command-not-found
+compiler-rt
 coreutils
 cowfortune
 cowsay
@@ -134,6 +136,7 @@ filesystem
 findutils
 firefox
 firefox-nightly
+fish
 flac
 flatpak
 flex
@@ -141,6 +144,7 @@ fluidsynth
 fmt
 fontconfig
 fontforge
+foot
 fortune-mod
 freeglut
 freetube-bin
@@ -152,6 +156,7 @@ fuse3
 fuzzel
 fzf
 gamemode
+gammastep
 gawk
 gc
 gcab
@@ -200,6 +205,7 @@ gpu-viewer
 graphene
 graphite
 graphviz
+greetd
 grep
 grim
 groff
@@ -234,6 +240,7 @@ gvfs
 gzip
 harfbuzz
 harfbuzz-icu
+help2man
 hicolor-icon-theme
 hidapi
 hiredis
@@ -271,6 +278,7 @@ json-glib
 jsoncpp
 kbd
 kbd-tapper
+keepassxc
 keyutils
 kitty
 kitty-terminfo
@@ -389,7 +397,7 @@ lib32-libxv
 lib32-libxxf86vm
 lib32-llvm-libs
 lib32-lm_sensors
-lib32-mesa-tkg-git
+lib32-mesa
 lib32-mpg123
 lib32-ncurses
 lib32-nettle
@@ -606,6 +614,7 @@ libtool
 libuninameslist
 libunistring
 libunwind
+liburcu
 liburing
 libusb
 libutempter
@@ -679,6 +688,7 @@ lilv
 linux-api-headers
 linux-firmware
 linux-zen
+llvm
 llvm-libs
 lm_sensors
 lmdb
@@ -711,6 +721,7 @@ mdadm
 menu-cache
 mesa
 mesa-demos
+mesa-utils
 meson
 metis
 miniupnpc
@@ -720,6 +731,7 @@ mkinitcpio
 mkinitcpio-busybox
 mlocate
 mobile-broadband-provider-info
+motrix-bin
 mpfr
 mpg123
 mpv-pipewire
@@ -815,6 +827,7 @@ perl-io-tty
 perl-libwww
 perl-list-moreutils
 perl-list-moreutils-xs
+perl-locale-gettext
 perl-lwp-mediatypes
 perl-lwp-protocol-https
 perl-mailtools
@@ -853,6 +866,7 @@ portaudio
 portmaster
 potrace
 powerpill
+preload
 prettier
 prettier_d_slim
 prettierd
@@ -905,6 +919,7 @@ python-progress
 python-psutil
 python-pyalsa
 python-pycparser
+python-pycryptodome
 python-pygments
 python-pyinotify
 python-pyopenssl
@@ -932,6 +947,7 @@ python2-gobject2
 python3-memoizedb
 python3-xcgf
 python3-xcpf
+qrencode
 qt4
 qt5-base
 qt5-charts
@@ -942,6 +958,7 @@ qt5-wayland
 qt5-webchannel
 qt5-webengine
 qt5-x11extras
+quazip
 qutebrowser
 ranger
 raptor
@@ -1021,11 +1038,12 @@ stacer
 starship
 startup-notification
 stow
+stylua
 sudo
 suitesparse
 svt-av1
 svt-hevc
-swaybg
+swaybg-git
 swaylock-effects
 swayr
 sxiv
@@ -1112,7 +1130,6 @@ wildmidi
 wine-staging
 wl-clipboard
 wlogout
-wlroots-git
 wmctrl
 woff2
 wofi
@@ -1135,7 +1152,7 @@ xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
-xdg-desktop-portal-wlr-git
+xdg-desktop-portal-wlr
 xdg-utils
 xf86-input-libinput
 xf86-video-intel
@@ -1203,6 +1220,9 @@ yaml-cpp
 yarn
 youtube-dl
 ytfzf
+yubico-c
+yubico-c-client
+yubikey-personalization
 z.lua
 zathura
 zathura-pdf-poppler
