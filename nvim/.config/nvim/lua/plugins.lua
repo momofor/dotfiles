@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
         config = function() require "nvimtree-config" end,
         event = "BufRead"
     }
-    use {"romgrk/barbar.nvim", event = "BufEnter"}
+    use {"romgrk/barbar.nvim"}
     use "neovim/nvim-lspconfig"
 
     use {"Raimondi/delimitMate", event = "InsertEnter"}
@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
         config = function() require "lsp_sig" end,
         event = "BufEnter"
     }
-    use {"folke/trouble.nvim", event = "BufRead"}
+    use {"folke/trouble.nvim", event = "BufEnter"}
     use {"onsails/lspkind-nvim", config = function() require "icons" end}
 
     use {

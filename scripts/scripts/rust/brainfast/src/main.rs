@@ -13,21 +13,30 @@ use std::env;
 
 use self::Token::*;
 
+enum Argument {
+    ShowCode,
+    ShowTokens,
+}
+
 #[tokio::main]
 async fn main() {
     let args: Vec<String> = env::args().collect();
     let code = std::fs::read_to_string(&args[1]).unwrap();
     let tokens = tokenize(code.as_str()).await;
-    println!("{:?}\n", &tokens);
     let generated_code = generate(&tokens).await;
-    println!("Generated Code:\n {}", generated_code);
-    let noice = std::process::Command::new("gcc")
+
+    tokio::process::Command::new("gcc")
         .arg("-o3")
         .arg("finished_program.c")
         .arg("-o")
         .arg(&args[2])
         .spawn()
         .expect("err");
+    tokio::process::Command::new("sudo")
+        .arg("./")
+        .arg(&args[2])
+        .spawn()
+        .expect("err 2");
 }
 
 async fn tokenize(input: &str) -> Vec<Token> {

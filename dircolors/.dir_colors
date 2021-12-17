@@ -179,7 +179,7 @@ STICKY 04;37;44
 *dockerFile 03;36
 .yml 03;34
 .sh 02;36
-.lua 01;36
+.lua 01;34
 #+--- Executables ---+
 .app 01;36
 .bat 01;36

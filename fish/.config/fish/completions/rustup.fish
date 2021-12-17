@@ -1,133 +1,199 @@
-rustup-completions 
-Generate tab-completion scripts for your shell
-
-USAGE:
-    rustup completions [ARGS]
-
-FLAGS:
-    -h, --help    Prints help information
-
-ARGS:
-    <shell>       [possible values: zsh, bash, fish, powershell, elvish]
-    <command>     [possible values: rustup, cargo]
-
-DISCUSSION:
-    Enable tab completion for Bash, Fish, Zsh, or PowerShell
-    The script is output on `stdout`, allowing one to re-direct the
-    output to the file of their choosing. Where you place the file
-    will depend on which shell, and which operating system you are
-    using. Your particular configuration may also determine where
-    these scripts need to be placed.
-
-    Here are some common set ups for the three supported shells under
-    Unix and similar operating systems (such as GNU/Linux).
-
-    BASH:
-
-    Completion files are commonly stored in `/etc/bash_completion.d/` for
-    system-wide commands, but can be stored in
-    `~/.local/share/bash-completion/completions` for user-specific commands.
-    Run the command:
-
-        $ mkdir -p ~/.local/share/bash-completion/completions
-        $ rustup completions bash >> ~/.local/share/bash-completion/completions/rustup
-
-    This installs the completion script. You may have to log out and
-    log back in to your shell session for the changes to take effect.
-
-    BASH (macOS/Homebrew):
-
-    Homebrew stores bash completion files within the Homebrew directory.
-    With the `bash-completion` brew formula installed, run the command:
-
-        $ mkdir -p $(brew --prefix)/etc/bash_completion.d
-        $ rustup completions bash > $(brew --prefix)/etc/bash_completion.d/rustup.bash-completion
-
-    FISH:
-
-    Fish completion files are commonly stored in
-    `$HOME/.config/fish/completions`. Run the command:
-
-        $ mkdir -p ~/.config/fish/completions
-        $ rustup completions fish > ~/.config/fish/completions/rustup.fish
-
-    This installs the completion script. You may have to log out and
-    log back in to your shell session for the changes to take effect.
-
-    ZSH:
-
-    ZSH completions are commonly stored in any directory listed in
-    your `$fpath` variable. To use these completions, you must either
-    add the generated script to one of those directories, or add your
-    own to this list.
-
-    Adding a custom directory is often the safest bet if you are
-    unsure of which directory to use. First create the directory; for
-    this example we'll create a hidden directory inside our `$HOME`
-    directory:
-
-        $ mkdir ~/.zfunc
-
-    Then add the following lines to your `.zshrc` just before
-    `compinit`:
-
-        fpath+=~/.zfunc
-
-    Now you can install the completions script using the following
-    command:
-
-        $ rustup completions zsh > ~/.zfunc/_rustup
-
-    You must then either log out and log back in, or simply run
-
-        $ exec zsh
-
-    for the new completions to take effect.
-
-    CUSTOM LOCATIONS:
-
-    Alternatively, you could save these files to the place of your
-    choosing, such as a custom directory inside your $HOME. Doing so
-    will require you to add the proper directives, such as `source`ing
-    inside your login script. Consult your shells documentation for
-    how to add such directives.
-
-    POWERSHELL:
-
-    The powershell completion scripts require PowerShell v5.0+ (which
-    comes with Windows 10, but can be downloaded separately for windows 7
-    or 8.1).
-
-    First, check if a profile has already been set
-
-        PS C:\> Test-Path $profile
-
-    If the above command returns `False` run the following
-
-        PS C:\> New-Item -path $profile -type file -force
-
-    Now open the file provided by `$profile` (if you used the
-    `New-Item` command it will be
-    `${env:USERPROFILE}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
-
-    Next, we either save the completions file into our profile, or
-    into a separate file and source it inside our profile. To save the
-    completions into our profile simply use
-
-        PS C:\> rustup completions powershell >>
-${env:USERPROFILE}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
-    CARGO:
-
-    Rustup can also generate a completion script for `cargo`. The script output
-    by `rustup` will source the completion script distributed with your default
-    toolchain. Not all shells are currently supported. Here are examples for
-    the currently supported shells.
-
-    BASH:
-
-        $ rustup completions bash cargo >> ~/.local/share/bash-completion/completions/cargo
-
-    ZSH:
-
-        $ rustup completions zsh cargo > ~/.zfunc/_cargo
+complete -c rustup -n "__fish_use_subcommand" -s v -l verbose -d 'Enable verbose output'
+complete -c rustup -n "__fish_use_subcommand" -s q -l quiet -d 'Disable progress output'
+complete -c rustup -n "__fish_use_subcommand" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_use_subcommand" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_use_subcommand" -f -a "dump-testament" -d 'Dump information about the build'
+complete -c rustup -n "__fish_use_subcommand" -f -a "show" -d 'Show the active and installed toolchains or profiles'
+complete -c rustup -n "__fish_use_subcommand" -f -a "install" -d 'Update Rust toolchains'
+complete -c rustup -n "__fish_use_subcommand" -f -a "uninstall" -d 'Uninstall Rust toolchains'
+complete -c rustup -n "__fish_use_subcommand" -f -a "update" -d 'Update Rust toolchains and rustup'
+complete -c rustup -n "__fish_use_subcommand" -f -a "check" -d 'Check for updates to Rust toolchains and rustup'
+complete -c rustup -n "__fish_use_subcommand" -f -a "default" -d 'Set the default toolchain'
+complete -c rustup -n "__fish_use_subcommand" -f -a "toolchain" -d 'Modify or query the installed toolchains'
+complete -c rustup -n "__fish_use_subcommand" -f -a "target" -d 'Modify a toolchain\'s supported targets'
+complete -c rustup -n "__fish_use_subcommand" -f -a "component" -d 'Modify a toolchain\'s installed components'
+complete -c rustup -n "__fish_use_subcommand" -f -a "override" -d 'Modify directory toolchain overrides'
+complete -c rustup -n "__fish_use_subcommand" -f -a "run" -d 'Run a command with an environment configured for a given toolchain'
+complete -c rustup -n "__fish_use_subcommand" -f -a "which" -d 'Display which binary will be run for a given command'
+complete -c rustup -n "__fish_use_subcommand" -f -a "doc" -d 'Open the documentation for the current toolchain'
+complete -c rustup -n "__fish_use_subcommand" -f -a "man" -d 'View the man page for a given command'
+complete -c rustup -n "__fish_use_subcommand" -f -a "self" -d 'Modify the rustup installation'
+complete -c rustup -n "__fish_use_subcommand" -f -a "set" -d 'Alter rustup settings'
+complete -c rustup -n "__fish_use_subcommand" -f -a "completions" -d 'Generate tab-completion scripts for your shell'
+complete -c rustup -n "__fish_use_subcommand" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from dump-testament" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from dump-testament" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from show" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from show" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from show" -f -a "active-toolchain" -d 'Show the active toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from show" -f -a "home" -d 'Display the computed value of RUSTUP_HOME'
+complete -c rustup -n "__fish_seen_subcommand_from show" -f -a "profile" -d 'Show the current profile'
+complete -c rustup -n "__fish_seen_subcommand_from show" -f -a "keys" -d 'Display the known PGP keys'
+complete -c rustup -n "__fish_seen_subcommand_from show" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from active-toolchain" -s v -l verbose -d 'Enable verbose output with rustc information'
+complete -c rustup -n "__fish_seen_subcommand_from active-toolchain" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from active-toolchain" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from home" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from home" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from profile" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from profile" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from keys" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from keys" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l profile -r -f -a "minimal default complete"
+complete -c rustup -n "__fish_seen_subcommand_from install" -l no-self-update -d 'Don\'t perform self-update when running the `rustup install` command'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l force -d 'Force an update, even if some components are missing'
+complete -c rustup -n "__fish_seen_subcommand_from install" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from install" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from update" -l no-self-update -d 'Don\'t perform self update when running the `rustup update` command'
+complete -c rustup -n "__fish_seen_subcommand_from update" -l force -d 'Force an update, even if some components are missing'
+complete -c rustup -n "__fish_seen_subcommand_from update" -l force-non-host -d 'Install toolchains that require an emulator. See https://github.com/rust-lang/rustup/wiki/Non-host-toolchains'
+complete -c rustup -n "__fish_seen_subcommand_from update" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from update" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from check" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from check" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from default" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from default" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -f -a "list" -d 'List installed toolchains'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -f -a "install" -d 'Install or update a given toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -f -a "uninstall" -d 'Uninstall a toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -f -a "link" -d 'Create a custom toolchain by symlinking to a directory'
+complete -c rustup -n "__fish_seen_subcommand_from toolchain" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s v -l verbose -d 'Enable verbose output with toolchain information'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l profile -r -f -a "minimal default complete"
+complete -c rustup -n "__fish_seen_subcommand_from install" -s c -l component -d 'Add specific components on installation'
+complete -c rustup -n "__fish_seen_subcommand_from install" -s t -l target -d 'Add specific targets on installation'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l no-self-update -d 'Don\'t perform self update when running the`rustup toolchain install` command'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l force -d 'Force an update, even if some components are missing'
+complete -c rustup -n "__fish_seen_subcommand_from install" -l allow-downgrade -d 'Allow rustup to downgrade the toolchain to satisfy your component choice'
+complete -c rustup -n "__fish_seen_subcommand_from install" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from install" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from link" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from link" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from target" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from target" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from target" -f -a "list" -d 'List installed and available targets'
+complete -c rustup -n "__fish_seen_subcommand_from target" -f -a "add" -d 'Add a target to a Rust toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from target" -f -a "remove" -d 'Remove a target from a Rust toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from target" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from list" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from list" -l installed -d 'List only installed targets'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from add" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from add" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from add" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from component" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from component" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from component" -f -a "list" -d 'List installed and available components'
+complete -c rustup -n "__fish_seen_subcommand_from component" -f -a "add" -d 'Add a component to a Rust toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from component" -f -a "remove" -d 'Remove a component from a Rust toolchain'
+complete -c rustup -n "__fish_seen_subcommand_from component" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from list" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from list" -l installed -d 'List only installed components'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from add" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from add" -l target
+complete -c rustup -n "__fish_seen_subcommand_from add" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from add" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -l target
+complete -c rustup -n "__fish_seen_subcommand_from remove" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from remove" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from override" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from override" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from override" -f -a "list" -d 'List directory toolchain overrides'
+complete -c rustup -n "__fish_seen_subcommand_from override" -f -a "set" -d 'Set the override toolchain for a directory'
+complete -c rustup -n "__fish_seen_subcommand_from override" -f -a "unset" -d 'Remove the override toolchain for a directory'
+complete -c rustup -n "__fish_seen_subcommand_from override" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from list" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from set" -l path -d 'Path to the directory'
+complete -c rustup -n "__fish_seen_subcommand_from set" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from set" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from unset" -l path -d 'Path to the directory'
+complete -c rustup -n "__fish_seen_subcommand_from unset" -l nonexistent -d 'Remove override toolchain for all nonexistent directories'
+complete -c rustup -n "__fish_seen_subcommand_from unset" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from unset" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from run" -l install -d 'Install the requested toolchain if needed'
+complete -c rustup -n "__fish_seen_subcommand_from run" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from run" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from which" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from which" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from which" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l path -d 'Only print the path to the documentation'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l alloc -d 'The Rust core allocation and collections library'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l book -d 'The Rust Programming Language book'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l cargo -d 'The Cargo Book'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l core -d 'The Rust Core Library'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l edition-guide -d 'The Rust Edition Guide'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l nomicon -d 'The Dark Arts of Advanced and Unsafe Rust Programming'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l proc_macro -d 'A support library for macro authors when defining new macros'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l reference -d 'The Rust Reference'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l rust-by-example -d 'A collection of runnable examples that illustrate various Rust concepts and standard libraries'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l rustc -d 'The compiler for the Rust programming language'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l rustdoc -d 'Generate documentation for Rust projects'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l std -d 'Standard library API documentation'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l test -d 'Support code for rustc\'s built in unit-test and micro-benchmarking framework'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l unstable-book -d 'The Unstable Book'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -l embedded-book -d 'The Embedded Rust Book'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from doc" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from man" -l toolchain -d 'Toolchain name, such as \'stable\', \'nightly\', or \'1.8.0\'. For more information see `rustup help toolchain`'
+complete -c rustup -n "__fish_seen_subcommand_from man" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from man" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from self" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from self" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from self" -f -a "update" -d 'Download and install updates to rustup'
+complete -c rustup -n "__fish_seen_subcommand_from self" -f -a "uninstall" -d 'Uninstall rustup.'
+complete -c rustup -n "__fish_seen_subcommand_from self" -f -a "upgrade-data" -d 'Upgrade the internal data format.'
+complete -c rustup -n "__fish_seen_subcommand_from self" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from update" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from update" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s y
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from uninstall" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from upgrade-data" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from upgrade-data" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from set" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from set" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from set" -f -a "default-host" -d 'The triple used to identify toolchains when not specified'
+complete -c rustup -n "__fish_seen_subcommand_from set" -f -a "profile" -d 'The default components installed'
+complete -c rustup -n "__fish_seen_subcommand_from set" -f -a "auto-self-update" -d 'The rustup auto self update mode'
+complete -c rustup -n "__fish_seen_subcommand_from set" -f -a "help" -d 'Prints this message or the help of the given subcommand(s)'
+complete -c rustup -n "__fish_seen_subcommand_from default-host" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from default-host" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from profile" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from profile" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from auto-self-update" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from auto-self-update" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from completions" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from completions" -s V -l version -d 'Prints version information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s h -l help -d 'Prints help information'
+complete -c rustup -n "__fish_seen_subcommand_from help" -s V -l version -d 'Prints version information'

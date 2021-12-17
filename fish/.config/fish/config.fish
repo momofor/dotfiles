@@ -15,7 +15,7 @@
 ##################################START OF AUTOSTART ###############
 # "autostart"
 function fish_greeting
-test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
+	test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
 end
 #################################END OF AUTOSTART########################
 
@@ -76,6 +76,8 @@ alias pkgcount="paru -Qa | wc -l"
 alias cr="colorscript random"
 alias recordu="/usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr"
 alias night="gammastep -O 5000K"
+alias neovide ~/.other/git-stuff/neovide/target/release/neovide
+
 
 ###############END OF EXPORTS############################################
 starship init fish | source

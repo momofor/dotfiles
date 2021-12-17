@@ -30,13 +30,16 @@ set $screenshot grim
 set $term kitty
 set $term2 alacritty
 set $browser firefox-nightly
+set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
+
 input "type:keyboard" {
     xkb_layout dvp
     xkb_options caps:swapescape
     xkb_numlock enable
-    repeat_delay 200
+    repeat_delay 150
     repeat_rate 40
 }
+
 default_border pixel 3
 smart_borders on
 smart_gaps on
@@ -61,7 +64,10 @@ set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf
 set $menu2 wofi --conf .config/rofi/config.rasi --show drun
 
 ### Output configuration
-#
+output VGA-1 mode 1280x1024@75.025Hz
+output VGA-1 max_render_time 5
+output VGA-1 subpixel rgb
+output VGA-1 scale_filter smart
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 #
@@ -111,7 +117,7 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+e exec $menu2
+    bindsym $mod+e exec $guieditor
     bindsym $mod+s exec $screenshot
 
     bindsym ctrl+alt+l exec swaylock \
