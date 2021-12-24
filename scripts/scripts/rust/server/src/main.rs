@@ -10,8 +10,6 @@ async fn main() -> Result<()> {
     let addr = "127.0.0.1:8080";
     let listener = TcpListener::bind(&addr).await?;
     println!("listening on: {}", addr);
-    neovide_sucks_ass(true);
-    neovide_sucks_ass(false);
     loop {
         let (socket, _) = listener.accept().await?;
 
@@ -19,13 +17,6 @@ async fn main() -> Result<()> {
             // Process each socket concurrently.
             connection_handler(socket).await.unwrap();
         });
-    }
-}
-
-fn neovide_sucks_ass(agree: bool) {
-    match agree {
-        true => println!("I knew it, it sucks ass"),
-        false => println!("You suck ass too it really sucks ass"),
     }
 }
 
@@ -45,5 +36,4 @@ async fn connection_handler(mut socket: TcpStream) -> Result<()> {
 
     socket.flush().await?;
     println!("{}", String::from_utf8_lossy(&buffer[..]));
-    Ok(())
 }

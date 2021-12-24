@@ -11,9 +11,11 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-seat seat0 xcursor_theme Breeze 24
+#polkit init
+
 exec_always ~/.config/sway/import-gsettings
 exec_always "eww open example"
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
 xwayland enable
 
@@ -64,10 +66,12 @@ set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf
 set $menu2 wofi --conf .config/rofi/config.rasi --show drun
 
 ### Output configuration
-output VGA-1 mode 1280x1024@75.025Hz
-output VGA-1 max_render_time 5
-output VGA-1 subpixel rgb
-output VGA-1 scale_filter smart
+output VGA-1 {
+ mode 1280x1024@75.025Hz
+ max_render_time 6
+ subpixel rgb
+ scale_filter smart
+}
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 #
@@ -258,8 +262,10 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
 
+bindsym $mod+r mode "resize"
+client.focused #ffffff #4c566a  #ffffff
+client.unfocused #ffffff #3b4252 #ffffff
 #
 # Status Bar:
 #

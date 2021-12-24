@@ -37,6 +37,7 @@ set -x PATH $HOME/.local/bin:$PATH
 set -x EDITOR nvim
 set -x LD_LIBRARY_PATH /usr/local/lib/
 set -x LD_LIBRARY_PATH /usr/local/lib64/:$LD_LIBRARY_PATH
+set -x PIPEWIRE_LATENCY 256/4800
 
 
 

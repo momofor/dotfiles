@@ -137,6 +137,9 @@ return require('packer').startup(function(use)
     use {'lervag/vimtex'}
 	use 'eraserhd/parinfer-rust'
 	use 'elkowar/yuck.vim'
+	use {"akinsho/toggleterm.nvim", event = "VimEnter" ,config = function ()
+		require "term"
+	end}
 
     if packer_bootstrap then require('packer').sync() end
 end)
