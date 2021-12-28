@@ -18,6 +18,7 @@ function fish_greeting
 	test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
 end
 #################################END OF AUTOSTART########################
+zoxide init fish | source
 
 ################START OF EXPORTS##################################
 #exports

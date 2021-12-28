@@ -36,4 +36,5 @@ async fn connection_handler(mut socket: TcpStream) -> Result<()> {
 
     socket.flush().await?;
     println!("{}", String::from_utf8_lossy(&buffer[..]));
+    Ok(())
 }

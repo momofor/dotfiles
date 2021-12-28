@@ -1,0 +1,11 @@
+Initialize engine version: 2017.4.10f1 (f2cce2a5991f)
+GfxDevice: creating device client; threaded=1
+d3d11: failed to create device and context (80004005).
+GfxDevice: creating device client; threaded=1
+d3d11: failed to create device and context (80004005).
+Failed to initialize graphics.
+Make sure you have DirectX 11 installed, have up to date
+drivers for your graphics card and have not disabled
+3D acceleration in display settings.
+InitializeEngineGraphics failed
+PlayerInitEngineGraphics: InitializeEngineGraphics failed
