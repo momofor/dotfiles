@@ -17,7 +17,7 @@ exec_always ~/.config/sway/import-gsettings
 exec_always "eww open example"
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
-xwayland enable
+# xwayland enable
 
 exec dunst
 set $mod Mod4
@@ -32,6 +32,8 @@ set $screenshot grim
 set $term kitty
 set $term2 alacritty
 set $browser firefox-nightly
+set $music_player "LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
+set $file_manager "pcmanfm"
 set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
@@ -122,7 +124,6 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $guieditor
-    bindsym $mod+s exec $screenshot
 
     bindsym ctrl+alt+l exec swaylock \
         --screenshots \
@@ -263,8 +264,19 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+mode "spawn" {
+	bindsym {
+		m exec $music_player
+		f exec $file_manager
+		b exec $browser
+		Return mode "default"
+		Escape mode "default"
+	}
+}
+
 bindsym $mod+r mode "resize"
-client.focused #ffffff #4c566a  #ffffff
+bindsym $mod+s mode "spawn"
+client.focused #ffffff #88c0d0  #ffffff
 client.unfocused #ffffff #3b4252 #ffffff
 #
 # Status Bar:

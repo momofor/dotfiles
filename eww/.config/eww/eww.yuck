@@ -2,13 +2,16 @@
   "date '+%H:%M:%S | %a %d %b '")
 
 (deflisten windowName :initial "whatever"
-  `~/.config/eww/scripts/custom/sway-testing-with-ipc`)
+  `~/.config/eww/scripts/custom/get_window_name`)
 
 (defpoll volume :initial "sound" :interval "1s"
   "~/.config/eww/scripts/getVol")
 
 (deflisten workspaces_listen :initial "Yay"
-  "~/scripts/rust/sway-testing-with-ipc/target/release/sway-testing-with-ipc") 
+  "~/.config/eww/scripts/custom/get_workspaces") 
+
+(deflisten mode_listen :initial "hoh"
+  "~/.config/eww/scripts/custom/get_bindings_mode") 
 
 (defwidget widg [class value al]
   (box :class "${class} widg" :space-evenly: false :style "margin-left: 1em;" :halign "${al}"
@@ -16,6 +19,9 @@
 
 (defwidget workspaces []
   (literal :content workspaces_listen))
+
+(defwidget mode []
+ (literal :content mode_listen))
 
 (defwidget windowName [] 
   (box :orientation "h" :halign "center" :class "windowName"  :hexpand false :vexpand false
@@ -33,6 +39,7 @@
   (box :class "bar" :orientation "h" :space-evenly false :hexpand false :vexpand false
     (workspaces)
     (windowName)
+    (mode)
     (sidestuff)))
     ; (widg :value "${windowName}" :class "windowName" :al "start")
     

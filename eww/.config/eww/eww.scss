@@ -9,6 +9,23 @@
 	border-radius: .5em;
 }
 
+.mode.widg {
+	border-radius:1em ;
+	padding: 3px;
+	&.default {
+		color: #88c0d0;
+		background-color: #4c566a;
+	}
+	&.resize {
+		color: #3b4252;
+		background-color: #88c0d0;
+	}
+	&.spawn {
+		color: #bf616a;
+		background-color:#3b4252;
+	}
+}
+
 .coolBoy button{
 	margin-left: 10px;
 	background-color: #4c566a;
