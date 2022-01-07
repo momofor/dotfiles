@@ -1,5 +1,8 @@
 require"telescope".setup {
     defaults = {
+		extensions = {
+			file_browser = {
+				  theme = "ivy"}},
         vimgrep_arguments = {
             "rg", "--color=never", "--no-heading", "--with-filename",
             "--line-number", "--column", "--smart-case"
@@ -47,10 +50,6 @@ utils.map("n", "<Leader>M", ":lua require'telescope.builtin'.man_pages() <CR>",
           {noremap = true})
 utils.map("n", "<Leader>T", ":lua require'telescope.builtin'.treesitter() <CR>",
           {noremap = true})
-utils.map("n", "<Leader>F",
-          ":lua require'telescope.builtin'.file_browser() <CR>",
-          {noremap = true})
-
 utils.map("n", "<Leader>rc",
           ":lua require'tele'.Search('< NeovimRC >' , '~/.config/nvim/' ) <CR>",
           {})

@@ -1,2 +1,1 @@
-require'lspconfig'.clangd.setup{}
-vim.cmd "LspStart"
+require("lspconfig").clangd.setup({})

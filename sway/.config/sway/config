@@ -16,8 +16,9 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec_always ~/.config/sway/import-gsettings
 exec_always "eww open example"
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+exec_always /usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr
 
-# xwayland enable
+xwayland enable
 
 exec dunst
 set $mod Mod4
@@ -38,7 +39,7 @@ set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
     xkb_layout dvp
-    xkb_options caps:swapescape
+    xkb_options caps:swapescape,grp:rctrl_toggle
     xkb_numlock enable
     repeat_delay 150
     repeat_rate 40
@@ -73,6 +74,7 @@ output VGA-1 {
  max_render_time 6
  subpixel rgb
  scale_filter smart
+ adaptive_sync on
 }
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill

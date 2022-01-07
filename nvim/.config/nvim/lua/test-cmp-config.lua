@@ -69,7 +69,7 @@ cmp.setup({
         end, {"i", "s"})
     },
     experimental = {
-		native_menu = false
+		native_menu = true
 	},
     sources = {
         {name = 'nvim_lsp'}, -- For vsnip user.

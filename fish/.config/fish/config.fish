@@ -62,7 +62,6 @@ alias cl=clear
 alias neo=neofetch
 alias n=nvim
 alias nz="nvim ~/.zshrc"
-alias l=exa
 # alias g=git
 alias naw="nvim ~/.config/awesome/rc.lua"
 alias t=tmux
@@ -79,6 +78,8 @@ alias cr="colorscript random"
 alias recordu="/usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr"
 alias night="gammastep -O 5000K"
 alias neovide ~/.other/git-stuff/neovide/target/release/neovide
+alias l="exa --hyperlink=auto --color=auto"
+alias ls="ls --hyperlink=auto --color=auto"
 
 
 ###############END OF EXPORTS############################################
