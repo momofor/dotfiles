@@ -25,7 +25,7 @@ zoxide init fish | source
 echo "Welcome To Fish"
 colorscript exec random
 set -x BROWSER "firefox-nightly"
-set -x LIBVA_DRIVER_NAME i965 
+set -x LIBVA_DRIVER_NAME i965
 set -x LIBVA_DRIVERS_PATH /usr/lib/dri
 set -x QT_PLUGIN_PATH /usr/lib/qt/plugins/
 set -x QT_QPA_PLATFORM wayland

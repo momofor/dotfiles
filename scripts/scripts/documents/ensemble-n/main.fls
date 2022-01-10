@@ -1,4 +1,4 @@
-PWD /home/momofor/scripts/documents/ensemble-n
+PWD /home/momofor/dotfiles/scripts/scripts/documents/ensemble-n
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT main.log
@@ -19,7 +19,7 @@ OUTPUT /home/momofor/.texlive/texmf-var/m_t_x_t_e_s_t.tmp
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-parsers.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-configuration.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
-INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-01-07.lua
+INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-05-20.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-fallback.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-multiscript.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
@@ -72,10 +72,6 @@ INPUT /usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-INPUT /usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
-INPUT /usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
-INPUT /usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
-INPUT /usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
 INPUT /usr/share/texmf-dist/tex/latex/fontspec/fontspec.lua
 INPUT /usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 INPUT /usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty

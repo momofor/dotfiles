@@ -38,18 +38,21 @@ set $file_manager "pcmanfm"
 set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
-    xkb_layout dvp
+    xkb_layout dvp,us
     xkb_options caps:swapescape,grp:rctrl_toggle
+
     xkb_numlock enable
     repeat_delay 150
     repeat_rate 40
 }
 
-default_border pixel 3
+default_border pixel 2
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
 gaps inner 4
+bindsym $mod+tab focus next
+bindsym $mod+Shift+tab focus prev
 # gaps inner 24
 # gaps outer -8
 
@@ -181,6 +184,8 @@ output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
 # Workspaces:
 #
     # Switch to workspace
+	bindsym $mod+n workspace next
+	bindsym $mod+p workspace prev
     bindsym $mod+7 workspace number 1
     bindsym $mod+5 workspace number 2
     bindsym $mod+3 workspace number 3
@@ -278,8 +283,9 @@ mode "spawn" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+s mode "spawn"
-client.focused #ffffff #88c0d0  #ffffff
-client.unfocused #ffffff #3b4252 #ffffff
+#						 background			text
+client.focused   #3b4252   #434c5e			#8fbcbb
+client.unfocused #2e3440   #2e3440			#d8dee9
 #
 # Status Bar:
 #
