@@ -39,6 +39,8 @@ set -x EDITOR nvim
 set -x LD_LIBRARY_PATH /usr/local/lib/
 set -x LD_LIBRARY_PATH /usr/local/lib64/:$LD_LIBRARY_PATH
 set -x PIPEWIRE_LATENCY 256/4800
+set -x _JAVA_AWT_WM_NONREPARENTING 1
+set -x BEMENU_OPTS "-b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0"
 
 
 

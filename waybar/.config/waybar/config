@@ -1,202 +1,176 @@
 {
-  "layer": "top",
-  "position": "top",
-  "modules-left": [
-    "sway/workspaces",
-    "sway/mode"
-  ],
-  "modules-center": ["sway/window"],
-  "modules-right": [
-    "pulseaudio",
-    "memory",
-    "cpu",
-    "clock#4",
-    "clock#3",
-    "tray",
-  ],
-  "custom/sway-testing-with-ipc": {
-	  "exec":"~/.config/waybar/custom/sway-testing-with-ipc",
-	  "format": "{}"
-  },
-  "custom/left-arrow-dark": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left-arrow-light": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right-arrow-dark": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right-arrow-light": {
-    "format": "",
-    "tooltip": false
-  },
-  "clock#2": {
-    "format": "{:%H:%M}",
-    "tooltip": false
-  },
-  "clock#3": {
-    "format": "{:%H:%M}(UTC)",
-    "tooltip": false,
-    "timezone": "Etc/UTC"
-  },
-  "clock#4": {
-    "format": "{:%a %d/%m %H:%M}",
-    "tooltip": false
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}% {format_source}",
-    "format-bluetooth": "{icon} {volume}% {format_source}",
-    "format-bluetooth-muted": " {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "height": 36, // Waybar height (to be removed for auto height)
+    // Archived modules
+    // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
+    // Choose the order of the modules
+    "modules-left": [ "clock",  "sway/mode"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": [  "cpu", "temperature", "pulseaudio", "bluetooth", "network", "tray"],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "<span color=\"#D8DEE9\"></span>",
+            "2": "<span color=\"#88C0D0\"></span>",
+            "3": "<span color=\"#A3BE8C\"></span>",
+            "4": "<span color=\"#D8DEE9\"></span>",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
     },
-    "scroll-step": 5,
-    "on-click": "pavucontrol",
-    "on-click-right": "blueman-manager"
-  },
-  "memory": {
-    "interval": 2,
-    "format": "Mem: {}%"
-  },
-  "cpu": {
-    "interval": 2,
-    "format": "CPU: {usage:2}%"
-  },
-  "battery": {
-    "bat": "BAT0",
-    "states": {
-      "full": 100,
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
-    "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% ({time})",
-    "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% ({time})",
-    "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> Full",
-    "format-time": "{H}h{M}m",
-    "interval": 30,
-    "on-click": "gnome-power-statistics",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  "battery#bat1": {
-    "bat": "BAT1",
-    "states": {
-      "full": 100,
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% ({time})",
-    "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% ({time})",
-    "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> Full",
-    "format-time": "{H}h{M}m",
-    "interval": 30,
-    "on-click": "gnome-power-statistics",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  "tray": {
-    "icon-size": 20
-  },
-  "sway/mode": {
-    "format": " {}",
-    "max-length": 50
-  },
-  "custom/scratchpad": {
-    "format": "Scratchpad: {}",
-    "escape": true,
-    "interval": 1,
-    "exec": "swaymsg -t get_tree | jq '.nodes[].nodes[] | select(.name==\"__i3_scratch\").floating_nodes | length'",
-    "exec-if": "swaymsg -t get_tree | jq '.nodes[].nodes[] | select(.name==\"__i3_scratch\").floating_nodes | length' | grep -v '^0$'"
-  },
-  "sway/workspaces": {
-    "disable-scroll": false,
-    "disable-scroll-wraparound": true,
-    "format": "{index}:{name}"
-  },
-    "custom/spotify-monitor": {
-        "interval": 30,
-        "exec": "~/.config/waybar/custom/spotify/monitor.sh",
-        "signal": 4
-    },
-    "custom/spotify-metadata": {
-        "format": " {}",
-        "max-length": 500,
-        "interval": "once",
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "sway workspace music",
-        "rotate": 90,
-        "signal": 5
-    },
-    "custom/spotify-play-pause": {
+    "sway/window": {
         "format": "{}",
-        "interval": "once",
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/play-pause.sh",
-        "on-click": "~/.config/waybar/custom/spotify/controls.sh",
-        "signal": 5
+        "max-length": 50, 
+        "tooltip": false
     },
-    "custom/spotify-next": {
-        "format": "怜",
-        "return-type": "json",
-        "interval": "once",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "~/.config/waybar/custom/spotify/controls.sh next",
-        "rotate": 90,
-        "signal": 5
+    "bluetooth": {
+        "interval": 30,
+        "format": "{icon}",
+        // "format-alt": "{status}",
+        "format-icons": {
+            "enabled": "",
+            "disabled": ""
+        },
+        "on-click": "blueberry"
+    },    
+    "sway/language": {
+        "format": "<big></big> {}",
+        "max-length": 5,
+        "min-length": 5,        
     },
-    "custom/spotify-prev": {
-        "format": "玲",
-        "interval": "once",
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "~/.config/waybar/custom/spotify/controls.sh prev",
-        "rotate": 90,
-        "signal": 5
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": "true"
     },
-    "custom/spotify-quit": {
-        "format": "",
-        "interval": "once",
-        "return-type": "json",
-        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-        "on-click": "~/.config/waybar/custom/spotify/quit.sh ",
-        "rotate": 90,
-        "signal": 6
+    "tray": {
+        //"icon-size": 11,
+        "spacing": 5
     },
-  "custom/recorder": {
-    "format": "",
-    "return-type": "json",
-    "interval": 1,
-    "exec": "echo '{\"class\": \"recording\"}'",
-    "exec-if": "pgrep wf-recorder"
-  }
+    "clock": {
+        "format": "  {:%H:%M   %e %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>",
+        "on-click": "gnome-calendar"
+    },
+    "cpu": {
+        "interval": "1",      
+        "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+        "max-length": 13,
+        "min-length": 13,
+        "on-click": "kitty -e htop --sort-key PERCENT_CPU",
+        "tooltip": false
+    },
+    "temperature": {
+        //"thermal-zone": 1,
+        "interval": "4",
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 74,
+        "format-critical": "  {temperatureC}°C",
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "max-length": 7,
+        "min-length": 7
+    },
+    "network": {
+        // "interface": "wlan0", // (Optional) To force the use of this interface,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "family": "ipv4",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}"
+    },
+    "pulseaudio": {
+        "scroll-step": 3, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    },
+    "custom/pacman": {
+        "format": "<big>􏆲</big>  {}",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
+        "max-length": 5,
+        "min-length": 3
+    },
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=1'",
+        "interval": 3600
+    },
+    "custom/gpu": {
+      "exec": "$HOME/.config/waybar/custom_modules/custom-gpu.sh",
+      "return-type": "json",
+      "format": "  {}",
+      "interval": 2,
+      "tooltip": "{tooltip}",
+      "max-length": 19,
+      "min-length": 19,
+      "on-click": "powerupp"
+      
+    }, 
+    "custom/cpugovernor": {
+      "format": "{icon}",
+      "interval": "30",
+      "return-type": "json",
+      "exec": "$HOME/.config/waybar/custom_modules/cpugovernor.sh",
+      "min-length": 2,
+      "max-length": 2,
+        "format-icons": {
+            "perf": "",
+            "sched": ""
+        },
+    },    
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/scratchpad-indicator": {
+        "interval": 3,
+        "return-type": "json",
+        "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '( select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") }'",
+        "format": "{} 􏠜",
+        "on-click": "exec swaymsg 'scratchpad show'",
+        "on-click-right": "exec swaymsg 'move scratchpad'"
+    }    
 }

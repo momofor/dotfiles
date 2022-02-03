@@ -4,5 +4,6 @@ vim.filetype.add {
 	},
 	filename = {
 		["~/.config/sway/config"] = "i3config",
+		["~/.config/mako/config"] = "conf",
 	},
 }

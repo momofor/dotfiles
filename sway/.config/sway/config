@@ -17,10 +17,12 @@ exec_always ~/.config/sway/import-gsettings
 exec_always "eww open example"
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 exec_always /usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr
+exec_always wl-paste -t text --watch clipman store
+exec_always mako
+exec_always ydotoold
 
 xwayland enable
 
-exec dunst
 set $mod Mod4
 set $mod2 Mod1
 # Home row direction keys, like vim
@@ -53,6 +55,7 @@ hide_edge_borders smart
 gaps inner 4
 bindsym $mod+tab focus next
 bindsym $mod+Shift+tab focus prev
+bindsym $mod+shift+a exec ydotool type 'I USE ARCH BTW'
 # gaps inner 24
 # gaps outer -8
 
@@ -70,6 +73,7 @@ bindsym $mod+Shift+tab focus prev
 # set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
 set $menu bemenu-run -b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0
 set $menu2 wofi --conf .config/rofi/config.rasi --show drun
+bindsym $mod+Shift+p exec clipman pick -t "bemenu" 
 
 ### Output configuration
 output VGA-1 {
@@ -279,6 +283,18 @@ mode "spawn" {
 		Return mode "default"
 		Escape mode "default"
 	}
+}
+bindsym {
+	XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+	XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+	XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+	XF86MonBrightnessDown exec brightnessctl set 5%-
+	XF86MonBrightnessUp exec brightnessctl set +5%
+	XF86AudioPlay exec playerctl play-pause
+	XF86AudioNext exec playerctl next
+	XF86AudioPrev exec playerctl previous
+	XF86Search exec bemenu-run
 }
 
 bindsym $mod+r mode "resize"

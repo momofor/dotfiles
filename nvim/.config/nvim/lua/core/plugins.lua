@@ -22,8 +22,9 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.telescope-config"
 		end,
+		event = "VimEnter",
 	}
-	use "nvim-telescope/telescope-file-browser.nvim"
+	use { "nvim-telescope/telescope-file-browser.nvim", event = "VimEnter" }
 	use { "tpope/vim-surround", event = "InsertEnter" }
 	use {
 		"norcalli/nvim-colorizer.lua",
@@ -40,7 +41,7 @@ return require("packer").startup(function(use)
 			require "plugins.treesitter-config"
 		end,
 		requires = {
-			"nvim-treesitter/nvim-treesitter-textobjects",
+			{ "nvim-treesitter/nvim-treesitter-textobjects" },
 			"nvim-treesitter/playground",
 			"nvim-treesitter/nvim-treesitter-refactor",
 		},
@@ -78,7 +79,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.lualine-config"
 		end,
-		event = "BufRead",
+		event = "VimEnter",
 	}
 
 	-- use {"folke/lsp-colors.nvim"}
@@ -176,7 +177,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.rust-crates-config"
 		end,
-		event = "BufRead",
+		event = "BufRead Cargo.toml",
 	}
 	-- use {'lervag/vimtex'}
 	use "eraserhd/parinfer-rust"
@@ -190,7 +191,7 @@ return require("packer").startup(function(use)
 	}
 	use {
 		"akinsho/toggleterm.nvim",
-		event = "VimEnter",
+		event = "BufWinEnter",
 		config = function()
 			require "plugins.term-toggle-config"
 		end,
@@ -201,9 +202,18 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.null-ls-config"
 		end,
+		event = "BufRead",
 	}
 
 	use { "lervag/vimtex" }
+	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
+	use "arkav/lualine-lsp-progress"
+	use {
+		"andweeb/presence.nvim",
+		config = function()
+			require "plugins.discord-rich-presence-config"
+		end,
+	}
 
 	if packer_bootstrap then
 		require("packer").sync()
