@@ -2,15 +2,19 @@ spacing = 2
 padding = 0
 hide_ascii = false
 hide_bar_delimiters = true
-prefer_small_ascii = false
-separator = ">"
+prefer_small_ascii = true
+separator = ":"
 key_color = "Blue"
 separator_color = "Cyan"
-palette = "Light"
+[palette]
+type = "Full"
+glyph = " "
+visible = true
 
 [box]
 title = ""
 visible = true
+border = "rounded"
 
 [box.inner_margin]
 x = 1

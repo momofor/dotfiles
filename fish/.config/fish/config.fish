@@ -29,6 +29,8 @@ set -x LIBVA_DRIVER_NAME i965
 set -x LIBVA_DRIVERS_PATH /usr/lib/dri
 set -x QT_PLUGIN_PATH /usr/lib/qt/plugins/
 set -x QT_QPA_PLATFORM wayland
+set -x QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+
 set -x XDG_CURRENT_DESKTOP sway
 set -x MOZ_ENABLE_WAYLAND 1
 set -x SWAY_CURSOR_THEME "Breeze"
@@ -82,6 +84,7 @@ alias night="gammastep -O 5000K"
 alias neovide ~/.other/git-stuff/neovide/target/release/neovide
 alias l="exa --hyperlink=auto --color=auto"
 alias ls="ls --hyperlink=auto --color=auto"
+alias rust-analyzer="rustup run nightly rust-analyzer"
 
 
 ###############END OF EXPORTS############################################

@@ -18,12 +18,6 @@ fn main() -> Result<(), Error> {
                     Some(window_name) => println!("{}", &window_name),
                     None => println!("none"),
                 }
-                /* Command::new("sh")
-                .arg("-c")
-                .arg(format!("notify-send '{}' '{}'", &window_name, &window_name))
-                .output()
-                .expect("It ain't working boy"); */
-                // };
             }
             /* Event::Binding(_binding_event) => {
                 let mode = Connection::new()?.get_binding_state().unwrap();

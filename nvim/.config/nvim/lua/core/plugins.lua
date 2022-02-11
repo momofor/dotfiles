@@ -69,9 +69,9 @@ return require("packer").startup(function(use)
 	use { "folke/trouble.nvim", event = "BufEnter" }
 	use {
 		"onsails/lspkind-nvim",
-		config = function()
-			require "core.icons"
-		end,
+		-- config = function()
+		-- 	require "core.icons"
+		-- end,
 	}
 
 	use {
@@ -148,7 +148,13 @@ return require("packer").startup(function(use)
 	}
 
 	-- use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
-	use { "L3MON4D3/LuaSnip", requires = "rafamadriz/friendly-snippets" }
+	use {
+		"L3MON4D3/LuaSnip",
+		requires = "rafamadriz/friendly-snippets",
+		config = function()
+			require "plugins.luasnip"
+		end,
+	}
 	use {
 		"hrsh7th/nvim-cmp",
 		config = function()
@@ -159,7 +165,6 @@ return require("packer").startup(function(use)
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-nvim-lua",
 		},
 	}
@@ -208,12 +213,6 @@ return require("packer").startup(function(use)
 	use { "lervag/vimtex" }
 	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
 	use "arkav/lualine-lsp-progress"
-	use {
-		"andweeb/presence.nvim",
-		config = function()
-			require "plugins.discord-rich-presence-config"
-		end,
-	}
 
 	if packer_bootstrap then
 		require("packer").sync()

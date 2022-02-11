@@ -20,8 +20,7 @@ enum Argument {
 
 #[tokio::main]
 async fn main() {
-    let args: Vec<String> = env::args().collect();
-    let code = std::fs::read_to_string(&args[1]).unwrap();
+    let code = std::fs::read_to_string("src/code.bf").unwrap();
     let tokens = tokenize(code.as_str()).await;
     let generated_code = generate(&tokens).await;
 
@@ -29,12 +28,12 @@ async fn main() {
         .arg("-o3")
         .arg("finished_program.c")
         .arg("-o")
-        .arg(&args[2])
+        .arg("output")
         .spawn()
         .expect("err");
     tokio::process::Command::new("sudo")
         .arg("./")
-        .arg(&args[2])
+        .arg("output")
         .spawn()
         .expect("err 2");
 }
