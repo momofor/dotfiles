@@ -1,5 +1,6 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
+format = "$all"
 
 # Replace the "❯" symbol in the prompt with "➜"
 #[character]                            # The name of the module we are configuring is "character"
@@ -16,11 +17,11 @@ conflicted = "⚔️ "
 ahead = "×${count}  "
 behind = "×${count} "
 diverged = " ×${ahead_count} 🐢 ×${behind_count}🔱 🏎️ 💨"
-untracked = "${count}? "
+untracked = "${count}x? "
 stashed = "📦 "
-modified = "${count}! "
-staged = "${count}s "
-renamed = "${count}r "
-deleted = "${count}✘ "
+modified = "${count}×! "
+staged = "${count}×s "
+renamed = "${count}×r "
+deleted = "${count}×✘ "
 style = "bold red"
 format = "[$all_status$ahead_behind]($style)"
