@@ -101,17 +101,14 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 # Type: Bool
 config.set("content.javascript.enabled", True, "qute://*/*")
 
+# launch link(video) in mpv 
+config.bind(",m", "spawn mpv --force-window yes {url}")
+config.bind(",M", "hint links spawn --detach mpv --force-window yes {hint-url}")
+
 #############################################################################################################
 ######################################### NORD THEME ########################################################
 config.source("nord-qutebrowser.py")
 # dark mode
-# config.set("colors.webpage.darkmode.enabled", True)
-config.bind(
-    ",ap",
-    'config-cycle content.user_stylesheets ~/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
-)
-config.bind(
-    ",sd",
-    'config-cycle content.user_stylesheets ~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
-)
+config.set("colors.webpage.darkmode.enabled", True)
+config.set("auto_save.session",True)
 config.set("scrolling.smooth", True)
