@@ -102,13 +102,16 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 config.set("content.javascript.enabled", True, "qute://*/*")
 
 # launch link(video) in mpv 
-config.bind(",m", "spawn mpv --force-window yes {url}")
-config.bind(",M", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind(";m", "spawn mpv --force-window yes {url}")
+config.bind(";M", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind('xb', 'config-cycle statusbar.show always never')
 
 #############################################################################################################
 ######################################### NORD THEME ########################################################
+c.tabs.show = 'switching'
 config.source("nord-qutebrowser.py")
 # dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.darkmode.enabled", False)
+config.set("tabs.position", "left")
 config.set("auto_save.session",True)
 config.set("scrolling.smooth", True)
