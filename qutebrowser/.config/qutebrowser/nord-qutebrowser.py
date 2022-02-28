@@ -275,7 +275,7 @@ c.colors.statusbar.url.warn.fg = nord['nord12']
 
 ## Background color of the tab bar.
 ## Type: QtColor
-c.colors.tabs.bar.bg = nord['nord3']
+c.colors.tabs.bar.bg = nord['nord0']
 
 ## Background color of unselected even tabs.
 ## Type: QtColor

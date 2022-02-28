@@ -14,9 +14,10 @@
 
 #window {
     font-family: "Fira Code Nerd Font";
+    min-width: 20rem;
     border: 1px solid #434c5e;
     border-radius: 10em;
-    color: #88c0d0;
+    color: #8fbcbb;
     padding: 0 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -35,6 +36,8 @@ window#waybar.empty {
 
 #workspaces button {
     padding: 0 5px;
+    min-width: 1em;
+
     background-color: transparent;
     color: #4c566a;
 }
@@ -44,7 +47,8 @@ window#waybar.empty {
 }
 
 #workspaces button.focused {
-    color: #8fbcbb;
+    color: #81a1c1;
+
 }
 
 #workspaces button.urgent {
@@ -70,15 +74,16 @@ window#waybar.empty {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #88c0d0;
+    color: #a3be8c;
     border-bottom: 1px solid #434c5e;
     /* color: ; */
 }
 
 #clock {
+    margin-left: 1em;
     border: 1px solid #434c5e;
     border-radius: 100px;
-    color: #a3be8c;
+    color: #b48ead;
 }
 
 @keyframes blink {
@@ -90,12 +95,6 @@ window#waybar.empty {
 
 label:focus {
     background-color: #000000;
-}
-
-#cpu {
-}
-
-#memory {
 }
 
 #network {

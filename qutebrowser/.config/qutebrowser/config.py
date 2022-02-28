@@ -105,13 +105,33 @@ config.set("content.javascript.enabled", True, "qute://*/*")
 config.bind(";m", "spawn mpv --force-window yes {url}")
 config.bind(";M", "hint links spawn --detach mpv --force-window yes {hint-url}")
 config.bind('xb', 'config-cycle statusbar.show always never')
+config.bind('tt', 'tab-take')
+config.bind('tg', 'tab-give')
+config.bind(';vs','open -w')
+
 
 #############################################################################################################
 ######################################### NORD THEME ########################################################
-c.tabs.show = 'switching'
+# c.tabs.show = 'always'
+# c.tabs.padding = {
+#     "left": 5,
+#     "right": 5,
+#     "top": 0,
+#     "bottom": 1,
+# }
+# c.tabs.width = "10%"
+# config.set("tabs.position", "top")
+
+c.content.autoplay = False
+c.content.dns_prefetch = True
+c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
 config.source("nord-qutebrowser.py")
+c.content.cookies.accept = "never"
+c.content.cookies.store = False
+
+
+c.content.blocking.method = 'adblock'
 # dark mode
-config.set("colors.webpage.darkmode.enabled", False)
-config.set("tabs.position", "left")
+config.set("colors.webpage.darkmode.enabled", True)
 config.set("auto_save.session",True)
 config.set("scrolling.smooth", True)

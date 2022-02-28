@@ -36,7 +36,7 @@ set $term kitty
 set $term2 alacritty
 set $browser qutebrowser
 set $music_player "LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
-set $file_manager "pcmanfm"
+set $file_manager "nemo"
 set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
@@ -48,11 +48,12 @@ input "type:keyboard" {
     repeat_rate 40
 }
 
-default_border pixel 2
+default_border pixel 1
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
 # gaps inner 4
+# gaps outer 2
 bindsym $mod+tab focus next
 bindsym $mod+Shift+tab focus prev
 bindsym $mod+shift+a exec ydotool type 'I USE ARCH BTW'
@@ -84,7 +85,7 @@ output VGA-1 {
  adaptive_sync on
 }
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/momofor/.config/awesome/themes/nord-powerarrow/wall.png fill
+output * bg /home/momofor/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -299,9 +300,12 @@ bindsym {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+s mode "spawn"
-#						 background			text
-client.focused   #3b4252   #434c5e			#8fbcbb
-client.unfocused #2e3440   #2e3440			#d8dee9
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
+client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
 #
 # Status Bar:
 #
