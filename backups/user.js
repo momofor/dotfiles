@@ -1,51 +1,65 @@
-user_pref("media.ffmpeg.vaapi.enabled ", true)
-user_pref("media.ffvpx.enabled", false) ;
-user_pref("media.navigator.mediadatadecoder_vpx_enabled", true)
-user_pref("media.rdd-vpx.enabled", false)
+user_pref("media.ffmpeg.vaapi.enabled ", true);
+// user_pref("media.ffvpx.enabled", false);
+// user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+// user_pref("media.rdd-vpx.enabled", false);
+user_pref("browser.proton.places-tooltip.enabled", true);
 
-user_pref("apz.allow_zooming",                               true);            ///     true
-user_pref("apz.force_disable_desktop_zooming_scrollbars",   false);            ///    false
-user_pref("apz.paint_skipping.enabled",                      true);            ///     true
-user_pref("apz.windows.use_direct_manipulation",             true);            ///     true
-user_pref("dom.event.wheel-deltaMode-lines.always-disabled", true);            ///    false
-user_pref("general.smoothScroll.currentVelocityWeighting", "0.12");            ///   "0.25" <- 1. If scroll too slow, set to "0.15"
-user_pref("general.smoothScroll.durationToIntervalRatio",    1000);            ///      200
-user_pref("general.smoothScroll.lines.durationMaxMS",         100);            ///      150
-user_pref("general.smoothScroll.lines.durationMinMS",           0);            ///      150
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS",    100);            ///      200
-user_pref("general.smoothScroll.mouseWheel.durationMinMS",      0);            ///       50
-user_pref("general.smoothScroll.mouseWheel.migrationPercent", 100);            ///      100
-user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);   ///      120
-user_pref("general.smoothScroll.msdPhysics.enabled",                  true);   ///    false
-user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 200);   ///     1250
-user_pref("general.smoothScroll.msdPhysics.regularSpringConstant",     200);   ///     1000
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS",         10);   ///       12
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio",  "1.20");   ///    "1.3"
-user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant",   1000);   ///     2000
-user_pref("general.smoothScroll.other.durationMaxMS",         100);            ///      150
-user_pref("general.smoothScroll.other.durationMinMS",           0);            ///      150
-user_pref("general.smoothScroll.pages.durationMaxMS",         100);            ///      150
-user_pref("general.smoothScroll.pages.durationMinMS",           0);            ///      150
-user_pref("general.smoothScroll.pixels.durationMaxMS",        100);            ///      150
-user_pref("general.smoothScroll.pixels.durationMinMS",          0);            ///      150
-user_pref("general.smoothScroll.scrollbars.durationMaxMS",    100);            ///      150
-user_pref("general.smoothScroll.scrollbars.durationMinMS",      0);            ///      150
-user_pref("general.smoothScroll.stopDecelerationWeighting", "0.6");            ///    "0.4"
-user_pref("layers.async-pan-zoom.enabled",                   true);            ///     true
-user_pref("layout.css.scroll-behavior.spring-constant",   "250.0");            ///   "250.0"
-user_pref("mousewheel.acceleration.factor",                     3);            ///       10
-user_pref("mousewheel.acceleration.start",                     -1);            ///       -1
-user_pref("mousewheel.default.delta_multiplier_x",            100);            ///      100
-user_pref("mousewheel.default.delta_multiplier_y",            100);            ///      100
-user_pref("mousewheel.default.delta_multiplier_z",            100);            ///      100
-user_pref("mousewheel.min_line_scroll_amount",                  0);            ///        5
-user_pref("mousewheel.system_scroll_override.enabled",       true);            ///     true <- 2. If scroll too fast, set to false
+// Fill SVG Color
+user_pref("svg.context-properties.content.enabled", true);
+
+// CSS Color Mix - 88 Above
+user_pref("layout.css.color-mix.enabled", true);
+
+// CSS Blur Filter - 88 Above
+user_pref("layout.css.backdrop-filter.enabled", true);
+
+// Restore Compact Mode - 89 Above
+user_pref("browser.compactmode.show", true);
+
+user_pref("browser.tabs.drawInTitlebar", true);
+user_pref("apz.allow_zooming", true); ///     true
+user_pref("apz.force_disable_desktop_zooming_scrollbars", false); ///    false
+user_pref("apz.paint_skipping.enabled", true); ///     true
+user_pref("apz.windows.use_direct_manipulation", true); ///     true
+user_pref("dom.event.wheel-deltaMode-lines.always-disabled", true); ///    false
+user_pref("general.smoothScroll.currentVelocityWeighting", "0.12"); ///   "0.25" <- 1. If scroll too slow, set to "0.15"
+user_pref("general.smoothScroll.durationToIntervalRatio", 1000); ///      200
+user_pref("general.smoothScroll.lines.durationMaxMS", 100); ///      150
+user_pref("general.smoothScroll.lines.durationMinMS", 0); ///      150
+user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 100); ///      200
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 0); ///       50
+user_pref("general.smoothScroll.mouseWheel.migrationPercent", 100); ///      100
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12); ///      120
+user_pref("general.smoothScroll.msdPhysics.enabled", true); ///    false
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 200); ///     1250
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 200); ///     1000
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 10); ///       12
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "1.20"); ///    "1.3"
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 1000); ///     2000
+user_pref("general.smoothScroll.other.durationMaxMS", 100); ///      150
+user_pref("general.smoothScroll.other.durationMinMS", 0); ///      150
+user_pref("general.smoothScroll.pages.durationMaxMS", 100); ///      150
+user_pref("general.smoothScroll.pages.durationMinMS", 0); ///      150
+user_pref("general.smoothScroll.pixels.durationMaxMS", 100); ///      150
+user_pref("general.smoothScroll.pixels.durationMinMS", 0); ///      150
+user_pref("general.smoothScroll.scrollbars.durationMaxMS", 100); ///      150
+user_pref("general.smoothScroll.scrollbars.durationMinMS", 0); ///      150
+user_pref("general.smoothScroll.stopDecelerationWeighting", "0.6"); ///    "0.4"
+user_pref("layers.async-pan-zoom.enabled", true); ///     true
+user_pref("layout.css.scroll-behavior.spring-constant", "250.0"); ///   "250.0"
+user_pref("mousewheel.acceleration.factor", 3); ///       10
+user_pref("mousewheel.acceleration.start", -1); ///       -1
+user_pref("mousewheel.default.delta_multiplier_x", 100); ///      100
+user_pref("mousewheel.default.delta_multiplier_y", 100); ///      100
+user_pref("mousewheel.default.delta_multiplier_z", 100); ///      100
+user_pref("mousewheel.min_line_scroll_amount", 0); ///        5
+user_pref("mousewheel.system_scroll_override.enabled", true); ///     true <- 2. If scroll too fast, set to false
 user_pref("mousewheel.system_scroll_override_on_root_content.enabled", false); ///     true
-user_pref("mousewheel.transaction.timeout",                  1500);            ///     1500
-user_pref("toolkit.scrollbox.horizontalScrollDistance",         4);            ///        5
-user_pref("toolkit.scrollbox.verticalScrollDistance",           3);            ///        3
+user_pref("mousewheel.transaction.timeout", 1500); ///     1500
+user_pref("toolkit.scrollbox.horizontalScrollDistance", 4); ///        5
+user_pref("toolkit.scrollbox.verticalScrollDistance", 3); ///        3
 
- /* FasterFox                                                                *
+/* FasterFox                                                                *
  * "Non ducor duco."                                                        *
  * priority: speedy browsing                                                *
  * version: September 2021                                                  *
@@ -57,7 +71,7 @@ user_pref("toolkit.scrollbox.verticalScrollDistance",           3);            /
  * [NOTE] For best performance on older hardware, you will need to test     *
  * these settings individually, especially Webrender.                       *
  *                                                                          *
-****************************************************************************/
+ ****************************************************************************/
 
 // PREF: force enable all Webrender prefs
 // DISABLING WILL NOT BE SUPPORTED SOON | https://groups.google.com/a/mozilla.org/g/dev-platform/c/__ZtiiEn0u0/m/fbTlD-I4AAAJ?pli=1
@@ -121,7 +135,7 @@ user_pref("network.http.max-connections", 1500); // default=900
 
 /****************************************************************************
  * SECTION: TRACKING PROTECTION                                             *
-****************************************************************************/
+ ****************************************************************************/
 
 // PREF: Enhanced Tracking Protection (ETP)
 // Tracking Content blocking will strip cookies and block all resource requests to domains listed in Disconnect.me.
@@ -143,7 +157,10 @@ user_pref("privacy.socialtracking.block_cookies.enabled", true); // default
 // PREF: allow embedded tweets and Instagram posts
 // [1] https://www.reddit.com/r/firefox/comments/l79nxy/firefox_dev_is_ignoring_social_tracking_preference/gl84ukk
 user_pref("urlclassifier.trackingSkipURLs", "*.twitter.com, *.twimg.com"); // hidden
-user_pref("urlclassifier.features.socialtracking.skipURLs", "*.instagram.com, *.twitter.com, *.twimg.com"); // hidden
+user_pref(
+  "urlclassifier.features.socialtracking.skipURLs",
+  "*.instagram.com, *.twitter.com, *.twimg.com"
+); // hidden
 
 // PREF: Site Isolation
 // Creates operating system process-level boundaries for all sites loaded in Firefox for Desktop. Isolating each site
@@ -167,14 +184,17 @@ user_pref("fission.autostart", true);
 // [3] https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/
 // [4] https://hacks.mozilla.org/2021/02/introducing-state-partitioning/
 user_pref("network.cookie.cookieBehavior", 5); // changes to 5 when Enhanced Tracking Protection is set to "Strict"
-user_pref("browser.contentblocking.state-partitioning.mvp.ui.enabled", true); // default 
-user_pref("browser.contentblocking.reject-and-isolate-cookies.preferences.ui.enabled", true); // default
+user_pref("browser.contentblocking.state-partitioning.mvp.ui.enabled", true); // default
+user_pref(
+  "browser.contentblocking.reject-and-isolate-cookies.preferences.ui.enabled",
+  true
+); // default
 
 // PREF: Network Partitioning
 // Networking-related APIs are not intended to be used for websites to store data, but they can be abused for
 // cross-site tracking. Network APIs and caches are permanently partitioned by the top-level site.
 // Network Partitioning (isolation) will allow Firefox to associate resources on a per-website basis rather than together
-// in the same pool. This includes cache, favicons, CSS files, images, and even speculative connections. 
+// in the same pool. This includes cache, favicons, CSS files, images, and even speculative connections.
 // [1] https://www.zdnet.com/article/firefox-to-ship-network-partitioning-as-a-new-anti-tracking-defense/
 // [2] https://developer.mozilla.org/en-US/docs/Web/Privacy/State_Partitioning#network_partitioning
 // [3] https://blog.mozilla.org/security/2021/01/26/supercookie-protections/
@@ -215,7 +235,7 @@ user_pref("dom.battery.enabled", false);
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 
-// PREF: Local Storage Next Generation (LSNG) (DOMStorage) 
+// PREF: Local Storage Next Generation (LSNG) (DOMStorage)
 // [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1286798
 user_pref("dom.storage.next_gen", true);
 
@@ -239,7 +259,7 @@ user_pref("privacy.webrtc.globalMuteToggles", true);
 
 /******************************************************************************
  * SECTION: CLEARING DATA DEFAULTS                           *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: reset default items to clear with Ctrl-Shift-Del
 // This dialog can also be accessed from the menu History>Clear Recent History
@@ -278,7 +298,7 @@ user_pref("privacy.history.custom", true);
 
 /******************************************************************************
  * SECTION: SPECULATIVE CONNECTIONS                           *
-******************************************************************************/
+ ******************************************************************************/
 
 // [NOTE] Firefox 85+ partitions (isolates) pooled connections, prefetch connections, pre-connect connections,
 // speculative connections, TLS session identifiers, and other connections. We can take advantage of the speed of
@@ -371,7 +391,7 @@ user_pref("browser.newtab.preload", true); // default
 
 /******************************************************************************
  * SECTION: SEARCH / URL BAR                              *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: do not trim certain parts of the URL
 // [1] https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/browser.urlbar.trimURLs#values
@@ -416,7 +436,7 @@ user_pref("network.IDN_show_punycode", true);
 
 /******************************************************************************
  * SECTION: HTTPS-FIRST POLICY                          *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: HTTPS-First Policy
 // Firefox attempts to make all connections to websites secure, and falls back to insecure
@@ -430,7 +450,7 @@ user_pref("dom.security.https_first_pbm", true); // default
 
 /******************************************************************************
  * SECTION: HTTPS-ONLY MODE                              *
-******************************************************************************/
+ ******************************************************************************/
 
 // Firefox displays a warning page if HTTPS is not supported by a server. Options to use HTTP are then provided.
 // [NOTE] When "https_only_mode" (all windows) is true, "https_only_mode_pbm" (private windows only) is ignored.
@@ -462,7 +482,7 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 
 /******************************************************************************
  * SECTION: DNS-over-HTTPS                                                    *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: DNS-over-HTTPS (DoH) provider
 // Mozilla uses Cloudfare by default. NextDNS is also an option.
@@ -485,7 +505,7 @@ user_pref("network.trr.custom_uri", "");
 
 /******************************************************************************
  * SECTION: ESNI / ECH                            *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: Enable Encrypted Client Hello (ECH)
 // Evolution of ESNI.
@@ -497,7 +517,7 @@ user_pref("network.dns.use_https_rr_as_altsvc", true);
 
 /******************************************************************************
  * SECTION: PASSWORDS                             *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: Disable autofilling saved passwords on HTTP pages and show warning
 // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1217152,1319119
@@ -510,7 +530,7 @@ user_pref("signon.privateBrowsingCapture.enabled", false);
 // PREF: Disable Firefox Lockwise (about:logins)
 // [1] https://lockwise.firefox.com/
 // [2] https://support.mozilla.org/en-US/kb/firefox-lockwise-managing-account-data
-user_pref("signon.management.page.breach-alerts.enabled", false); 
+user_pref("signon.management.page.breach-alerts.enabled", false);
 user_pref("signon.management.page.breachAlertUrl", "");
 user_pref("browser.contentblocking.report.lockwise.enabled", false);
 user_pref("browser.contentblocking.report.lockwise.how_it_works.url", "");
@@ -545,7 +565,7 @@ user_pref("signon.autofillForms.autocompleteOff", true);
 user_pref("signon.showAutoCompleteOrigins", false);
 
 // PREF: Disable websites autocomplete
-// Don't let sites dictate use of saved logins and passwords. 
+// Don't let sites dictate use of saved logins and passwords.
 user_pref("signon.storeWhenAutocompleteOff", false);
 
 // PREF: Disable formless login capture
@@ -557,7 +577,7 @@ user_pref("extensions.fxmonitor.enabled", false);
 
 /****************************************************************************
  * SECTION: ADDRESS + CREDIT CARD MANAGER                                   *
-****************************************************************************/
+ ****************************************************************************/
 
 // PREF: Disable Form Autofill
 // NOTE: stored data is not secure (uses a JSON file)
@@ -572,7 +592,7 @@ user_pref("browser.formfill.enable", false);
 
 /******************************************************************************
  * SECTION: MIXED CONTENT + CROSS-SITE                             *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: limit (or disable) HTTP authentication credentials dialogs triggered by sub-resources
 // Hardens against potential credentials phishing
@@ -639,7 +659,7 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
 /******************************************************************************
  * SECTION: VARIOUS                            *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: Disable favicons in shortcuts
 // URL shortcuts use a cached randomly named .ico file which is stored in your
@@ -663,7 +683,7 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
 /******************************************************************************
  * SECTION: GOOGLE SAFE BROWSING (GSB)                                        *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: GSB checks for downloads (remote)
 // To verify the safety of certain executable files, Firefox may submit some information about the
@@ -687,7 +707,10 @@ user_pref("browser.safebrowsing.downloads.enabled", false);
 
 // PREF: GSB checks for unwanted software
 // Privacy & Security>Security>... "Warn you about unwanted and uncommon software"
-user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref(
+  "browser.safebrowsing.downloads.remote.block_potentially_unwanted",
+  false
+);
 user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
 // PREF: 'ignore this warning' on Google Safe Browsing warnings
@@ -698,11 +721,14 @@ user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
 /******************************************************************************
  * SECTION: MOZILLA                                                   *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: Use Mozilla geolocation service instead of Google when geolocation is enabled
 // user_pref("permissions.default.geo", 0);
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+user_pref(
+  "geo.provider.network.url",
+  "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%"
+);
 // Enable logging geolocation to the console
 // user_pref("geo.provider.network.logging.enabled", true);
 
@@ -730,7 +756,7 @@ user_pref("app.update.background.scheduling.enabled", false);
 
 /******************************************************************************
  * SECTION: TELEMETRY                                                   *
-******************************************************************************/
+ ******************************************************************************/
 
 // PREF: disable all the various Mozilla telemetry, studies, reports, etc.
 // Telemtry
@@ -805,6 +831,6 @@ user_pref("app.normandy.enabled", false);
 // Currently blocked by 'datareporting.healthreport.uploadEnabled'
 user_pref("browser.ping-centre.telemetry", false);
 
-// PREF: Activity Stream telemetry 
+// PREF: Activity Stream telemetry
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);

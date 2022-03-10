@@ -43,15 +43,11 @@ vim.g.did_load_filetypes = 0
 --[[ vim.opt.spell = true
 vim.opt.spelllang = {'en_us'} ]]
 
--- highlight on yank
-vim.api.nvim_exec(
-	[[
-augroup YankHighlight
-autocmd!
-autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-augroup end
-]],
-	false
-)
+vim.api.nvim_create_augroup("YankHighlight", {})
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = "YankHighlight",
+	pattern = "*",
+	command = "silent! lua vim.highlight.on_yank()",
+})
 
 utils.set_options(options)

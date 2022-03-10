@@ -39,7 +39,11 @@ set $music_player "LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
 set $file_manager "nemo"
 set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
+# for_window [app_id="firefox-nightly"] opacity 0.9
+
+
 input "type:keyboard" {
+    # xkb_layout us
     xkb_layout dvp,us,dvorak
     xkb_options caps:swapescape,grp:rctrl_toggle
 
@@ -82,7 +86,6 @@ output VGA-1 {
  max_render_time 6
  subpixel rgb
  scale_filter smart
- adaptive_sync on
 }
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/momofor/wallpaper.png fill

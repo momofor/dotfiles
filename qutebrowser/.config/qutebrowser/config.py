@@ -101,13 +101,13 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 # Type: Bool
 config.set("content.javascript.enabled", True, "qute://*/*")
 
-# launch link(video) in mpv 
+# launch link(video) in mpv
 config.bind(";m", "spawn mpv --force-window yes {url}")
 config.bind(";M", "hint links spawn --detach mpv --force-window yes {hint-url}")
-config.bind('xb', 'config-cycle statusbar.show always never')
-config.bind('tt', 'tab-take')
-config.bind('tg', 'tab-give')
-config.bind(';vs','open -w')
+config.bind("xb", "config-cycle statusbar.show always never")
+config.bind("tt", "tab-take")
+config.bind("tg", "tab-give")
+config.bind(";vs", "open -w")
 
 
 #############################################################################################################
@@ -124,14 +124,30 @@ config.bind(';vs','open -w')
 
 c.content.autoplay = False
 c.content.dns_prefetch = True
-c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
+c.content.blocking.adblock.lists = [
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+    "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+    "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt",
+    "https://www.i-dont-care-about-cookies.eu/abp/",
+    "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2021.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
+]
 config.source("nord-qutebrowser.py")
 c.content.cookies.accept = "never"
 c.content.cookies.store = False
 
 
-c.content.blocking.method = 'adblock'
+c.content.blocking.method = "adblock"
 # dark mode
 config.set("colors.webpage.darkmode.enabled", True)
-config.set("auto_save.session",True)
+config.set("auto_save.session", True)
 config.set("scrolling.smooth", True)
