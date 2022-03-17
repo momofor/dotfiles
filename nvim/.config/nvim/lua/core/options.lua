@@ -40,6 +40,7 @@ vim.opt.shell = "dash"
 vim.opt.completeopt = "menuone,noselect,preview"
 vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
+
 --[[ vim.opt.spell = true
 vim.opt.spelllang = {'en_us'} ]]
 

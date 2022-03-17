@@ -23,7 +23,7 @@ zoxide init fish | source
 ################START OF EXPORTS##################################
 #exports
 echo "Welcome To Fish"
-colorscript exec random
+# colorscript exec random
 # set -x BROWSER "qutebrowser"
 set -x LIBVA_DRIVER_NAME i965
 set -x LIBVA_DRIVERS_PATH /usr/lib/dri

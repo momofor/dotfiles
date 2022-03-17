@@ -34,7 +34,7 @@ set $screenshot grim
 # Your preferred terminal emulator
 set $term kitty
 set $term2 alacritty
-set $browser qutebrowser
+set $browser firefox-nightly
 set $music_player "LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
 set $file_manager "nemo"
 set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb

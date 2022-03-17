@@ -1,3 +1,6 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 local opts = {
 	tools = { -- rust-tools options
 		-- Automatically set inlay hints (type hints)
@@ -104,9 +107,10 @@ local opts = {
 	-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 	server = {
 		cmd = { "/home/momofor/.cargo/bin/rustup", "run", "nightly", "rust-analyzer" },
-		-- settings = {
-		-- 	["rust-analyzer"] = { experimental = { procAttrMacros = false } },
-		-- },
+		capabilities = capabilities,
+		settings = {
+			["rust-analyzer"] = { experimental = { procAttrMacros = false } },
+		},
 	}, -- rust-analyer options
 
 	-- debugging stuff

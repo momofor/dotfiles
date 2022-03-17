@@ -12,6 +12,7 @@ local sources = {
 	diagnostics.chktex,
 	formatting.black,
 	diagnostics.hadolint,
+	null_ls.builtins.formatting.latexindent,
 }
 
 null_ls.setup({

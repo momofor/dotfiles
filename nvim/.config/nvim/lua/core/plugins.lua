@@ -31,7 +31,6 @@ return require("packer").startup(function(use)
 		config = function()
 			require("colorizer").setup()
 		end,
-		event = "BufRead",
 	}
 	use "christianchiarulli/nvcode-color-schemes.vim"
 
@@ -108,7 +107,12 @@ return require("packer").startup(function(use)
 		event = "BufRead",
 	}
 
-	use { "nathanaelkane/vim-indent-guides", event = "BufEnter" }
+	use {
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require "plugins.indent-blankline-config"
+		end,
+	}
 	use {
 		"lewis6991/gitsigns.nvim",
 		config = function()
@@ -213,6 +217,13 @@ return require("packer").startup(function(use)
 	use { "lervag/vimtex" }
 	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
 	use "arkav/lualine-lsp-progress"
+	use {
+		"simrat39/symbols-outline.nvim",
+		event = "BufRead",
+		config = function()
+			require "plugins.symbol-outline-config"
+		end,
+	}
 
 	if packer_bootstrap then
 		require("packer").sync()

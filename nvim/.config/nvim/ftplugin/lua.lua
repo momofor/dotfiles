@@ -2,6 +2,10 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
 require("lspconfig").sumneko_lua.setup({
 	settings = {
 		Lua = {
@@ -29,4 +33,5 @@ require("lspconfig").sumneko_lua.setup({
 			},
 		},
 	},
+	capabilities = capabilities,
 })

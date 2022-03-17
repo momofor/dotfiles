@@ -1,4 +1,3 @@
 #!/bin/sh
-neofetch
-nvim startupfile
+clear && neofetch && nvim 
 
