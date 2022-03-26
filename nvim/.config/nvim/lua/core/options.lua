@@ -51,4 +51,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	command = "silent! lua vim.highlight.on_yank()",
 })
 
+vim.g.loaded_gzip = 0
+vim.g.loaded_tar = 0
+vim.g.loaded_tarPluGin = 0
+vim.g.loaded_zipPlugin = 0
+vim.g.loaded_2html_plugin = 0
+vim.g.loaded_netrw = 0
+vim.g.loaded_netrwPluGin = 0
+vim.g.loaded_matchit = 0
+vim.g.loaded_matchparen = 0
+vim.g.loaded_spec = 0
+
 utils.set_options(options)

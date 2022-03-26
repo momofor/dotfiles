@@ -16,15 +16,16 @@ return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 
 	use "nvim-lua/popup.nvim"
-	use "nvim-lua/plenary.nvim"
+	use { "nvim-lua/plenary.nvim", module = "plenary" }
 	use {
 		"nvim-telescope/telescope.nvim",
+		module = "telescope",
+		cmd = "Telescope",
 		config = function()
 			require "plugins.telescope-config"
 		end,
-		event = "VimEnter",
 	}
-	use { "nvim-telescope/telescope-file-browser.nvim", event = "VimEnter" }
+	use { "nvim-telescope/telescope-file-browser.nvim", requires = "nvim-telescope/telescope.nvim" }
 	use { "tpope/vim-surround", event = "InsertEnter" }
 	use {
 		"norcalli/nvim-colorizer.lua",
@@ -52,9 +53,9 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.nvimtree-config"
 		end,
-		event = "BufRead",
+		module = "nvim-web-devicons",
 	}
-	use { "romgrk/barbar.nvim" }
+	use { "romgrk/barbar.nvim", event = "BufRead" }
 	use "neovim/nvim-lspconfig"
 
 	use { "Raimondi/delimitMate", event = "InsertEnter" }
@@ -68,9 +69,6 @@ return require("packer").startup(function(use)
 	use { "folke/trouble.nvim", event = "BufEnter" }
 	use {
 		"onsails/lspkind-nvim",
-		-- config = function()
-		-- 	require "core.icons"
-		-- end,
 	}
 
 	use {
@@ -112,6 +110,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.indent-blankline-config"
 		end,
+		event = "BufRead",
 	}
 	use {
 		"lewis6991/gitsigns.nvim",
@@ -173,13 +172,6 @@ return require("packer").startup(function(use)
 		},
 	}
 
-	--[[ use 'saadparwaiz1/cmp_luasnip'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-nvim-lua'
-    use 'hrsh7th/cmp-nvim-lua' ]]
-
 	use {
 		"saecki/crates.nvim",
 		ft = "toml",
@@ -188,9 +180,8 @@ return require("packer").startup(function(use)
 		end,
 		event = "BufRead Cargo.toml",
 	}
-	-- use {'lervag/vimtex'}
-	use "eraserhd/parinfer-rust"
-	use "elkowar/yuck.vim"
+	-- use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
+	-- use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
 	use {
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
@@ -200,7 +191,7 @@ return require("packer").startup(function(use)
 	}
 	use {
 		"akinsho/toggleterm.nvim",
-		event = "BufWinEnter",
+		event = "BufRead",
 		config = function()
 			require "plugins.term-toggle-config"
 		end,
@@ -214,7 +205,7 @@ return require("packer").startup(function(use)
 		event = "BufRead",
 	}
 
-	use { "lervag/vimtex" }
+	use { "lervag/vimtex", filetype = "tex" }
 	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
 	use "arkav/lualine-lsp-progress"
 	use {

@@ -108,9 +108,9 @@ local opts = {
 	server = {
 		cmd = { "/home/momofor/.cargo/bin/rustup", "run", "nightly", "rust-analyzer" },
 		capabilities = capabilities,
-		settings = {
-			["rust-analyzer"] = { experimental = { procAttrMacros = false } },
-		},
+		-- settings = {
+		-- 	["rust-analyzer"] = { experimental = { procAttrMacros = false } },
+		-- },
 	}, -- rust-analyer options
 
 	-- debugging stuff
