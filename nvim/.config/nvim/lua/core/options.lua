@@ -36,7 +36,7 @@ local options = {
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.shell = "dash"
+vim.opt.shell = "/usr/bin/dash"
 vim.opt.completeopt = "menuone,noselect,preview"
 vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
@@ -51,15 +51,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	command = "silent! lua vim.highlight.on_yank()",
 })
 
-vim.g.loaded_gzip = 0
-vim.g.loaded_tar = 0
-vim.g.loaded_tarPluGin = 0
-vim.g.loaded_zipPlugin = 0
-vim.g.loaded_2html_plugin = 0
-vim.g.loaded_netrw = 0
-vim.g.loaded_netrwPluGin = 0
-vim.g.loaded_matchit = 0
-vim.g.loaded_matchparen = 0
-vim.g.loaded_spec = 0
+vim.g.loaded_gzip = 1
+vim.g.loaded_tar = 1
+vim.g.loaded_tarPluGin = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.loaded_2html_plugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPluGin = 1
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_spec = 1
+vim.g.python3_host_prog = "/usr/bin/python3"
 
 utils.set_options(options)

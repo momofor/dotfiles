@@ -57,13 +57,13 @@ utils.map("n", "<Leader>M", ":lua require'telescope.builtin'.man_pages() <CR>", 
 utils.map("n", "<Leader>T", ":lua require'telescope.builtin'.treesitter() <CR>", { noremap = true })
 utils.map(
 	"n",
-	"<Leader>rc",
+	"<Leader>fc",
 	":lua require'plugins.telescope-config'.Search('< NeovimRC >' , '~/.config/nvim/' ) <CR>",
 	{}
 )
 utils.map(
 	"n",
-	"<Leader>Aw",
+	"<Leader>fr",
 	":lua require'plugins.telescope-config'.Search('< AwesomewmRC >' , '~/.config/awesome/' ) <CR>",
 	{}
 )

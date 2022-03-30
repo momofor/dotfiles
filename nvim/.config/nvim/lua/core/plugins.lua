@@ -13,6 +13,7 @@ end
 
 return require("packer").startup(function(use)
 	-- use { "mhinz/vim-startify", event = "VimEnter" }
+	use "lewis6991/impatient.nvim"
 	use "wbthomason/packer.nvim"
 
 	use "nvim-lua/popup.nvim"
@@ -76,7 +77,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.lualine-config"
 		end,
-		event = "VimEnter",
+		event = "BufRead",
 	}
 
 	-- use {"folke/lsp-colors.nvim"}
@@ -207,7 +208,7 @@ return require("packer").startup(function(use)
 
 	use { "lervag/vimtex", filetype = "tex" }
 	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
-	use "arkav/lualine-lsp-progress"
+	use { "arkav/lualine-lsp-progress", event = "BufRead" }
 	use {
 		"simrat39/symbols-outline.nvim",
 		event = "BufRead",

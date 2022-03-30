@@ -3,6 +3,7 @@
 
 use arduino_hal::adc;
 use arduino_hal::{delay_ms, prelude::*};
+use embedded_hal::prelude::_embedded_hal_serial_Read;
 // use embedded_hal::prelude::*;
 use panic_halt as _;
 
@@ -33,7 +34,6 @@ fn main() -> ! {
     tc1.tccr1b
         .write(|w| w.wgm1().bits(0b01).cs1().prescale_64());
     pins.d9.into_output();
-
     loop {
         let value = pin.analog_read(&mut adc);
         ufmt::uwriteln!(&mut serial, "{}", value).void_unwrap();
@@ -50,9 +50,8 @@ fn main() -> ! {
             led.set_high();
             led2.set_low();
         }
+        // let noice = serial.read().unwrap();
         tc1.ocr1a.write(|w| unsafe { w.bits((value) as u16) });
-        // let noiceu = serial.read().unwrap();
-        // ufmt::uwriteln!(&mut serial, "{}", noiceu);
         delay_ms(100);
     }
 }
