@@ -55,17 +55,4 @@ end
 vim.g.mapleader = " "
 utils.map("n", "<Leader>M", ":lua require'telescope.builtin'.man_pages() <CR>", { noremap = true })
 utils.map("n", "<Leader>T", ":lua require'telescope.builtin'.treesitter() <CR>", { noremap = true })
-utils.map(
-	"n",
-	"<Leader>fc",
-	":lua require'plugins.telescope-config'.Search('< NeovimRC >' , '~/.config/nvim/' ) <CR>",
-	{}
-)
-utils.map(
-	"n",
-	"<Leader>fr",
-	":lua require'plugins.telescope-config'.Search('< AwesomewmRC >' , '~/.config/awesome/' ) <CR>",
-	{}
-)
-utils.map("n", "<Leader>sr", ":lua require'plugins.telescope-config'.Search('< swayRC >' , '~/.config/sway' ) <CR>", {})
 return M

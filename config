@@ -82,6 +82,7 @@ bindsym $mod+Shift+p exec clipman pick -t "bemenu"
 
 ### Output configuration
 output VGA-1 {
+scale 0.5
  mode 1280x1024@75.025Hz
  max_render_time 6
  subpixel rgb

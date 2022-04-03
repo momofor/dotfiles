@@ -1,5 +1,5 @@
 " source $HOME/.config/nvim/theme-config/nord-treesitter.vim
-lua require('impatient')
+lua require('impatient').enable_profile()
 source $HOME/.config/nvim/lua/init.lua
 set termguicolors
 let g:neovide_refresh_rate=60

@@ -60,13 +60,13 @@ return require("packer").startup(function(use)
 	use "neovim/nvim-lspconfig"
 
 	use { "Raimondi/delimitMate", event = "InsertEnter" }
-	use {
-		"ray-x/lsp_signature.nvim",
-		config = function()
-			require "plugins.lsp_sig"
-		end,
-		event = "BufEnter",
-	}
+	-- use {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	config = function()
+	-- 		require "plugins.lsp_sig"
+	-- 	end,
+	-- 	event = "BufEnter",
+	-- }
 	use { "folke/trouble.nvim", event = "BufEnter" }
 	use {
 		"onsails/lspkind-nvim",
@@ -77,6 +77,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.lualine-config"
 		end,
+		requires = { "arkav/lualine-lsp-progress" },
 		event = "BufRead",
 	}
 
@@ -166,10 +167,12 @@ return require("packer").startup(function(use)
 		end,
 		requires = {
 			"saadparwaiz1/cmp_luasnip",
+			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-nvim-lua",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
 	}
 
@@ -183,12 +186,20 @@ return require("packer").startup(function(use)
 	}
 	-- use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
 	-- use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
-	use {
+	--[[ use {
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		config = function()
 			require "plugins.dashboard-config"
 		end,
+	} ]]
+	use {
+		"goolord/alpha-nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+		event = "BufEnter",
 	}
 	use {
 		"akinsho/toggleterm.nvim",
@@ -208,14 +219,15 @@ return require("packer").startup(function(use)
 
 	use { "lervag/vimtex", filetype = "tex" }
 	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
-	use { "arkav/lualine-lsp-progress", event = "BufRead" }
 	use {
-		"simrat39/symbols-outline.nvim",
-		event = "BufRead",
+		"nvim-neorg/neorg",
+		ft = "norg",
+		after = "nvim-treesitter", -- You may want to specify Telescope here as well
 		config = function()
-			require "plugins.symbol-outline-config"
+			require("neorg").setup { load = { ["core.defaults"] = {}, ["core.norg.concealer"] = {} } }
 		end,
 	}
+	use { "b0o/schemastore.nvim", filetype = "json" }
 
 	if packer_bootstrap then
 		require("packer").sync()
