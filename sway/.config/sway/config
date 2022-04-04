@@ -305,10 +305,10 @@ bindsym $mod+r mode "resize"
 bindsym $mod+s mode "spawn"
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+client.focused          #4c566a  #2e3440  #eceff4 #8fbcbb   #8fbcbb
+client.focused_inactive #4c566a  #2e3440  #d8dee9 #4c566a   #4c566a
+client.unfocused        #4c566a  #2e3440  #d8dee9 #4c566a   #4c566a
+client.urgent           #ebcb8b  #ebcb8b  #2e3440 #8fbcbb   #ebcb8b
 #
 # Status Bar:
 #

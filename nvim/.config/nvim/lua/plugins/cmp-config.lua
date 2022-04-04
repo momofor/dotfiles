@@ -84,6 +84,11 @@ require("cmp").setup.cmdline(":", {
 		{ name = "cmdline" },
 	},
 })
+require("cmp").setup.cmdline(":e", {
+	sources = {
+		{ name = "buffer" },
+	},
+})
 
 require("cmp").setup.cmdline("/", {
 	sources = {
