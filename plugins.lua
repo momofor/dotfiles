@@ -184,7 +184,7 @@ return require("packer").startup(function(use)
 		end,
 		event = "BufRead Cargo.toml",
 	}
-	use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
+	use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead", run = "cargo build --release" }
 	use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
 	--[[ use {
 		"glepnir/dashboard-nvim",

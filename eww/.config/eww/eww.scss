@@ -1,96 +1,95 @@
 * {
-	all: unset;
-	// font-family: "DejavuSans Mono Book";
+  all: unset;
+  // font-family: "DejavuSans Mono Book";
 }
 
 .bar {
-	padding: 5px;
-	background-color: #2e3440;
-	border-radius: .5em;
+  padding: 5px;
+  background-color: #2e3440;
+  border-radius: 0.5em;
 }
 
 .mode.widg {
-	border-radius:1em ;
-	padding: 3px;
-	&.default {
-		color: #88c0d0;
-		background-color: #4c566a;
-	}
-	&.resize {
-		color: #3b4252;
-		background-color: #88c0d0;
-	}
-	&.spawn {
-		color: #bf616a;
-		background-color:#3b4252;
-	}
+  border-radius: 1em;
+  padding: 3px;
+  &.default {
+    color: #88c0d0;
+    background-color: #4c566a;
+  }
+  &.resize {
+    color: #3b4252;
+    background-color: #88c0d0;
+  }
+  &.spawn {
+    color: #bf616a;
+    background-color: #3b4252;
+  }
 }
 
-.coolBoy button{
-	margin-left: 10px;
-	background-color: #4c566a;
-	color: #88c0d0;
-	border-radius: 1em;
+.coolBoy button {
+  margin-left: 10px;
+  background-color: #4c566a;
+  color: #88c0d0;
+  border-radius: 1em;
 }
 .coolBoy button:hover {
-	background-color: green;
+  background-color: green;
 }
 
 .noice.widg {
-	color: #a3be8c;
-	background-color: #3b4252;
-	padding: .2em;
-	border-radius: 1em;
+  color: #a3be8c;
+  background-color: #3b4252;
+  padding: 0.2em;
+  border-radius: 1em;
 }
 
 .sidestuff {
-	margin-left: 2em;
+  margin-left: 2em;
 }
 
 .windowName {
-	color: red;
-	margin-left: 2em;
-	min-width: 30em;
-	color: #8fbcbb;
-	background-color: #3b4252;
-	padding: .2em;
-	border-radius: 1em;
-
+  margin-left: 2em;
+  min-width: 20rem;
+  padding: 0.2em;
+  border: 1px solid #434c5e;
+  border-radius: 10em;
+  color: #8fbcbb;
 }
 
 .focusedWorkspace {
-	color: #88c0d0;
-	background-color: #4c566a;
-	border-radius: .5em;
-	padding-left: .5em;
-	padding-right: .5em;
-	margin-left: .3em;
+  color: #88c0d0;
+  background-color: #4c566a;
+  border-radius: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.3em;
 }
-.widg.ram , .widg.cpu {
-	background-color: #3b4252;
-	border-radius: .5em;
-	padding-left: .5em;
-	padding-right: .5em;
-	color: #d8dee9;
+.widg.ram,
+.widg.cpu {
+  background-color: #3b4252;
+  border-radius: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #d8dee9;
 }
 
 .normalWorkspace {
-	color: #e5e9f0;
-	background-color: #3b4252;
-	border-radius: .5em;
-	padding-right: .5em;
-	padding-left: .5em;
-	margin-left: .3em;
+  color: #e5e9f0;
+  background-color: #3b4252;
+  border-radius: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin-left: 0.3em;
 }
 
 .widg {
-	color: wheat;
+  color: wheat;
 }
 
 .workspaces {
-	color: yellow;
-	min-width: 4em;
+  color: yellow;
+  min-width: 4em;
 }
 .coolBoy {
-	color: wheat;
+  color: wheat;
 }
