@@ -184,7 +184,7 @@ return require("packer").startup(function(use)
 		end,
 		event = "BufRead Cargo.toml",
 	}
-	use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead", run = "cargo build --release" }
+	use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
 	use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
 	--[[ use {
 		"glepnir/dashboard-nvim",
@@ -228,6 +228,13 @@ return require("packer").startup(function(use)
 		end,
 	}
 	use { "b0o/schemastore.nvim", filetype = "json" }
+	use {
+		"shaunsingh/nord.nvim",
+		event = "BufEnter",
+		config = function()
+			vim.cmd [[colorscheme nord]]
+		end,
+	}
 
 	if packer_bootstrap then
 		require("packer").sync()

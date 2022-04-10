@@ -208,7 +208,6 @@ return require("packer").startup(function(use)
 			require "plugins.term-toggle-config"
 		end,
 	}
-	-- use 'shaunsingh/nord.nvim'
 	use {
 		"jose-elias-alvarez/null-ls.nvim",
 		config = function()
@@ -228,7 +227,6 @@ return require("packer").startup(function(use)
 		end,
 	}
 	use { "b0o/schemastore.nvim", filetype = "json" }
-
 	if packer_bootstrap then
 		require("packer").sync()
 	end

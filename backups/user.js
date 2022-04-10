@@ -834,3 +834,5 @@ user_pref("browser.ping-centre.telemetry", false);
 // PREF: Activity Stream telemetry
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
+
+user_perf("network.dns.disableIPv6", true);
