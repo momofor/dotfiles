@@ -836,3 +836,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 
 user_perf("network.dns.disableIPv6", true);
+
+// RFP
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF]
