@@ -10,7 +10,7 @@ format = "$all"
 #[package]
 #disabled = true
 [line_break]
-disabled = false
+disabled = true
 # git status
 [git_status]
 conflicted = "⚔️ "

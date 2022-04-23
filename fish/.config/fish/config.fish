@@ -18,7 +18,7 @@ function fish_greeting
 	test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
 end
 #################################END OF AUTOSTART########################
-zoxide init fish | source
+#zoxide init fish | source
 
 ################START OF EXPORTS##################################
 #exports
@@ -44,9 +44,9 @@ set -x PIPEWIRE_LATENCY 256/4800
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x BEMENU_OPTS "-b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0"
 set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
-set -x http_proxy 192.168.1.9:3128
-set -x https_proxy 192.168.1.9:3128
-set -x ftp_proxy 192.168.1.9:10600
+# set -x http_proxy 192.168.1.9:3128
+# set -x https_proxy 192.168.1.9:3128
+# set -x ftp_proxy 192.168.1.9:10600
 
 
 
@@ -93,4 +93,4 @@ alias rust-analyzer="rustup run nightly rust-analyzer"
 
 ###############END OF EXPORTS############################################
 starship init fish | source
-
+# source (/usr/bin/starship init fish --print-full-init | psub)

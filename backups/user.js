@@ -1,7 +1,7 @@
 user_pref("media.ffmpeg.vaapi.enabled ", true);
-// user_pref("media.ffvpx.enabled", false);
-// user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
-// user_pref("media.rdd-vpx.enabled", false);
+user_pref("media.ffvpx.enabled", false);
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+user_pref("media.rdd-vpx.enabled", false);
 user_pref("browser.proton.places-tooltip.enabled", true);
 
 // Fill SVG Color
@@ -85,7 +85,7 @@ user_pref("toolkit.scrollbox.verticalScrollDistance", 3); ///        3
 // DISABLING WILL NOT BE SUPPORTED SOON | https://groups.google.com/a/mozilla.org/g/dev-platform/c/__ZtiiEn0u0/m/fbTlD-I4AAAJ?pli=1
 // [1] https://www.ghacks.net/2020/12/14/how-to-find-out-if-webrender-is-enabled-in-firefox-and-how-to-enable-it-if-it-is-not/
 user_pref("gfx.webrender.all", true);
-user_pref("gfx.webrender.software", true);
+user_pref("gfx.webrender.software", false);
 
 // PREF: Lazy Image Loading
 // https://www.ghacks.net/2020/02/15/firefox-75-gets-lazy-loading-support-for-images/
