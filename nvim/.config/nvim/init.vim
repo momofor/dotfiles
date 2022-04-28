@@ -2,9 +2,6 @@
 lua require('impatient').enable_profile()
 source $HOME/.config/nvim/lua/init.lua
 set termguicolors
-let g:neovide_refresh_rate=60
-let g:neovide_cursor_antialiasing=v:true
-set guifont=FiraCode\ Nerd\ Font:h16
 " colorscheme nord-treesitter
 " source nord-treesitter.vim
 " let g:slime_target = "tmux"

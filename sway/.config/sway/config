@@ -51,6 +51,11 @@ input "type:keyboard" {
     repeat_rate 40
 }
 
+input "type:pointer" {
+	accel_profile "flat"
+	# pointer_accel 0.8
+}
+
 default_border pixel 1
 smart_borders on
 smart_gaps on

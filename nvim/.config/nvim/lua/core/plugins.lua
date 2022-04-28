@@ -41,12 +41,12 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.treesitter-config"
 		end,
-		requires = {
-			{ "nvim-treesitter/nvim-treesitter-textobjects" },
-			"nvim-treesitter/playground",
-			"nvim-treesitter/nvim-treesitter-refactor",
-		},
 	}
+	use "nvim-treesitter/nvim-treesitter-textobjects"
+	use "nvim-treesitter/playground"
+	use "nvim-treesitter/nvim-treesitter-refactor"
+
+
 
 	use "kyazdani42/nvim-web-devicons"
 	use {

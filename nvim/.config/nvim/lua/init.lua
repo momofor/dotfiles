@@ -3,7 +3,7 @@
 require("core.hotkeys")
 require("core.options")
 require("core.plugins")
-require("core.lsp-icons")
+-- require("core.lsp-icons")
 require("core.lsp-hotkeys")
 require("core.filetypes")
 require("core.global-variables")
