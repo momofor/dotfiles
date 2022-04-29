@@ -4,17 +4,16 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	packer_bootstrap = fn.system {
 		"git",
 		"clone",
-		"--depth",
-		"1",
+		"--depth=1",
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
 	}
+	vim.cmd "packadd packer.nvim"
 end
 
-return require("packer").startup(function(use)
+require("packer").startup(function(use)
 	-- use { "mhinz/vim-startify", event = "VimEnter" }
 	use "lewis6991/impatient.nvim"
-	use "wbthomason/packer.nvim"
 
 	use "nvim-lua/popup.nvim"
 	use { "nvim-lua/plenary.nvim", module = "plenary" }
@@ -26,7 +25,7 @@ return require("packer").startup(function(use)
 			require "plugins.telescope-config"
 		end,
 	}
-	use { "nvim-telescope/telescope-file-browser.nvim", requires = "nvim-telescope/telescope.nvim" }
+	use { "nvim-telescope/telescope-file-browser.nvim", after = "telescope.nvim" }
 	use { "tpope/vim-surround", event = "InsertEnter" }
 	use {
 		"norcalli/nvim-colorizer.lua",
@@ -45,8 +44,6 @@ return require("packer").startup(function(use)
 	use "nvim-treesitter/nvim-treesitter-textobjects"
 	use "nvim-treesitter/playground"
 	use "nvim-treesitter/nvim-treesitter-refactor"
-
-
 
 	use "kyazdani42/nvim-web-devicons"
 	use {
@@ -165,9 +162,8 @@ return require("packer").startup(function(use)
 		config = function()
 			require "plugins.cmp-config"
 		end,
-		requires = {
+		before = {
 			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
@@ -227,7 +223,9 @@ return require("packer").startup(function(use)
 		end,
 	}
 	use { "b0o/schemastore.nvim", filetype = "json" }
-	if packer_bootstrap then
-		require("packer").sync()
-	end
+	-- if packer_bootstrap then
+	-- require('packer').sync()
+	-- end
 end)
+
+require("packer").compile()

@@ -62,5 +62,6 @@ vim.g.loaded_matchit = 1
 vim.g.loaded_matchparen = 1
 vim.g.loaded_spec = 1
 vim.g.python3_host_prog = "/usr/bin/python3"
+vim.g.loaded_perl_provider = 0
 
 utils.set_options(options)
