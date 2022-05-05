@@ -1,22 +1,10 @@
-local fn = vim.fn
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-	packer_bootstrap = fn.system {
-		"git",
-		"clone",
-		"--depth=1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	}
-	vim.cmd "packadd packer.nvim"
-end
-
-require("packer").startup(function(use)
-	-- use { "mhinz/vim-startify", event = "VimEnter" }
+vim.cmd [[packadd packer.nvim]]
+return require("packer").startup(function(use)
 	use "lewis6991/impatient.nvim"
+	use "wbthomason/packer.nvim"
 
 	use "nvim-lua/popup.nvim"
-	use { "nvim-lua/plenary.nvim", module = "plenary" }
+	use { "nvim-lua/plenary.nvim", module = "plenary"}
 	use {
 		"nvim-telescope/telescope.nvim",
 		module = "telescope",
@@ -25,7 +13,7 @@ require("packer").startup(function(use)
 			require "plugins.telescope-config"
 		end,
 	}
-	use { "nvim-telescope/telescope-file-browser.nvim", after = "telescope.nvim" }
+	use { "nvim-telescope/telescope-file-browser.nvim", requires = "nvim-telescope/telescope.nvim" }
 	use { "tpope/vim-surround", event = "InsertEnter" }
 	use {
 		"norcalli/nvim-colorizer.lua",
@@ -41,9 +29,10 @@ require("packer").startup(function(use)
 			require "plugins.treesitter-config"
 		end,
 	}
-	use "nvim-treesitter/nvim-treesitter-textobjects"
-	use "nvim-treesitter/playground"
-	use "nvim-treesitter/nvim-treesitter-refactor"
+-- 	use { "nvim-treesitter/nvim-treesitter-textobjects",
+-- 	"nvim-treesitter/playground",
+-- 	"nvim-treesitter/nvim-treesitter-refactor",
+-- 	after = {"nvim-treesitter/nvim-treesitter"}}
 
 	use "kyazdani42/nvim-web-devicons"
 	use {
@@ -57,13 +46,6 @@ require("packer").startup(function(use)
 	use "neovim/nvim-lspconfig"
 
 	use { "Raimondi/delimitMate", event = "InsertEnter" }
-	-- use {
-	-- 	"ray-x/lsp_signature.nvim",
-	-- 	config = function()
-	-- 		require "plugins.lsp_sig"
-	-- 	end,
-	-- 	event = "BufEnter",
-	-- }
 	use { "folke/trouble.nvim", event = "BufEnter" }
 	use {
 		"onsails/lspkind-nvim",
@@ -78,7 +60,6 @@ require("packer").startup(function(use)
 		event = "BufRead",
 	}
 
-	-- use {"folke/lsp-colors.nvim"}
 	use {
 		"numToStr/Comment.nvim",
 		event = "BufRead",
@@ -86,8 +67,6 @@ require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	}
-
-	-- use "folke/lua-dev.nvim"
 
 	use {
 		"jose-elias-alvarez/nvim-lsp-ts-utils",
@@ -126,21 +105,6 @@ require("packer").startup(function(use)
 		event = "BufEnter",
 	}
 
-	-- use {
-	-- 	"iamcco/markdown-preview.nvim",
-	-- 	run = "cd app && npm install",
-	-- 	ft = "markdown",
-	-- 	event = "BufRead",
-	-- }
-
-	--[[ use {
-		"mhartington/formatter.nvim",
-		config = function()
-			require "formatting"
-		end,
-		event = "BufRead",
-	} ]]
-
 	use {
 		"simrat39/rust-tools.nvim",
 		ft = { "rust" },
@@ -148,11 +112,10 @@ require("packer").startup(function(use)
 			require "plugins.rust-tools"
 		end,
 	}
-
-	-- use {"fladson/vim-kitty", event = "BufRead", ft = "config"}
+	use "rafamadriz/friendly-snippets"
 	use {
 		"L3MON4D3/LuaSnip",
-		requires = "rafamadriz/friendly-snippets",
+		requires = {"rafamadriz/friendly-snippets"},
 		config = function()
 			require "plugins.luasnip"
 		end,
@@ -162,15 +125,16 @@ require("packer").startup(function(use)
 		config = function()
 			require "plugins.cmp-config"
 		end,
-		before = {
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-nvim-lsp-signature-help",
-		},
+		requires = {"rafamadriz/friendly-snippets","L3MON4D3/LuaSnip"}
 	}
+	use "saadparwaiz1/cmp_luasnip"
+	use "hrsh7th/cmp-cmdline"
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-path"
+	use "hrsh7th/cmp-nvim-lua"
+	use "hrsh7th/cmp-nvim-lsp-signature-help"
+
 
 	use {
 		"saecki/crates.nvim",
@@ -182,13 +146,6 @@ require("packer").startup(function(use)
 	}
 	use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
 	use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
-	--[[ use {
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require "plugins.dashboard-config"
-		end,
-	} ]]
 	use {
 		"goolord/alpha-nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
@@ -213,7 +170,6 @@ require("packer").startup(function(use)
 	}
 
 	use { "lervag/vimtex", filetype = "tex" }
-	--	use {'j-hui/fidget.nvim', config = function() require "fidget".setup{} end}
 	use {
 		"nvim-neorg/neorg",
 		ft = "norg",
@@ -223,9 +179,4 @@ require("packer").startup(function(use)
 		end,
 	}
 	use { "b0o/schemastore.nvim", filetype = "json" }
-	-- if packer_bootstrap then
-	-- require('packer').sync()
-	-- end
 end)
-
-require("packer").compile()

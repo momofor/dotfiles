@@ -45,7 +45,7 @@ nvim_lsp.tsserver.setup({
 		ts_utils.setup_client(client)
 
 		-- disable tsserver formatting
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 
 		-- define an alias
 		vim.cmd("command -buffer Formatting lua vim.lsp.buf.formatting()")

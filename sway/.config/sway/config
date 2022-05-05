@@ -45,6 +45,7 @@ input "type:keyboard" {
     # xkb_layout us
     xkb_layout dvp,dvorak,us
     xkb_options caps:swapescape,grp:rctrl_toggle
+    # xkb_options grp:rctrl_toggle
 
     xkb_numlock enable
     repeat_delay 150
