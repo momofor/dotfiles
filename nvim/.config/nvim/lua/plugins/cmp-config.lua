@@ -1,6 +1,7 @@
 -- Setup nvim-cmp.
 local cmp = require("cmp")
 local lsp_kind = require("lspkind")
+
 local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
@@ -27,14 +28,8 @@ cmp.setup({
 	},
 	snippet = {
 		expand = function(args)
-			-- For `vsnip` user.
-			-- vim.fn["vsnip#anonymous"](args.body)
-
 			-- For `luasnip` user.
 			require("luasnip").lsp_expand(args.body)
-
-			-- For `ultisnips` user.
-			-- vim.fn["UltiSnips#Anon"](args.body)
 		end,
 	},
 	mapping = {
@@ -67,15 +62,20 @@ cmp.setup({
 	},
 	experimental = {
 		native_menu = false,
+		ghost_text = false,
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
-		{ name = "nvim_lsp" }, -- For vsnip user.
-		{ name = "luasnip" }, -- For luasnip user.
-		{ name = "crates" }, -- { name = 'luasnip' },
-		{ name = "nvim_lua" }, -- For ultisnips user.
-		{ name = "path" }, -- { name = 'ultisnips' },
-		{ name = "buffer" },
-		{ name = "spell" },
-		{ name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp" }, -- neovim lsp completion
+		{ name = "luasnip" }, -- luasnip snippets completion
+		{ name = "crates" }, -- rust crates
+		{ name = "nvim_lua" }, -- neovim api completion
+		{ name = "path" }, -- path completion
+		{ name = "buffer" }, -- local buffer completion
+		{ name = "spell" }, -- prose completion
+		{ name = "nvim_lsp_signature_help" }, -- signature help
 	},
 })

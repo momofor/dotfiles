@@ -75,5 +75,5 @@ async fn generate(tokens: &[Token]) -> String {
     tokio::fs::write("finished_program.c", &output)
         .await
         .unwrap();
-    output
+    return output;
 }

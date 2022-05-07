@@ -37,7 +37,6 @@ local options = {
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "/usr/bin/dash"
-vim.opt.completeopt = "menuone,noselect,preview"
 vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
 

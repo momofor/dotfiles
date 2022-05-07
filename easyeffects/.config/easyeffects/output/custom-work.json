@@ -1,19 +1,19 @@
 {
     "output": {
         "bass_enhancer": {
-            "amount": 3.9999999999999996,
+            "amount": 0.0,
             "blend": 0.0,
             "floor": 20.0,
             "floor-active": false,
-            "harmonics": 8.499999999999998,
-            "input-gain": -4.5,
+            "harmonics": 8.5,
+            "input-gain": 0.0,
             "output-gain": 0.0,
-            "scope": 80.0
+            "scope": 100.0
         },
         "bass_loudness": {
             "input-gain": 0.0,
             "link": -9.1,
-            "loudness": -9.99999999999998,
+            "loudness": -3.1,
             "output": -6.0,
             "output-gain": 0.0
         },
@@ -48,6 +48,75 @@
             "input-gain": 0.0,
             "ir-width": 100,
             "kernel-path": "/home/momofor/.config/easyeffects/irs/Clear Bass+.irs",
+            "output-gain": 0.0
+        },
+        "crystalizer": {
+            "band0": {
+                "bypass": false,
+                "intensity": 0.0,
+                "mute": false
+            },
+            "band1": {
+                "bypass": false,
+                "intensity": -1.0,
+                "mute": false
+            },
+            "band10": {
+                "bypass": false,
+                "intensity": -10.0,
+                "mute": false
+            },
+            "band11": {
+                "bypass": false,
+                "intensity": -11.0,
+                "mute": false
+            },
+            "band12": {
+                "bypass": false,
+                "intensity": -12.0,
+                "mute": false
+            },
+            "band2": {
+                "bypass": false,
+                "intensity": -2.0,
+                "mute": false
+            },
+            "band3": {
+                "bypass": false,
+                "intensity": -3.0,
+                "mute": false
+            },
+            "band4": {
+                "bypass": false,
+                "intensity": -4.0,
+                "mute": false
+            },
+            "band5": {
+                "bypass": false,
+                "intensity": -5.0,
+                "mute": false
+            },
+            "band6": {
+                "bypass": false,
+                "intensity": -6.0,
+                "mute": false
+            },
+            "band7": {
+                "bypass": false,
+                "intensity": -7.0,
+                "mute": false
+            },
+            "band8": {
+                "bypass": false,
+                "intensity": -8.0,
+                "mute": false
+            },
+            "band9": {
+                "bypass": false,
+                "intensity": -9.0,
+                "mute": false
+            },
+            "input-gain": 0.0,
             "output-gain": 0.0
         },
         "equalizer": {
@@ -701,6 +770,16 @@
             },
             "split-channels": false
         },
+        "exciter": {
+            "amount": 0.0,
+            "blend": 0.0,
+            "ceil": 16000.0,
+            "ceil-active": false,
+            "harmonics": 8.5,
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "scope": 7500.0
+        },
         "limiter": {
             "alr": false,
             "alr-attack": 5.0,
@@ -709,23 +788,16 @@
             "attack": 5.0,
             "dithering": "None",
             "external-sidechain": false,
-            "gain-boost": false,
+            "gain-boost": true,
             "input-gain": 0.0,
             "lookahead": 5.0,
             "mode": "Herm Thin",
-            "output-gain": -2.0,
-            "oversampling": "Half x4(3L)",
-            "release": 10.0,
+            "output-gain": 0.0,
+            "oversampling": "None",
+            "release": 5.0,
             "sidechain-preamp": 0.0,
             "stereo-link": 100.0,
-            "threshold": -1.0
-        },
-        "loudness": {
-            "fft": "256",
-            "input-gain": 0.0,
-            "output-gain": 0.0,
-            "std": "ISO226-2003",
-            "volume": 7.0
+            "threshold": 0.0
         },
         "multiband_compressor": {
             "band0": {
@@ -948,14 +1020,15 @@
             "output-gain": 0.0
         },
         "plugins_order": [
-            "limiter",
             "equalizer",
+            "convolver",
             "compressor",
             "multiband_compressor",
-            "convolver",
+            "crystalizer",
+            "exciter",
             "bass_enhancer",
             "bass_loudness",
-            "loudness"
+            "limiter"
         ]
     }
 }
