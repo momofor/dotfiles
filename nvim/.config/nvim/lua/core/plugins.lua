@@ -4,7 +4,6 @@ return require("packer").startup {
 		use "lewis6991/impatient.nvim"
 		use "wbthomason/packer.nvim"
 
-		use "nvim-lua/popup.nvim"
 		use { "nvim-lua/plenary.nvim", module = "plenary" }
 		use {
 			"nvim-telescope/telescope.nvim",
@@ -15,6 +14,7 @@ return require("packer").startup {
 			end,
 		}
 		use { "nvim-telescope/telescope-file-browser.nvim", requires = "nvim-telescope/telescope.nvim" }
+		use { "stevearc/dressing.nvim", requires = "nvim-telescope/telescope.nvim" }
 		use { "tpope/vim-surround", event = "InsertEnter" }
 		use {
 			"norcalli/nvim-colorizer.lua",

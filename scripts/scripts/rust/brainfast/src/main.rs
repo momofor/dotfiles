@@ -59,18 +59,16 @@ async fn tokenize(input: &str) -> Vec<Token> {
 
 async fn generate(tokens: &[Token]) -> String {
     let mut output = String::from(include_str!("preface.c"));
-    for &token in tokens {
-        match token {
-            Add => output.push_str("++*ptr;\n"),
-            Sub => output.push_str("--*ptr;\n"),
-            Right => output.push_str("++ptr;\n"),
-            Left => output.push_str("--ptr;\n"),
-            Read => output.push_str("*ptr=getchar ();\n"),
-            Write => output.push_str("putchar(*ptr);\n"),
-            BeginLoop => output.push_str("while (*ptr) {\n"),
-            EndLoop => output.push_str("};\n"),
-        }
-    }
+    tokens.into_iter().for_each(|&token| match token {
+        Add => output.push_str("++*ptr;\n"),
+        Sub => output.push_str("--*ptr;\n"),
+        Right => output.push_str("++ptr;\n"),
+        Left => output.push_str("--ptr;\n"),
+        Read => output.push_str("*ptr=getchar ();\n"),
+        Write => output.push_str("putchar(*ptr);\n"),
+        BeginLoop => output.push_str("while (*ptr) {\n"),
+        EndLoop => output.push_str("};\n"),
+    });
     output.push_str("}\n");
     tokio::fs::write("finished_program.c", &output)
         .await

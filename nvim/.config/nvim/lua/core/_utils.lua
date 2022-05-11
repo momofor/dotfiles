@@ -42,10 +42,31 @@ function M.prequire(module)
 	local ok, err = pcall(require, module)
 	if not ok then
 		vim.notify(
-			"[prequire|" .. debug.getinfo(2, "S").short_src .. "] Failed to load module `" .. module .. "`",
+			"[prequire|"
+				.. debug.getinfo(2, "S").short_src
+				.. "] Failed to load module `"
+				.. module
+				.. "`"
+				.. "with error "
+				.. err,
 			vim.log.levels.ERROR
 		)
 	end
 end
 
+function M.packer_sync()
+	local snap_shot_time = os.date "!%Y-%m-%dT%TZ"
+	vim.cmd("PackerSnapshot " .. snap_shot_time)
+	vim.cmd "PackerSync"
+end
+
+-- yoinked from u/vonheikemen over on reddit
+function M.trailspace_trim()
+	-- Save cursor position to later restore
+	local curpos = vim.api.nvim_win_get_cursor(0)
+
+	-- Search and replace trailing whitespace
+	vim.cmd [[keeppatterns %s/\s\+$//e]]
+	vim.api.nvim_win_set_cursor(0, curpos)
+end
 return M

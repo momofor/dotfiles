@@ -1,4 +1,4 @@
-PWD /home/momofor/dotfiles/scripts/scripts/documents/ensemble-n
+PWD /home/momofor/.dotfiles/scripts/scripts/documents/ensemble-n
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT main.log
@@ -19,7 +19,7 @@ OUTPUT /home/momofor/.texlive/texmf-var/m_t_x_t_e_s_t.tmp
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-parsers.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-configuration.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
-INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-05-20.lua
+INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-02-24.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-fallback.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-multiscript.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
@@ -37,7 +37,13 @@ INPUT /usr/share/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-colors.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-resolvers.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-features.lua
+INPUT /usr/share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-normalize.lua
+INPUT /usr/share/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-parse.lua
+INPUT /usr/share/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-define.lua
+INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-cff2.lua
+INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-t2-writer.lua
+INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-ttf.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-plug.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-letterspace.lua
 INPUT /usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-embolden.lua
@@ -55,7 +61,7 @@ INPUT /usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT /usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT /usr/share/texmf-dist/tex/latex/extsizes/size14.clo
 INPUT /usr/share/texmf-dist/tex/latex/extsizes/size14.clo
-INPUT /home/momofor/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc
+INPUT /home/momofor/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
 INPUT /home/momofor/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc
 INPUT /usr/share/texmf-dist/tex/latex/base/exscale.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/exscale.sty
@@ -104,11 +110,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd
-INPUT /usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold17.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold17.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -117,8 +118,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 OUTPUT main.pdf
@@ -129,14 +128,12 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT ./main.aux
-INPUT /usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
