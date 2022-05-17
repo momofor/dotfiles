@@ -127,14 +127,16 @@ return require("packer").startup {
 				require "plugins.cmp-config"
 			end,
 			after = "nvim-lspconfig",
+			requires = {
+				"saadparwaiz1/cmp_luasnip",
+				"hrsh7th/cmp-cmdline",
+				"hrsh7th/cmp-nvim-lsp",
+				"hrsh7th/cmp-buffer",
+				"hrsh7th/cmp-path",
+				"hrsh7th/cmp-nvim-lua",
+				"hrsh7th/cmp-nvim-lsp-signature-help",
+			},
 		}
-		use "saadparwaiz1/cmp_luasnip"
-		use "hrsh7th/cmp-cmdline"
-		use "hrsh7th/cmp-nvim-lsp"
-		use "hrsh7th/cmp-buffer"
-		use "hrsh7th/cmp-path"
-		use "hrsh7th/cmp-nvim-lua"
-		use "hrsh7th/cmp-nvim-lsp-signature-help"
 
 		use {
 			"saecki/crates.nvim",
@@ -144,8 +146,8 @@ return require("packer").startup {
 			end,
 			event = "BufRead Cargo.toml",
 		}
-		use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
-		use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
+		-- use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
+		-- use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
 		use {
 			"goolord/alpha-nvim",
 			requires = { "kyazdani42/nvim-web-devicons" },

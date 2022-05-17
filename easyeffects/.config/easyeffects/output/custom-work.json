@@ -31,7 +31,7 @@
             "makeup": 0.0,
             "mode": "Upward",
             "output-gain": 0.0,
-            "ratio": 4.0,
+            "ratio": 5.0,
             "release": 100.0,
             "release-threshold": -120.0,
             "sidechain": {
@@ -47,7 +47,7 @@
         "convolver": {
             "input-gain": 0.0,
             "ir-width": 100,
-            "kernel-path": "/home/momofor/.config/easyeffects/irs/Clear Bass+.irs",
+            "kernel-path": "/home/momofor/.config/easyeffects/irs/razor-irs-clearbass.irs",
             "output-gain": 0.0
         },
         "crystalizer": {
@@ -805,13 +805,13 @@
                 "attack-time": 20.0,
                 "boost-amount": 6.0,
                 "boost-threshold": -72.0,
-                "compression-mode": "Upward",
+                "compression-mode": "Downward",
                 "compressor-enable": true,
                 "external-sidechain": false,
                 "knee": -6.0,
                 "makeup": 0.0,
                 "mute": false,
-                "ratio": 1.0,
+                "ratio": 1.7,
                 "release-threshold": -120.0,
                 "release-time": 100.0,
                 "sidechain-custom-highcut-filter": false,

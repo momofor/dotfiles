@@ -54,15 +54,15 @@ input "type:keyboard" {
 
 input "type:pointer" {
 	accel_profile "flat"
-	# pointer_accel 0.8
+	# pointer_accel 0
 }
 
 default_border pixel 1
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
-# gaps inner 4
-# gaps outer 2
+gaps inner 4
+gaps outer 2
 bindsym $mod+tab focus next
 bindsym $mod+Shift+tab focus prev
 bindsym $mod+shift+a exec ydotool type 'I USE ARCH BTW'
@@ -91,6 +91,7 @@ output VGA-1 {
  max_render_time 6
  subpixel rgb
  scale_filter smart
+ scale 1
 }
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/momofor/wallpaper.png fill

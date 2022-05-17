@@ -69,4 +69,5 @@ function M.trailspace_trim()
 	vim.cmd [[keeppatterns %s/\s\+$//e]]
 	vim.api.nvim_win_set_cursor(0, curpos)
 end
+
 return M
