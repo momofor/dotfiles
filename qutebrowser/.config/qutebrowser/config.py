@@ -148,6 +148,6 @@ c.content.cookies.store = False
 
 c.content.blocking.method = "adblock"
 # dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.darkmode.enabled", False)
 config.set("auto_save.session", True)
 config.set("scrolling.smooth", True)
