@@ -43,12 +43,12 @@ function M.prequire(module)
 	if not ok then
 		vim.notify(
 			"[prequire|"
-				.. debug.getinfo(2, "S").short_src
-				.. "] Failed to load module `"
-				.. module
-				.. "`"
-				.. "with error "
-				.. err,
+			.. debug.getinfo(2, "S").short_src
+			.. "] Failed to load module `"
+			.. module
+			.. "`"
+			.. "with error "
+			.. err,
 			vim.log.levels.ERROR
 		)
 	end
@@ -68,6 +68,10 @@ function M.trailspace_trim()
 	-- Search and replace trailing whitespace
 	vim.cmd [[keeppatterns %s/\s\+$//e]]
 	vim.api.nvim_win_set_cursor(0, curpos)
+end
+
+function M.Search(title, cwd)
+	require("telescope.builtin").find_files { prompt_title = title, cwd = cwd }
 end
 
 return M

@@ -45,14 +45,3 @@ require("telescope").setup({
 		},
 	},
 })
-local utils = require("core._utils")
-local M = {}
-
-function M.Search(title, cwd)
-	require("telescope.builtin").find_files({ prompt_title = title, cwd = cwd })
-end
-
-vim.g.mapleader = " "
-utils.map("n", "<Leader>M", ":lua require'telescope.builtin'.man_pages() <CR>", { noremap = true })
-utils.map("n", "<Leader>T", ":lua require'telescope.builtin'.treesitter() <CR>", { noremap = true })
-return M

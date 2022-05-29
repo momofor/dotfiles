@@ -43,14 +43,15 @@ set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
     xkb_layout dvp,dvorak,us
-	# xkb_layout us 
-	# xkb_variant dvorak-l
     xkb_options caps:swapescape,grp:rctrl_toggle
 
     xkb_numlock enable
     repeat_delay 150
     repeat_rate 30
 }
+
+input "11944:8484:Wings_Tech_Gaming_Keyboard" events disabled
+
 
 input "type:pointer" {
 	accel_profile "flat"
@@ -293,7 +294,6 @@ mode "spawn" {
 		Return mode "default"
 		Escape mode "default"
 		r border toggle
-		n input "6700:11555:USB_HCT_Keyboard" events toggle
 	}
 }
 bindsym {
