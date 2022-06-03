@@ -336,5 +336,5 @@ bar {
 	 swaybar_command waybar
 
 }
-
+exec xrdb -load ~/.Xresources
 include /etc/sway/config.d/*

@@ -2,7 +2,7 @@
 #![no_main]
 use arduino_hal::port::{mode::Output, Pin};
 use panic_halt as _;
-
+const DELAY_MS: u16 = 400;
 #[arduino_hal::entry]
 fn main() -> ! {
     let dp = arduino_hal::Peripherals::take().unwrap();
@@ -21,10 +21,8 @@ fn main() -> ! {
     let mut led_2 = pins.d11.into_output();
     let mut led_3 = pins.d12.into_output();
 
-    let leds = [led_1, led_2, led_3];
-
     loop {
         led_1.toggle();
-        arduino_hal::delay_ms(500);
+        arduino_hal::delay_ms(DELAY_MS);
     }
 }
