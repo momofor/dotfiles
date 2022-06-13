@@ -6,8 +6,8 @@ fn main() {
         .timeout(Duration::from_millis(10))
         .open()
         .expect("Failed to open port");
-    let output = "This is a test. This is only a test.".as_bytes();
-    loop {
-        port.write(output).expect("Write failed!");
-    }
+    let mut serial_buf: Vec<u8> = vec![0; 32];
+    port.read(serial_buf.as_mut_slice())
+        .expect("Found no data!");
+    println!("{:?}", String::from_utf8_lossy(&serial_buf));
 }

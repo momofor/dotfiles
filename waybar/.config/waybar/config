@@ -42,13 +42,13 @@
      },
 
     "clock": {
-        "format": " {:%a %d/%m/%Y - %T}",
+        "format": "  {:%a %d/%m/%Y - %T}",
     	"interval": 1
     },
     
     "network": {
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname} {bandwidthUpBits} {bandwidthDownBits}",
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}  {bandwidthUpBits}  {bandwidthDownBits}",
         "format-linked": " (No IP) ",
         "format-disconnected": "睊",
         "interval": 1

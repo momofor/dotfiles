@@ -31,7 +31,7 @@ return require("packer").startup {
 			end,
 		}
 		-- 	use { "nvim-treesitter/nvim-treesitter-textobjects",
-		-- 	"nvim-treesitter/playground",
+		use "nvim-treesitter/playground"
 		-- 	"nvim-treesitter/nvim-treesitter-refactor",
 		-- 	after = {"nvim-treesitter/nvim-treesitter"}}
 
@@ -181,6 +181,15 @@ return require("packer").startup {
 			end,
 		}
 		use { "b0o/schemastore.nvim", filetype = "json" }
+		use {
+			"smjonas/inc-rename.nvim",
+			config = function()
+				require("inc_rename").setup()
+			end,
+		}
+		use { "tversteeg/registers.nvim", event = "InsertEnter" }
+		use { "Pocco81/TrueZen.nvim", event = "BufRead" }
+		use "nvim-treesitter/nvim-treesitter-context"
 	end,
 	config = {
 		display = {
