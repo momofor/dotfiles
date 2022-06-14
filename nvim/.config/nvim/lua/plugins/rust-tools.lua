@@ -177,9 +177,6 @@ local opts = {
 		standalone = true,
 		cmd = { "/usr/bin/rustup", "run", "nightly", "rust-analyzer" },
 		capabilities = capabilities,
-		on_attach = function(client, bufnr)
-			require("nvim-navic").attach(client, bufnr)
-		end,
 	}, -- rust-analyer options
 
 	-- debugging stuff

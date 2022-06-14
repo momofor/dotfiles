@@ -44,12 +44,17 @@ input "type:keyboard" {
     xkb_layout dvp,dvorak,us
 	# xkb_layout us 
 	# xkb_variant dvorak-l
-    xkb_options caps:swapescape,grp:alt_shift_toggle
+    xkb_options caps:swapescape,grp:ralt_rshift_toggle
 
     xkb_numlock enable
     repeat_delay 150
     repeat_rate 30
 }
+
+input "7247:2:SIGMACHIP_USB_Keyboard" {
+    xkb_layout us
+}
+
 input "type:pointer" {
 	accel_profile "flat"
 	# pointer_accel 0
