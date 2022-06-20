@@ -51,13 +51,14 @@ input "type:keyboard" {
     repeat_rate 30
 }
 
-input "7247:2:SIGMACHIP_USB_Keyboard" {
-    xkb_layout us
-}
-
 input "type:pointer" {
 	accel_profile "flat"
-	# pointer_accel 0
+	pointer_accel 0
+}
+
+input "7247:2:SIGMACHIP_USB_Keyboard" {
+	events disabled
+
 }
 
 default_border pixel 1

@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 eframe = "0.17.0"
+tokio = { version = "1.19.2" , features = ["full"]}

@@ -26,13 +26,15 @@ return require("packer").startup {
 
 		use {
 			"nvim-treesitter/nvim-treesitter",
+			requires = {
+				"nvim-treesitter/nvim-treesitter-textobjects",
+				"nvim-treesitter/nvim-treesitter-refactor",
+				"nvim-treesitter/playground",
+			},
 			config = function()
 				require "plugins.treesitter-config"
 			end,
 		}
-		-- 	use { "nvim-treesitter/nvim-treesitter-textobjects",
-		use "nvim-treesitter/playground"
-		-- 	"nvim-treesitter/nvim-treesitter-refactor",
 		-- 	after = {"nvim-treesitter/nvim-treesitter"}}
 
 		use "kyazdani42/nvim-web-devicons"

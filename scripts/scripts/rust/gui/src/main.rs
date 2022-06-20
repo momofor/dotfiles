@@ -1,21 +1,31 @@
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
-use eframe::{egui, epi};
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+use std::sync::Arc;
 
-fn main() {
+// hide console window on Windows in release
+use eframe::{egui, epi};
+use tokio::{
+    sync::Mutex,
+    time::{sleep, Duration},
+};
+
+#[tokio::main]
+async fn main() {
+    tokio::spawn(async move {
+        let noice = Arc::new(Mutex::new(sleep(Duration::from_secs(10)).await));
+        println!("DONE");
+    });
     let options = eframe::NativeOptions::default();
     eframe::run_native(Box::new(MyApp::default()), options);
 }
 
 struct MyApp {
     name: String,
-    age: u32,
 }
 
 impl Default for MyApp {
     fn default() -> Self {
         Self {
             name: "Arthur".to_owned(),
-            age: 42,
         }
     }
 }
@@ -27,18 +37,12 @@ impl epi::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, frame: &epi::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("My egui Application");
-            ui.horizontal(|ui| {
-                ui.label("Your name: ");
-                ui.text_edit_singleline(&mut self.name);
-            });
-            ui.add(egui::Slider::new(&mut self.age, 0..=120).text("age"));
             if ui.button("Increment").clicked() {
-                self.age += 1;
+                println!("hello world");
             }
             if ui.button("Decrement").clicked() {
-                self.age -= 1;
+                println!("bye world");
             }
-            ui.label(format!("Hello '{}', age {}", self.name, self.age));
         });
 
         // Resize the native window to be just the size we need it to be:

@@ -3,7 +3,7 @@ local utils = require "core._utils"
 local options = {
 	ignorecase = true,
 	smartcase = true,
-	--laststatus = 0 ,
+	laststatus = 3,
 	showtabline = 4,
 	backup = false,
 	writebackup = false,
@@ -28,10 +28,11 @@ local options = {
 	scrolloff = 7,
 	cursorline = true,
 	foldmethod = "expr",
-	signcolumn = "yes", -- can be set to number
+	signcolumn = "auto", -- can be set to number
 	termguicolors = true,
 	timeoutlen = 300,
 	updatetime = 100, -- Faster completion
+	-- winbar = "%m %f",
 }
 
 vim.opt.shortmess:append "c"

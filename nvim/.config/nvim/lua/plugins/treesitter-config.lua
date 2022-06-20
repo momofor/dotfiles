@@ -29,17 +29,28 @@ require("nvim-treesitter.configs").setup({
 	},
 	refactor = {
 		highlight_definitions = { enable = true },
-		-- highlight_current_scope = { enable = true },
+		highlight_current_scope = { enable = true },
 	},
-	--[[ swap = {
-		enable = true,
-		swap_next = {
-			["[p"] = "@parameter.inner",
+	textobjects = {
+		select = {
+			enable = true,
+			lookahead = true,
+			keymaps = {
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+				["ic"] = "@class.inner",
+			},
 		},
-		swap_previous = {
-			["]p"] = "@parameter.inner",
+		lsp_interop = {
+			enable = true,
+			border = "rounded",
+			peek_definition_code = {
+				["<leader>df"] = "@function.outer",
+				["<leader>dc"] = "@class.outer",
+			},
 		},
-	}, ]]
+	},
 })
 
 --utils.map("n" , "<Leader>m" , ":lua print(require'nvim-treesitter.ts_utils'.get_node_at_cursor()) <CR>"  , {})

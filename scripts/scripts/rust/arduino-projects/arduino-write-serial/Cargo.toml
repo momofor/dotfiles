@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 serialport = "4.0.1"
+eframe = {version = "0.18.0", features = ["dark-light"]}

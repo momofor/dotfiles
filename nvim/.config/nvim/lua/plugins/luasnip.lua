@@ -77,56 +77,17 @@ local get_result_type = function(position)
 	end, {})
 end
 
-ls.add_snippets("all", {
-	s(
-		"curtime",
-		f(function()
-			return os.date("%D - %H:%M")
-		end)
-	),
-	s("sametest", fmt([[example: {}, function: {}]], { i(1), same(1) })),
-})
+-- ls.add_snippets("rust", {
+-- 	s("prl", fmt([[println!({},{});]], { i(1), i(2) })),
+-- })
 
 ls.add_snippets("lua", {
-	s(
-		"modtest",
-		fmt(
-			[[
-			#[cfg(test)]
-			mod test {{
-						{}
-
-						{}
-					}}
-																		]],
-			{
-				c(1, { t("    use super::*;"), t("") }),
-				i(0),
-			}
-		)
-	),
 	s(
 		"nreq",
 		fmt([[local {} = require"{}"]], {
 			c(2, { change_or_smth(1, 1), change_or_smth(1, 2) }),
 			i(1),
 		})
-	),
-	s(
-		"test",
-		fmt(
-			[[
-	#[test]
-	fn {}(){} {{
-		{}
-	}}
-	]],
-			{
-				i(1, "testname"),
-				get_result_type(2),
-				i(0),
-			}
-		)
 	),
 })
 vim.keymap.set("i", "<c-o>", function()
