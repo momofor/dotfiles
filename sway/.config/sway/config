@@ -44,7 +44,8 @@ input "type:keyboard" {
     xkb_layout dvp,dvorak,us
 	# xkb_layout us 
 	# xkb_variant dvorak-l
-    xkb_options caps:swapescape,grp:ralt_rshift_toggle
+	# caps:swapescape,
+    xkb_options grp:ralt_rshift_toggle
 
     xkb_numlock enable
     repeat_delay 150
