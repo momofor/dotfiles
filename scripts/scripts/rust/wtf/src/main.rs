@@ -1,42 +1,23 @@
-use tokio::sync::{mpsc, oneshot};
-
-struct testuChan {
-    sendu: &'static str,
-    recieveu: Responder<()>,
-}
-
-type Responder<T> = oneshot::Sender<Result<T, Box<dyn std::error::Error>>>;
+use tokio::io::{self, AsyncReadExt};
+use tokio::net::TcpListener;
 
 #[tokio::main]
-async fn main() {
-    let (tx, mut rx) = mpsc::channel(32);
+async fn main() -> io::Result<()> {
+    let listener = TcpListener::bind("127.0.0.1:8080").await?;
 
-    let tx2 = tx.clone();
-    let tx3 = tx.clone();
+    loop {
+        let (mut socket, _) = listener.accept().await?;
 
-    tokio::spawn(async move {
-        let (tux, mut rux) = oneshot::channel();
-        let noice = testuChan {
-            sendu: "First handle",
-            recieveu: tux,
-        };
+        tokio::spawn(async move {
+            let (mut rd, mut wr) = socket.split();
 
-        tx.send("Sending from first handle").await.unwrap();
-    });
+            if io::copy(&mut rd, &mut wr).await.is_err() {
+                eprintln!("failed to copy");
+            }
+            // let mut noice = String::new();
+            // let read = rd.read_to_string(&mut noice).await.unwrap();
 
-    tokio::spawn(async move {
-        let (tux, mut rux) = oneshot::channel();
-        tx2.send("Sending from second handle").await.unwrap();
-        tux.send("Finished Second handle").unwrap();
-    });
-
-    tokio::spawn(async move {
-        let (tux, mut rux) = oneshot::channel();
-        tx3.send("Sending from third handle").await.unwrap();
-        tux.send("Finished Third handle").unwrap();
-    });
-
-    while let Some(message) = rx.recv().await {
-        println!("GOT = {}", message);
+            println!("GOT");
+        });
     }
 }

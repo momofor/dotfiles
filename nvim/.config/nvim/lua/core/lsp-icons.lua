@@ -1,6 +1,7 @@
 local function lspSymbol(name, icon)
 	vim.fn.sign_define("DiagnosticSign" .. name, { text = icon, numhl = "DiagnosticDefault" .. name })
 end
+
 lspSymbol("Error", "")
 lspSymbol("Information", "")
 lspSymbol("Hint", "")
@@ -60,7 +61,7 @@ vim.api.nvim_set_keymap("n", "<leader>rn", "<cmd>lua Rename.rename()<CR>", { sil
 -- , "│", "─", , , , , "╰"
 vim.diagnostic.config {
 	underline = true,
-	update_in_insert = true,
+	update_in_insert = false,
 	virtual_text = {
 		true,
 		spacing = 1,
