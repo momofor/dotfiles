@@ -38,6 +38,7 @@
             "threshold": -12.0
         },
         "convolver": {
+            "autogain": true,
             "input-gain": 0.0,
             "ir-width": 100,
             "kernel-path": "/home/momofor/.config/easyeffects/irs/Clear Bass+.irs",
@@ -293,10 +294,10 @@
         "plugins_order": [
             "filter",
             "bass_enhancer",
-            "compressor",
             "multiband_compressor",
             "stereo_tools",
             "convolver",
+            "compressor",
             "limiter"
         ],
         "stereo_tools": {

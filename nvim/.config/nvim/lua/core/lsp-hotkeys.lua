@@ -69,4 +69,5 @@ end)
 utils.nnoremap("<leader>fr", function()
 	utils.Search("< SwayRC >", "~/.config/sway/")
 end)
---
+
+utils.nnoremap("<leader>at", ":term fish<CR>")

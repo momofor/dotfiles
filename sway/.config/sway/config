@@ -150,7 +150,7 @@ output * bg $background fill
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $guieditor
 
-    bindsym ctrl+alt+l exec swaylock --image $background --ring-color 3b4252 --key-hl-color 88c0d0 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --font "Fira Code" --clock --indicator --indicator-radius 100 --indicator-thickness 7
+    bindsym ctrl+alt+l exec swaylock --image $background --ring-color 3b4252 --key-hl-color 88c0d0 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --font "Fira Code" --indicator-radius 100 --indicator-thickness 7
         # --effect-blur 7x5 \
         # --effect-vignette 0.5:0.5 \
         # --fade-in 0.2
