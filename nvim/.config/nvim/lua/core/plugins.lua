@@ -30,6 +30,7 @@ return require("packer").startup {
 				"nvim-treesitter/nvim-treesitter-textobjects",
 				"nvim-treesitter/nvim-treesitter-refactor",
 				"nvim-treesitter/playground",
+				"nvim-treesitter/nvim-treesitter-context",
 			},
 			config = function()
 				require "plugins.treesitter-config"
@@ -191,7 +192,6 @@ return require("packer").startup {
 		}
 		use { "tversteeg/registers.nvim", event = "InsertEnter" }
 		use { "Pocco81/TrueZen.nvim", event = "BufRead" }
-		use "nvim-treesitter/nvim-treesitter-context"
 	end,
 	config = {
 		display = {

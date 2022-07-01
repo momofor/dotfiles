@@ -3,7 +3,6 @@ local types = require("luasnip.util.types")
 local s = ls.s
 local fmt = require("luasnip.extras.fmt").fmt
 local i = ls.insert_node
-local rep = require("luasnip.extras").rep
 local c = ls.choice_node
 local t = ls.text_node
 local f = ls.function_node
@@ -88,6 +87,18 @@ ls.add_snippets("lua", {
 			c(2, { change_or_smth(1, 1), change_or_smth(1, 2) }),
 			i(1),
 		})
+	),
+})
+
+ls.add_snippets("tex", {
+	s(
+		"beg",
+		fmt(
+			[[\begin{{{1}}}
+	{2}
+\end{{{3}}}]],
+			{ i(1), i(2), same(1) }
+		)
 	),
 })
 vim.keymap.set("i", "<c-o>", function()
