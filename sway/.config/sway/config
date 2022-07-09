@@ -19,7 +19,7 @@ exec_always /usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr
 exec_always wl-paste -t text --watch clipman store
 exec_always mako
 
-xwayland disable
+xwayland enable
 
 set $mod Mod4
 set $mod2 Mod1
@@ -44,8 +44,7 @@ input "type:keyboard" {
     xkb_layout dvp,dvorak,us
 	# xkb_layout us 
 	# xkb_variant dvorak-l
-	# caps:swapescape,
-    xkb_options grp:ralt_rshift_toggle
+    xkb_options grp:ralt_rshift_toggle,caps:swapescape
 
     xkb_numlock enable
     repeat_delay 150
