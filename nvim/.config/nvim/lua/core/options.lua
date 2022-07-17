@@ -32,14 +32,14 @@ local options = {
 	termguicolors = true,
 	timeoutlen = 300,
 	updatetime = 100, -- Faster completion
-	-- winbar = "%m %f",
 }
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "/usr/bin/dash"
-vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0
+
+-- vim.opt.do_filetype_lua = 1
+-- vim.opt.did_load_filetypes = 0
 
 --[[ vim.opt.spell = true
 vim.opt.spelllang = {'en_us'} ]]

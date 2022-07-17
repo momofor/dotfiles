@@ -19,7 +19,7 @@ exec_always /usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr
 exec_always wl-paste -t text --watch clipman store
 exec_always mako
 
-xwayland enable
+xwayland disable
 
 set $mod Mod4
 set $mod2 Mod1
@@ -42,6 +42,7 @@ set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 input "type:keyboard" {
     xkb_layout dvp,dvorak,us
+
 	# xkb_layout us 
 	# xkb_variant dvorak-l
     xkb_options grp:ralt_rshift_toggle,caps:swapescape
@@ -70,6 +71,7 @@ gaps outer 2
 bindsym $mod+tab focus next
 bindsym $mod+Shift+tab focus prev
 bindsym $mod+shift+a exec ydotool type 'I USE ARCH BTW'
+# bindsym $mod+z exec wlrctl keyboard type https://192.168.1.9/dns-query
 # gaps inner 24
 # gaps outer -8
 

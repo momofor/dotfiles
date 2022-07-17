@@ -1,11 +1,17 @@
+-- vim.filetype.add {
+-- 	filename = {
+-- 		-- ["~/.config/sway/config"] = "conf",
+-- 		["~/.config/mako/config"] = "conf",
+-- 		-- ["~/.font.conf"] = "xml",
+-- 		-- ["/home/momofor/.config/fontconfig/fonts.conf"] = "xml",
+-- 	},
+-- }
+--
+--
 vim.filetype.add {
-	extension = {
-		conf = "conf",
-	},
 	filename = {
-		-- ["~/.config/sway/config"] = "i3config",
-		-- ["~/.config/mako/config"] = "conf",
-		-- ["~/.font.conf"] = "xml",
-		-- ["/home/momofor/.config/fontconfig/fonts.conf"] = "xml",
+		[".foorc"] = "toml",
+		["/etc/foo/config"] = "toml",
+		["/home/momofor/.config/waybar/config"] = "conf",
 	},
 }

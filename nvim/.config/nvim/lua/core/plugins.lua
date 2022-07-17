@@ -15,7 +15,7 @@ return require("packer").startup {
 		}
 		use { "nvim-telescope/telescope-file-browser.nvim", requires = "nvim-telescope/telescope.nvim" }
 		use { "stevearc/dressing.nvim", requires = "nvim-telescope/telescope.nvim" }
-		use { "tpope/vim-surround", event = "InsertEnter" }
+		-- use { "tpope/vim-surround", event = "InsertEnter" }
 		use {
 			"norcalli/nvim-colorizer.lua",
 			config = function()
@@ -192,6 +192,14 @@ return require("packer").startup {
 		}
 		use { "tversteeg/registers.nvim", event = "InsertEnter" }
 		use { "Pocco81/TrueZen.nvim", event = "BufRead" }
+		use {
+			"kylechui/nvim-surround",
+			config = function()
+				require("nvim-surround").setup {
+					-- Configuration here, or leave empty to use defaults
+				}
+			end,
+		}
 	end,
 	config = {
 		display = {
