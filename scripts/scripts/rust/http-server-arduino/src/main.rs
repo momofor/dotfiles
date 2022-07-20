@@ -18,11 +18,14 @@ async fn hello_world(param: String) -> Result<impl warp::Reply, warp::Rejection>
     if param == "on".to_string() {
         println!("On");
         on_or_off(1).await;
+        Ok(warp::reply())
     } else if param == "off".to_string() {
         println!("OFF");
         on_or_off(0).await;
+        Ok(warp::reply())
+    } else {
+        Err(warp::reject::not_found())
     }
-    Ok(format!("Hello yo, {}", param))
 }
 
 #[tokio::main]
@@ -39,5 +42,5 @@ async fn main() {
         .and_then(hello_world);
     let routes = mainu.or(hello);
 
-    warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    warp::serve(routes).run(([192, 168, 1, 9], 3030)).await;
 }
