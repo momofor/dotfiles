@@ -76,9 +76,9 @@ local get_result_type = function(position)
 	end, {})
 end
 
--- ls.add_snippets("rust", {
--- 	s("prl", fmt([[println!({},{});]], { i(1), i(2) })),
--- })
+ls.add_snippets("rust", {
+	s("prl", fmt([[println!({},{});]], { i(1), i(2) })),
+})
 
 ls.add_snippets("lua", {
 	s(

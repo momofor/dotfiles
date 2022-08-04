@@ -9,3 +9,5 @@ edition = "2021"
 tokio = {version = "1.20.0", features = ["full"]}
 warp = "0.3.2"
 tokio-serial = "5.4.3"
+tracing = "0.1.35"
+tracing-subscriber = "0.3.15"

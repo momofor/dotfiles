@@ -5,7 +5,19 @@
 	</head>
 	<body>
 		<h1>ardunioo</h1>
-		<a href="http://192.168.1.9:3030/hello/on">turn on</a>
-		<a href="http://192.168.1.9:3030/hello/off">turn off</a>
+		<a href="http://192.168.1.9:3030/arduino/on" style="color:red">turn on</a>
+		<a href="http://192.168.1.9:3030/arduino/off" style="color:green">turn off</a>
+
+    <button onclick="turn_on()">turn on </button>
+    <button onclick="turn_off()">turn off </button>
+    <p id="demo"></p>
+    <script>
+      async function turn_on() {
+						fetch("http://192.168.1.9:3030/arduino/on")
+      }
+		async function turn_off() {
+					fetch("http://192.168.1.9:3030/arduino/off")
+				}
+    </script>
 	</body>
 </html>

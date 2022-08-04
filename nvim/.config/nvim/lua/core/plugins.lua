@@ -191,7 +191,6 @@ return require("packer").startup {
 			end,
 		}
 		use { "tversteeg/registers.nvim", event = "InsertEnter" }
-		use { "Pocco81/TrueZen.nvim", event = "BufRead" }
 		use {
 			"kylechui/nvim-surround",
 			config = function()
@@ -201,12 +200,14 @@ return require("packer").startup {
 			end,
 		}
 		use {
-			"shaunsingh/nord.nvim",
+			"Pocco81/true-zen.nvim",
 			config = function()
-				vim.g.nord_italic = false
-				require("nord").set()
-				vim.cmd "colorscheme nord"
+				require("true-zen").setup {}
 			end,
+		}
+		use {
+			"AckslD/nvim-FeMaco.lua",
+			config = 'require("femaco").setup()',
 		}
 	end,
 	config = {
