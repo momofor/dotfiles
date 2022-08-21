@@ -19,7 +19,7 @@ exec_always /usr/lib/xdg-desktop-portal -r & /usr/lib/xdg-desktop-portal-wlr
 exec_always wl-paste -t text --watch clipman store
 exec_always mako
 
-xwayland disable
+xwayland force
 
 set $mod Mod4
 set $mod2 Mod1

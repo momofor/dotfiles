@@ -1,0 +1,19 @@
+exec "wlgreet --command sway; swaymsg exit"
+
+input "type:keyboard" {
+    # xkb_layout us
+    xkb_layout dvp,dvorak,us
+    xkb_options caps:swapescape,grp:rctrl_toggle
+    # xkb_options grp:rctrl_toggle
+
+    xkb_numlock enable
+    repeat_delay 150
+    repeat_rate 30
+}
+
+bindsym Mod4+shift+e exec swaynag \
+	-t warning \
+	-m 'What do you want to do?' \
+	-b 'Poweroff' 'systemctl poweroff' \
+	-b 'Reboot' 'systemctl reboot'
+include /etc/sway/config.d/*

@@ -1,3 +1,5 @@
+use std::io::Read;
+
 use tokio::io::AsyncWriteExt;
 use tokio_serial::SerialPortBuilderExt;
 use tracing::{info, instrument, Level};
@@ -5,6 +7,7 @@ use tracing_subscriber::{
     filter::{FilterExt, LevelFilter},
     prelude::*,
 };
+
 use warp::Filter;
 // sends a serial message to either turn the led on or off
 async fn on_or_off(on: bool) {
@@ -21,18 +24,18 @@ async fn on_or_off(on: bool) {
 async fn arduino(param: String) -> Result<impl warp::Reply, warp::Rejection> {
     // Oh My God What did I just create
     // * derefrences the String param and as String supports derefrencing into str
-    // it return an str and then I refrence it again
+    // it returns an str and then I refrence it again
     // match &*param {
     match param.as_str() {
         "on" => {
-            info!("gonna turn arduino led on");
+            info!("turning arduino led on");
             println!("On");
             info!("Turned arduino led pin 13 on");
             on_or_off(true).await;
             Ok(warp::reply())
         }
         "off" => {
-            info!("gonna turn arduino led off");
+            info!("turning arduino led off");
             println!("OFF");
             info!("Turned arduino led pin 13 off");
             on_or_off(false).await;
@@ -53,6 +56,7 @@ async fn main() {
     tracing_subscriber::registry()
         .with(stdout_log.with_filter(LevelFilter::INFO))
         .init();
+
     info!("Doing stuff");
     let main = warp::get()
         .and(warp::path("main"))
@@ -64,6 +68,7 @@ async fn main() {
         .and(warp::path::param::<String>())
         .and(warp::path::end())
         .and_then(arduino);
+
     let routes = main.or(arduino);
 
     warp::serve(routes).run(([192, 168, 1, 9], 3030)).await;

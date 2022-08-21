@@ -1,0 +1,11 @@
+[package]
+name = "test-board"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+inputbot = { git = "https://github.com/obv-mikhail/InputBot", branch = "develop" }
+tokio-serial = "5.4.3"
+tokio = {version = "1.20.1", features = ["full"]}

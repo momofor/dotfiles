@@ -1,14 +1,11 @@
-/*!
- * Demonstration of writing to and reading from the serial console.
- */
 #![no_std]
 #![no_main]
 
-use arduino_hal::prelude::*;
+use arduino_hal::{delay_ms, prelude::*};
 use core::str;
 use panic_halt as _;
 
-use embedded_hal::serial::Read;
+use embedded_hal::{digital::v2::OutputPin, serial::Read};
 
 #[arduino_hal::entry]
 fn main() -> ! {
@@ -35,6 +32,16 @@ fn main() -> ! {
             led2.set_high();
         } else if b == 20 {
             led2.set_low();
+        } else if b == 10 {
+            led.set_high();
+            delay_ms(5);
+            led.set_low();
+        } else if b == 11 {
+            led.set_low();
+        } else if b == 12 {
+            led.set_high();
+            delay_ms(1000);
+            led.set_low();
         }
 
         if led.is_set_high() {
