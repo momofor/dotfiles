@@ -1051,15 +1051,15 @@ user_pref("userChrome.tabbar.one_liner.combine_navbar",     true); // Need one_l
 user_pref("userChrome.tabbar.one_liner.tabbar_first",       true); // Need one_liner
 user_pref("userChrome.tabbar.one_liner.responsive",         true); // Need one_liner
 
-user_pref("userChrome.autohide.tab",                        false);
-user_pref("userChrome.autohide.tab.opacity",                false);
-user_pref("userChrome.autohide.tab.blur",                   false);
-user_pref("userChrome.autohide.tabbar",                     true);
-user_pref("userChrome.autohide.navbar",                     true);
-user_pref("userChrome.autohide.bookmarkbar",                true);
-user_pref("userChrome.autohide.sidebar",                    true);
-user_pref("userChrome.autohide.fill_urlbar",                true);
+// user_pref("userChrome.autohide.tab",                        false);
+// user_pref("userChrome.autohide.tab.opacity",                false);
+// user_pref("userChrome.autohide.tab.blur",                   false);
+// user_pref("userChrome.autohide.tabbar",                     true);
+// user_pref("userChrome.autohide.navbar",                     true);
+// user_pref("userChrome.autohide.bookmarkbar",                true);
+// user_pref("userChrome.autohide.sidebar",                    true);
+// user_pref("userChrome.autohide.fill_urlbar",                true);
 user_pref("userChrome.autohide.back_button",                true);
 user_pref("userChrome.autohide.forward_button",             true);
-user_pref("userChrome.autohide.page_action",                true);
-user_pref("userChrome.autohide.toolbar_overlap",            true);
+// user_pref("userChrome.autohide.page_action",                true);
+// user_pref("userChrome.autohide.toolbar_overlap",            true);
