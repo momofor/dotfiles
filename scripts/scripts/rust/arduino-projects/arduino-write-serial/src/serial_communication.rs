@@ -1,7 +1,11 @@
+use serialport::SerialPort;
+
+static PORT: SerialPort = serialport::new("/dev/tty", 57600).open().unwrap();
+
 pub mod serial_communiaction {
     use std::sync::mpsc::Receiver;
     use tokio_serial::SerialPort;
-    pub fn turn_on_or_off(port: &mut Box<dyn SerialPort>, reex: &mut Receiver<u8>) {
+    pub fn turn_on_or_off(reex: &mut Receiver<u8>) {
         // let output: [u8; 1];
         // output = [status];
 
@@ -11,7 +15,7 @@ pub mod serial_communiaction {
             .unwrap()
             .block_on(async {
                 let output = reex.recv().unwrap();
-                port.write(&[output]).unwrap();
+                PORT.write(&[output]).unwrap();
             });
 
         // port.write(&output).expect("Write failed!");
