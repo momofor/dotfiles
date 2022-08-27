@@ -1,0 +1,37 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+LIBVA_DRIVER_NAME=i965
+LIBVA_DRIVERS_PATH=/usr/lib/dri
+QT_PLUGIN_PATH=/usr/lib/qt/plugins/
+QT_QPA_PLATFORM=wayland
+QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+GDK_BACKEND=wayland
+
+XDG_SESSION_TYPE=wayland
+XDG_SESSION_DESKTOP=sway
+XDG_CURRENT_DESKTOP=sway
+CLUTTER_BACKEND=wayland
+ECORE_EVAS_ENGINE=wayland
+ELM_ENGINE=wayland
+_JAVA_AWT_WM_NONREPARENTING=1
+NO_AT_BRIDGE=1
+
+
+MOZ_ENABLE_WAYLAND=1
+SWAY_CURSOR_THEME="Breeze"
+GTK_THEME=Nordic
+PATH=$HOME/.cargo/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
+EDITOR=nvim
+LD_LIBRARY_PATH=/usr/local/lib/
+LD_LIBRARY_PATH=/usr/local/lib64/:$LD_LIBRARY_PATH
+PIPEWIRE_LATENCY=256/48000
+_JAVA_AWT_WM_NONREPARENTING=1
+WX_CONFIG=/usr/bin/wx-config-gtk3-3.1
+CC=clang
+CXX=clang++
+LD=ld.lld
+SDL_VIDEODRIVER=wayland
