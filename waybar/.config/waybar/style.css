@@ -1,0 +1,147 @@
+
+@import "theme.css";
+
+*{
+    font-family: "Dejavu Sans";
+    font-size: 18px;
+    border: none;
+}
+
+#waybar {
+    background-color: @base;
+}
+
+#waybar.hidden {
+    opacity: 0;
+}
+
+#window {
+    font-family: "Fira Code Nerd Font";
+    min-width: 20rem;
+    border: 1px solid @surface0;
+    border-radius: 10em;
+    color: @sky;
+    padding: 0 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+window#waybar.empty {
+    border: none;
+}
+
+#workspaces {
+    background-color: @crust;
+    margin-left: 0.5em;
+    border: 1px solid @surface1 ;
+	border-radius: 10em;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    min-width: 1em;
+
+    color:@subtext1; 
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+}
+
+#workspaces button.focused {
+	color:@mantle;
+	background-color:@sky;
+	border-radius: 10em;
+}
+
+#workspaces button.urgent {
+    background-color: #c9a0dc;
+    color: #000000;
+}
+
+#mode {
+    margin-left: 1em;
+    border: 1px solid @surface0;
+    border-radius: 100px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#temperature,
+#backlight,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    color: @teal;
+    border-bottom: 1px solid @surface0;
+    /* color: ; */
+}
+
+#clock {
+    margin-left: 1em;
+    border: 1px solid @surface0;
+	margin-right:2em;
+    border-radius: 100px;
+    color: @flamingo;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#network {
+    border-left: 1px solid @surface0;
+    border-top: 1px solid @surface0;
+    border-radius: 100px 0 0 100px;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+    margin-right: 0.2em;
+    border-right: 1px solid #4c566a;
+    border-top: 1px solid #4c566a;
+    border-radius: 0 100px 100px 0;
+}
+
+#tray {
+    background-color: transparent;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}

@@ -1,0 +1,27 @@
+! 2021-04-23 https://www.reddit.com
+www.reddit.com##._1dJtiWITrnvIbQdXgYgdym.jEUbSHJJx8vISKpWirlfx
+
+! 2021-04-23 https://www.crazygames.com
+||images.crazygames.com/games/blob-opera/cover-1618230037270.png?auto=format,compress&q=75&cs=strip&ch=DPR&w=178&h=100&fit=crop$image
+
+! 2021-04-25 https://tex.stackexchange.com
+tex.stackexchange.com##.js-consent-banner.r16.l16.b16.bar-lg.fc-white.bg-black-750.sm\:p16.p32.sm\:w-auto.ws4.z-nav-fixed.ps-fixed.ff-sans
+
+! 2021-04-25 https://www.reddit.com
+www.reddit.com##._2aNPePbQCJ2-xyqF693-oh
+
+! Hide Reddit 'Top Broadcast Now' & 'Top livestream'
+reddit.com##a[href^="/rpan/"] > h3:has-text(/Top (livestream|broadcast)/):upward(7)
+
+! Block downloading. Please report back if does not work or causes issues
+||redd.it/*.m3u8^$xhr,domain=reddit.com
+||strapi.reddit.com^$xhr,domain=reddit.com
+
+! 2021-04-25 https://www.reddit.com
+www.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV
+www.reddit.com##._10wb7d3rGvj56Gcs4IQWL5._1FUNcfOeszr8eruqLxCMcR > div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV
+www.reddit.com##._3Im6OD67aKo33nql4FpSp_
+www.reddit.com##._1KrMye71CT332tKKKUWAj6
+www.reddit.com##._34dh2eyzMvJfjCBLeoWiDD
+www.reddit.com##._1oRQu-aolgpPPJDblUGTw5
+

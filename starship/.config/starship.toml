@@ -1,0 +1,27 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+format = "$all"
+
+# Replace the "❯" symbol in the prompt with "➜"
+#[character]                            # The name of the module we are configuring is "character"
+#success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+# Disable the package module, hiding it from the prompt completely
+#[package]
+#disabled = true
+[line_break]
+disabled = true
+# git status
+[git_status]
+conflicted = "⚔️ "
+ahead = "×${count}  "
+behind = "×${count} "
+diverged = " ×${ahead_count} 🐢 ×${behind_count}🔱 🏎️ 💨"
+untracked = "${count}x? "
+stashed = "📦 "
+modified = "${count}×! "
+staged = "${count}×s "
+renamed = "${count}×r "
+deleted = "${count}×✘ "
+style = "bold red"
+format = "[$all_status$ahead_behind]($style)"

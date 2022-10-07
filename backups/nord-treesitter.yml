@@ -1,0 +1,448 @@
+information:
+  name: nord-treesitter
+  background: dark
+  author: "momofor"
+
+palette:
+  fg: "#D8DEE9"
+  bg: "#2E3440"
+
+  nord0: "#2E3440"
+  nord1: "#3B4252"
+  nord2: "#434C5E"
+  nord3: "#4C566A"
+  nord3_gui_bright: "#616E88"
+  nord4: "#D8DEE9"
+  nord5: "#E5E9F0"
+  nord6: "#ECEFF4"
+  nord7: "#8FBCBB"
+  nord8: "#88C0D0"
+  nord9: "#81A1C1"
+  nord10: "#5E81AC"
+  nord11: "#BF616A"
+  nord12: "#D08770"
+  nord13: "#EBCB8B"
+  nord14: "#A3BE8C"
+  nord15: "#B48EAD"
+  line_grey: "#5C6370"
+  cursor_grey: "#2C323C"
+  special_grey: "#3B4048"
+
+highlights:
+  # Editor
+  CmpItemAbbr: "nord5"
+  CmpItemAbbrMatch: "nord8"
+  CmpItemAbbrMatchFuzzy: "nord7"
+  CmpItemKind: "nord4"
+  CmpItemMenu: "nord4"
+  ColorColumn: "- nord1"
+  Cursor: "nord0 nord4"
+  CursorLine: "- nord1"
+  Error: "nord4 nord11"
+  LineNr: "nord3"
+  MatchParen: "nord8 nord3"
+  NonText: "nord2"
+  Normal: "nord4 nord0"
+  Pmenu: "nord4 nord2"
+  PmenuSbar: "nord4 nord2"
+  PmenuSel: "nord8 nord3"
+  PmenuThumb: "nord8 nord3"
+  SpecialKey: "nord3"
+  #spell chekcs
+  #SpellBad: "nord11 nord0 u"
+  #SpellCap: "nord13 nord8 u"
+  #SpellLocal: "nord7 nord0 u" # nord5
+  #SpellRare: "nord9 nord0 u" # nord 6
+  #spell checks
+  Visual: "- nord2"
+  VisualNOS: "- nord2"
+  QuickFixLine: "bg nord13"
+  Terminal: "nord6 bg"
+
+  # Neovim checkhealth
+  healthError: "nord11 nord1"
+  healthSuccess: "nord14 nord1"
+  healthWarning: "nord13 nord1"
+
+  # Gutter
+  CursorColumn: "- nord1"
+  CursorLineNr: "nord4"
+  Folded: "nord3 nord0"
+  FoldColumn: "nord3 nord0"
+  SignColumn: "nord1 nord0"
+
+  # Navigation
+  Directory: "nord8"
+
+  # Prompt/Status
+  EndOfBuffer: "nord1"
+  ErrorMsg: "nord4 nord11"
+  ModeMsg: "nord4"
+  MoreMsg: "nord8"
+  Question: "nord4"
+  StatusLine: "nord6 nord3"
+  StatusLineNC: "nord4 nord3"
+  StatusLineTerm: "nord8 nord3"
+  StatusLineTermNC: "nord4 nord3"
+  WarningMsg: "nord0 nord13"
+  WildMenu: "nord8 nord1"
+
+  # Search (using high contrast search)
+  IncSearch: "nord0 nord13 u"
+  Search: "nord0 nord13"
+
+  # Tabs
+  TabLine: "nord4 nord1"
+  TabLineFill: "nord4 nord1"
+  TabLineSel: "nord8 nord3"
+
+  # Window
+  Title: "nord4"
+  VertSplit: "nord2 nord0"
+
+  # Language Base Groups
+  Boolean: "nord9"
+  Character: "nord14"
+  Comment: "nord3_gui_bright "
+  Conditional: "nord9"
+  # css after :
+  Constant: "nord7 - i "
+  #end
+  Define: "nord9"
+  Delimeter: "nord7 - b "
+  Exception: "nord9"
+  Float: "nord15"
+  Function: "nord7 - bi"
+  #tested
+  #nord8
+  Identifier: "nord9 - i"
+  #ended
+  Include: "nord9"
+  Keyword: "nord9"
+  Label: "nord9"
+  Number: "nord15"
+  Operator: "nord9"
+  PreProc: "nord9"
+  Repeat: "nord9"
+  # tested
+  Special: "nord7"
+  # ended
+  SpecialChar: "nord13"
+  SpecialComment: "nord8 - i"
+  Statement: "nord9 - b"
+  StorageClass: "nord9"
+  String: "nord14"
+  Structure: "nord13"
+  Tag: "nord8"
+  Todo: "nord13"
+  Type: "nord9"
+  Typedef: "nord9"
+  Macro: "nord9"
+  PreCondit: "nord9"
+
+  # Git
+  DiffAdd: "nord14 nord1"
+  DiffChange: "nord13 nord1"
+  DiffDelete: "nord11 nord1"
+  DiffText: "nord9 nord1"
+  diffAdded: "nord14 nord1"
+  diffChanged: "nord13 nord1"
+  diffRemoved: "nord11 nord1"
+  diffFileId: "nord10 - br"
+  diffFile: "special_grey"
+  diffNewFile: "nord14"
+  diffOldFile: "nord11"
+  gitconfigVariable: "nord7"
+  debugPc: "- nord7"
+  debugBreakpoint: "nord11 - r"
+
+  # -- Start Treesitter --
+  # Misc
+  # css
+  TSSelector: "nord7 - b"
+  # css end
+  TSError: "nord11 - u"
+  TSPunctDelimiter: "nord9"
+  TSPunctBracket: "nord7" # nord6
+  TSPunctSpecial: "nord7"
+  # Constants
+  #
+  TSConstant: "nord8 - i"
+  TSConstBuiltin: "nord9"
+  TSConstMacro: "nord7"
+  TSStringRegex: "nord14"
+  TSString: "nord14"
+  TSStringEscape: "nord8"
+  TSCharacter: "nord14"
+  TSNumber: "nord15"
+  TSBoolean: "nord9"
+  TSFloat: "nord15"
+  TSAnnotation: "nord12"
+  # test
+  TSAttribute: "nord8 "
+  #end
+  # tested
+  TSNamespace: "nord9"
+  # Functions
+  # test
+  TSFuncBuiltin: "nord9"
+  TSFunction: "nord8 - i "
+
+  TSFuncMacro: "nord8"
+  #end
+  TSParameter: "nord7 - b"
+  TSParameterReference: "nord9"
+  #test
+  TSMethod: "nord7"
+  #test
+  TSField: "nord7 - i"
+  #test
+  TSProperty: "nord8 "
+  #test
+  TSConstructor: "nord7"
+  # Keywords
+  TSConditional: "nord9"
+  TSRepeat: "nord15"
+  TSLabel: "nord8"
+  TSKeyword: "nord9"
+  TSKeywordFunction: "nord9"
+  TSKeywordOperator: "nord9"
+  TSOperator: "nord9"
+  TSException: "nord9"
+  # css odd attribute
+  TSType: "nord7"
+  TSTypeBuiltin: "nord9 - bi"
+  TSStructure: "#FF00FF"
+  TSInclude: "nord9"
+  # Variable
+  # test
+  TSVariable: "nord8 - i"
+  TSVariableBuiltin: "nord9 - i"
+  # Text
+  TSText: "nord9 - b"
+  TSStrong: "#FFFF00"
+  TSEmphasis: "#FFFF00"
+  TSUnderline: "#FFFF00"
+  TSTitle: "nord8"
+  TSLiteral: "nord14 - b"
+  TSURI: "nord7 - u"
+  # Tags
+  # Tag Name
+  TSTag: "nord9 "
+  #Tag Sign
+  TSTagDelimiter: "nord9 "
+  # -- END Treesitter --
+
+  # -- START Languages --
+  # HTML (keep consistent with Markdown, below)
+
+  htmlArg: "nord7"
+  htmlBold: "nord9 - b"
+  htmlB: "nord10 - b"
+  htmlEndTag: "nord10"
+  htmlH1: "nord7"
+  htmlH2: "nord7"
+  htmlH3: "nord7"
+  htmlH4: "nord7"
+  htmlH5: "nord7"
+  htmlH6: "nord7"
+  htmlItalic: "nord9 - i"
+  htmlLink: "nord7 - u"
+  htmlSpecialChar: "nord4 - b"
+  htmlSpecialTagName: "nord7"
+  htmlTag: "nord9"
+  htmlTagN: "nord14"
+  htmlTagName: "nord9 "
+  htmlTitle: "nord9 - b"
+  htmlClass: "nord15 - i"
+
+  #typescript
+
+  # Css
+  #cssAttributeSelector: "nord15 - b"
+  #cssDefinition: "nord15 - b"
+  # Id name
+  cssIdentifier: "nord14 - b"
+  # end
+  #cssStringQ: "nord14 - b"
+  #cssRuleset: "nord15 - b "
+  cssColor: "nord15"
+  #cssPropertyName: "nord15 - b - i"
+  #cssPlain: "nord15 - b - i"
+  # css class name
+  cssAttributeSpecificity: "nord10 - b"
+  #cssSelectorOp: "nord15 - b"
+  # end
+  # name of css definition
+  #cssSpecificity: "nord14 - b - i"
+  #end
+  #cssSelectorSpecificity: "nord13"
+  #cssDeclaration: "nord15"
+  #cssClassSelector: "nord14"
+  #cssTSType: "nord3"
+  #cssClassName: "nord8 - b"
+  #cssAttr: "nord4"
+  #cssVendor: "nord10"
+  # css thing
+  cssProp: "nord7 - i "
+  cssClassName: "nord9 - b"
+  #end
+  cssPseudoClass: "nord12"
+  cssPseudoClassId: "nord13 - b"
+  #cssIdSelector: "nord14"
+  #cssIdName: "nord14"
+  luaIdentifier: "nord8 - b"
+
+  #  Markdown (keep consistent with HTML, above)
+  markdownBlockquote: "line_grey"
+  markdownBold: "nord8 - b"
+  markdownCode: "nord14"
+  markdownCodeBlock: "nord14"
+  markdownCodeDelimiter: "nord14"
+  markdownH1: "nord10"
+  markdownH2: "nord10"
+  markdownH3: "nord10"
+  markdownH4: "nord10"
+  markdownH5: "nord10"
+  markdownH6: "nord10"
+  markdownHeadingDelimiter: "nord11"
+  markdownHeadingRule: "line_grey"
+  markdownId: "nord15"
+  markdownIdDeclaration: "nord10"
+  markdownIdDelimiter: "nord15"
+  markdownItalic: "nord15 - i"
+  markdownLinkDelimiter: "nord15"
+  markdownLinkText: "nord10"
+  markdownListMarker: "nord11"
+  markdownOrdenord11ListMarker: "nord11"
+  markdownRule: "line_grey"
+  markdownUrl: "nord7 - u"
+
+  # -- START CoC --
+  CocExplorerIndentLine: "line_grey"
+  CocExplorerBufferRoot: "nord7"
+  CocExplorerFileRoot: "nord7"
+  CocExplorerBufferFullPath: "line_grey"
+  CocExplorerFileFullPath: "line_grey"
+  CocExplorerBufferReadonly: "nord15"
+  CocExplorerBufferModified: "nord15"
+  CocExplorerBufferNameVisible: "nord12"
+  CocExplorerFileReadonly: "nord15"
+  CocExplorerFileModified: "nord15"
+  CocExplorerFileHidden: "line_grey"
+  CocExplorerHelpLine: "nord15"
+
+  CocErrorSign: "nord11"
+  CocWarningSign: "nord13"
+  CocInfoSign: "nord9"
+  CocHintSign: "nord13"
+
+  # -- START Easymotion --
+  EasyMotionTarget: "nord11 - b"
+  EasyMotionTarget2First: "nord11 - b"
+  EasyMotionTarget2Second: "nord11 - b"
+  EasyMotionShade: ""
+
+  # -- START Startify --
+  StartifyNumber: "nord8"
+  StartifySelect: "nord14"
+  StartifyBracket: "nord4"
+  StartifySpecial: "nord7"
+  StartifyVar: "nord7"
+  StartifyPath: "nord8"
+  StartifyFile: "nord14"
+  StartifySlash: "nord4"
+  StartifyHeader: "nord8"
+  StartifySection: "nord4"
+  StartifyFooter: "nord14"
+
+  # -- START WhichKey --
+  WhichKey: "nord15"
+  WhichKeySeperator: "nord14"
+  WhichKeyGroup: "nord7"
+  WhichKeyDesc: "nord7"
+
+  # GitGutter
+  GitGutterAdd: "nord14"
+  GitGutterChange: "nord13"
+  GitGutterChangeDelete: "nord11"
+  GitGutterDelete: "nord11"
+
+  # Fugitive
+  gitcommitDiscardedFile: "nord11"
+  gitcommitSelectedFile: "nord14"
+  gitcommitUntrackedFile: "nord11"
+
+  # Nvim LSP
+  LSPDiagnosticsWarning: "nord13"
+  LspDiagnosticsDefaultError: "nord11"
+  LspDiagnosticsInformation: "nord8"
+  LspDiagnosticsHint: "nord10"
+  LspDiagnosticsUnderlineWarning: "nord13"
+  LspDiagnosticsUnderlineError: "nord11"
+  LspDiagnosticsUnderlineInformation: "nord8"
+  LspDiagnosticsUnderlineHint: "nord10"
+
+  # Telesope
+  TelescopeSelection: "nord9" # selected item
+  TelescopeSelectionCaret: "nord4" # selection caret
+  TelescopeMultiSelection: "nord9" # multisections
+  TelescopeNormal:
+    "nord4" # floating windows created by telescope.
+    # Border highlight groups.
+  TelescopeBorder: "nord1"
+  TelescopePromptBorder: "nord1"
+  TelescopeResultsBorder: "nord1"
+  TelescopePreviewBorder: "nord1"
+  # Used for highlighting characters that you match.
+  TelescopeMatching: "nord8"
+  # Used for the prompt prefix
+  TelescopePromptPrefix: "nord7"
+
+  # barbar
+  BufferCurrentMod: "nord14"
+
+  # lspsaga
+  #LspSagaFinderSelection: ""
+  #LspFloatWinBorder : "nord3"
+  #LspSagaBorderTitle: ""
+  TargetWord: "nord9"
+  #ReferencesCount: ""
+  #DefinitionCount: ""
+  #TargetFileName: ""
+  #DefinitionIcon: ""
+  #ReferencesIcon: ""
+  #ProviderTruncateLine: ""
+  #SagaShadow: ""
+  #LspSagaFinderSelection: ""
+  #DiagnosticTruncateLine: ""
+  #DiagnosticError: ""
+  #DiagnosticWarning : ""
+  #DiagnosticInformation : ""
+  #DiagnosticHint: ""
+  #DefinitionPreviewTitle: ""
+  #LspSagaShTruncateLine : ""
+  #LspSagaDocTruncateLine: ""
+  #LineDiagTuncateLine: ""
+  LspSagaCodeActionTitle: "nord9 - b"
+  #LspSagaCodeActionTruncateLine : ""
+  LspSagaCodeActionContent: "nord8"
+  LspSagaRenamePromptPrefix: "nord4"
+  #LspSagaRenameBorder: ""
+  #LspSagaHoverBorder: ""
+  #LspSagaSignatureHelpBorder: ""
+  #LspSagaCodeActionBorder: ""
+  #LspSagaAutoPreview: ""
+  #LspSagaDefPreviewBorder: ""
+  #LspLinesDiagBorde: ""
+  #makefiles
+  makeCommands: "nord9"
+  makeSpecial: "nord15"
+
+  # Neorg
+  NeorgMarkupBold: "- - b"
+  Neorg__notfound: "nord0"
+  NeorgDefinitionTitle: "nord8 - b"
+  NeorgDefinitionContent: "nord14"
+  NeorgMarkupUnderline: "- - u"
+  NeorgMarkupItalic: "- - i"

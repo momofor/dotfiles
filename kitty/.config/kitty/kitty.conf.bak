@@ -1,0 +1,120 @@
+# Fully featured
+# font_family         FiraCode Nerd Font Mono
+# italic_font			Hack Italic Nerd Font Complete Mono
+# bold_font           Fira Code SemiBold Nerd Font Complete Mono
+# bold_italic_font    Hack Bold Italic Nerd Font Complete Mono
+font_family			Fira Code Regular
+italic_font			Hack FC Ligatured Italic
+bold_font           auto
+bold_italic_font	Hack FC Ligatured BoldItalic
+
+# Font size (in pts)
+font_size        16
+
+font_features FiraCode-Regular +cv28 +ss09 +ss05
+
+tab_bar_style powerline
+
+
+active_tab_foreground   #4c566a
+active_tab_background   #88c0d0
+active_tab_font_style   bold-italic
+inactive_tab_foreground #d8dee9
+inactive_tab_background #434c5e
+inactive_tab_font_style normal
+# tab_bar_background #4c566a
+
+
+# The amount the font size is changed by (in pts) when increasing/decreasing
+# the font size in a running terminal.
+
+# Nord theme - ported from https://github.com/arcticicestudio/nord-hyper
+
+#disble cursor blinking
+cursor_blink_interval 0
+cursor_shape block
+
+# sync frame rate to monitor for no screen tearing
+sync_to_monitor yes
+#delay
+# input_delay 2
+background_opacity .95
+enable_audio_bell no
+
+# window_padding_width 2
+
+allow_hyperlinks yes
+
+#key bindings
+# kitty_mod ctrl+shift
+
+map ctrl+a>n next_tab
+map ctrl+a>b previous_tab
+map ctrl+a>d close_tab
+map ctrl+a>p previous_tab
+
+# the shell that starts with kitty
+shell "/usr/bin/fish"
+symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E62F,U+E700-U+E7C5,U+F000-U+F2E0,U+F300-U+F31C,U+F400-U+F4A9,U+F500-U+F8FF Symbols Nerd Font
+
+
+# enabled_layouts tall:bias=50;full_size=1;mirrored=false
+# enabled_layouts fat:bias=50;full_size=1;mirrored=false
+
+map ctrl+[ layout_action decrease_num_full_size_windows
+map ctrl+] layout_action increase_num_full_size_windows
+
+# map f1 toggle_layout tall
+# map f2 toggle_layout grid
+# map f3 toggle_layout stack
+
+
+enabled_layouts splits:split_axis=horizontal
+
+map ctrl+a>- launch --location=hsplit --cwd=current
+map ctrl+a>\ launch --location=vsplit --cwd=current
+map F7 layout_action rotate
+
+map ctrl+b>k move_window up
+map ctrl+b>l move_window left
+map ctrl+b>h move_window right
+map ctrl+b>j move_window down
+
+
+map ctrl+a>h neighboring_window left
+map ctrl+a>l neighboring_window right
+map ctrl+a>k neighboring_window up
+map ctrl+a>j neighboring_window down
+
+map ctrl+a>t new_tab
+
+map ctrl+a>c launch --type=tab --cwd=current
+
+map ctrl+left resize_window narrower
+map ctrl+right resize_window wider
+map ctrl+up resize_window taller
+map ctrl+down resize_window shorter
+
+
+map ctrl+a>f focus_visible_window
+
+
+wheel_scroll_multiplier 10.0
+dynamic_background_opacity true
+map ctrl+c copy_and_clear_or_interrupt
+allow_remote_control yes
+
+# scrollback_pager nvim -c 'setl filetype=terminal' -
+# scrollback_pager nvim -c 'setlocal nonumber nolist showtabline=0 foldcolumn=0' -c "autocmd VimEnter * normal G" -
+# scrollback_pager nvim -c "set nonumber nolist showtabline=0 foldcolumn=0" -c "autocmd TermOpen * normal G" -c "silent! write /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
+scrollback_lines 10000
+scrollback_pager nvim -c "set foldcolumn=0" -c "autocmd TermOpen * normal G" -c "autocmd TermClose * :!rm /tmp/kitty_scrollback_buffer" -c "silent! write /tmp/kitty_scrollback_buffer | terminal cat /tmp/kitty_scrollback_buffer -"
+# map f1 launch --stdin-source=@screen_scrollback --stdin-add-formatting less +G -R
+# map f1 launch --stdin-source=@screen_scrollback --stdin-add-formatting nvim -c 'setl filetype=terminal' -
+shell_integration enabled
+
+
+# BEGIN_KITTY_THEME
+# Nord
+include current-theme.conf
+# END_KITTY_THEME
