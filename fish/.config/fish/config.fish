@@ -49,7 +49,6 @@ set -x MOZ_ENABLE_WAYLAND 1
 set -x SWAY_CURSOR_THEME "Breeze"
 # set -x WAYLAND_DISPLAY wayland-0
 # set -x DISPLAY :0
-set -x GTK_THEME Nordic
 set -x PATH $HOME/.cargo/bin:$PATH
 set -x PATH $HOME/.local/bin:$PATH
 set -x PATH $HOME/.other/git/eww/bin:$PATH
