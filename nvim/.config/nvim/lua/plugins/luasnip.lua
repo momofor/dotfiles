@@ -9,6 +9,9 @@ local f = ls.function_node
 local sn = ls.sn
 local d = ls.dynamic_node
 
+local ts_locals = require("nvim-treesitter.locals")
+local ts_utils = require("nvim-treesitter.ts_utils")
+
 ls.config.set_config({
 	history = true,
 	-- Update more often, :h events for more info.
@@ -69,10 +72,21 @@ local change_or_smth = function(index, type)
 		end
 	end, { index })
 end
+local eq_type = { inline_formula = true, displayed_equation = true }
 
-local get_result_type = function(position)
-	return d(position, function()
-		return sn(nil, t("example"))
+local set_completion = function(index)
+	return d(index, function()
+		local cur_node = ts_utils.get_node_at_cursor()
+
+		local node = cur_node
+
+		while node do
+			if eq_type[node:type()] then
+				return sn(nil, fmt([[\{{ {} \}}]], { i(1) }))
+			end
+			node = node:parent()
+		end
+		return sn(nil, fmt([[$\{{ {} \}}$]], { i(1) }))
 	end, {})
 end
 
@@ -101,7 +115,11 @@ ls.add_snippets("tex", {
 		)
 	),
 	s("$", fmt("${}$", { i(1) })),
+	s("eq", fmt("\\equiv{}", { i(1) })),
+	s("rar", fmt("\\rightarrow{}", i(1))),
+	s("st", fmt("{}", set_completion(1))),
 })
+
 vim.keymap.set("i", "<c-o>", function()
 	ls.expand()
 end)

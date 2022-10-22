@@ -45,6 +45,7 @@ return require("packer").startup {
 				require "plugins.nvimtree-config"
 			end,
 			module = "nvim-web-devicons",
+			cmd = "NvimTreeToggle",
 		}
 		use { "romgrk/barbar.nvim", event = "BufRead" }
 		use "neovim/nvim-lspconfig"
@@ -101,13 +102,13 @@ return require("packer").startup {
 			end,
 			event = "BufRead",
 		}
-		use {
-			"ahmedkhalf/lsp-rooter.nvim",
-			config = function()
-				require("lsp-rooter").setup()
-			end,
-			event = "BufEnter",
-		}
+		-- use {
+		-- 	"ahmedkhalf/lsp-rooter.nvim",
+		-- 	config = function()
+		-- 		require("lsp-rooter").setup()
+		-- 	end,
+		-- 	event = "BufEnter",
+		-- }
 
 		use {
 			"simrat39/rust-tools.nvim",
@@ -190,7 +191,7 @@ return require("packer").startup {
 				require("inc_rename").setup()
 			end,
 		}
-		use { "tversteeg/registers.nvim", event = "InsertEnter" }
+		-- use { "tversteeg/registers.nvim", event = "InsertEnter" }
 		use {
 			"kylechui/nvim-surround",
 			config = function()
@@ -214,6 +215,24 @@ return require("packer").startup {
 			as = "catppuccin",
 			config = function()
 				require "plugins.catpuccin"
+			end,
+		}
+		use {
+			"folke/lua-dev.nvim",
+			config = function()
+				require("lua-dev").setup {}
+			end,
+			filetype = "lua",
+		}
+		use {
+			"tamton-aquib/duck.nvim",
+			config = function()
+				vim.keymap.set("n", "<leader>dd", function()
+					require("duck").hatch "ඞ"
+				end, {})
+				vim.keymap.set("n", "<leader>dk", function()
+					require("duck").cook()
+				end, {})
 			end,
 		}
 	end,

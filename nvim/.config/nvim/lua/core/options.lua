@@ -32,6 +32,7 @@ local options = {
 	termguicolors = true,
 	timeoutlen = 300,
 	updatetime = 100, -- Faster completion
+	conceallevel = 2,
 }
 
 vim.opt.shortmess:append "c"
