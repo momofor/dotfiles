@@ -5,6 +5,9 @@
 # Uncomment this to still load settings configured via autoconfig.yml
 config.load_autoconfig()
 
+import catppuccin
+
+
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
 # The underlying WebKit version (set to a fixed value   with
@@ -111,7 +114,6 @@ config.bind(";vs", "open -w")
 
 
 #############################################################################################################
-######################################### NORD THEME ########################################################
 # c.tabs.show = 'always'
 # c.tabs.padding = {
 #     "left": 5,
@@ -141,7 +143,6 @@ c.content.blocking.adblock.lists = [
     "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
     "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
 ]
-config.source("nord-qutebrowser.py")
 c.content.cookies.accept = "never"
 c.content.cookies.store = False
 
@@ -151,3 +152,4 @@ c.content.blocking.method = "adblock"
 config.set("colors.webpage.darkmode.enabled", False)
 config.set("auto_save.session", True)
 config.set("scrolling.smooth", True)
+catppuccin.setup(c, "macchiato")

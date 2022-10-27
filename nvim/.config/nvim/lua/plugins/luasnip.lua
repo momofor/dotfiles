@@ -9,6 +9,10 @@ local f = ls.function_node
 local sn = ls.sn
 local d = ls.dynamic_node
 
+local time_today = function()
+	return os.date()
+end
+
 local ts_locals = require("nvim-treesitter.locals")
 local ts_utils = require("nvim-treesitter.ts_utils")
 
@@ -93,6 +97,9 @@ end
 ls.add_snippets("rust", {
 	s("prl", fmt([[println!({},{});]], { i(1), i(2) })),
 })
+ls.add_snippets("all", {
+	s("today", fmt("{}", { time_today() })),
+})
 
 ls.add_snippets("lua", {
 	s(
@@ -116,7 +123,7 @@ ls.add_snippets("tex", {
 	),
 	s("$", fmt("${}$", { i(1) })),
 	s("eq", fmt("\\equiv{}", { i(1) })),
-	s("rar", fmt("\\rightarrow{}", i(1))),
+	s("rar", fmt("\\rightarrow{} ", i(1))),
 	s("st", fmt("{}", set_completion(1))),
 })
 

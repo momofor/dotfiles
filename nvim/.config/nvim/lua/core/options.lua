@@ -37,13 +37,8 @@ local options = {
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.shell = "/usr/bin/bash"
-
--- vim.opt.do_filetype_lua = 1
--- vim.opt.did_load_filetypes = 0
-
---[[ vim.opt.spell = true
-vim.opt.spelllang = {'en_us'} ]]
+vim.opt.shell = "/usr/bin/dash"
+vim.opt.spell = true
 
 vim.api.nvim_create_augroup("YankHighlight", {})
 vim.api.nvim_create_autocmd("TextYankPost", {

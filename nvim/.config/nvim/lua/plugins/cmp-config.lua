@@ -71,8 +71,8 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" }, -- neovim lsp completion
 		{ name = "luasnip" }, -- luasnip snippets completion
+		{ name = "nvim_lua" },
 		{ name = "crates" }, -- rust crates
-		{ name = "nvim_lua" }, -- neovim api completion
 		{ name = "path" }, -- path completion
 		{ name = "buffer" }, -- local buffer completion
 		{ name = "spell" }, -- prose completion
