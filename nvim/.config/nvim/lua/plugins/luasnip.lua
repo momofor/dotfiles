@@ -78,29 +78,21 @@ local change_or_smth = function(index, type)
 end
 local eq_type = { inline_formula = true, displayed_equation = true }
 
-local set_completion = function(index)
-	return d(index, function()
-		local cur_node = ts_utils.get_node_at_cursor()
-
-		local node = cur_node
-
-		while node do
-			if eq_type[node:type()] then
-				return sn(nil, fmt([[\{{ {} \}}]], { i(1) }))
-			end
-			node = node:parent()
-		end
-		return sn(nil, fmt([[$\{{ {} \}}$]], { i(1) }))
-	end, {})
-end
-
-ls.add_snippets("rust", {
-	s("prl", fmt([[println!({},{});]], { i(1), i(2) })),
-})
-ls.add_snippets("all", {
-	s("today", fmt("{}", { time_today() })),
-})
-
+-- local if_in_equation = function(index, if_in, if_out)
+-- 	return d(index, function()
+-- 		local cur_node = ts_utils.get_node_at_cursor()
+--
+-- 		local node = cur_node
+--
+-- 		while node do
+-- 			if eq_type[node:type()] then
+-- 				return if_in
+-- 			end
+-- 			node = node:parent()
+-- 		end
+-- 		return if_out
+-- 	end, {})
+-- end
 ls.add_snippets("lua", {
 	s(
 		"nreq",
@@ -124,7 +116,39 @@ ls.add_snippets("tex", {
 	s("$", fmt("${}$", { i(1) })),
 	s("eq", fmt("\\equiv{}", { i(1) })),
 	s("rar", fmt("\\rightarrow{} ", i(1))),
-	s("st", fmt("{}", set_completion(1))),
+	s("st", fmt([[\{{ {} \}}]], { i(1) })),
+	s("pfn", fmt("+\\infty{}", { i(1) })),
+	s("nfn", fmt("-\\infty{}", { i(1) })),
+	s("ir", fmt("[{};{}]", { i(1), i(2) })),
+	s("frac", fmt([[\frac{{{}}}{{{}}}]], { i(1), i(2) })),
+	s(
+		"graph",
+		fmt(
+			[[
+\begin{{tikzpicture}}
+	\begin{{axis}}[axis lines=middle,ymin = -10,ymax=10,xmin=-10,xmax=10]
+		\addplot[samples=500,color=red]{{{}}};
+	\end{{axis}}
+\end{{tikzpicture}}
+	]],
+			{ i(1) }
+		)
+	),
+	s(
+		"variations",
+		fmt(
+			[[
+\begin{{tikzpicture}}
+   \tkzTabInit[lgt=3]
+   {{$x$ / 1 , ${}$ / 2}}
+   {{$-\infty$,{},$+\infty$}}
+   \tkzTabVar
+   {{{}}}
+\end{{tikzpicture}}
+	]],
+			{ i(1), i(2), i(3) }
+		)
+	),
 })
 
 vim.keymap.set("i", "<c-o>", function()

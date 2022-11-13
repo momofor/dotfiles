@@ -47,7 +47,7 @@ input "type:keyboard" {
 
 	# xkb_layout us 
 	# xkb_variant dvorak-l
-    xkb_options grp:ralt_rshift_toggle,caps:swapescape
+    xkb_options grp:ralt_rshift_toggle,caps:swapescape,compose:ralt
 
     xkb_numlock enable
     repeat_delay 150
@@ -341,11 +341,13 @@ bindsym {
 	XF86AudioNext exec playerctl next
 	XF86AudioPrev exec playerctl previous
 	XF86Search exec $menu
+	XF86Explorer exec playerctl next
 	XF86LaunchA exec playerctl play-pause
 }
 
 bindsym $mod+r mode "resize"
 bindsym $mod+s mode "spawn"
+bindsym $mod+g exec qutebrowser
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
 

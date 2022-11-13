@@ -31,14 +31,15 @@ local options = {
 	signcolumn = "yes", -- can be set to number
 	termguicolors = true,
 	timeoutlen = 300,
-	updatetime = 100, -- Faster completion
+	updatetime = 200, -- Faster completion
 	conceallevel = 2,
+	undofile = true,
 }
 
 vim.opt.shortmess:append "c"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "/usr/bin/dash"
-vim.opt.spell = true
+-- vim.opt.spell = true
 
 vim.api.nvim_create_augroup("YankHighlight", {})
 vim.api.nvim_create_autocmd("TextYankPost", {

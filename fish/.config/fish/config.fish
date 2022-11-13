@@ -1,4 +1,4 @@
-# Put system-wide fish configuration entries here
+
 # or in .fish files in conf.d/
 # Files in conf.d can be overridden by the user
 # by files with the same name in $XDG_CONFIG_HOME/fish/conf.d
@@ -55,13 +55,15 @@ set -x PATH $HOME/.other/git/eww/bin:$PATH
 set -x EDITOR nvim
 set -x LD_LIBRARY_PATH /usr/local/lib/
 set -x LD_LIBRARY_PATH /usr/local/lib64/:$LD_LIBRARY_PATH
+set -x LIBTORCH /home/momofor/.other/git/libtorch
+set -x LD_LIBRARY_PATH $LIBTORCH/lib:$LD_LIBRARY_PATH
 set -x PIPEWIRE_LATENCY 256/48000
 set -x SDL_VIDEODRIVER wayland
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x BEMENU_OPTS "-b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0"
 set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
-set -x CC clang
-set -x CXX clang++
+# set -x CC clang
+# set -x CXX clang++
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
 
@@ -127,6 +129,7 @@ alias mirror="wget -mkxKE"
 alias ob="obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias tachi="docker run -p 127.0.0.1:4567:4567 -v /home/momofor/.other/tachidesk-data:/./home/suwayomi/.local/share/Tachidesk ghcr.io/suwayomi/tachidesk"
 alias record="wf-recorder -c h264_vaapi -d /dev/dri/renderD128 --audio -f"
+alias init-julia="julia --project=$PWD -e 'using Pkg; Pkg.instantiate()'"
 
 
 

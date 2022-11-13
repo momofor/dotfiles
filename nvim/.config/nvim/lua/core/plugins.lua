@@ -212,6 +212,14 @@ return require("packer").startup {
 			end,
 			event = "BufEnter",
 		}
+		use {
+			"williamboman/mason.nvim",
+			config = function()
+				require("mason").setup()
+			end,
+		}
+
+		use { "mfussenegger/nvim-dap" }
 	end,
 	config = {
 		display = {
