@@ -71,3 +71,6 @@ utils.nnoremap("<leader>fr", function()
 end)
 
 utils.nnoremap("<leader>at", ":term fish<CR>")
+utils.nnoremap("<leader>sr", function()
+	require("ssr").open()
+end)

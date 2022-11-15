@@ -201,10 +201,6 @@ return require("packer").startup {
 			end,
 		}
 		use {
-			"folke/neodev.nvim",
-			filetype = "lua",
-		}
-		use {
 			"phaazon/hop.nvim",
 			branch = "v2", -- optional but strongly recommended
 			config = function()
@@ -218,8 +214,6 @@ return require("packer").startup {
 				require("mason").setup()
 			end,
 		}
-
-		use { "mfussenegger/nvim-dap" }
 	end,
 	config = {
 		display = {

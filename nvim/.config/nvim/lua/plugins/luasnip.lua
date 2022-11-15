@@ -8,6 +8,7 @@ local t = ls.text_node
 local f = ls.function_node
 local sn = ls.sn
 local d = ls.dynamic_node
+local uls = require("plugins.luasnip_utils")
 
 local time_today = function()
 	return os.date()
@@ -39,7 +40,7 @@ ls.config.set_config({
 	enable_autosnippets = true,
 	-- mapping for cutting selected text so it's usable as SELECT_DEDENT,
 	-- SELECT_RAW or TM_SELECTED_TEXT (mapped via xmap).
-	store_selection_keys = "<Tab>",
+	-- store_selection_keys = "<Tab>",
 	-- luasnip uses this function to get the currently active filetype. This
 	-- is the (rather uninteresting) default, but it's possible to use
 	-- eg. treesitter for getting the current filetype by setting ft_func to
@@ -76,23 +77,17 @@ local change_or_smth = function(index, type)
 		end
 	end, { index })
 end
-local eq_type = { inline_formula = true, displayed_equation = true }
+local eq_type = { inline_formula = true, displayed_equation = true, math_environment = true }
 
--- local if_in_equation = function(index, if_in, if_out)
--- 	return d(index, function()
--- 		local cur_node = ts_utils.get_node_at_cursor()
---
--- 		local node = cur_node
---
--- 		while node do
--- 			if eq_type[node:type()] then
--- 				return if_in
--- 			end
--- 			node = node:parent()
--- 		end
--- 		return if_out
--- 	end, {})
--- end
+local function in_equation(index)
+	return d(index, function()
+		if uls.in_mathzone() then
+			return sn(nil, t("true"))
+		end
+		return sn(nil, t("false"))
+	end, {})
+end
+
 ls.add_snippets("lua", {
 	s(
 		"nreq",
@@ -149,7 +144,35 @@ ls.add_snippets("tex", {
 			{ i(1), i(2), i(3) }
 		)
 	),
-})
+	s("mk", fmt("${}$", { i(1) })),
+	s("dm", fmt([[ \[{}\.] ]], { i(1) })),
+	s("tot", fmt("{}", { in_equation(1) })),
+
+	s(
+		{ trig = "(%a)(%d)", regTrig = true, name = "auto subscript", dscr = "hi" },
+		fmt([[<>_<>]], {
+			f(function(_, snip)
+				return snip.captures[1]
+			end),
+			f(function(_, snip)
+				return snip.captures[2]
+			end),
+		}, { delimiters = "<>" }),
+		{ condition = uls.in_mathzone }
+	),
+	s(
+		{ trig = "(%a)_(%d%d)", regTrig = true, name = "auto subscript 2", dscr = "auto subscript for 2+ digits" },
+		fmt([[<>_{<>}]], {
+			f(function(_, snip)
+				return snip.captures[1]
+			end),
+			f(function(_, snip)
+				return snip.captures[2]
+			end),
+		}, { delimiters = "<>" }),
+		{ condition = uls.in_mathzone }
+	),
+}, { type = "autosnippets" })
 
 vim.keymap.set("i", "<c-o>", function()
 	ls.expand()
