@@ -61,7 +61,6 @@ return require("packer").startup {
 			config = function()
 				require "plugins.lualine-config"
 			end,
-			requires = { "arkav/lualine-lsp-progress" },
 			event = "BufRead",
 		}
 

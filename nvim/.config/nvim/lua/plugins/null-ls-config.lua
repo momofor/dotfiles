@@ -9,10 +9,8 @@ local sources = {
 	formatting.prettierd,
 	code_actions.gitsigns,
 	formatting.stylua,
-	diagnostics.chktex,
 	formatting.black,
 	diagnostics.hadolint,
-	null_ls.builtins.formatting.latexindent,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

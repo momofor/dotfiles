@@ -8,6 +8,7 @@ local t = ls.text_node
 local f = ls.function_node
 local sn = ls.sn
 local d = ls.dynamic_node
+local rep = require("luasnip.extras").rep
 local uls = require("plugins.luasnip_utils")
 
 local time_today = function()
@@ -37,7 +38,7 @@ ls.config.set_config({
 	ext_base_prio = 300,
 	-- minimal increase in priority.
 	ext_prio_increase = 1,
-	enable_autosnippets = true,
+	-- enable_autosnippets = true,
 	-- mapping for cutting selected text so it's usable as SELECT_DEDENT,
 	-- SELECT_RAW or TM_SELECTED_TEXT (mapped via xmap).
 	-- store_selection_keys = "<Tab>",
@@ -57,12 +58,6 @@ vim.keymap.set("i", "<c-l>", function()
 		ls.change_choice(1)
 	end
 end)
-
-local same = function(index)
-	return f(function(arg)
-		return arg[1]
-	end, { index })
-end
 
 local change_or_smth = function(index, type)
 	return f(function(import_name)
@@ -105,17 +100,13 @@ ls.add_snippets("tex", {
 			[[\begin{{{1}}}
 	{2}
 \end{{{3}}}]],
-			{ i(1), i(2), same(1) }
+			{ i(1), i(2), rep(1) }
 		)
 	),
 	s("$", fmt("${}$", { i(1) })),
-	s("eq", fmt("\\equiv{}", { i(1) })),
-	s("rar", fmt("\\rightarrow{} ", i(1))),
-	s("st", fmt([[\{{ {} \}}]], { i(1) })),
 	s("pfn", fmt("+\\infty{}", { i(1) })),
 	s("nfn", fmt("-\\infty{}", { i(1) })),
 	s("ir", fmt("[{};{}]", { i(1), i(2) })),
-	s("frac", fmt([[\frac{{{}}}{{{}}}]], { i(1), i(2) })),
 	s(
 		"graph",
 		fmt(
@@ -145,9 +136,10 @@ ls.add_snippets("tex", {
 		)
 	),
 	s("mk", fmt("${}$", { i(1) })),
-	s("dm", fmt([[ \[{}\.] ]], { i(1) })),
+	s("dm", fmt([[ \[{}.\] ]], { i(1) })),
 	s("tot", fmt("{}", { in_equation(1) })),
-
+})
+ls.add_snippets("tex", {
 	s(
 		{ trig = "(%a)(%d)", regTrig = true, name = "auto subscript", dscr = "hi" },
 		fmt([[<>_<>]], {
@@ -172,6 +164,11 @@ ls.add_snippets("tex", {
 		}, { delimiters = "<>" }),
 		{ condition = uls.in_mathzone }
 	),
+	s("vec", fmt([[ \overrightarrow{{{}}} ]], { i(1) }), { condition = uls.in_mathzone }),
+	s("impl", t([[\Rightarrow{}]]), { condition = uls.in_mathzone }),
+	s("eqv", t([[\Longleftrightarrow{}]]), { condition = uls.in_mathzone }),
+	s("frac", fmt([[\frac{{{}}}{{{}}}]], { i(1), i(2) }), { condition = uls.in_mathzone }),
+	s("st", fmt([[\set{{{}}}]], { i(1) }), { condition = uls.in_mathzone }),
 }, { type = "autosnippets" })
 
 vim.keymap.set("i", "<c-o>", function()

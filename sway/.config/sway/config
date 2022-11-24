@@ -43,11 +43,9 @@ set $guieditor ~/.other/git-stuff/neovide/target/release/neovide --srgb
 
 
 input "type:keyboard" {
-    xkb_layout dvp,dvorak,us
+    xkb_layout dvp,dvorak,us,ar
 
-	# xkb_layout us 
-	# xkb_variant dvorak-l
-    xkb_options grp:ralt_rshift_toggle,caps:swapescape,compose:ralt
+    xkb_options grp:rctrl_rshift_toggle,caps:swapescape,compose:ralt
 
     xkb_numlock enable
     repeat_delay 150

@@ -70,7 +70,4 @@ utils.nnoremap("<leader>fr", function()
 	utils.Search("< SwayRC >", "~/.config/sway/")
 end)
 
-utils.nnoremap("<leader>at", ":term fish<CR>")
-utils.nnoremap("<leader>sr", function()
-	require("ssr").open()
-end)
+utils.nnoremap("<leader>mk", ":TexlabForward<CR>")
