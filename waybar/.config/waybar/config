@@ -9,17 +9,29 @@
 //                            \/__/   
 //
 // https://github.com/Jorgedeveloopzz                     
-
 {
-    "position": "top", 
-    "height": 30, 
-
-    // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "battery","backlight","pulseaudio", "tray"],
-
-    // Modules configuration
+	"position": "top",
+	"height": 30,
+	// Choose the order of the modules
+	"modules-left": ["sway/workspaces", "sway/window"],
+	// "modules-left": [
+		// "wlr/workspaces",
+		// "hyprland/window"
+	// ],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"network",
+		"cpu",
+		"memory",
+		"temperature",
+		"battery",
+		"backlight",
+		"pulseaudio",
+		"tray"
+	],
+	// Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
          "format":"{icon}",
@@ -37,57 +49,54 @@
          }
      },
 
-     "sway/window": {
-	 "format": "{}"
-     },
-
-    "clock": {
-        "format": "  {:%a %d/%m/%Y - %T}",
-    	"interval": 1
-    },
-    
-    "network": {
-        "format-wifi": "  {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname}  {bandwidthUpBits}  {bandwidthDownBits}",
-        "format-linked": " (No IP) ",
-        "format-disconnected": "睊",
-        "interval": 1
-    },
-    
-    "cpu": {
-        "format": "{usage}% ",
-        "interval": 1
-    },
-    
-    "memory": {
-        "format": "{percentage}% ",
-        "interval": 1
-    },
-    
-        "pulseaudio": {
-            "format": "{icon} {volume}%",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": "ﱝ {icon} {format_source}",
-            "format-muted": "ﱝ",
-            "format-source": "{volume}% ",
-            "format-source-muted": "",
-            "format-icons": {
-                "headphones": "",
-                "handsfree": "",
-                "headset": "",
-                "phone": "",
-                "portable": "",
-                "car": "",
-                "default": ["奄", "奔", "墳"]
-            },
-            "on-click": "pavucontrol"
-        },
-    
-    
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
+	"sway/window": {
+		"format": "{}"
+	},
+	"clock": {
+		"format": "  {:%a %d/%m/%Y - %T}",
+		"interval": 1
+	},
+	"network": {
+		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-ethernet": " {ifname}  {bandwidthUpBits}  {bandwidthDownBits}",
+		"format-linked": " (No IP) ",
+		"format-disconnected": "睊",
+		"interval": 1
+	},
+	"cpu": {
+		"format": "{usage}% ",
+		"interval": 1
+	},
+	"memory": {
+		"format": "{percentage}% ",
+		"interval": 1
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": "ﱝ {icon} {format_source}",
+		"format-muted": "ﱝ",
+		"format-source": "{volume}% ",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"奄",
+				"奔",
+				"墳"
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"tray": {
+		// "icon-size": 21,
+		"spacing": 10
+	},
 	"battery": {
 		"bat": "BAT1",
 		"interval": 30,
@@ -96,21 +105,32 @@
 			"critical": 15
 		},
 		"format": "{capacity}% {icon}",
-		"format-icons": ["", "", "", "", ""],
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
 		"max-length": 25
 	},
 	"backlight": {
 		"device": "intel_backlight",
 		"format": "{percent}% {icon}",
-		"format-icons": ["", ""]
+		"format-icons": [
+			"",
+			""
+		]
 	},
- "temperature": {
-    // "thermal-zone": 2,
-    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    // "critical-threshold": 80,
-    // "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
+	// "hyprland/window": {
+		// "format": "👉 {}",
+		// "separate-outputs": true
+	// },
+	"temperature": {
+		// "thermal-zone": 2,
+		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		// "critical-threshold": 80,
+		// "format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C "
+	}
 }
-
-}
-    
