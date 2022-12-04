@@ -1,6 +1,6 @@
 local prequire = require("core._utils").prequire
 
-prequire("core.hotkeys")
+-- prequire("core.hotkeys")
 prequire("core.options")
 prequire("core.plugins")
 prequire("core.lsp-hotkeys")

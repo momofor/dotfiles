@@ -1,6 +1,5 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+local utils = require("core._utils")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local opts = {
 	tools = { -- rust-tools options
@@ -177,6 +176,7 @@ local opts = {
 		standalone = true,
 		cmd = { "/usr/bin/rustup", "run", "nightly", "rust-analyzer" },
 		capabilities = capabilities,
+		on_attach = utils.on_attach,
 	}, -- rust-analyer options
 
 	-- debugging stuff

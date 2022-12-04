@@ -14,8 +14,8 @@ function M.TableConcat(t1, t2)
 end
 
 --- @param keys string key to trigger action
----@param action string action to be triggered
----@param options table || nil table of option can be nil
+---@param action function | string action to be triggered
+---@param options? table | nil table of option can be nil
 function M.nnoremap(keys, action, options)
 	if options == nil then
 		options = { noremap = true }
@@ -72,6 +72,38 @@ end
 
 function M.Search(title, cwd)
 	require("telescope.builtin").find_files { prompt_title = title, cwd = cwd }
+end
+
+M.on_attach = function(client, bufnr)
+	local bufopt = { buffer = bufnr }
+	M.nnoremap("gd", function()
+		vim.lsp.buf.definition()
+	end, bufopt)
+	M.nnoremap("gD", function()
+		vim.lsp.buf.declaration()
+	end, bufopt)
+	M.nnoremap("gr", function()
+		vim.lsp.buf.references()
+	end, bufopt)
+	M.nnoremap("gi", function()
+		vim.lsp.buf.implementation()
+	end, bufopt)
+	M.nnoremap("K", function()
+		vim.lsp.buf.hover()
+	end, bufopt)
+	M.nnoremap("ga", function()
+		vim.lsp.buf.signature_help()
+	end, bufopt)
+
+	M.nnoremap("<Leader>a", ":lua vim.lsp.buf.code_action()<CR>", bufopt)
+
+	M.nnoremap("<C-n>", function()
+		vim.diagnostic.goto_next()
+	end, bufopt)
+
+	M.nnoremap("<C-p>", function()
+		vim.diagnostic.goto_prev()
+	end, bufopt)
 end
 
 return M
