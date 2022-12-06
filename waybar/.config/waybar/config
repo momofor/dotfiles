@@ -1,4 +1,4 @@
-//                               __                        
+// vim:filetype=json
 //                              /\ \                       
 //  __  __  __     __     __  __\ \ \____     __     _ __  
 // /\ \/\ \/\ \  /'__`\  /\ \/\ \\ \ '__`\  /'__`\  /\`'__\
@@ -13,11 +13,14 @@
 	"position": "top",
 	"height": 30,
 	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "sway/window"],
 	// "modules-left": [
-		// "wlr/workspaces",
-		// "hyprland/window"
+	// "sway/workspaces",
+	// "sway/window"
 	// ],
+	"modules-left": [
+		"wlr/workspaces",
+		"hyprland/window"
+	],
 	"modules-center": [
 		"clock"
 	],
@@ -32,23 +35,22 @@
 		"tray"
 	],
 	// Modules configuration
-     "sway/workspaces": {
-         "disable-scroll": true,
-         "format":"{icon}",
-         "format-icons": {
-             "1": " ",
-             "2": "",
-             "3": "",
-             "4": "",
-	     "5": "",
-	     "6": "",
-	     "7": " ",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
-     },
-
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": " ",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"7": " ",
+			"urgent": "",
+			"focused": "",
+			"default": ""
+		}
+	},
 	"sway/window": {
 		"format": "{}"
 	},
@@ -122,10 +124,10 @@
 			""
 		]
 	},
-	// "hyprland/window": {
-		// "format": "👉 {}",
-		// "separate-outputs": true
-	// },
+	"hyprland/window": {
+		"format": "{}",
+		"separate-outputs": true
+	},
 	"temperature": {
 		// "thermal-zone": 2,
 		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
