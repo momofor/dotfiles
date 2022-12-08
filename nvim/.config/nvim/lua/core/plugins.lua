@@ -17,9 +17,9 @@ return require("packer").startup {
 		use { "stevearc/dressing.nvim", requires = "nvim-telescope/telescope.nvim" }
 		-- use { "tpope/vim-surround", event = "InsertEnter" }
 		use {
-			"norcalli/nvim-colorizer.lua",
+			"NvChad/nvim-colorizer.lua",
 			config = function()
-				require("colorizer").setup()
+				require "plugins.colorizer"
 			end,
 		}
 		-- use "christianchiarulli/nvcode-color-schemes.vim"
@@ -133,7 +133,6 @@ return require("packer").startup {
 				"hrsh7th/cmp-nvim-lua",
 				"hrsh7th/cmp-nvim-lsp-signature-help",
 				"kdheepak/cmp-latex-symbols",
-				"uga-rosa/cmp-dictionary",
 			},
 		}
 

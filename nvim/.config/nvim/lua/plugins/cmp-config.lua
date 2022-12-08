@@ -78,12 +78,5 @@ cmp.setup({
 		{ name = "spell" }, -- prose completion
 		{ name = "nvim_lsp_signature_help" }, -- signature help
 		{ name = "latex_symbols" },
-		{ name = "dictionary", keyword_length = 2 },
-	},
-})
-
-require("cmp_dictionary").setup({
-	dic = {
-		["*"] = "/home/momofor/.other/dictionary/my.dict",
 	},
 })
