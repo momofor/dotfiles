@@ -36,8 +36,6 @@ set -x XDG_DATA_HOME ~/.local/share
 set -x XDG_CONFIG_HOME ~/.config
 set -x XDG_STATE_HOME ~/.local/state
 set -x XDG_CACHE_HOME ~/.cache
-set -x XDG_SESSION_DESKTOP sway
-set -x XDG_CURRENT_DESKTOP sway
 set -x CLUTTER_BACKEND wayland
 set -x ECORE_EVAS_ENGINE wayland
 set -x ELM_ENGINE wayland
@@ -46,7 +44,6 @@ set -x NO_AT_BRIDGE 1
 
 
 set -x MOZ_ENABLE_WAYLAND 1
-set -x SWAY_CURSOR_THEME "Breeze"
 # set -x WAYLAND_DISPLAY wayland-0
 # set -x DISPLAY :0
 set -x PATH $HOME/.cargo/bin:$PATH
