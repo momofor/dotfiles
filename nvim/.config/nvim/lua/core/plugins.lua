@@ -215,6 +215,12 @@ return require("packer").startup {
 			end,
 		}
 		use {
+			"j-hui/fidget.nvim",
+			config = function()
+				require("fidget").setup {}
+			end,
+		}
+		use {
 			"jghauser/kitty-runner.nvim",
 			config = function()
 				require("kitty-runner").setup()

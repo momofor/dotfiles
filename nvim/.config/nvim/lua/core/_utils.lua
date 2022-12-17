@@ -43,12 +43,12 @@ function M.prequire(module)
 	if not ok then
 		vim.notify(
 			"[prequire|"
-			.. debug.getinfo(2, "S").short_src
-			.. "] Failed to load module `"
-			.. module
-			.. "`"
-			.. "with error "
-			.. err,
+				.. debug.getinfo(2, "S").short_src
+				.. "] Failed to load module `"
+				.. module
+				.. "`"
+				.. "with error "
+				.. err,
 			vim.log.levels.ERROR
 		)
 	end
@@ -82,9 +82,7 @@ M.on_attach = function(client, bufnr)
 	M.nnoremap("gD", function()
 		vim.lsp.buf.declaration()
 	end, bufopt)
-	M.nnoremap("gr", function()
-		vim.lsp.buf.references()
-	end, bufopt)
+	M.nnoremap("gr", ":Telescope lsp_references<CR>", bufopt)
 	M.nnoremap("gi", function()
 		vim.lsp.buf.implementation()
 	end, bufopt)
