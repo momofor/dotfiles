@@ -12,11 +12,10 @@
 {
 	"position": "top",
 	"height": 30,
-	// Choose the order of the modules
-	// "modules-left": [
-	// "sway/workspaces",
-	// "sway/window"
-	// ],
+	//"modules-left": [
+	//"sway/workspaces",
+	//"sway/window"
+	//],
 	"modules-left": [
 		"wlr/workspaces",
 		"hyprland/window"

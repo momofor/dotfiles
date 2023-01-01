@@ -57,7 +57,6 @@ set -x LD_LIBRARY_PATH $LIBTORCH/lib:$LD_LIBRARY_PATH
 set -x PIPEWIRE_LATENCY 256/48000
 set -x SDL_VIDEODRIVER wayland
 set -x _JAVA_AWT_WM_NONREPARENTING 1
-set -x BEMENU_OPTS "-b --tb=#2e3440 --nb=#2e3440 --sb=#4c566a --hb=#4c566a --nf=#e5e9f0 --hf=#e5e9f0 --sf=#e5e9f0 --fb=#2e3440 --tf=#88c0d0"
 set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 # set -x CC clang
 # set -x CXX clang++
@@ -127,6 +126,7 @@ alias ob="obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias tachi="docker run -p 127.0.0.1:4567:4567 -v /home/momofor/.other/tachidesk-data:/./home/suwayomi/.local/share/Tachidesk ghcr.io/suwayomi/tachidesk"
 alias record="wf-recorder -c h264_vaapi -d /dev/dri/renderD128 --audio -f"
 alias init-julia="julia --project=$PWD -e 'using Pkg; Pkg.instantiate()'"
+alias salawat "~/.other/projects/salawat.fish"
 
 
 
