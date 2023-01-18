@@ -40,12 +40,14 @@ return require("packer").startup {
 
 		use "kyazdani42/nvim-web-devicons"
 		use {
-			"kyazdani42/nvim-tree.lua",
+			"nvim-tree/nvim-tree.lua",
+			requires = {
+				"nvim-tree/nvim-web-devicons", -- optional, for file icons
+			},
 			config = function()
 				require "plugins.nvimtree-config"
 			end,
-			module = "nvim-web-devicons",
-			cmd = "NvimTreeToggle",
+			tag = "nightly", -- optional, updated every week. (see issue #1193)
 		}
 		use { "romgrk/barbar.nvim", event = "BufRead" }
 		use "neovim/nvim-lspconfig"
@@ -170,14 +172,6 @@ return require("packer").startup {
 		}
 
 		use { "lervag/vimtex", filetype = "tex" }
-		use {
-			"nvim-neorg/neorg",
-			ft = "norg",
-			after = "nvim-treesitter", -- You may want to specify Telescope here as well
-			config = function()
-				require("neorg").setup { load = { ["core.defaults"] = {}, ["core.norg.concealer"] = {} } }
-			end,
-		}
 		use { "b0o/schemastore.nvim", filetype = "json" }
 		use {
 			"smjonas/inc-rename.nvim",

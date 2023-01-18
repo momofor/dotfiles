@@ -18,7 +18,7 @@
 	//],
 	"modules-left": [
 		"wlr/workspaces",
-		"hyprland/window"
+		"hyprland/window",
 	],
 	"modules-center": [
 		"clock"
