@@ -1,3 +1,0 @@
-KrigBilateral.glsl:https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637
-SSimDownscaler.glsl:https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10
-SSimSuperRes.glsl:https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b
