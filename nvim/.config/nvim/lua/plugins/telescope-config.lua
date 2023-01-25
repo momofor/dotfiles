@@ -45,3 +45,24 @@ require("telescope").setup({
 		},
 	},
 })
+
+vim.keymap.set("n", "<leader>ff", function()
+	require("telescope.builtin").find_files()
+end, { noremap = true })
+-- vim.keymap.set("n", "<leader>fF", function()
+-- 	require("telescope").extensions.file_browser.file_browser()
+-- end, { noremap = true })
+vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader>e", ":Telescope lsp_document_diagnostics<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader>M", function()
+	require("telescope.builtin").man_pages()
+end, { noremap = true })
+vim.keymap.set("n", "<leader>T", function()
+	require("telescope.builtin").treesitter()
+end, { noremap = true })
+
+vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols, { noremap = true })
+vim.keymap.set("n", "<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, { noremap = true })

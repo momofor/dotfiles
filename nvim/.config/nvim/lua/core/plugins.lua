@@ -1,40 +1,62 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
+	vim.fn.system {
 		"git",
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable", -- latest stable release
 		lazypath,
-	})
+	}
 end
 vim.opt.rtp:prepend(lazypath)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require("lazy").setup({
+require("lazy").setup {
 	"lewis6991/impatient.nvim",
 
 	"nvim-lua/plenary.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
 		cmd = "Telescope",
+		keys = {
+			{ "<leader>ff", desc = "find files" },
+			{ "<leader>fw", desc = "find word" },
+			{ "<leader>fo", desc = "recently opened" },
+			{ "<leader>e", desc = "document diagnostics" },
+			{ "<leader>M", desc = "Man pages" },
+			{ "<leader>T", desc = "treesitter keys" },
+			{ "<leader>ds", desc = "document symbols" },
+			{ "<leader>ws", desc = "workspace symbols" },
+		},
 		config = function()
-			require("plugins.telescope-config")
+			require "plugins.telescope-config"
 		end,
 	},
-	{ "nvim-telescope/telescope-file-browser.nvim", dependencies = "nvim-telescope/telescope.nvim" },
-	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim" },
-	-- use { "tpope/vim-surround", event = "InsertEnter" }
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = "nvim-telescope/telescope.nvim",
+		keys = {
+			{ "<leader>fF", desc = "file browser" },
+		},
+		config = function()
+			vim.keymap.set("n", "<leader>fF", function()
+				require("telescope").extensions.file_browser.file_browser()
+			end, {})
+		end,
+	},
+	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
 	{
 		"NvChad/nvim-colorizer.lua",
 		config = function()
-			require("plugins.colorizer")
+			require "plugins.colorizer"
 		end,
+		event = "BufRead",
 	},
-	-- use "christianchiarulli/nvcode-color-schemes.vim"
-
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = "BufRead",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"nvim-treesitter/nvim-treesitter-refactor",
@@ -42,16 +64,17 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter-context",
 		},
 		config = function()
-			require("plugins.treesitter-config")
+			require "plugins.treesitter-config"
 		end,
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
+		keys = { "<leader>t", desc = "NvimTree" },
 		dependencies = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
 		config = function()
-			require("plugins.nvimtree-config")
+			require "plugins.nvimtree-config"
 		end,
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	},
@@ -67,7 +90,7 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
-			require("plugins.lualine-config")
+			require "plugins.lualine-config"
 		end,
 		event = "BufRead",
 	},
@@ -98,14 +121,14 @@ require("lazy").setup({
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("plugins.indent-blankline-config")
+			require "plugins.indent-blankline-config"
 		end,
 		event = "BufRead",
 	},
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
-			require("plugins.git-signs")
+			require "plugins.git-signs"
 		end,
 		event = "BufRead",
 	},
@@ -114,23 +137,24 @@ require("lazy").setup({
 		"simrat39/rust-tools.nvim",
 		ft = { "rust" },
 		config = function()
-			require("plugins.rust-tools")
+			require "plugins.rust-tools"
 		end,
 	},
-	"rafamadriz/friendly-snippets",
 	{
 		"L3MON4D3/LuaSnip",
+		event = "InsertEnter",
 		dependencies = { "rafamadriz/friendly-snippets" },
 		config = function()
-			require("plugins.luasnip")
+			require "plugins.luasnip"
 		end,
 		build = "make install_jsregexp",
 	},
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
-			require("plugins.cmp-config")
+			require "plugins.cmp-config"
 		end,
+		event = "InsertEnter",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-cmdline",
@@ -147,7 +171,7 @@ require("lazy").setup({
 		"saecki/crates.nvim",
 		ft = "toml",
 		config = function()
-			require("plugins.rust-crates-config")
+			require "plugins.rust-crates-config"
 		end,
 		event = "BufRead Cargo.toml",
 	},
@@ -164,19 +188,19 @@ require("lazy").setup({
 		"akinsho/toggleterm.nvim",
 		event = "BufRead",
 		config = function()
-			require("plugins.term-toggle-config")
+			require "plugins.term-toggle-config"
 		end,
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		config = function()
-			require("plugins.null-ls-config")
+			require "plugins.null-ls-config"
 		end,
 		event = "LspAttach",
 	},
 
-	{ "lervag/vimtex", filetype = "tex" },
-	{ "b0o/schemastore.nvim", filetype = "json" },
+	{ "lervag/vimtex", ft = "tex" },
+	{ "b0o/schemastore.nvim", ft = "json" },
 	{
 		"smjonas/inc-rename.nvim",
 		config = function()
@@ -187,41 +211,43 @@ require("lazy").setup({
 	{
 		"kylechui/nvim-surround",
 		config = function()
-			require("nvim-surround").setup({})
+			require("nvim-surround").setup {}
 		end,
 		event = "InsertEnter",
 	},
 	{
 		"catppuccin/nvim",
-		as = "catppuccin",
+		name = "catppuccin",
 		config = function()
-			require("plugins.catpuccin")
+			require "plugins.catpuccin"
 		end,
 	},
 	{
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended
 		config = function()
-			require("plugins.hop")
+			require "plugins.hop"
 		end,
-		event = "BufEnter",
+		event = "BufRead",
 	},
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	},
+	-- {
+	-- 	"williamboman/mason.nvim",
+	-- 	config = function()
+	-- 		require("mason").setup()
+	-- 	end,
+	-- },
 	{
 		"j-hui/fidget.nvim",
 		config = function()
-			require("fidget").setup({})
+			require("fidget").setup {}
 		end,
+		event = "LspAttach",
 	},
 	{
 		"jghauser/kitty-runner.nvim",
 		config = function()
 			require("kitty-runner").setup()
 		end,
+		ft = { "julia", "fish", "bash" },
 	},
-})
+}

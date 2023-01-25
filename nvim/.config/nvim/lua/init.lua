@@ -1,6 +1,5 @@
 local prequire = require("core._utils").prequire
 
-vim.g.mapleader = " "
 prequire("core.options")
 prequire("core.plugins")
 prequire("core.lsp-hotkeys")
