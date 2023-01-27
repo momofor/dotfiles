@@ -1,0 +1,7 @@
+mpd_music_dir = /home/momofor/Music/peaceful-piano/
+visualizer_data_source = "/home/momofor/.mpd-files/my_fifo"
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
+
