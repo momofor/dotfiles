@@ -21,14 +21,14 @@
 		"hyprland/window",
 	],
 	"modules-center": [
-		"clock"
+		"clock",
 	],
 	"modules-right": [
+		"mpd",
 		"network",
 		"cpu",
 		"memory",
 		"temperature",
-		"battery",
 		"backlight",
 		"pulseaudio",
 		"tray"
@@ -128,10 +128,31 @@
 		"separate-outputs": true
 	},
 	"temperature": {
-		// "thermal-zone": 2,
-		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-		// "critical-threshold": 80,
-		// "format-critical": "{temperatureC}°C ",
 		"format": "{temperatureC}°C "
+	},
+	"mpd": {
+		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} |",
+		"format-disconnected": "Disconnected ",
+		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+		"interval": 10,
+		"consume-icons": {
+			"on": " " // Icon shows only when "consume" is on
+		},
+		"random-icons": {
+			"off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+			"on": " "
+		},
+		"repeat-icons": {
+			"on": " "
+		},
+		"single-icons": {
+			"on": "1 "
+		},
+		"state-icons": {
+			"paused": "",
+			"playing": ""
+		},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)"
 	}
 }
