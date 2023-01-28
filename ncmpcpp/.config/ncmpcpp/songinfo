@@ -1,6 +1,6 @@
 #!/bin/sh
 
-music_dir="$HOME/Music/peaceful-piano"
+music_dir="$HOME/Music"
 previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
 filename="$(mpc --format "$music_dir"/%file% current)"
 previewname="$previewdir/$(mpc --format %album% current | base64).png"

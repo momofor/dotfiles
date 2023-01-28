@@ -5,9 +5,9 @@ SETUVAR _fish_abbr_cht:curl\x20cht\x2esh/
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_1002:laptop\u2022\x20\u21911\x20
 SETUVAR _hydro_git_102147:\x1d
 SETUVAR _hydro_git_10724:\x1d
+SETUVAR _hydro_git_1134:laptop\u2022\x20
 SETUVAR _hydro_git_11415:\x1d
 SETUVAR _hydro_git_16228:\x1d
 SETUVAR _hydro_git_1816:\x1d
