@@ -14,8 +14,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("lazy").setup {
-	"lewis6991/impatient.nvim",
-
 	"nvim-lua/plenary.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
@@ -82,9 +80,9 @@ require("lazy").setup {
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
-	{ "folke/trouble.nvim", event = "BufEnter" },
+	{ "folke/trouble.nvim", event = "LspAttach" },
 	{
-		"onsails/lspkind-nvim",
+		{ "onsails/lspkind-nvim", event = "LspAttach" },
 	},
 
 	{
@@ -250,4 +248,5 @@ require("lazy").setup {
 		end,
 		ft = { "julia", "fish", "bash" },
 	},
+	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }
