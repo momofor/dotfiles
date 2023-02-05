@@ -76,7 +76,7 @@ require("lazy").setup {
 		end,
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	},
-	{ "romgrk/barbar.nvim", event = "BufRead" },
+	{ "romgrk/barbar.nvim", event = "BufEnter" },
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
@@ -90,7 +90,7 @@ require("lazy").setup {
 		config = function()
 			require "plugins.lualine-config"
 		end,
-		event = "BufRead",
+		event = "BufEnter",
 	},
 
 	{
