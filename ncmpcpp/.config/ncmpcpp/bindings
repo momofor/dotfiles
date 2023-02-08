@@ -21,3 +21,6 @@ def_key "h"
 
 def_key "j"
   scroll_down
+
+def_key "L"
+  show_lyrics

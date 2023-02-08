@@ -22,6 +22,7 @@
 	],
 	"modules-center": [
 		"clock",
+		"battery",
 	],
 	"modules-right": [
 		//"mpd",
@@ -99,7 +100,7 @@
 		"spacing": 10
 	},
 	"battery": {
-		"bat": "BAT1",
+		"bat": "BAT2",
 		"interval": 30,
 		"states": {
 			"warning": 30,
