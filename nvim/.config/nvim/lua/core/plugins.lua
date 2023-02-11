@@ -22,9 +22,9 @@ require("lazy").setup {
 			{ "<leader>ff", desc = "find files" },
 			{ "<leader>fw", desc = "find word" },
 			{ "<leader>fo", desc = "recently opened" },
-			{ "<leader>e", desc = "document diagnostics" },
-			{ "<leader>M", desc = "Man pages" },
-			{ "<leader>T", desc = "treesitter keys" },
+			{ "<leader>e",  desc = "document diagnostics" },
+			{ "<leader>M",  desc = "Man pages" },
+			{ "<leader>T",  desc = "treesitter keys" },
 			{ "<leader>ds", desc = "document symbols" },
 			{ "<leader>ws", desc = "workspace symbols" },
 		},
@@ -53,8 +53,8 @@ require("lazy").setup {
 		event = "BufRead",
 	},
 	{
-		"nvim-treesitter/nvim-treesitter",
 		event = "BufRead",
+		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"nvim-treesitter/nvim-treesitter-refactor",
@@ -76,11 +76,11 @@ require("lazy").setup {
 		end,
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	},
-	{ "romgrk/barbar.nvim", event = "BufEnter" },
+	{ "romgrk/barbar.nvim",     event = "BufEnter" },
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
-	{ "folke/trouble.nvim", event = "LspAttach" },
+	{ "folke/trouble.nvim",   event = "LspAttach" },
 	{
 		{ "onsails/lspkind-nvim", event = "LspAttach" },
 	},
@@ -197,7 +197,7 @@ require("lazy").setup {
 		event = "LspAttach",
 	},
 
-	{ "lervag/vimtex", ft = "tex" },
+	{ "lervag/vimtex",        ft = "tex" },
 	{ "b0o/schemastore.nvim", ft = "json" },
 	{
 		"smjonas/inc-rename.nvim",
@@ -228,18 +228,20 @@ require("lazy").setup {
 		end,
 		event = "BufRead",
 	},
-	-- {
-	-- 	"williamboman/mason.nvim",
-	-- 	config = function()
-	-- 		require("mason").setup()
-	-- 	end,
-	-- },
 	{
 		"j-hui/fidget.nvim",
 		config = function()
 			require("fidget").setup {}
 		end,
 		event = "LspAttach",
+	},
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = "kevinhwang91/promise-async",
+		event = "LspAttach",
+		config = function()
+			require "plugins.ufo-config"
+		end,
 	},
 	{
 		"jghauser/kitty-runner.nvim",

@@ -1,5 +1,9 @@
 local utils = require("core._utils")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+capabilities.textDocument.foldingRange = {
+	dynamicRegistration = false,
+	lineFoldingOnly = true,
+}
 
 local opts = {
 	tools = { -- rust-tools options
@@ -165,7 +169,6 @@ local opts = {
 			},
 		},
 	},
-
 	-- all the opts to send to nvim-lspconfig
 	-- these override the defaults set by rust-tools.nvim
 	-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
@@ -178,7 +181,6 @@ local opts = {
 		capabilities = capabilities,
 		on_attach = utils.on_attach,
 	}, -- rust-analyer options
-
 	-- debugging stuff
 	dap = {
 		adapter = {

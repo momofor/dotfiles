@@ -27,7 +27,6 @@ local options = {
 	colorcolumn = "100",
 	scrolloff = 7,
 	cursorline = true,
-	foldmethod = "expr",
 	signcolumn = "yes", -- can be set to number
 	termguicolors = true,
 	timeoutlen = 300,

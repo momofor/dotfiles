@@ -19,13 +19,13 @@ audio_output {
     format                  "44100:16:2"
 }
 
-# audio_output {
-#     type        "httpd"
-#     name        "My HTTP Stream"
-#     encoder     "opus"      
-#     port        "8000"
-# 	always_on "yes"
-# 	bitrate "128000"
-#     format      "48000:16:1"
-# 	tags "yes"
-# }
+audio_output {
+    type        "httpd"
+    name        "My HTTP Stream"
+    encoder     "lame"      # optional, vorbis or lame
+    port        "8000"
+	always_on "yes"
+    # quality     "2.0"           # do not define if bitrate is defined
+	bitrate "128"
+    format      "44100:16:1"
+}

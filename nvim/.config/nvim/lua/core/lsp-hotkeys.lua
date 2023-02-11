@@ -49,8 +49,10 @@ utils.map("v", "K", ":m '<-2<CR>gv=gv'")
 utils.map("n", "J", "mzJ`z")
 utils.map("n", "<C-d>", "<C-d>zz")
 utils.map("n", "<C-u>", "<C-u>zz")
-utils.map("n", "n", "nzzzv")
-utils.map("n", "N", "Nzzzv")
+-- utils.map("n", "n", "nzzzv")
+-- utils.map("n", "N", "Nzzzv")
 utils.map("x", "<leader>p", [[\"_dP]])
+
+utils.map("n", "<Leader>cg", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true })
 
 utils.nnoremap("<leader>D", vim.lsp.buf.type_definition)
