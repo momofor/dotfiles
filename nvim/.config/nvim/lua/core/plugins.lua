@@ -244,6 +244,12 @@ require("lazy").setup {
 		end,
 	},
 	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
 		"jghauser/kitty-runner.nvim",
 		config = function()
 			require("kitty-runner").setup()

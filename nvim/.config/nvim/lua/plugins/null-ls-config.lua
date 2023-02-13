@@ -6,7 +6,6 @@ local formatting = null_ls.builtins.formatting
 
 local sources = {
 	diagnostics.write_good,
-	formatting.prettierd,
 	code_actions.gitsigns,
 	formatting.stylua,
 	formatting.black,
