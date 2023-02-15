@@ -13,5 +13,6 @@ vim.filetype.add {
 		[".foorc"] = "toml",
 		["/etc/foo/config"] = "toml",
 		["/home/momofor/.config/waybar/config"] = "conf",
+		["/home/momofor/.config/eww/*.yuck"] = "lisp",
 	},
 }

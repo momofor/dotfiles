@@ -3,10 +3,10 @@
 # italic_font			Hack Italic Nerd Font Complete Mono
 # bold_font           Fira Code SemiBold Nerd Font Complete Mono
 # bold_italic_font    Hack Bold Italic Nerd Font Complete Mono
-font_family			Fira Code Regular
-italic_font			Hack FC Ligatured Italic
+font_family			Fira Code
+italic_font			Fira Code Retina
 bold_font           auto
-bold_italic_font	Hack FC Ligatured BoldItalic
+bold_italic_font	Fira Code SemiBold
 
 # Font size (in pts)
 font_size        16
@@ -36,7 +36,7 @@ cursor_shape block
 sync_to_monitor yes
 #delay
 # input_delay 2
-background_opacity 1
+background_opacity .85
 enable_audio_bell no
 
 # window_padding_width 2
@@ -73,10 +73,10 @@ map ctrl+a>- launch --location=hsplit --cwd=current
 map ctrl+a>\ launch --location=vsplit --cwd=current
 map F7 layout_action rotate
 
-map ctrl+b>k move_window up
-map ctrl+b>l move_window left
-map ctrl+b>h move_window right
-map ctrl+b>j move_window down
+map ctrl+a>k move_window up
+map ctrl+a>l move_window left
+map ctrl+a>h move_window right
+map ctrl+a>j move_window down
 
 
 map ctrl+a>h neighboring_window left

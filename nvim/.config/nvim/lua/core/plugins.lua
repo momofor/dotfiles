@@ -173,8 +173,6 @@ require("lazy").setup {
 		end,
 		event = "BufRead Cargo.toml",
 	},
-	-- use { "eraserhd/parinfer-rust", ft = "yuck", event = "BufRead" }
-	-- use { "elkowar/yuck.vim", ft = "yuck", event = "BufRead" }
 	{
 		"goolord/alpha-nvim",
 		config = function()
@@ -241,12 +239,6 @@ require("lazy").setup {
 		event = "LspAttach",
 		config = function()
 			require "plugins.ufo-config"
-		end,
-	},
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
 		end,
 	},
 	{
