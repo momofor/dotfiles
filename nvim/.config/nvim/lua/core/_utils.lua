@@ -102,6 +102,7 @@ M.on_attach = function(client, bufnr)
 	M.nnoremap("<C-p>", function()
 		vim.diagnostic.goto_prev()
 	end, bufopt)
+	M.nnoremap("<space>ca", vim.lsp.codelens.run, bufopt)
 end
 
 return M

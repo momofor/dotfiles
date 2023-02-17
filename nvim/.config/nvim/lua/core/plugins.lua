@@ -248,5 +248,16 @@ require("lazy").setup {
 		end,
 		ft = { "julia", "fish", "bash" },
 	},
+	{
+		"mrcjkb/haskell-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim", -- optional
+		},
+		config = function()
+			require "plugins.haskell-tools"
+		end,
+		ft = { "haskell" },
+	},
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }

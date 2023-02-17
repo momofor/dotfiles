@@ -64,7 +64,6 @@ set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
 set -x LC_ALL C
-set -x hydro_symbol_prompt λ
 
 
 
@@ -73,10 +72,6 @@ set -x LS_COLORS 'no=00:rs=0:fi=00:di=01;34:ln=36:mh=04;36:pi=04;01;36:so=04;33:
 # set -x https_proxy 192.168.1.9:3128
 # set -x ftp_proxy 192.168.1.9:10600
 
-#hydro prompt
-set -x hydro_color_pwd blue
-set -x hydro_color_prompt green
-set -x hydro_color_git cyan
 ###############END OF EXPORTS############################################
 
 

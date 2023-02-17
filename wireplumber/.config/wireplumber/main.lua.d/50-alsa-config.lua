@@ -16,10 +16,8 @@ alsa_monitor.properties = {
 
 	-- Enables MIDI functionality
 	["alsa.midi"] = true,
-
 	-- Enables monitoring of alsa MIDI devices
 	["alsa.midi.monitoring"] = true,
-
 	-- These properties override node defaults when running in a virtual machine.
 	-- The rules below still override those.
 	["vm.node.defaults"] = {
@@ -66,7 +64,7 @@ alsa_monitor.rules = {
 			-- Don't use the hardware mixer for volume control. It
 			-- will only use software volume. The mixer is still used
 			-- to mute unused paths based on the selected port.
-			--["api.alsa.soft-mixer"] = false,
+			["api.alsa.soft-mixer"] = false,
 
 			-- Ignore decibel settings of the driver. Can be used to
 			-- work around buggy drivers that report wrong values.
@@ -126,7 +124,7 @@ alsa_monitor.rules = {
 			--["dither.noise"]           = 0,
 			--["audio.channels"]         = 2,
 			--["audio.format"]           = "S16LE",
-			--["audio.rate"]             = 44100,
+			["audio.rate"] = 48000,
 			["audio.allowed-rates"] = "48000 44100",
 			--["audio.position"]         = "FL,FR",
 			--["api.alsa.period-num"]    = 2,
