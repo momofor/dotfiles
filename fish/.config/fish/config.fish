@@ -63,7 +63,7 @@ set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 # set -x CXX clang++
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
-set -x LC_ALL C
+set -x LC_ALL en_US.UTF-8 
 
 
 
@@ -128,6 +128,7 @@ alias record="wf-recorder -c h264_vaapi -d /dev/dri/renderD128 --audio -f"
 alias init-julia="julia --project=$PWD -e 'using Pkg; Pkg.instantiate()'"
 alias salawat "~/salawat.fish"
 alias rm "rm -i"
+alias zotero "GDK_BACKEND=x11  zotero"
 
 
 
