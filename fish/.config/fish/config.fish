@@ -136,3 +136,4 @@ alias rm "rm -i"
 
 # starship init fish | source
 # source (/usr/bin/starship init fish --print-full-init | psub)
+starship init fish | source
