@@ -31,3 +31,4 @@ require("lspconfig").texlab.setup({
 	capabilities = capabilities,
 	on_attach = utils.on_attach,
 })
+vim.keymap.set("n", "<leader>I", ":VimtexTocToggle<CR>")

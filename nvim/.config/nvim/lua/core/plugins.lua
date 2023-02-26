@@ -259,5 +259,6 @@ require("lazy").setup {
 		end,
 		ft = { "haskell" },
 	},
+	{ "elkowar/yuck.vim" },
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }

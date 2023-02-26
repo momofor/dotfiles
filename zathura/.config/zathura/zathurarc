@@ -1,3 +1,7 @@
+set synctex true
+set synctex-editor-command "nvim --remote-silent +%{line} %{input}"
+set render-loading "false"
+
 set default-fg                "#CAD3F5"
 set default-bg 			          "#24273A"
 
@@ -35,5 +39,5 @@ set render-loading-fg		      "#CAD3F5"
 set highlight-color		        "#575268"
 set highlight-fg              "#F5BDE6"
 set highlight-active-color	  "#F5BDE6"
-set font "Fira Code Nerd Font 10"
+set font "Fira Code 10"
 set selection-clipboard clipboard
