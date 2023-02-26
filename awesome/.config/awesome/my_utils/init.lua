@@ -1,6 +1,0 @@
-require("my_utils.autostart")
-require("my_utils.imports")
---require("my_utils.apps")
-require("my_utils.ChangeLayout")
-require("my_utils.CustomNotify")
---require("my_utils.apps_keybind")
