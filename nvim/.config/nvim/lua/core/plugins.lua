@@ -104,7 +104,6 @@ require("lazy").setup {
 	{
 		"jose-elias-alvarez/nvim-lsp-ts-utils",
 		dependencies = "jose-elias-alvarez/null-ls.nvim",
-
 		ft = {
 			"javascript",
 			"javascriptreact",
@@ -259,6 +258,13 @@ require("lazy").setup {
 		end,
 		ft = { "haskell" },
 	},
-	{ "elkowar/yuck.vim" },
+	{
+		"HiPhish/nvim-ts-rainbow2",
+		dependencies = "nvim-treesitter",
+		event = "BufRead",
+		config = function()
+			require "plugins.ts-rainbow"
+		end,
+	},
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }

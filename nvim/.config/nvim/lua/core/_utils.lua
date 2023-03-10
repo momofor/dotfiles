@@ -15,7 +15,7 @@ end
 
 --- @param keys string key to trigger action
 ---@param action function | string action to be triggered
----@param options? table | nil table of option can be nil
+---@param options? table | nil table of options can be nil
 function M.nnoremap(keys, action, options)
 	if options == nil then
 		options = { noremap = true }
