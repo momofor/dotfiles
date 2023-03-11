@@ -2,12 +2,16 @@ vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 
 require("catppuccin").setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
-	transparent_background = false,
-	term_colors = false,
+	transparent_background = true,
+	term_colors = true,
 	dim_inactive = {
 		enabled = false,
 		shade = "dark",
 		percentage = 0.15,
+	},
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
 	},
 	styles = {
 		comments = { "italic" },
@@ -30,6 +34,11 @@ require("catppuccin").setup({
 		treesitter = true,
 		barbar = true,
 		dashboard = true,
+		fidget = true,
+		hop = true,
+		indent_blankline = { enabled = true, colored_indent_levels = true },
+		ts_rainbow = true,
+		treesitter_context = true,
 		gitsigns = true,
 		lsp_trouble = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
