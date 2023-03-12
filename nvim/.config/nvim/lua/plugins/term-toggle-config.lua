@@ -21,7 +21,7 @@ require("toggleterm").setup({
 		border = "curved",
 		width = 200,
 		height = 50,
-		winblend = 3,
+		winblend = 0,
 		highlights = {
 			border = "Normal",
 			background = "Normal",

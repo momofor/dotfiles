@@ -66,15 +66,17 @@ require("lazy").setup {
 		end,
 	},
 	{
-		"nvim-tree/nvim-tree.lua",
-		keys = { "<leader>t", desc = "NvimTree" },
-		dependencies = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
+		"nvim-neo-tree/neo-tree.nvim",
+		keys = { "<leader>t", desc = "NeoTree" },
 		config = function()
-			require "plugins.nvimtree-config"
+			require "plugins.neo-tree-config"
 		end,
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
+		branch = "v2.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
 	},
 	{ "romgrk/barbar.nvim",     event = "BufEnter" },
 	"neovim/nvim-lspconfig",
@@ -257,6 +259,24 @@ require("lazy").setup {
 			require "plugins.haskell-tools"
 		end,
 		ft = { "haskell" },
+	},
+	{
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		opts = {
+			load = {
+				["core.defaults"] = {}, -- Loads default behaviour
+				["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+				["core.norg.dirman"] = { -- Manages Neorg workspaces
+					config = {
+						workspaces = {
+							notes = "~/notes",
+						},
+					},
+				},
+			},
+		},
+		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 	{
 		"HiPhish/nvim-ts-rainbow2",
