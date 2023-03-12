@@ -40,6 +40,7 @@ require("catppuccin").setup({
 		ts_rainbow = true,
 		treesitter_context = true,
 		gitsigns = true,
+		semantic_tokens = true,
 		lsp_trouble = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
