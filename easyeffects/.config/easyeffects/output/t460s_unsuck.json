@@ -1,14 +1,5 @@
 {
     "output": {
-        "autogain#0": {
-            "bypass": false,
-            "input-gain": 0.0,
-            "maximum-history": 15,
-            "output-gain": 0.0,
-            "reference": "Geometric Mean (MSI)",
-            "silence-threshold": -70.0,
-            "target": -23.0
-        },
         "bass_enhancer#0": {
             "amount": 20.0,
             "blend": 0.0,
@@ -27,7 +18,7 @@
             "inertia": 20.0,
             "input-gain": 0.0,
             "mode": "36dB/oct Highpass",
-            "output-gain": 0.0,
+            "output-gain": 1.0,
             "resonance": -3.0
         },
         "limiter#0": {
@@ -278,7 +269,6 @@
             "bass_enhancer#0",
             "multiband_compressor#0",
             "stereo_tools#0",
-            "autogain#0",
             "limiter#0"
         ],
         "stereo_tools#0": {

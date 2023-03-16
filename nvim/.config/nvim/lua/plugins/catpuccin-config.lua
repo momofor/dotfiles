@@ -1,4 +1,4 @@
-vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
 
 require("catppuccin").setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
@@ -37,8 +37,12 @@ require("catppuccin").setup({
 		fidget = true,
 		hop = true,
 		indent_blankline = { enabled = true, colored_indent_levels = true },
-		ts_rainbow = true,
+		ts_rainbow2 = true,
 		treesitter_context = true,
+		navic = {
+			enabled = true,
+			custom_bg = "NONE",
+		},
 		gitsigns = true,
 		semantic_tokens = true,
 		lsp_trouble = true,

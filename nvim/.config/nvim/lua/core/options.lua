@@ -10,7 +10,7 @@ local options = {
 	clipboard = "unnamedplus",
 	hidden = true,
 	pumheight = 25,
-	cmdheight = 0,
+	cmdheight = 1,
 	mouse = "",
 	splitbelow = true,
 	splitright = true,
@@ -24,7 +24,7 @@ local options = {
 	expandtab = false,
 	number = true,
 	relativenumber = true,
-	colorcolumn = "100",
+	-- colorcolumn = "120",
 	scrolloff = 7,
 	cursorline = true,
 	signcolumn = "yes", -- can be set to number
@@ -36,8 +36,8 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.shell = "/usr/bin/dash"
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- vim.opt.spell = true
 
 vim.api.nvim_create_augroup("YankHighlight", {})
@@ -60,4 +60,5 @@ vim.g.loaded_spec = 1
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.loaded_perl_provider = 0
 
+utils.set_options(options)
 utils.set_options(options)

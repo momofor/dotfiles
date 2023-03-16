@@ -76,6 +76,8 @@ end
 
 M.on_attach = function(client, bufnr)
 	local bufopt = { buffer = bufnr }
+	local navic = require "nvim-navic"
+	navic.attach(client, bufnr)
 	M.nnoremap("gd", function()
 		vim.lsp.buf.definition()
 	end, bufopt)

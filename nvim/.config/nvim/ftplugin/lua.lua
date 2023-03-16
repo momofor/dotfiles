@@ -9,6 +9,11 @@ capabilities.textDocument.foldingRange = {
 	lineFoldingOnly = true,
 }
 
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+require("neodev").setup({
+	-- add any options here, or leave empty to use the default settings
+})
+
 require("lspconfig").lua_ls.setup({
 	settings = {
 		Lua = {

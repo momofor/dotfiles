@@ -216,7 +216,7 @@ require("lazy").setup {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = function()
-			require "plugins.catpuccin"
+			require "plugins.catpuccin-config"
 		end,
 	},
 	{
@@ -277,7 +277,24 @@ require("lazy").setup {
 			},
 		},
 		dependencies = { { "nvim-lua/plenary.nvim" } },
+		ft = "norg",
 	},
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require "plugins.nvim-dap-config"
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap" },
+		config = function()
+			require "plugins.nvim-dap-ui-config"
+		end,
+	},
+	{ "folke/neodev.nvim",  ft = "lua" },
+
+	{ "SmiteshP/nvim-navic", opts = {    highlight = true} },
 	{
 		"HiPhish/nvim-ts-rainbow2",
 		dependencies = "nvim-treesitter",
@@ -286,5 +303,7 @@ require("lazy").setup {
 			require "plugins.ts-rainbow"
 		end,
 	},
+	{ "sindrets/diffview.nvim", event = "BufEnter" },
+
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }

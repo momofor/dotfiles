@@ -33,7 +33,7 @@ end
 local cur_node = ts_utils.get_node_at_cursor()
 local scope = ts_locals.get_scope_tree(cur_node, 0)
 
-function is_inside_a_function()
+local function is_inside_a_function()
 	for _, node in ipairs(scope) do
 		if node:type() == "function_declaration" then
 			return true
