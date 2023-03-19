@@ -36,7 +36,7 @@ require("catppuccin").setup({
 		dashboard = true,
 		fidget = true,
 		hop = true,
-		indent_blankline = { enabled = true, colored_indent_levels = true },
+		indent_blankline = { enabled = true, colored_indent_levels = false },
 		ts_rainbow2 = true,
 		treesitter_context = true,
 		navic = {

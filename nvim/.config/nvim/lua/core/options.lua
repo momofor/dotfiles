@@ -37,7 +37,6 @@ local options = {
 
 vim.opt.shortmess:append "c"
 vim.opt.shell = "/usr/bin/dash"
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- vim.opt.spell = true
 
 vim.api.nvim_create_augroup("YankHighlight", {})

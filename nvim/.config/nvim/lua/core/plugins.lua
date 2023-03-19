@@ -78,7 +78,7 @@ require("lazy").setup {
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	{ "romgrk/barbar.nvim",     event = "BufEnter" },
+	{ "romgrk/barbar.nvim",     event = "BufRead" },
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
@@ -279,22 +279,9 @@ require("lazy").setup {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
 	},
-	{
-		"mfussenegger/nvim-dap",
-		config = function()
-			require "plugins.nvim-dap-config"
-		end,
-	},
-	{
-		"rcarriga/nvim-dap-ui",
-		dependencies = { "mfussenegger/nvim-dap" },
-		config = function()
-			require "plugins.nvim-dap-ui-config"
-		end,
-	},
-	{ "folke/neodev.nvim",  ft = "lua" },
+	{ "folke/neodev.nvim",   ft = "lua" },
 
-	{ "SmiteshP/nvim-navic", opts = {    highlight = true} },
+	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
 	{
 		"HiPhish/nvim-ts-rainbow2",
 		dependencies = "nvim-treesitter",

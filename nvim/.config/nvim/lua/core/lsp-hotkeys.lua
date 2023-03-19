@@ -54,5 +54,6 @@ utils.map("x", "<leader>p", [[\"_dP]])
 utils.map("n", "<Leader>cg", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true })
 
 utils.map("t", "<Esc>", [[ <C-\><C-n> ]], { noremap = true })
+utils.nnoremap("<Leader>e", vim.diagnostic.open_float)
 
 utils.nnoremap("<leader>D", vim.lsp.buf.type_definition)
