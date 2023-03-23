@@ -14,14 +14,14 @@ cmp.setup({
 		format = function(entry, vim_item)
 			vim_item.kind = lsp_kind.presets.default[vim_item.kind]
 			vim_item.menu = ({
-					nvim_lsp = "[LSP]",
-					luasnip = "[Snp]",
-					buffer = "[Buf]",
-					nvim_lua = "[Lua]",
-					path = "[Pth]",
-					calc = "[Clc]",
-					emoji = "[Emj]",
-				})[entry.source.name]
+				nvim_lsp = "[LSP]",
+				luasnip = "[Snp]",
+				buffer = "[Buf]",
+				nvim_lua = "[Lua]",
+				path = "[Pth]",
+				calc = "[Clc]",
+				emoji = "[Emj]",
+			})[entry.source.name]
 
 			return vim_item
 		end,
@@ -33,12 +33,12 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-			["<C-d>"] = cmp.mapping.scroll_docs(-4),
-			["<C-f>"] = cmp.mapping.scroll_docs(4),
-			["<C-Space>"] = cmp.mapping.complete(),
-			["<C-e>"] = cmp.mapping.close(),
-			["<CR>"] = cmp.mapping.confirm({ select = true }),
-			["<Tab>"] = cmp.mapping(function(fallback)
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-e>"] = cmp.mapping.close(),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
 			elseif luasnip.expand_or_jumpable() then
@@ -49,7 +49,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
-			["<S-Tab>"] = cmp.mapping(function(fallback)
+		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
 			elseif luasnip.jumpable(-1) then
@@ -68,14 +68,14 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
-		{ name = "nvim_lsp" },          -- neovim lsp completion
-		{ name = "luasnip" },           -- luasnip snippets completion
+		{ name = "nvim_lsp" }, -- neovim lsp completion
+		{ name = "luasnip" }, -- luasnip snippets completion
 		{ name = "nvim_lua" },
-		{ name = "crates" },            -- rust crates
-		{ name = "path" },              -- path completion
-		{ name = "buffer" },            -- local buffer completion
-		{ name = "spell" },             -- prose completion
+		{ name = "crates" }, -- rust crates
+		{ name = "path" }, -- path completion
+		{ name = "buffer" }, -- local buffer completion
+		{ name = "spell" }, -- prose completion
 		{ name = "nvim_lsp_signature_help" }, -- signature help
-		{ name = "latex_symbols" },
+		{ name = "latex_symbols", ft = "julia" },
 	},
 })
