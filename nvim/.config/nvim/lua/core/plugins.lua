@@ -78,7 +78,13 @@ require("lazy").setup {
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	{ "romgrk/barbar.nvim", event = "BufRead" },
+	{
+		"romgrk/barbar.nvim",
+		event = "BufRead",
+		options = {
+			separator = { left = "a", right = "b" },
+		},
+	},
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },

@@ -166,9 +166,9 @@ local opts = {
 		settings = {
 			["rust-analyzer"] = {
 				inlayHints = { lifetimeElisionHints = { enable = "always" } },
-				check = {
-					command = "clippy",
-				},
+				-- check = {
+				-- 	command = "clippy",
+				-- },
 			},
 		},
 	}, -- rust-analyer options
