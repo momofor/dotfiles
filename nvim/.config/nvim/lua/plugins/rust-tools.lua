@@ -4,6 +4,10 @@ capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true,
 }
+-- For debugging to work you need to download vscode-lldb (not lldb-vscode)
+local extension_path = "/usr/lib/codelldb/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb.so" -- MacOS: This may be .dylib
 
 local opts = {
 	tools = {
@@ -159,26 +163,22 @@ local opts = {
 	server = {
 		-- standalone file support
 		-- setting it to false may improve startup time
-		standalone = true,
+		standalone = false,
 		cmd = { "/usr/bin/rustup", "run", "nightly", "rust-analyzer" },
 		capabilities = capabilities,
 		on_attach = utils.on_attach,
 		settings = {
 			["rust-analyzer"] = {
 				inlayHints = { lifetimeElisionHints = { enable = "always" } },
-				-- check = {
-				-- 	command = "clippy",
-				-- },
+				check = {
+					command = "clippy",
+				},
 			},
 		},
 	}, -- rust-analyer options
 	-- debugging stuff
 	dap = {
-		adapter = {
-			type = "executable",
-			command = "lldb-vscode",
-			name = "rt_lldb",
-		},
+		adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
 	},
 }
 

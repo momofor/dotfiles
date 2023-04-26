@@ -61,7 +61,7 @@ cmp.setup({
 	},
 	experimental = {
 		native_menu = false,
-		ghost_text = false,
+		ghost_text = true,
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
@@ -76,6 +76,6 @@ cmp.setup({
 		{ name = "buffer" }, -- local buffer completion
 		{ name = "spell" }, -- prose completion
 		{ name = "nvim_lsp_signature_help" }, -- signature help
-		{ name = "latex_symbols", ft = "julia" },
+		-- { name = "latex_symbols", ft = "julia" },
 	},
 })

@@ -9,10 +9,7 @@
 --
 --
 vim.filetype.add {
-	filename = {
-		[".foorc"] = "toml",
-		["/etc/foo/config"] = "toml",
-		["/home/momofor/.config/waybar/config"] = "conf",
-		["/home/momofor/.config/eww/*.yuck"] = "lisp",
+	extension = {
+		wgsl = "wgsl",
 	},
 }

@@ -164,11 +164,11 @@ ls.add_snippets("tex", {
 		}, { delimiters = "<>" }),
 		{ condition = uls.in_mathzone }
 	),
-	s("vec", fmt([[ \overrightarrow{{{}}} ]], { i(1) }), { condition = uls.in_mathzone }),
-	s("impl", t([[\Rightarrow{}]]), { condition = uls.in_mathzone }),
-	s("eqv", t([[\Longleftrightarrow{}]]), { condition = uls.in_mathzone }),
-	s("frac", fmt([[\frac{{{}}}{{{}}}]], { i(1), i(2) }), { condition = uls.in_mathzone }),
-	s("st", fmt([[\set{{{}}}]], { i(1) }), { condition = uls.in_mathzone }),
+	-- s("vec", fmt([[ \overrightarrow{ {{}} } ]], { i(1) }), { condition = uls.in_mathzone }),
+	-- s("impl", t([[\Rightarrow{}]]), { condition = uls.in_mathzone }),
+	-- s("eqv", t([[\Longleftrightarrow{}]]), { condition = uls.in_mathzone }),
+	-- s("frac", fmt([[\frac { {{}} {{}} }]], { i(1), i(2) }), { condition = uls.in_mathzone }),
+	-- s("st", fmt([[\set{ {{}} }]], { i(1) }), { condition = uls.in_mathzone }),
 }, { type = "autosnippets" })
 
 vim.keymap.set("i", "<c-o>", function()

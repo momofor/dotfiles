@@ -44,6 +44,7 @@ require("lazy").setup {
 			end, {})
 		end,
 	},
+	{ "debugloop/telescope-undo.nvim", dependencies = "nvim-telescope/telescope.nvim" },
 	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
 	{
 		"NvChad/nvim-colorizer.lua",
@@ -81,9 +82,6 @@ require("lazy").setup {
 	{
 		"romgrk/barbar.nvim",
 		event = "BufRead",
-		options = {
-			separator = { left = "a", right = "b" },
-		},
 	},
 	"neovim/nvim-lspconfig",
 
@@ -272,8 +270,8 @@ require("lazy").setup {
 		opts = {
 			load = {
 				["core.defaults"] = {}, -- Loads default behaviour
-				["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-				["core.norg.dirman"] = { -- Manages Neorg workspaces
+				["core.concealer"] = {}, -- Adds pretty icons to your documents
+				["core.dirman"] = { -- Manages Neorg workspaces
 					config = {
 						workspaces = {
 							notes = "~/notes",
@@ -296,8 +294,22 @@ require("lazy").setup {
 			require "plugins.ts-rainbow"
 		end,
 	},
-	{ "jbyuki/nabla.nvim" },
-	{ "sindrets/diffview.nvim", event = "BufEnter" },
-
+	{
+		"mfussenegger/nvim-dap",
+		event = "LspAttach",
+		ft = { "rust", "cpp", "c" },
+		config = function()
+			require "plugins.nvim-dap-config"
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		event = "LspAttach",
+		ft = { "rust", "cpp", "c" },
+		dependencies = "nvim-dap",
+		config = function()
+			require "plugins.nvim-dap-ui-config"
+		end,
+	},
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 }

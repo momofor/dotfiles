@@ -1,16 +1,16 @@
 local null_ls = require("null-ls")
 -- register any number of sources simultaneously
 local diagnostics = null_ls.builtins.diagnostics
-local code_actions = null_ls.builtins.code_actions
+-- local code_actions = null_ls.builtins.code_actions
 local formatting = null_ls.builtins.formatting
 
 local sources = {
 	diagnostics.write_good,
-	code_actions.gitsigns,
+	-- code_actions.gitsigns,
 	formatting.stylua,
 	formatting.black,
 	diagnostics.hadolint,
-	null_ls.builtins.code_actions.gitsigns,
+	-- null_ls.builtins.code_actions.gitsigns,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -24,9 +24,8 @@ null_ls.setup({
 			group = augroup,
 			buffer = bufnr,
 			callback = function()
-				vim.lsp.buf.format({ bufnr = bufnr,})
+				vim.lsp.buf.format({ bufnr = bufnr })
 			end,
 		})
 	end,
 })
-

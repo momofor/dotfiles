@@ -14,3 +14,4 @@ require("lspconfig").clangd.setup({
 	capabilities = capabilities,
 	on_attach = utils.on_attach,
 })
+vim.cmd([[LspStart]])
