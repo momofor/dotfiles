@@ -56,4 +56,4 @@ utils.map("n", "<Leader>cg", ":TSHighlightCapturesUnderCursor<CR>", { noremap = 
 utils.map("t", "<Esc>", [[ <C-\><C-n> ]], { noremap = true })
 utils.nnoremap("<Leader>e", vim.diagnostic.open_float)
 
-utils.nnoremap("<leader>D", vim.lsp.buf.type_definition)
+utils.nnoremap("<leader>Ds", ":! objdump -d ./target/release/simd-testing --disassembler-options=intel<CR>")

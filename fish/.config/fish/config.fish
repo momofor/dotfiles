@@ -28,6 +28,7 @@ set -x LIBVA_DRIVER_NAME i965
 # set -x LIBVA_DRIVERS_PATH /usr/lib/dri
 set -x QT_PLUGIN_PATH /usr/lib/qt/plugins/
 set -x QT_QPA_PLATFORM wayland
+set -x ANKI_WAYLAND 1
 set -x QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
 set -x GDK_BACKEND wayland
 
@@ -63,7 +64,7 @@ set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 # set -x CXX clang++
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
-set -x LC_ALL en_US.UTF-8 
+# set -x LC_ALL en_US.UTF-8 
 
 
 
