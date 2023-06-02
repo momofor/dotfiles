@@ -1,0 +1,2 @@
+LIBSEAT_BACKEND=logind
+exec dbus-launch --sh-syntax --exit-with-session Hyprland

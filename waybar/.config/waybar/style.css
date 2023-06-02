@@ -20,7 +20,7 @@
     min-width: 20rem;
     border: 1px solid @surface0;
     border-radius: 10em;
-    color: @lavender;
+    color: @lavenderu;
     padding: 0 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -31,7 +31,6 @@ window#waybar.empty {
 }
 /*!###############################################################################################*/
 #workspaces {
-    background-color: @base;
     margin-left: 0.5em;
     border: 1px solid @surface1 ;
 	border-radius: 10em;
@@ -49,7 +48,7 @@ window#waybar.empty {
 #workspaces button.active label {
 	padding: 0 20px;
 	color:@mantle;
-	background-color:@lavender;
+	background-color:@lavenderu;
 	background-size:200% 200%;
 	border-radius: 10em;
 	transition: all 0.2s cubic-bezier(.55,-0.68,.48,1.682);
@@ -76,7 +75,6 @@ window#waybar.empty {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: @teal;
     border-bottom: 1px solid @surface0;
     /* color: ; */
 }
@@ -128,4 +126,29 @@ label:focus {
 
 #mpd.stopped, #mpd.paused {
     color: @red;
+}
+#mpd {
+	color:@lavenderu;
+}
+#network {
+	color:@sapphire;
+}
+#cpu {
+	color:@sky;
+}
+
+#memory {
+	color:@yellow;
+}
+
+#temperature {
+	color:@pink;
+}
+
+#backlight {
+	color:@flamingo;
+}
+
+#pulseaudio {
+	color:@rosewater;
 }

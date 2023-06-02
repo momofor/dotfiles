@@ -1,26 +1,17 @@
 {
     "output": {
         "bass_enhancer#0": {
-            "amount": 20.0,
+            "amount": 25.0,
             "blend": 0.0,
             "bypass": false,
             "floor": 10.0,
             "floor-active": true,
             "harmonics": 10.0,
             "input-gain": 0.0,
-            "output-gain": -0.6,
+            "output-gain": -4.6,
             "scope": 200.0
         },
         "blocklist": [],
-        "filter#0": {
-            "bypass": false,
-            "frequency": 135.0,
-            "inertia": 20.0,
-            "input-gain": 0.0,
-            "mode": "36dB/oct Highpass",
-            "output-gain": 1.0,
-            "resonance": -3.0
-        },
         "limiter#0": {
             "alr": false,
             "alr-attack": 5.0,
@@ -265,7 +256,6 @@
             "wet": 0.0
         },
         "plugins_order": [
-            "filter#0",
             "bass_enhancer#0",
             "multiband_compressor#0",
             "stereo_tools#0",

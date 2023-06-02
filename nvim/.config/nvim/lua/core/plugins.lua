@@ -22,9 +22,9 @@ require("lazy").setup {
 			{ "<leader>ff", desc = "find files" },
 			{ "<leader>fw", desc = "find word" },
 			{ "<leader>fo", desc = "recently opened" },
-			{ "<leader>e",  desc = "document diagnostics" },
-			{ "<leader>M",  desc = "Man pages" },
-			{ "<leader>T",  desc = "treesitter keys" },
+			{ "<leader>e", desc = "document diagnostics" },
+			{ "<leader>M", desc = "Man pages" },
+			{ "<leader>T", desc = "treesitter keys" },
 			{ "<leader>ds", desc = "document symbols" },
 			{ "<leader>ws", desc = "workspace symbols" },
 		},
@@ -45,7 +45,7 @@ require("lazy").setup {
 		end,
 	},
 	{ "debugloop/telescope-undo.nvim", dependencies = "nvim-telescope/telescope.nvim" },
-	{ "stevearc/dressing.nvim",        dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
+	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
 	{
 		"NvChad/nvim-colorizer.lua",
 		config = function()
@@ -79,14 +79,14 @@ require("lazy").setup {
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	-- {
-	-- 	"romgrk/barbar.nvim",
-	-- 	event = "BufRead",
-	-- },
+	{
+		"romgrk/barbar.nvim",
+		event = "BufRead",
+	},
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
-	{ "folke/trouble.nvim",   event = "LspAttach" },
+	{ "folke/trouble.nvim", event = "LspAttach" },
 	{
 		{ "onsails/lspkind-nvim", event = "LspAttach" },
 	},
@@ -106,7 +106,6 @@ require("lazy").setup {
 			require("Comment").setup()
 		end,
 	},
-
 	{
 		"jose-elias-alvarez/nvim-lsp-ts-utils",
 		dependencies = "jose-elias-alvarez/null-ls.nvim",
@@ -200,7 +199,7 @@ require("lazy").setup {
 		event = "LspAttach",
 	},
 
-	{ "lervag/vimtex",        ft = "tex" },
+	{ "lervag/vimtex", ft = "tex" },
 	{ "b0o/schemastore.nvim", ft = "json" },
 	{
 		"smjonas/inc-rename.nvim",
@@ -282,7 +281,7 @@ require("lazy").setup {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
 	},
-	{ "folke/neodev.nvim",   ft = "lua" },
+	{ "folke/neodev.nvim", ft = "lua" },
 
 	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
 	{
