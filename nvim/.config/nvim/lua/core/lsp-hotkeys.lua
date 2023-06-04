@@ -57,3 +57,4 @@ utils.map("t", "<Esc>", [[ <C-\><C-n> ]], { noremap = true })
 utils.nnoremap("<Leader>e", vim.diagnostic.open_float)
 
 utils.nnoremap("<leader>Ds", ":! objdump -d ./target/release/simd-testing --disassembler-options=intel<CR>")
+utils.nnoremap("<enter>", "ciw")
