@@ -2,6 +2,7 @@ font="Dejavu Sans Mono" 12
 border-radius=10
 markup=1
 default-timeout=10000
+layer=overlay
 
 
 background-color=#24273a

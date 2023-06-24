@@ -1,14 +1,14 @@
 {
     "output": {
         "bass_enhancer#0": {
-            "amount": 25.0,
-            "blend": 0.0,
+            "amount": 20.0,
+            "blend": 1.0,
             "bypass": false,
             "floor": 10.0,
             "floor-active": true,
-            "harmonics": 10.0,
+            "harmonics": 6.0,
             "input-gain": 0.0,
-            "output-gain": -4.6,
+            "output-gain": -2.6,
             "scope": 200.0
         },
         "blocklist": [],

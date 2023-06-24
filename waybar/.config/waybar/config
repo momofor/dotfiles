@@ -11,7 +11,8 @@
 // https://github.com/Jorgedeveloopzz                     
 {
 	"position": "top",
-	"height": 30,
+	"layer":"top" ,
+	"height": 10,
 	//"modules-left": [
 	//"sway/workspaces",
 	//"sway/window"
@@ -133,7 +134,7 @@
 	},
 	"mpd": {
 		// "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} |",
-		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{title} |",
+		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{title}",
 		"format-disconnected": "Disconnected ",
 		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
 		"interval": 10,

@@ -43,3 +43,5 @@ writeCommonTags: couldn't write 'year' tag to 'The Notorious B.I.G. - Notorious 
 writeCommonTags: couldn't write 'year' tag to 'Wiz Khalifa - Black and Yellow.opus' as it's not a positive integer
 writeCommonTags: couldn't write 'year' tag to 'X Gon' Give It To Ya.opus' as it's not a positive integer
 writeCommonTags: couldn't write 'track' tag to 'X Gon' Give It To Ya.opus' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'dj honda - travellin' man feat. mosdef.opus' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'dj honda - travellin' man feat. mosdef.opus' as it's not a positive integer
