@@ -10,6 +10,7 @@ local sources = {
 	formatting.stylua,
 	formatting.black,
 	diagnostics.hadolint,
+	formatting.clang_format,
 	-- null_ls.builtins.code_actions.gitsigns,
 }
 

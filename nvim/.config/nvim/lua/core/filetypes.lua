@@ -12,5 +12,11 @@ vim.filetype.add {
 	extension = {
 		wgsl = "wgsl",
 		yuck = "lisp",
+		h = "c",
 	},
 }
+
+local noice = false
+if noice == true then
+	print(noice)
+end

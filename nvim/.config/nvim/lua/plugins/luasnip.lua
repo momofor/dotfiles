@@ -170,6 +170,23 @@ ls.add_snippets("tex", {
 	-- s("frac", fmt([[\frac { {{}} {{}} }]], { i(1), i(2) }), { condition = uls.in_mathzone }),
 	-- s("st", fmt([[\set{ {{}} }]], { i(1) }), { condition = uls.in_mathzone }),
 }, { type = "autosnippets" })
+ls.add_snippets("c", {
+	s(
+		"ndef",
+		fmt(
+			[[#ifndef {}
+#define {}
+{}
+#endif //!{}]],
+			{
+				i(1),
+				rep(1),
+				i(2),
+				rep(1),
+			}
+		)
+	),
+})
 
 vim.keymap.set("i", "<c-o>", function()
 	ls.expand()
