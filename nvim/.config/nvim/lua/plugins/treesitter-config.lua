@@ -30,6 +30,8 @@ require("nvim-treesitter.configs").setup({
 				["ic"] = "@class.inner",
 				["aa"] = "@parameter.outer",
 				["ia"] = "@parameter.inner",
+				["rh"] = "@assignment.rhs",
+				["lh"] = "@assignment.lhs",
 			},
 		},
 		lsp_interop = {
