@@ -106,7 +106,7 @@ require("lazy").setup {
 			require("Comment").setup()
 		end,
 	},
-	{
+	--[[ {
 		"jose-elias-alvarez/nvim-lsp-ts-utils",
 		dependencies = "jose-elias-alvarez/null-ls.nvim",
 		ft = {
@@ -118,7 +118,7 @@ require("lazy").setup {
 			"typescript.tsx",
 		},
 		event = "BufRead",
-	},
+	}, ]]
 
 	{
 		"lukas-reineke/indent-blankline.nvim",

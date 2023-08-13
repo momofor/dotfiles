@@ -7,7 +7,7 @@
             "output-gain": 0.0,
             "reference": "Geometric Mean (MSI)",
             "silence-threshold": -70.0,
-            "target": -30.0
+            "target": -20.0
         },
         "blocklist": [],
         "compressor#0": {

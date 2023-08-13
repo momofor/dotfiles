@@ -42,3 +42,5 @@ set highlight-active-color	  "#F5BDE6"
 set font "Fira Code 10"
 set selection-clipboard clipboard
 set recolor-reverse-video "true"
+set recolor-keephue "true"
+

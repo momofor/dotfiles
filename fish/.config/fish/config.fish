@@ -130,11 +130,7 @@ alias init-julia="julia --project=$PWD -e 'using Pkg; Pkg.instantiate()'"
 alias salawat "~/salawat.fish"
 alias rm "rm -i"
 alias zotero "GDK_BACKEND=x11  zotero"
-
-
-
-
-
+alias tao "zathura ~/books/Tao-Te-Ching-Annotated-And-Explained-Derek-Lin.pdf"
 
 # starship init fish | source
 # source (/usr/bin/starship init fish --print-full-init | psub)
