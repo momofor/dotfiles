@@ -333,4 +333,16 @@ require("lazy").setup {
 			},
 		},
 	},
+	--[[ {
+		"epwalsh/obsidian.nvim",
+		lazy = true,
+		event = { "BufReadPre " },
+		dependencies = {
+			-- Required.
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {
+			dir = "~/notes/studying/studying/", -- no need to call 'vim.fn.expand' here
+		},
+	} ,]]
 }
