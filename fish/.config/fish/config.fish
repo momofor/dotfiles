@@ -133,7 +133,7 @@ alias zotero "GDK_BACKEND=x11  zotero"
 alias tao "zathura ~/books/Tao-Te-Ching-Annotated-And-Explained-Derek-Lin.pdf"
 
 function set_temp
-	gawk -v temp=$argv -i inplace '{gsub(/temperature\s?+=[0-9]?+\.?[0-9]?+/, "temperature=" temp)}; {print}' .config/hypr/shaders/blue_light.glsl
+	gawk -v temp=$argv -i inplace '{gsub(/temperature\s?+=[0-9]?+\.?[0-9]?+/, "temperature=" temp)}; {print}' ~/.config/hypr/shaders/blue_light.glsl
 end
 
 # starship init fish | source

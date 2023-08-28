@@ -2,7 +2,7 @@
 @import "theme.css";
 
 *{
-    font-family: "Dejavu Sans";
+    font-family: "DejavuSansM Nerd Font";
     font-size: 16px;
     border: none;
 }
@@ -16,7 +16,7 @@
 }
 
 #window {
-    font-family: "Fira Code Nerd Font";
+    font-family: "DejavuSansM Nerd Font";
     min-width: 20rem;
 	color:@lavenderu;
     border: 1px solid @surface0;

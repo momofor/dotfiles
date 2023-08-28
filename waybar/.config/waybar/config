@@ -71,7 +71,7 @@
 		"interval": 1
 	},
 	"memory": {
-		"format": "{percentage}% ",
+		"format": "{percentage}% 󰍛",
 		"interval": 1
 	},
 	"pulseaudio": {
@@ -89,9 +89,10 @@
 			"portable": "",
 			"car": "",
 			"default": [
-				"奄",
-				"奔",
-				"墳"
+				"",
+				"",
+				"󰕾"
+
 			]
 		},
 		"on-click": "pavucontrol"

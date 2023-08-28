@@ -331,6 +331,9 @@ require("lazy").setup {
 				end,
 				desc = "Flash",
 			},
+			{ "t" },
+			{ "f" },
+			{ "/" },
 		},
 	},
 	--[[ {
