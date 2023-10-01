@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 require("nvim-treesitter.configs").setup({
 	highlight = {
 		enable = true,
-		disable = { "html", "css,", "latex" },
+		disable = { "html", "css", "latex" },
 	},
 	incremental_selection = {
 		enable = true,
@@ -16,7 +16,7 @@ require("nvim-treesitter.configs").setup({
 		},
 	},
 	refactor = {
-		highlight_definitions = { enable = true },
+		highlight_definitions = { enable = false },
 		highlight_current_scope = { enable = false },
 	},
 	textobjects = {

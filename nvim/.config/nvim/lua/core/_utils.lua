@@ -43,12 +43,12 @@ function M.prequire(module)
 	if not ok then
 		vim.notify(
 			"[prequire|"
-				.. debug.getinfo(2, "S").short_src
-				.. "] Failed to load module `"
-				.. module
-				.. "`"
-				.. "with error "
-				.. err,
+			.. debug.getinfo(2, "S").short_src
+			.. "] Failed to load module `"
+			.. module
+			.. "`"
+			.. "with error "
+			.. err,
 			vim.log.levels.ERROR
 		)
 	end

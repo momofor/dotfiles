@@ -1,6 +1,6 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 local utils = require("core._utils")
-
+--
 require("lspconfig").texlab.setup({
 	settings = {
 		["texlab"] = {
@@ -10,7 +10,7 @@ require("lspconfig").texlab.setup({
 				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f", "-outdir=./out" },
 				executable = "latexmk",
 				forwardSearchAfter = false,
-				onSave = true,
+				onSave = false,
 			},
 			chktex = {
 				onEdit = true,
@@ -20,7 +20,7 @@ require("lspconfig").texlab.setup({
 			formatterLineLength = 80,
 			forwardSearch = {
 				executable = "zathura",
-				args = { "%p" },
+				args = {"--synctex-forward", "%l:1:%f" ,"%p" },
 			},
 			latexFormatter = "latexindent",
 			latexindent = {
@@ -31,4 +31,9 @@ require("lspconfig").texlab.setup({
 	capabilities = capabilities,
 	on_attach = utils.on_attach,
 })
-vim.keymap.set("n", "<leader>I", ":VimtexTocToggle<CR>")
+vim.cmd [[LspStart]]
+
+vim.cmd [[syn sync maxlines=200]]
+vim.cmd [[syn sync minlines=50]]
+vim.keymap.set("n","<leader>tf",":TexlabForward<CR>")
+-- vim.keymap.set("n", "<leader>I", ":VimtexTocToggle<CR>")

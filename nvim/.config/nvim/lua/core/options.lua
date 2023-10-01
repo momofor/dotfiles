@@ -31,7 +31,7 @@ local options = {
 	termguicolors = true,
 	timeoutlen = 300,
 	updatetime = 200, -- Faster completion
-	conceallevel = 2,
+	conceallevel = 0,
 	undofile = true,
 }
 
@@ -58,6 +58,6 @@ vim.g.loaded_matchparen = 1
 vim.g.loaded_spec = 1
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.loaded_perl_provider = 0
+vim.g.tex_fast = ""
 
-utils.set_options(options)
 utils.set_options(options)

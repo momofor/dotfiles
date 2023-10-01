@@ -46,6 +46,7 @@ require("catppuccin").setup({
 		gitsigns = true,
 		semantic_tokens = true,
 		lsp_trouble = true,
+		ufo = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
 	color_overrides = {},

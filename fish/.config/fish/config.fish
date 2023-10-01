@@ -27,9 +27,9 @@ zoxide init fish | source
 set -x LIBVA_DRIVER_NAME i965
 # set -x LIBVA_DRIVERS_PATH /usr/lib/dri
 set -x QT_PLUGIN_PATH /usr/lib/qt/plugins/
-set -x QT_QPA_PLATFORM wayland
-set -x ANKI_WAYLAND 1
+set -x QT_QPA_PLATFORM "wayland;xcb"
 set -x QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+set -x ANKI_WAYLAND 1
 set -x GDK_BACKEND wayland
 
 set -x XDG_SESSION_TYPE wayland
@@ -64,7 +64,6 @@ set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 # set -x CXX clang++
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
-set LC_ALL en_US.UTF-8
 
 
 
@@ -131,6 +130,7 @@ alias salawat "~/salawat.fish"
 alias rm "rm -i"
 alias zotero "GDK_BACKEND=x11  zotero"
 alias tao "zathura ~/books/Tao-Te-Ching-Annotated-And-Explained-Derek-Lin.pdf"
+alias network_data "sudo netstat --listening --program --numeric --tcp --udp --extend"
 
 function set_temp
 	gawk -v temp=$argv -i inplace '{gsub(/temperature\s?+=[0-9]?+\.?[0-9]?+/, "temperature=" temp)}; {print}' ~/.config/hypr/shaders/blue_light.glsl

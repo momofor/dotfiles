@@ -38,7 +38,7 @@ ls.config.set_config({
 	ext_base_prio = 300,
 	-- minimal increase in priority.
 	ext_prio_increase = 1,
-	-- enable_autosnippets = true,
+	enable_autosnippets = true,
 	-- mapping for cutting selected text so it's usable as SELECT_DEDENT,
 	-- SELECT_RAW or TM_SELECTED_TEXT (mapped via xmap).
 	-- store_selection_keys = "<Tab>",
@@ -103,10 +103,6 @@ ls.add_snippets("tex", {
 			{ i(1), i(2), rep(1) }
 		)
 	),
-	s("$", fmt("${}$", { i(1) })),
-	s("pfn", fmt("+\\infty{}", { i(1) })),
-	s("nfn", fmt("-\\infty{}", { i(1) })),
-	s("ir", fmt("[{};{}]", { i(1), i(2) })),
 	s(
 		"graph",
 		fmt(
@@ -135,41 +131,71 @@ ls.add_snippets("tex", {
 			{ i(1), i(2), i(3) }
 		)
 	),
-	s("mk", fmt("${}$", { i(1) })),
-	s("dm", fmt([[ \[{}.\] ]], { i(1) })),
 	s("tot", fmt("{}", { in_equation(1) })),
+	s({trig = "mk"}, fmt("${}$", { i(1) })),
+	s("dm", fmt([[ \[{}.\] ]], { i(1) })),
+	s("$", fmt("${}$", { i(1) })),
+	s("pfn", fmt("+\\infty{}", { i(1) }), {condition= uls.in_mathzone}),
+	s("nfn", fmt("-\\infty{}", { i(1) }), {condition= uls.in_mathzone}),
+	s({trig ="iv",snippetType="autosnippet" }, fmt("[{};{}]", { i(1), i(2) }), {condition= uls.in_mathzone}),
+	s({trig ="eps",snippetType="autosnippet" }, fmt([[\epsilon {}]], { i(1)}), {condition= uls.in_mathzone}),
+	-- s("lim", fmt([[\lim_{ <> \to <> }]], { i(1), i(2) }, { delimiters = "<>" }), { condition = uls.in_mathzone }),
 })
-ls.add_snippets("tex", {
-	s(
-		{ trig = "(%a)(%d)", regTrig = true, name = "auto subscript", dscr = "hi" },
-		fmt([[<>_<>]], {
-			f(function(_, snip)
-				return snip.captures[1]
-			end),
-			f(function(_, snip)
-				return snip.captures[2]
-			end),
-		}, { delimiters = "<>" }),
-		{ condition = uls.in_mathzone }
-	),
-	s(
-		{ trig = "(%a)_(%d%d)", regTrig = true, name = "auto subscript 2", dscr = "auto subscript for 2+ digits" },
-		fmt([[<>_{<>}]], {
-			f(function(_, snip)
-				return snip.captures[1]
-			end),
-			f(function(_, snip)
-				return snip.captures[2]
-			end),
-		}, { delimiters = "<>" }),
-		{ condition = uls.in_mathzone }
-	),
-	-- s("vec", fmt([[ \overrightarrow{ {{}} } ]], { i(1) }), { condition = uls.in_mathzone }),
-	-- s("impl", t([[\Rightarrow{}]]), { condition = uls.in_mathzone }),
-	-- s("eqv", t([[\Longleftrightarrow{}]]), { condition = uls.in_mathzone }),
-	-- s("frac", fmt([[\frac { {{}} {{}} }]], { i(1), i(2) }), { condition = uls.in_mathzone }),
-	-- s("st", fmt([[\set{ {{}} }]], { i(1) }), { condition = uls.in_mathzone }),
-}, { type = "autosnippets" })
+-- ls.add_snippets("tex", {
+-- 	s(
+-- 		{ trig = "(%a)(%d)", regTrig = true, name = "auto subscript", dscr = "hi" },
+-- 		fmt([[<>_<>]], {
+-- 			f(function(_, snip)
+-- 				return snip.captures[1]
+-- 			end),
+-- 			f(function(_, snip)
+-- 				return snip.captures[2]
+-- 			end),
+-- 		}, { delimiters = "<>" }),
+-- 		{ condition = uls.in_mathzone }
+-- 	),
+-- 	s(
+-- 		{ trig = "(%a)_(%d%d)", regTrig = true, name = "auto subscript 2", dscr = "auto subscript for 2+ digits" },
+-- 		fmt([[<>_{<>}]], {
+-- 			f(function(_, snip)
+-- 				return snip.captures[1]
+-- 			end),
+-- 			f(function(_, snip)
+-- 				return snip.captures[2]
+-- 			end),
+-- 		}, { delimiters = "<>" }),
+-- 		{ condition = uls.in_mathzone }
+-- 	),
+-- 	s(
+-- 		{ trig = "(%a)(%d)", regTrig = true, name = "auto exponent", dscr = "hi" },
+-- 		fmt([[<>^<>]], {
+-- 			f(function(_, snip)
+-- 				return snip.captures[1]
+-- 			end),
+-- 			f(function(_, snip)
+-- 				return snip.captures[2]
+-- 			end),
+-- 		}, { delimiters = "<>" }),
+-- 		{ condition = uls.in_mathzone }
+-- 	),
+-- 	s(
+-- 		{ trig = "(%a)^(%d%d)", regTrig = true, name = "auto exponent 2", dscr = "auto subscript for 2+ digits",type = "autosnippet" },
+-- 		fmt([[<>^{<>}]], {
+-- 			f(function(_, snip)
+-- 				return snip.captures[1]
+-- 			end),
+-- 			f(function(_, snip)
+-- 				return snip.captures[2]
+-- 			end),
+-- 		}, { delimiters = "<>" }),
+-- 		{ condition = uls.in_mathzone }
+-- 	),
+-- 	-- s("vec", fmt([[ \overrightarrow{ {{}} } ]], { i(1) }), { condition = uls.in_mathzone }),
+-- 	-- s("impl", t([[\Rightarrow{}]]), { condition = uls.in_mathzone }),
+-- 	-- s("eqv", t([[\Longleftrightarrow{}]]), { condition = uls.in_mathzone }),
+-- 	-- s("frac", fmt([[\frac { {{}} {{}} }]], { i(1), i(2) }), { condition = uls.in_mathzone }),
+-- 	-- s("st", fmt([[\set{ {{}} }]], { i(1) }), { condition = uls.in_mathzone }),
+-- }, { type = "autosnippets" })
 ls.add_snippets("c", {
 	s(
 		"ndef",

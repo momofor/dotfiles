@@ -12,13 +12,13 @@
 {
 	"position": "top",
 	"layer":"top" ,
-	"height": 10,
+	"height": 32,
 	//"modules-left": [
 	//"sway/workspaces",
 	//"sway/window"
 	//],
 	"modules-left": [
-		"wlr/workspaces",
+		"hyprland/workspaces",
 		"hyprland/window",
 	],
 	"modules-center": [
@@ -56,7 +56,7 @@
 		"format": "{}"
 	},
 	"clock": {
-		"format": "  {:%a %d/%m/%Y - %T}",
+		"format": "󰃰 {:%a %d/%m/%Y - %T}",
 		"interval": 1
 	},
 	"network": {
@@ -77,8 +77,8 @@
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
-		"format-bluetooth-muted": "ﱝ {icon} {format_source}",
-		"format-muted": "ﱝ",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": "",
 		"format-source": "{volume}% ",
 		"format-source-muted": "",
 		"format-icons": {
@@ -135,7 +135,7 @@
 	},
 	"mpd": {
 		// "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} |",
-		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{title}",
+		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title}",
 		"format-disconnected": "Disconnected ",
 		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
 		"interval": 10,
