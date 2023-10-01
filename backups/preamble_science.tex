@@ -1,0 +1,141 @@
+% \usepackage{fontspec}
+
+\usepackage{mathbbol}
+\usepackage{mathtools}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{kpfonts}
+
+\usepackage{tkz-tab}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabulary}
+\usepackage{hyperref,cleveref}
+\usepackage{titlesec}
+\usepackage{babel}
+\usepackage{amsmath,amsfonts,amsthm}
+% \usepackage{amssymb}
+\usepackage{mdframed}
+\usepackage{pgfplots}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{multicol}
+\hypersetup{
+	colorlinks = true,
+	linkcolor=blue
+}
+\usetikzlibrary{mindmap,calc}
+
+\usepackage[
+	protrusion=true,
+	activate={true,nocompatibility},
+	final,
+	tracking=true,
+	factor=1100]
+{microtype}
+\SetTracking{encoding={*}, shape=sc}{40}
+
+\usepackage[a4paper,bottom=0.75in,right=0.8in,left=0.8in]{geometry}
+
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=cache/]
+
+\pgfplotsset{compat=1.18,width=15cm}
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\textcolor{yellow}{\thesection}}{.5em}{}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\textcolor{yellow}{\thesubsection}}{.5em}{}
+
+\newcounter{questionNumber}
+\setcounter{questionNumber}{0}
+\newcommand{\qs}[1]{
+	Problem Number: \arabic{questionNumber}
+
+	{#1}
+	\addtocounter{questionNumber}{1}
+}
+
+%% One of the nicest things about LaTeX is you can create custom macros. If  there is a long-ish expression that you will write often, it is nice to give it a shorter command.
+%% For our common number systems.
+\newcommand{\R}{\mathbb{R}} %% The blackboard-bold R that you have seen used for real numbers is typeset by $\mathbb{R}$. This macro means that $\RR$ will yield the same result, and is much shorter to type.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\fa}{\forall}
+\newcommand{\ex}{\exists}
+\newcommand{\clr}{\textcolor}
+
+%% Your macros can even accept arguments. 
+\newcommand\set[1]{\left\lbrace #1 \right\rbrace} %% In mathmode, if you write \set{STUFF}, then this will output {STUFF}, i.e. STUFF inside of a set
+\newcommand\abs[1]{\left| #1 \right|} %% This will do the same but with vertical bars. I.e., \abs{STUFF} gives |STUFF|
+\newcommand\parens[1]{\left( #1 \right)} %% Similar. \parens{STUFF} gives (STUFF)
+\newcommand\brac[1]{\left[ #1 \right]} %% Similar. \brac{STUFF} gives [STUFF]
+\newcommand\sol[1]{\begin{mdframed}
+		\emph{Solution.} #1
+	\end{mdframed}}
+\newcommand\solproof[1]{\begin{mdframed}
+		\begin{proof} #1
+		\end{proof}
+	\end{mdframed}}
+\newcommand{\definition}[1]{
+	\begin{tcolorbox}[colback=red!5!white,colframe=red!50!black,title=Définition]
+		#1
+	\end{tcolorbox}}
+\newcommand{\property}[1]{
+	\begin{tcolorbox}[colback=red!5!white,colframe=blue!50!black,title=propriétés]
+		#1
+	\end{tcolorbox}}
+\newcommand{\solution}[1]{
+	\begin{tcolorbox}[colback=green!5!white,colframe=green!50!black,title=Solution]
+		#1
+	\end{tcolorbox}}
+\newcommand{\preuve}[1]{
+	\begin{tcolorbox}[colback=magenta!5!white,colframe=magenta!50!black,title=Preuve]
+		#1
+	\end{tcolorbox}}
+
+\newcommand{\exercice}[1]{
+	\begin{tcolorbox}[colback=magenta!5!white,colframe=magenta!50!black,title=Exercice]
+		#1
+	\end{tcolorbox}}
+%% A few more important commands:
+
+%% You should start every proof with \begin{proof} and end it with \end{proof}.  
+%%
+%% Code inside single dollar signs will give in-line mathmode. I.e., $f(x) = x^2$ 
+%% Code \[ \] will give mathmode centered on its own line.
+%%
+%% Other common commands:
+%%	\begin{align*} and \end{align*} -- Good for multiline equations
+%%	\begin{align} and \end{align} -- Same as above, but it will number the equations for easy reference
+%%	\emph{italicized text here} and \textbf{bold text here} are also useful.
+%%
+%% Some very specific mathmode commands and their meanings:
+%%	x \in A -- x is an element of A
+%%	x \notin A -- x is not an element of A
+%%	A \subseteq B -- A is a subset of B
+%%	A \subsetneq B -- A is a proper subset of B
+%%	x \equiv y \pmod{n} -- x is congruent to y mod n. 
+%%	x \geq y and x \leq y -- Greater than or equal to and less than or equal to 
+%%
+%% You'll probably find lots of relevant commands in the question prompts. Also Google is your friend!
+
+\newcommand{\vertLineFromPoint}[2]{
+	\draw[dashed,#2]
+	(#1) -- (#1|-{rel axis cs:0,0}) % chktex 8
+}
+\newcommand{\horLineFromPoint}[2]{
+	\draw[dashed,#2]
+	(#1) -- (#1-|{rel axis cs:0,0}) % chktex 8
+}
+\newcommand{\LinesFromPoint}[2]{
+	\vertLineFromPoint{#1}{#2};
+	\horLineFromPoint{#1}{#2};
+}
+
+
