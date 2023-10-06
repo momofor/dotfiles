@@ -36,4 +36,5 @@ vim.cmd [[LspStart]]
 vim.cmd [[syn sync maxlines=200]]
 vim.cmd [[syn sync minlines=50]]
 vim.keymap.set("n","<leader>tf",":TexlabForward<CR>")
+vim.keymap.set("n","<leader>tb",":TexlabBuild<CR>")
 -- vim.keymap.set("n", "<leader>I", ":VimtexTocToggle<CR>")

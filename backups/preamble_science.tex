@@ -2,10 +2,11 @@
 
 \usepackage{mathbbol}
 \usepackage{mathtools}
+\usepackage{wrapfig}
+% \usepackage{fancyhdr}
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
-\usepackage{kpfonts}
 
 \usepackage{tkz-tab}
 \usepackage{array}
@@ -13,12 +14,15 @@
 \usepackage{tabulary}
 \usepackage{hyperref,cleveref}
 \usepackage{titlesec}
-\usepackage{babel}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[lighttext,frenchstyle]{kpfonts-otf}
 \usepackage{amsmath,amsfonts,amsthm}
 % \usepackage{amssymb}
-\usepackage{mdframed}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins,listings,breakable,poster}
+
 \usepackage{pgfplots}
-\usepackage{tcolorbox}
 \usepackage{float}
 \usepackage{multicol}
 \hypersetup{
@@ -36,7 +40,8 @@
 {microtype}
 \SetTracking{encoding={*}, shape=sc}{40}
 
-\usepackage[a4paper,bottom=0.75in,right=0.8in,left=0.8in]{geometry}
+% \usepackage[a4paper,bottom=0.75cm,right=0.8cm,left=0.8cm]{geometry}
+\usepackage[a4paper,,scale=0.9]{geometry}
 
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=cache/]
@@ -51,15 +56,6 @@
 \titleformat{\subsection}
 {\normalfont\large\bfseries}{\textcolor{yellow}{\thesubsection}}{.5em}{}
 
-\newcounter{questionNumber}
-\setcounter{questionNumber}{0}
-\newcommand{\qs}[1]{
-	Problem Number: \arabic{questionNumber}
-
-	{#1}
-	\addtocounter{questionNumber}{1}
-}
-
 %% One of the nicest things about LaTeX is you can create custom macros. If  there is a long-ish expression that you will write often, it is nice to give it a shorter command.
 %% For our common number systems.
 \newcommand{\R}{\mathbb{R}} %% The blackboard-bold R that you have seen used for real numbers is typeset by $\mathbb{R}$. This macro means that $\RR$ will yield the same result, and is much shorter to type.
@@ -71,38 +67,33 @@
 \newcommand{\clr}{\textcolor}
 
 %% Your macros can even accept arguments. 
-\newcommand\set[1]{\left\lbrace #1 \right\rbrace} %% In mathmode, if you write \set{STUFF}, then this will output {STUFF}, i.e. STUFF inside of a set
+\newcommand\set[1]{\left\lbrace #1 \right\rbrace}%% In mathmode, if you write \set{STUFF}, then this will output {STUFF}, i.e. STUFF inside of a set
 \newcommand\abs[1]{\left| #1 \right|} %% This will do the same but with vertical bars. I.e., \abs{STUFF} gives |STUFF|
-\newcommand\parens[1]{\left( #1 \right)} %% Similar. \parens{STUFF} gives (STUFF)
+\newcommand\parens[1]{\left(#1 \right)} %% Similar. \parens{STUFF} gives (STUFF)
 \newcommand\brac[1]{\left[ #1 \right]} %% Similar. \brac{STUFF} gives [STUFF]
-\newcommand\sol[1]{\begin{mdframed}
-		\emph{Solution.} #1
-	\end{mdframed}}
-\newcommand\solproof[1]{\begin{mdframed}
-		\begin{proof} #1
-		\end{proof}
-	\end{mdframed}}
-\newcommand{\definition}[1]{
-	\begin{tcolorbox}[colback=red!5!white,colframe=red!50!black,title=Définition]
-		#1
-	\end{tcolorbox}}
-\newcommand{\property}[1]{
-	\begin{tcolorbox}[colback=red!5!white,colframe=blue!50!black,title=propriétés]
-		#1
-	\end{tcolorbox}}
-\newcommand{\solution}[1]{
-	\begin{tcolorbox}[colback=green!5!white,colframe=green!50!black,title=Solution]
-		#1
-	\end{tcolorbox}}
-\newcommand{\preuve}[1]{
-	\begin{tcolorbox}[colback=magenta!5!white,colframe=magenta!50!black,title=Preuve]
-		#1
-	\end{tcolorbox}}
 
-\newcommand{\exercice}[1]{
-	\begin{tcolorbox}[colback=magenta!5!white,colframe=magenta!50!black,title=Exercice]
-		#1
-	\end{tcolorbox}}
+\newtcolorbox{definition}{%
+	colback=red!5!white,colframe=red!50!black,title=Définition,
+}
+
+\newtcolorbox{property}{
+	colback=red!5!white,colframe=blue!50!black,title=Propriété,
+}
+
+\newtcolorbox{solution}{
+	colback=green!5!white,colframe=green!50!black,title=Solution,
+}
+
+\newtcolorbox{preuve}{
+	colback=magenta!5!white,colframe=magenta!50!black,title=Preuve,
+}
+
+\newtcolorbox{exercice}{
+	colback=magenta!5!white,colframe=magenta!50!black,title=Exercice,
+}
+\newtcolorbox{exemple}{
+	colback=magenta!5!white,colframe=magenta!50!black,title=Exemple,
+}
 %% A few more important commands:
 
 %% You should start every proof with \begin{proof} and end it with \end{proof}.  
@@ -137,5 +128,4 @@
 	\vertLineFromPoint{#1}{#2};
 	\horLineFromPoint{#1}{#2};
 }
-
 
