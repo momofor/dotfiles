@@ -20,7 +20,7 @@ require("lspconfig").texlab.setup({
 			formatterLineLength = 80,
 			forwardSearch = {
 				executable = "zathura",
-				args = {"--synctex-forward", "%l:1:%f" ,"%p" },
+				args = { "--synctex-forward", "%l:1:%f", "%p" },
 			},
 			latexFormatter = "latexindent",
 			latexindent = {
@@ -35,6 +35,7 @@ vim.cmd [[LspStart]]
 
 vim.cmd [[syn sync maxlines=200]]
 vim.cmd [[syn sync minlines=50]]
-vim.keymap.set("n","<leader>tf",":TexlabForward<CR>")
-vim.keymap.set("n","<leader>tb",":TexlabBuild<CR>")
+vim.keymap.set("n", "<leader>tf", ":TexlabForward<CR>")
+vim.keymap.set("n", "<leader>tb", ":TexlabBuild<CR>")
+vim.keymap.set("n", "<leader>ft", function() vim.lsp.buf.format() end)
 -- vim.keymap.set("n", "<leader>I", ":VimtexTocToggle<CR>")
