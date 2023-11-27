@@ -2,11 +2,11 @@ local ht = require("haskell-tools")
 local utils = require("core._utils")
 local buffer = vim.api.nvim_get_current_buf()
 local def_opts = { noremap = true, silent = true }
-ht.start_or_attach({
+vim.g.haskell_tools = {
 	hls = {
 		on_attach = utils.on_attach,
 	},
-})
+}
 
 -- Suggested keymaps that do not depend on haskell-language-server:
 local bufnr = vim.api.nvim_get_current_buf()
