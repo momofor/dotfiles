@@ -359,7 +359,10 @@ require("lazy").setup {
 		config = function()
 			require('kitty-scrollback').setup()
 		end,
-	}
+	},
+	{"frabjous/knap",config = function ()
+		require("plugins.knap-conf")
+	end}
 	--[[ {
 		"epwalsh/obsidian.nvim",
 		lazy = true,

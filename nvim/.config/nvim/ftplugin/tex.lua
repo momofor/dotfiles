@@ -10,7 +10,7 @@ require("lspconfig").texlab.setup({
 				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f", "-outdir=./out" },
 				executable = "latexmk",
 				forwardSearchAfter = false,
-				onSave = false,
+				onSave = true,
 			},
 			chktex = {
 				onEdit = true,
@@ -19,8 +19,8 @@ require("lspconfig").texlab.setup({
 			diagnosticsDelay = 300,
 			formatterLineLength = 80,
 			forwardSearch = {
-				executable = "zathura",
-				args = { "--synctex-forward", "%l:1:%f", "%p" },
+				executable = "sioyek",
+				args = { "--forward-search-file","%f","--forward-search-line","%l", "%p" },
 			},
 			latexFormatter = "latexindent",
 			latexindent = {
