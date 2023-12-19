@@ -22,9 +22,9 @@ require("lazy").setup {
 			{ "<leader>ff", desc = "find files" },
 			{ "<leader>fw", desc = "find word" },
 			{ "<leader>fo", desc = "recently opened" },
-			{ "<leader>e",  desc = "document diagnostics" },
-			{ "<leader>M",  desc = "Man pages" },
-			{ "<leader>T",  desc = "treesitter keys" },
+			{ "<leader>e", desc = "document diagnostics" },
+			{ "<leader>M", desc = "Man pages" },
+			{ "<leader>T", desc = "treesitter keys" },
 			{ "<leader>ds", desc = "document symbols" },
 			{ "<leader>ws", desc = "workspace symbols" },
 		},
@@ -45,7 +45,7 @@ require("lazy").setup {
 		end,
 	},
 	{ "debugloop/telescope-undo.nvim", dependencies = "nvim-telescope/telescope.nvim" },
-	{ "stevearc/dressing.nvim",        dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
+	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
 	{
 		"NvChad/nvim-colorizer.lua",
 		config = function()
@@ -86,7 +86,7 @@ require("lazy").setup {
 	"neovim/nvim-lspconfig",
 
 	{ "Raimondi/delimitMate", event = "InsertEnter" },
-	{ "folke/trouble.nvim",   event = "LspAttach" },
+	{ "folke/trouble.nvim", event = "LspAttach" },
 	{
 		{ "onsails/lspkind-nvim", event = "LspAttach" },
 	},
@@ -207,7 +207,7 @@ require("lazy").setup {
 		-- vimtex isn't required if using treesitter
 		requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
 		config = function()
-			require 'luasnip-latex-snippets'.setup({ use_treesitter = true })
+			require("luasnip-latex-snippets").setup { use_treesitter = true }
 			require("luasnip").config.setup { enable_autosnippets = true }
 		end,
 	},
@@ -262,7 +262,7 @@ require("lazy").setup {
 		config = function()
 			require("kitty-runner").setup()
 		end,
-		ft = { "julia" }
+		ft = { "julia" },
 	},
 	{
 		"mrcjkb/haskell-tools.nvim",
@@ -294,9 +294,9 @@ require("lazy").setup {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
 	},
-	{ "folke/neodev.nvim",    ft = "lua" },
+	{ "folke/neodev.nvim", ft = "lua" },
 
-	{ "SmiteshP/nvim-navic",  opts = { highlight = true }, event = "LspAttach" },
+	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
 	{
 		"HiPhish/nvim-ts-rainbow2",
 		dependencies = "nvim-treesitter",
@@ -349,20 +349,33 @@ require("lazy").setup {
 		},
 	},
 	{
-		'mikesmithgh/kitty-scrollback.nvim',
+		"mikesmithgh/kitty-scrollback.nvim",
 		enabled = true,
 		lazy = true,
-		cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
-		event = { 'User KittyScrollbackLaunch' },
+		cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
+		event = { "User KittyScrollbackLaunch" },
 		-- version = '*', -- latest stable version, may have breaking changes if major version changed
 		-- version = '^2.0.0', -- pin major version, include fixes and features that do not have breaking changes
 		config = function()
-			require('kitty-scrollback').setup()
+			require("kitty-scrollback").setup()
 		end,
 	},
-	{"frabjous/knap",config = function ()
+	--[[ {"frabjous/knap",config = function ()
 		require("plugins.knap-conf")
-	end}
+	end} ]]
+	{
+		"stevearc/oil.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+		"stevearc/conform.nvim",
+		config = function()
+			require "plugins.conform-config"
+		end,
+	},
+
 	--[[ {
 		"epwalsh/obsidian.nvim",
 		lazy = true,
