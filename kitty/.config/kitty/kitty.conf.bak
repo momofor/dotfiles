@@ -1,34 +1,19 @@
-# Fully featured
-# font_family         FiraCode Nerd Font Mono
-# italic_font			Hack Italic Nerd Font Complete Mono
-# bold_font           Fira Code SemiBold Nerd Font Complete Mono
-# bold_italic_font    Hack Bold Italic Nerd Font Complete Mono
+# vim: filetype=conf
 font_family			Fira Code
-italic_font			Fira Code Retina
+italic_font			auto
 bold_font           auto
-bold_italic_font	Fira Code SemiBold
+bold_italic_font	auto
 
-# Font size (in pts)
 font_size        16
 
 font_features FiraCode-Regular +cv28 +ss09 +ss05
 
 tab_bar_style powerline
-# active_tab_foreground   #4c566a
-# active_tab_background   #88c0d0
+tab_powerline_style round
 active_tab_font_style   bold-italic
-# inactive_tab_foreground #d8dee9
-# inactive_tab_background #434c5e
 inactive_tab_font_style normal
-# tab_bar_background #4c566a
 
 
-# The amount the font size is changed by (in pts) when increasing/decreasing
-# the font size in a running terminal.
-
-# Nord theme - ported from https://github.com/arcticicestudio/nord-hyper
-
-#disble cursor blinking
 cursor_blink_interval 0
 cursor_shape block
 
@@ -36,7 +21,7 @@ cursor_shape block
 sync_to_monitor yes
 #delay
 # input_delay 2
-background_opacity .85
+background_opacity 1
 enable_audio_bell no
 
 # window_padding_width 2
@@ -44,7 +29,7 @@ enable_audio_bell no
 allow_hyperlinks yes
 
 #key bindings
-# kitty_mod ctrl+shift
+# kitty_mod ctrl+a
 
 map ctrl+a>n next_tab
 map ctrl+a>b previous_tab
@@ -73,10 +58,10 @@ map ctrl+a>- launch --location=hsplit --cwd=current
 map ctrl+a>\ launch --location=vsplit --cwd=current
 map F7 layout_action rotate
 
-map ctrl+a>k move_window up
-map ctrl+a>l move_window left
-map ctrl+a>h move_window right
-map ctrl+a>j move_window down
+map ctrl+b>k move_window up
+map ctrl+b>l move_window left
+map ctrl+b>h move_window right
+map ctrl+b>j move_window down
 
 
 map ctrl+a>h neighboring_window left
@@ -105,12 +90,26 @@ allow_remote_control yes
 # scrollback_pager nvim -c 'setl filetype=terminal' -
 # scrollback_pager nvim -c 'setlocal nonumber nolist showtabline=0 foldcolumn=0' -c "autocmd VimEnter * normal G" -
 # scrollback_pager nvim -c "set nonumber nolist showtabline=0 foldcolumn=0" -c "autocmd TermOpen * normal G" -c "silent! write /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
-scrollback_lines 10000
-scrollback_pager nvim -c "set foldcolumn=0" -c "autocmd TermOpen * normal G" -c "autocmd TermClose * :!rm /tmp/kitty_scrollback_buffer" -c "silent! write /tmp/kitty_scrollback_buffer | terminal cat /tmp/kitty_scrollback_buffer -"
+#
+# scrollback_lines 10000
+# scrollback_pager nvim -c "set foldcolumn=0" -c "autocmd TermOpen * normal G" -c "autocmd TermClose * :!rm /tmp/kitty_scrollback_buffer" -c "silent! write /tmp/kitty_scrollback_buffer | terminal cat /tmp/kitty_scrollback_buffer -"
+#
 # map f1 launch --stdin-source=@screen_scrollback --stdin-add-formatting less +G -R
 # map f1 launch --stdin-source=@screen_scrollback --stdin-add-formatting nvim -c 'setl filetype=terminal' -
 shell_integration enabled
 # tab_bar_background none
+
+listen_on unix:/tmp/kitty
+
+# kitty-scrollback.nvim Kitten alias
+action_alias kitty_scrollback_nvim kitten /home/momofor/.local/share/nvim/lazy/kitty-scrollback.nvim/python/kitty_scrollback_nvim.py
+ 
+# Browse scrollback buffer in nvim
+map ctrl+shift+h kitty_scrollback_nvim
+# Browse output of the last shell command in nvim
+map ctrl+shift+g kitty_scrollback_nvim --config ksb_builtin_last_cmd_output
+# Show clicked command output in nvim
+mouse_map ctrl+shift+right press ungrabbed combine : mouse_select_command_output : kitty_scrollback_nvim --config ksb_builtin_last_visited_cmd_output
 
 
 # BEGIN_KITTY_THEME

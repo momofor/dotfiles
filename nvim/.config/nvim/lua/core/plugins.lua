@@ -136,13 +136,13 @@ require("lazy").setup {
 		end,
 		event = "BufRead",
 	},
-
 	{
-		"simrat39/rust-tools.nvim",
-		ft = { "rust" },
+		"mrcjkb/rustaceanvim",
 		config = function()
-			require "plugins.rust-tools"
+			require "plugins.rustacean-config"
 		end,
+		version = "^3", -- Recommended
+		ft = { "rust" },
 	},
 	{
 		"L3MON4D3/LuaSnip",
