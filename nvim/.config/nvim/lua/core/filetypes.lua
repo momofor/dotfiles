@@ -14,6 +14,7 @@ vim.filetype.add {
 		yuck = "lisp",
 		h = "c",
 	},
+	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 }
 
 local noice = false

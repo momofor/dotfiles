@@ -1,64 +1,66 @@
-
 @import "theme.css";
 
-*{
-    font-family: "Dejavu Sans";
-    font-size: 16px;
-    border: none;
+* {
+	font-family: "Dejavu Sans";
+	font-size: 16px;
+	border: none;
 }
 
 #waybar {
-    background-color: @base;
+	background-color: @base;
 }
 
 #waybar.hidden {
-    opacity: 0;
+	opacity: 0;
 }
 
 #window {
-    font-family: "Dejavu Sans";
-    min-width: 20rem;
-	color:@lavenderu;
-    border: 1px solid @surface0;
-    border-radius: 10em;
-    padding: 0 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+	font-family: "Dejavu Sans";
+	min-width: 20rem;
+	color: @lavenderu;
+	border: 1px solid @surface0;
+	border-radius: 10em;
+	padding: 0 1em;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 window#waybar.empty {
-    border: none;
+	border: none;
 }
+
 /*!###############################################################################################*/
 #workspaces {
-    margin-left: 0.5em;
-    border: 1px solid @surface1 ;
+	margin-left: 0.5em;
+	border: 1px solid @surface1 ;
 	border-radius: 10em;
 }
 
 #workspaces button label {
-    min-width: 1em;
-	border-radius:10em;
-    color:@subtext1; 
+	min-width: 1em;
+	border-radius: 10em;
+	color: @subtext1;
 }
+
 #workspaces button {
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
+	transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
 }
 
 #workspaces button.active label {
 	padding: 0 20px;
-	color:@mantle;
-	background-color:@lavenderu;
-	background-size:200% 200%;
+	color: @mantle;
+	background-color: @lavenderu;
+	background-size: 200% 200%;
 	border-radius: 10em;
-	transition: all 0.2s cubic-bezier(.55,-0.68,.48,1.682);
+	transition: all 0.2s cubic-bezier(.55, -0.68, .48, 1.682);
 }
+
 /*!#######################################*/
 
 #mode {
-    margin-left: 1em;
-    border: 1px solid @surface0;
-    border-radius: 100px;
+	margin-left: 1em;
+	border: 1px solid @surface0;
+	border-radius: 100px;
 }
 
 #clock,
@@ -74,79 +76,82 @@ window#waybar.empty {
 #backlight,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
-    border-bottom: 1px solid @surface0;
+	padding: 0 10px;
+	border-bottom: 1px solid @surface0;
 }
 
 #clock {
-    margin-left: 1em;
-    border: 1px solid @surface0;
-	margin-right:2em;
-    border-radius: 100px;
-    color: @flamingo;
+	margin-left: 1em;
+	border: 1px solid @surface0;
+	margin-right: 2em;
+	border-radius: 100px;
+	color: @flamingo;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
 }
 
 label:focus {
-    background-color: #000000;
+	background-color: #000000;
 }
 
 #mpd {
-    border-left: 1px solid @surface0;
-    border-top: 1px solid @surface0;
-    border-radius: 100px 0 0 100px;
+	border-left: 1px solid @surface0;
+	border-top: 1px solid @surface0;
+	border-radius: 100px 0 0 100px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+	background-color: #f53c3c;
 }
 
 #pulseaudio {
-    margin-right: 0.2em;
-    border-right: 1px solid #4c566a;
-    border-top: 1px solid #4c566a;
-    border-radius: 0 100px 100px 0;
+	margin-right: 0.2em;
+	border-right: 1px solid #4c566a;
+	border-top: 1px solid #4c566a;
+	border-radius: 0 100px 100px 0;
 }
 
 #tray {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+	background-color: #ecf0f1;
+	color: #2d3436;
 }
 
-#mpd.stopped, #mpd.paused {
-}
+#mpd.stopped,
+#mpd.paused {}
+
 #mpd {
-	color:@lavenderu;
+	color: @lavenderu;
 }
+
 #network {
-	color:@sapphire;
+	color: @sapphire;
 }
+
 #cpu {
-	color:@sky;
+	color: @sky;
 }
 
 #memory {
-	color:@yellow;
+	color: @yellow;
 }
 
 #temperature {
-	color:@pink;
+	color: @pink;
 }
 
 #backlight {
-	color:@flamingo;
+	color: @flamingo;
 }
 
 #pulseaudio {
-	color:@rosewater;
+	color: @rosewater;
 }

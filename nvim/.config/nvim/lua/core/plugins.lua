@@ -62,6 +62,7 @@ require("lazy").setup {
 			"nvim-treesitter/playground",
 			-- "nvim-treesitter/nvim-treesitter-context",
 		},
+		build = ":TSUpdate",
 		config = function()
 			require "plugins.treesitter-config"
 		end,
@@ -275,9 +276,9 @@ require("lazy").setup {
 		end,
 		ft = { "haskell" },
 	},
-	{
+	--[[ {
 		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
+		-- build = ":Neorg sync-parsers",
 		opts = {
 			load = {
 				["core.defaults"] = {}, -- Loads default behaviour
@@ -293,7 +294,7 @@ require("lazy").setup {
 		},
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
-	},
+	}, ]]
 	{ "folke/neodev.nvim", ft = "lua" },
 
 	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
@@ -305,23 +306,23 @@ require("lazy").setup {
 			require "plugins.ts-rainbow"
 		end,
 	},
-	{
-		"mfussenegger/nvim-dap",
-		event = "LspAttach",
-		ft = { "rust", "cpp", "c" },
-		config = function()
-			require "plugins.nvim-dap-config"
-		end,
-	},
-	{
-		"rcarriga/nvim-dap-ui",
-		event = "LspAttach",
-		ft = { "rust", "cpp", "c" },
-		dependencies = "nvim-dap",
-		config = function()
-			require "plugins.nvim-dap-ui-config"
-		end,
-	},
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- 	event = "LspAttach",
+	-- 	ft = { "rust", "cpp", "c" },
+	-- 	config = function()
+	-- 		require "plugins.nvim-dap-config"
+	-- 	end,
+	-- },
+	-- {
+	-- 	"rcarriga/nvim-dap-ui",
+	-- 	event = "LspAttach",
+	-- 	ft = { "rust", "cpp", "c" },
+	-- 	dependencies = "nvim-dap",
+	-- 	config = function()
+	-- 		require "plugins.nvim-dap-ui-config"
+	-- 	end,
+	-- },
 	{ "sindrets/diffview.nvim", event = "BufEnter" },
 	{
 		"folke/flash.nvim",
