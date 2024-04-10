@@ -52,6 +52,7 @@ set -x PATH $HOME/.local/bin:$PATH
 set -x PATH $HOME/.other/git/eww/bin:$PATH
 set -x PATH $HOME/.other/git/quarto/opt/quarto-1.2.335/bin:$PATH
 set -x EDITOR nvim
+set -x GUIEDITOR neovide
 set -x LD_LIBRARY_PATH /usr/local/lib/
 set -x LD_LIBRARY_PATH /usr/local/lib64/:$LD_LIBRARY_PATH
 set -x LIBTORCH /home/momofor/.other/git/libtorch

@@ -1,8 +1,8 @@
-vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 
 require("catppuccin").setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
-	transparent_background = true,
+	transparent_background = false,
 	term_colors = true,
 	dim_inactive = {
 		enabled = false,
@@ -27,6 +27,7 @@ require("catppuccin").setup({
 		types = {},
 		operators = {},
 	},
+	default_integrations = true,
 	integrations = {
 		cmp = true,
 		nvimtree = true,

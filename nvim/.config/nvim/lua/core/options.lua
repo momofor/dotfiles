@@ -33,6 +33,7 @@ local options = {
 	updatetime = 200, -- Faster completion
 	conceallevel = 0,
 	undofile = true,
+	guifont = "Fira Code:h16:#e-subpixelantialias:#h-slight",
 }
 
 vim.opt.shortmess:append "c"
@@ -61,3 +62,4 @@ vim.g.loaded_perl_provider = 0
 vim.g.tex_fast = ""
 
 utils.set_options(options)
+vim.g.neovide_theme = "dark"
