@@ -71,14 +71,14 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
-		{ name = "nvim_lsp" },          -- neovim lsp completion
-		{ name = "luasnip" },           -- luasnip snippets completion
+		{ name = "nvim_lsp" }, -- neovim lsp completion
+		{ name = "luasnip" }, -- luasnip snippets completion
 		{ name = "nvim_lua" },
-		{ name = "crates" },            -- rust crates
-		{ name = "path" },              -- path completion
-		{ name = "buffer" },            -- local buffer completion
-		{ name = "spell" },             -- prose completion
+		{ name = "crates" }, -- rust crates
+		{ name = "path" }, -- path completion
+		{ name = "buffer" }, -- local buffer completion
+		{ name = "spell" }, -- prose completion
 		{ name = "nvim_lsp_signature_help" }, -- signature help
-		-- { name = "latex_symbols", ft = "julia" },
+		{ name = "latex_symbols", ft = "txt" },
 	},
 })
