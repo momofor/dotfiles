@@ -46,13 +46,15 @@ require("lazy").setup {
 	},
 	{ "debugloop/telescope-undo.nvim", dependencies = "nvim-telescope/telescope.nvim" },
 	{ "stevearc/dressing.nvim", dependencies = "nvim-telescope/telescope.nvim", event = "LspAttach" },
-	{
+
+	--[[ {
 		"NvChad/nvim-colorizer.lua",
 		config = function()
 			require "plugins.colorizer"
 		end,
 		event = "BufRead",
-	},
+	}, ]]
+
 	{
 		event = "BufRead",
 		"nvim-treesitter/nvim-treesitter",
@@ -132,9 +134,9 @@ require("lazy").setup {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		config = function()
-			require "plugins.git-signs"
-		end,
+		-- config = function()
+		-- 	require "plugins.git-signs"
+		-- end,
 		event = "BufRead",
 	},
 	{
@@ -202,8 +204,8 @@ require("lazy").setup {
 	-- 	event = "LspAttach",
 	-- },
 
-	-- { "lervag/vimtex", ft = "tex" },
-	{
+	{ "lervag/vimtex", ft = "tex" },
+	--[[ {
 		"iurimateus/luasnip-latex-snippets.nvim",
 		-- vimtex isn't required if using treesitter
 		requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
@@ -211,7 +213,7 @@ require("lazy").setup {
 			require("luasnip-latex-snippets").setup { use_treesitter = true }
 			require("luasnip").config.setup { enable_autosnippets = true }
 		end,
-	},
+	}, ]]
 	{ "b0o/schemastore.nvim", ft = "json" },
 	{
 		"smjonas/inc-rename.nvim",
@@ -298,14 +300,14 @@ require("lazy").setup {
 	{ "folke/neodev.nvim", ft = "lua" },
 
 	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
-	{
-		"HiPhish/nvim-ts-rainbow2",
-		dependencies = "nvim-treesitter",
-		event = "BufRead",
-		config = function()
-			require "plugins.ts-rainbow"
-		end,
-	},
+	-- {
+	-- 	"HiPhish/nvim-ts-rainbow2",
+	-- 	dependencies = "nvim-treesitter",
+	-- 	event = "BufRead",
+	-- 	config = function()
+	-- 		require "plugins.ts-rainbow"
+	-- 	end,
+	-- },
 	-- {
 	-- 	"mfussenegger/nvim-dap",
 	-- 	event = "LspAttach",

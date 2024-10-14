@@ -62,6 +62,7 @@ end, { noremap = true })
 -- end, { noremap = true })
 vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>u", "<cmd> Telescope undo<CR>", { noremap = true })
 
 vim.keymap.set("n", "<leader>M", function()
 	require("telescope.builtin").man_pages()

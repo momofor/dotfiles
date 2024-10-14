@@ -15,8 +15,8 @@ local time_today = function()
 	return os.date()
 end
 
-local ts_locals = require("nvim-treesitter.locals")
-local ts_utils = require("nvim-treesitter.ts_utils")
+-- local ts_locals = require("nvim-treesitter.locals")
+-- local ts_utils = require("nvim-treesitter.ts_utils")
 
 ls.config.set_config({
 	history = true,
@@ -132,13 +132,13 @@ ls.add_snippets("tex", {
 		)
 	),
 	s("tot", fmt("{}", { in_equation(1) })),
-	s({trig = "mk"}, fmt("${}$", { i(1) })),
+	s({ trig = "mk" }, fmt("${}$", { i(1) })),
 	s("dm", fmt([[ \[{}.\] ]], { i(1) })),
 	s("$", fmt("${}$", { i(1) })),
-	s("pfn", fmt("+\\infty{}", { i(1) }), {condition= uls.in_mathzone}),
-	s("nfn", fmt("-\\infty{}", { i(1) }), {condition= uls.in_mathzone}),
-	s({trig ="iv",snippetType="autosnippet" }, fmt("[{};{}]", { i(1), i(2) }), {condition= uls.in_mathzone}),
-	s({trig ="eps",snippetType="autosnippet" }, fmt([[\epsilon {}]], { i(1)}), {condition= uls.in_mathzone}),
+	s("pfn", fmt("+\\infty{}", { i(1) }), { condition = uls.in_mathzone }),
+	s("nfn", fmt("-\\infty{}", { i(1) }), { condition = uls.in_mathzone }),
+	s({ trig = "iv", snippetType = "autosnippet" }, fmt("[{};{}]", { i(1), i(2) }), { condition = uls.in_mathzone }),
+	s({ trig = "eps", snippetType = "autosnippet" }, fmt([[\epsilon {}]], { i(1) }), { condition = uls.in_mathzone }),
 	-- s("lim", fmt([[\lim_{ <> \to <> }]], { i(1), i(2) }, { delimiters = "<>" }), { condition = uls.in_mathzone }),
 })
 -- ls.add_snippets("tex", {

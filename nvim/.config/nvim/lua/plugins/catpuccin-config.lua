@@ -38,8 +38,8 @@ require("catppuccin").setup({
 		fidget = true,
 		hop = true,
 		indent_blankline = { enabled = true, colored_indent_levels = false },
-		ts_rainbow2 = true,
-		treesitter_context = true,
+		-- ts_rainbow2 = true,
+		treesitter_context = false,
 		navic = {
 			enabled = true,
 			custom_bg = "NONE",
