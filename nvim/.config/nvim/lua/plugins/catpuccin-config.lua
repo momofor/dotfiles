@@ -1,4 +1,4 @@
-vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
 require("catppuccin").setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
@@ -20,7 +20,7 @@ require("catppuccin").setup({
 		functions = {},
 		keywords = {},
 		strings = {},
-		variables = { "italic" },
+		variables = {},
 		numbers = {},
 		booleans = {},
 		properties = {},

@@ -43,22 +43,23 @@ function M.prequire(module)
 	if not ok then
 		vim.notify(
 			"[prequire|"
-			.. debug.getinfo(2, "S").short_src
-			.. "] Failed to load module `"
-			.. module
-			.. "`"
-			.. "with error "
-			.. err,
+				.. debug.getinfo(2, "S").short_src
+				.. "] Failed to load module `"
+				.. module
+				.. "`"
+				.. "with error "
+				.. err,
 			vim.log.levels.ERROR
 		)
 	end
 end
 
-function M.packer_sync()
+-- from the days of packer
+--[[ function M.packer_sync()
 	local snap_shot_time = os.date "!%Y-%m-%dT%TZ"
 	vim.cmd("PackerSnapshot " .. snap_shot_time)
 	vim.cmd "PackerSync"
-end
+end ]]
 
 -- yoinked from u/vonheikemen over on reddit
 function M.trailspace_trim()

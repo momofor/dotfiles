@@ -7,7 +7,7 @@
 }
 
 #waybar {
-	background-color: @base;
+	background-color: @transparent;
 }
 
 #waybar.hidden {
@@ -17,7 +17,8 @@
 #window {
 	font-family: "Dejavu Sans";
 	min-width: 20rem;
-	color: @lavenderu;
+	background-color: @pink;
+	color: @surface1;
 	border: 1px solid @surface0;
 	border-radius: 10em;
 	padding: 0 1em;
@@ -29,17 +30,23 @@ window#waybar.empty {
 	border: none;
 }
 
+/* #waybar#waybar.empty { */
+/* 	background-color: transparent; */
+/* } */
+
 /*!###############################################################################################*/
 #workspaces {
 	margin-left: 0.5em;
 	border: 1px solid @surface1 ;
 	border-radius: 10em;
+	background-color: @mauve;
+	color: @base;
 }
 
 #workspaces button label {
 	min-width: 1em;
 	border-radius: 10em;
-	color: @subtext1;
+	color: @base;
 }
 
 #workspaces button {
@@ -48,8 +55,8 @@ window#waybar.empty {
 
 #workspaces button.active label {
 	padding: 0 20px;
-	color: @mantle;
-	background-color: @lavenderu;
+	color: @surface1;
+	background-color: @maroon;
 	background-size: 200% 200%;
 	border-radius: 10em;
 	transition: all 0.2s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -85,7 +92,8 @@ window#waybar.empty {
 	border: 1px solid @surface0;
 	margin-right: 2em;
 	border-radius: 100px;
-	color: @flamingo;
+	background-color: @flamingo;
+	color: @base;
 }
 
 @keyframes blink {
@@ -128,7 +136,7 @@ label:focus {
 #mpd.stopped,
 #mpd.paused {}
 
-#mpd {
+/* #mpd {
 	color: @lavenderu;
 }
 
@@ -154,4 +162,21 @@ label:focus {
 
 #pulseaudio {
 	color: @rosewater;
+} */
+
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#temperature,
+#backlight,
+#idle_inhibitor,
+#mpd {
+	background-color: @mauve;
+	color: @surface1;
+
 }
