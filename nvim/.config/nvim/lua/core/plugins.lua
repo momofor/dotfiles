@@ -422,6 +422,11 @@ require("lazy").setup {
 			require("colorizer").setup()
 		end,
 	},
+	-- Session manager
+	--[[ {
+		"folke/persistence.nvim",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
+	}, ]]
 
 	--[[ {
 		"epwalsh/obsidian.nvim",

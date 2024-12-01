@@ -1,44 +1,90 @@
-set synctex true
+set synctex false
 set synctex-editor-command "nvim --remote-silent +%{line} %{input}"
-set render-loading "false"
+# set render-loading "false"
 
-set default-fg                "#CAD3F5"
-set default-bg 			          "#24273A"
+# catppuccin mocha
+set default-fg                rgba(205,214,244,1)
+set default-bg 			          rgba(30,30,46,1)
 
-set completion-bg		          "#363A4F"
-set completion-fg		          "#CAD3F5"
-set completion-highlight-bg	  "#575268"
-set completion-highlight-fg	  "#CAD3F5"
-set completion-group-bg		    "#363A4F"
-set completion-group-fg		    "#8AADF4"
+set completion-bg		          rgba(49,50,68,1)
+set completion-fg		          rgba(205,214,244,1)
+set completion-highlight-bg	  rgba(87,82,104,1)
+set completion-highlight-fg	  rgba(205,214,244,1)
+set completion-group-bg		    rgba(49,50,68,1)
+set completion-group-fg		    rgba(137,180,250,1)
 
-set statusbar-fg		          "#CAD3F5"
-set statusbar-bg		          "#363A4F"
+set statusbar-fg		          rgba(205,214,244,1)
+set statusbar-bg		          rgba(49,50,68,1)
 
-set notification-bg		        "#363A4F"
-set notification-fg		        "#CAD3F5"
-set notification-error-bg	    "#363A4F"
-set notification-error-fg	    "#ED8796"
-set notification-warning-bg	  "#363A4F"
-set notification-warning-fg	  "#FAE3B0"
+set notification-bg		        rgba(49,50,68,1)
+set notification-fg		        rgba(205,214,244,1)
+set notification-error-bg	    rgba(49,50,68,1)
+set notification-error-fg	    rgba(243,139,168,1)
+set notification-warning-bg	  rgba(49,50,68,1)
+set notification-warning-fg	  rgba(250,227,176,1)
 
-set inputbar-fg			          "#CAD3F5"
-set inputbar-bg 		          "#363A4F"
+set inputbar-fg			          rgba(205,214,244,1)
+set inputbar-bg 		          rgba(49,50,68,1)
 
-set recolor-lightcolor		    "#24273A"
-set recolor-darkcolor		      "#CAD3F5"
+# set recolor                   "true"
+set recolor-lightcolor		    rgba(30,30,46,1)
+set recolor-darkcolor		      rgba(205,214,244,1)
 
-set index-fg			            "#CAD3F5"
-set index-bg			            "#24273A"
-set index-active-fg		        "#CAD3F5"
-set index-active-bg		        "#363A4F"
+set index-fg			            rgba(205,214,244,1)
+set index-bg			            rgba(30,30,46,1)
+set index-active-fg		        rgba(205,214,244,1)
+set index-active-bg		        rgba(49,50,68,1)
 
-set render-loading-bg		      "#24273A"
-set render-loading-fg		      "#CAD3F5"
+set render-loading-bg		      rgba(30,30,46,1)
+set render-loading-fg		      rgba(205,214,244,1)
 
-set highlight-color		        "#575268"
-set highlight-fg              "#F5BDE6"
-set highlight-active-color	  "#F5BDE6"
+set highlight-color		        rgba(87,82,104,0.5)
+set highlight-fg              rgba(245,194,231,0.5)
+set highlight-active-color	  rgba(245,194,231,0.5)
+#mocha end
+
+#catppuccin latte
+# set default-fg                rgba(76,79,105,1)
+# set default-bg 			          rgba(239,241,245,1)
+#
+# set completion-bg		          rgba(204,208,218,1)
+# set completion-fg		          rgba(76,79,105,1)
+# set completion-highlight-bg	  rgba(87,82,104,1)
+# set completion-highlight-fg	  rgba(76,79,105,1)
+# set completion-group-bg		    rgba(204,208,218,1)
+# set completion-group-fg		    rgba(30,102,245,1)
+#
+# set statusbar-fg		          rgba(76,79,105,1)
+# set statusbar-bg		          rgba(204,208,218,1)
+#
+# set notification-bg		        rgba(204,208,218,1)
+# set notification-fg		        rgba(76,79,105,1)
+# set notification-error-bg	    rgba(204,208,218,1)
+# set notification-error-fg	    rgba(210,15,57,1)
+# set notification-warning-bg	  rgba(204,208,218,1)
+# set notification-warning-fg	  rgba(250,227,176,1)
+#
+# set inputbar-fg			          rgba(76,79,105,1)
+# set inputbar-bg 		          rgba(204,208,218,1)
+#
+# set recolor                   "true"
+# set recolor-lightcolor		    rgba(239,241,245,1)
+# set recolor-darkcolor		      rgba(76,79,105,1)
+#
+# set index-fg			            rgba(76,79,105,1)
+# set index-bg			            rgba(239,241,245,1)
+# set index-active-fg		        rgba(76,79,105,1)
+# set index-active-bg		        rgba(204,208,218,1)
+#
+# set render-loading-bg		      rgba(239,241,245,1)
+# set render-loading-fg		      rgba(76,79,105,1)
+#
+# set highlight-color		        rgba(87,82,104,0.5)
+# set highlight-fg              rgba(234,118,203,0.5)
+# set highlight-active-color	  rgba(234,118,203,0.5)
+
+# themes end
+
 set font "Fira Code 10"
 set selection-clipboard clipboard
 set recolor-reverse-video "true"

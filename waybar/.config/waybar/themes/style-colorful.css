@@ -7,7 +7,7 @@
 }
 
 #waybar {
-	background-color: @base;
+	background-color: transparent;
 }
 
 #waybar.hidden {
@@ -124,9 +124,9 @@ label:focus {
 	border-radius: 0 100px 100px 0;
 }
 
-#tray {
+/* #tray {
 	background-color: transparent;
-}
+} */
 
 #idle_inhibitor.activated {
 	background-color: #ecf0f1;

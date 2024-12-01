@@ -23,7 +23,6 @@
 	],
 	"modules-center": [
 		"clock",
-		"battery",
 	],
 	"modules-right": [
 		"mpd",
@@ -32,6 +31,7 @@
 		"memory",
 		"temperature",
 		"backlight",
+		"battery",
 		"pulseaudio",
 		"tray"
 	],
@@ -102,7 +102,7 @@
 		"spacing": 10
 	},
 	"battery": {
-		"bat": "BAT2",
+		"bat": "BAT0",
 		"interval": 30,
 		"states": {
 			"warning": 30,
