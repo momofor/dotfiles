@@ -48,6 +48,7 @@ require("catppuccin").setup({
 		semantic_tokens = true,
 		lsp_trouble = true,
 		ufo = true,
+		snacks = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
 	color_overrides = {},
