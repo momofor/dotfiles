@@ -63,8 +63,7 @@ cmp.setup({
 		end, { "i", "s" }),
 	},
 	experimental = {
-		native_menu = false,
-		ghost_text = false,
+		ghost_text = true,
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
@@ -80,5 +79,6 @@ cmp.setup({
 		{ name = "spell" }, -- prose completion
 		{ name = "nvim_lsp_signature_help" }, -- signature help
 		{ name = "latex_symbols", ft = "txt" },
+		{ name = "lazydev" },
 	},
 })

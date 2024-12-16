@@ -1,4 +1,4 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local utils = require("core._utils")
 --
 require("lspconfig").texlab.setup({

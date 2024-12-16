@@ -4,18 +4,11 @@ table.insert(runtime_path, "lua/?/init.lua")
 local utils = require("core._utils")
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true,
 }
-
--- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev").setup({
-	library = {
-		plugins = false,
-	},
-	-- add any options here, or leave empty to use the default settings
-})
 
 require("lspconfig").lua_ls.setup({
 	settings = {

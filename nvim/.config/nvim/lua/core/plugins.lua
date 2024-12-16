@@ -184,6 +184,7 @@ require("lazy").setup {
 		version = "^5", -- Recommended
 		ft = { "rust" },
 	},
+
 	{
 		"L3MON4D3/LuaSnip",
 		event = "InsertEnter",
@@ -193,6 +194,7 @@ require("lazy").setup {
 		end,
 		build = "make install_jsregexp",
 	},
+
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
@@ -211,14 +213,84 @@ require("lazy").setup {
 		},
 	},
 
+	--[[ {
+		"saghen/blink.cmp",
+		event = { "LspAttach" },
+
+		requires = { "L3MON4D3/LuaSnip", "folke/lazydev.nvim" },
+		version = "v0.*",
+		opts = {
+			keymap = { preset = "enter" },
+			appearance = {
+				use_nvim_cmp_as_default = true,
+				-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+				-- Adjusts spacing to ensure icons are aligned
+				nerd_font_variant = "mono",
+			},
+			sources = {
+				completion = {
+					enabled_providers = { "lsp", "path", "luasnip", "buffer", "lazydev" },
+				},
+				providers = {
+					lsp = { fallback_for = { "lazydev" } },
+					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+				},
+			},
+
+			completion = {
+				accept = { auto_brackets = { enabled = true } },
+				menu = {
+					border = "rounded",
+					scrolloff = 1,
+					scrollbar = false,
+					columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+
+					draw = {
+						padding = 0,
+						gap = 1,
+						treesitter = true,
+					},
+				},
+
+				documentation = {
+					auto_show_delay_ms = 0,
+					auto_show = true,
+					window = {
+						border = "rounded",
+					},
+				},
+			},
+			snippets = {
+				expand = function(snippet)
+					require("luasnip").lsp_expand(snippet)
+				end,
+				active = function(filter)
+					if filter and filter.direction then
+						return require("luasnip").jumpable(filter.direction)
+					end
+					return require("luasnip").in_snippet()
+				end,
+				jump = function(direction)
+					require("luasnip").jump(direction)
+				end,
+			},
+
+			signature = {
+				enabled = true,
+				border = "rounded",
+			},
+		},
+	},
+]]
 	{
 		"saecki/crates.nvim",
 		ft = "toml",
 		config = function()
-			require("crates").setup()
+			require("crates").setup {}
 		end,
 		event = "BufRead Cargo.toml",
 	},
+
 	--[[ {
 		"goolord/alpha-nvim",
 		config = function()
@@ -335,7 +407,17 @@ require("lazy").setup {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
 	}, ]]
-	{ "folke/neodev.nvim", ft = "lua" },
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				-- See the configuration section for more details
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+			},
+		},
+	},
 
 	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
 	-- {

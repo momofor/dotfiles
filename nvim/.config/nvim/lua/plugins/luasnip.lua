@@ -72,6 +72,7 @@ local change_or_smth = function(index, type)
 		end
 	end, { index })
 end
+
 local eq_type = { inline_formula = true, displayed_equation = true, math_environment = true }
 
 local function in_equation(index)
