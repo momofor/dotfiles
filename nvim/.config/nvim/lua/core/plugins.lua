@@ -185,17 +185,7 @@ require("lazy").setup {
 		ft = { "rust" },
 	},
 
-	{
-		"L3MON4D3/LuaSnip",
-		event = "InsertEnter",
-		dependencies = { "rafamadriz/friendly-snippets" },
-		config = function()
-			require "plugins.luasnip"
-		end,
-		build = "make install_jsregexp",
-	},
-
-	{
+	--[[ {
 		"hrsh7th/nvim-cmp",
 		config = function()
 			require "plugins.cmp-config"
@@ -211,16 +201,45 @@ require("lazy").setup {
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"kdheepak/cmp-latex-symbols",
 		},
-	},
+	}, ]]
 
-	--[[ {
+	{
 		"saghen/blink.cmp",
-		event = { "LspAttach" },
+		dependencies = {
+			{
 
-		requires = { "L3MON4D3/LuaSnip", "folke/lazydev.nvim" },
-		version = "v0.*",
+				"L3MON4D3/LuaSnip",
+				event = "InsertEnter",
+				dependencies = { "rafamadriz/friendly-snippets" },
+				config = function()
+					require "plugins.luasnip"
+				end,
+				build = "make install_jsregexp",
+			},
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+				opts = {
+					library = {
+						-- See the configuration section for more details
+						-- Load luvit types when the `vim.uv` word is found
+						{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+					},
+				},
+			},
+		},
 		opts = {
-			keymap = { preset = "enter" },
+			-- keymap = { preset = "super-tab" },
+			keymap = {
+				["<Tab>"] = { "select_next", "snippet_forward", "fallback" }, -- snippets
+				["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+				["<CR>"] = { "accept", "fallback" },
+				["<C-l>"] = { "show", "hide", "fallback" },
+				["<C-e>"] = { "cancel", "fallback" },
+				["<C-Space>"] = { "show_documentation", "hide_documentation", "fallback" },
+				["<C-f>"] = { "scroll_documentation_down", "fallback" },
+				["<C-b>"] = { "scroll_documentation_up", "fallback" },
+			},
 			appearance = {
 				use_nvim_cmp_as_default = true,
 				-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -228,29 +247,34 @@ require("lazy").setup {
 				nerd_font_variant = "mono",
 			},
 			sources = {
-				completion = {
-					enabled_providers = { "lsp", "path", "luasnip", "buffer", "lazydev" },
+				default = {
+					"lazydev",
+					"lsp",
+					"path",
+					"luasnip",
+					"buffer",
 				},
 				providers = {
-					lsp = { fallback_for = { "lazydev" } },
-					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
 				},
 			},
 
 			completion = {
+				trigger = { prefetch_on_insert = true },
 				accept = { auto_brackets = { enabled = true } },
 				menu = {
 					border = "rounded",
 					scrolloff = 1,
 					scrollbar = false,
-					columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
 
 					draw = {
-						padding = 0,
+						columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "source_name" } },
 						gap = 1,
-						treesitter = true,
+						-- treesitter = true,
 					},
 				},
+
+				list = { selection = "auto_insert" },
 
 				documentation = {
 					auto_show_delay_ms = 0,
@@ -277,11 +301,11 @@ require("lazy").setup {
 
 			signature = {
 				enabled = true,
-				border = "rounded",
+				window = { border = "rounded" },
 			},
 		},
 	},
-]]
+
 	{
 		"saecki/crates.nvim",
 		ft = "toml",
@@ -407,17 +431,6 @@ require("lazy").setup {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 		ft = "norg",
 	}, ]]
-	{
-		"folke/lazydev.nvim",
-		ft = "lua", -- only load on lua files
-		opts = {
-			library = {
-				-- See the configuration section for more details
-				-- Load luvit types when the `vim.uv` word is found
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-			},
-		},
-	},
 
 	{ "SmiteshP/nvim-navic", opts = { highlight = true }, event = "LspAttach" },
 	-- {

@@ -4,11 +4,11 @@ require("catppuccin").setup({
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	transparent_background = false,
 	term_colors = true,
-	dim_inactive = {
-		enabled = false,
-		shade = "dark",
-		percentage = 0.15,
-	},
+	-- dim_inactive = {
+	-- 	enabled = false,
+	-- 	shade = "dark",
+	-- 	percentage = 0.15,
+	-- },
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
@@ -29,7 +29,8 @@ require("catppuccin").setup({
 	},
 	default_integrations = true,
 	integrations = {
-		cmp = true,
+		blink_cmp = true,
+		cmp = false,
 		nvimtree = true,
 		telescope = true,
 		treesitter = true,
@@ -53,6 +54,11 @@ require("catppuccin").setup({
 	},
 	color_overrides = {},
 	custom_highlights = {},
+	highlight_overrides = {
+		mocha = function(mocha)
+			return { Pmenu = { bg = mocha.mantle } }
+		end,
+	},
 })
 
 vim.api.nvim_command("colorscheme catppuccin")

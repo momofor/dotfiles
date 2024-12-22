@@ -11,6 +11,7 @@ end
 local luasnip = require("luasnip")
 require("luasnip/loaders/from_vscode").lazy_load()
 cmp.setup({
+	performance = { debounce = 0 },
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.kind = lsp_kind.presets.default[vim_item.kind]
