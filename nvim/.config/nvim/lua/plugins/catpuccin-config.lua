@@ -56,7 +56,7 @@ require("catppuccin").setup({
 	custom_highlights = {},
 	highlight_overrides = {
 		mocha = function(mocha)
-			return { Pmenu = { bg = mocha.mantle } }
+			return { Pmenu = { bg = mocha.mantle }, BlinkCmpLabelMatch = { style = { "bold" }, fg = "" } }
 		end,
 	},
 })

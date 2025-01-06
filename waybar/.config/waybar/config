@@ -25,7 +25,6 @@
 		"clock",
 	],
 	"modules-right": [
-		"mpd",
 		"network",
 		"cpu",
 		"memory",
@@ -133,7 +132,19 @@
 	"temperature": {
 		"format": "{temperatureC}°C "
 	},
-	"mpd": {
+	"mpris": {
+		"format": "{player_icon} | {title} ",
+		"format-paused": "{status_icon} | {title}",
+		"player-icons": {
+			"default": "",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		},
+		"ignored-players": ["firefox"]
+	},
+	 "mpd": {
 		// "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} |",
 		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title}",
 		"format-disconnected": "Disconnected ",
@@ -158,5 +169,5 @@
 		},
 		"tooltip-format": "MPD (connected)",
 		"tooltip-format-disconnected": "MPD (disconnected)"
-	}
+	} 
 }

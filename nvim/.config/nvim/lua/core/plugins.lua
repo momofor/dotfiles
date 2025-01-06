@@ -227,83 +227,96 @@ require("lazy").setup {
 					},
 				},
 			},
+
+			{
+				"xzbdmw/colorful-menu.nvim",
+				opts = { ... },
+			},
 		},
-		opts = {
-			-- keymap = { preset = "super-tab" },
-			keymap = {
-				["<Tab>"] = { "select_next", "snippet_forward", "fallback" }, -- snippets
-				["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
-				["<CR>"] = { "accept", "fallback" },
-				["<C-l>"] = { "show", "hide", "fallback" },
-				["<C-e>"] = { "cancel", "fallback" },
-				["<C-Space>"] = { "show_documentation", "hide_documentation", "fallback" },
-				["<C-f>"] = { "scroll_documentation_down", "fallback" },
-				["<C-b>"] = { "scroll_documentation_up", "fallback" },
-			},
-			appearance = {
-				use_nvim_cmp_as_default = true,
-				-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-				-- Adjusts spacing to ensure icons are aligned
-				nerd_font_variant = "mono",
-			},
-			sources = {
-				default = {
-					"lazydev",
-					"lsp",
-					"path",
-					"luasnip",
-					"buffer",
-				},
-				providers = {
-					lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
-				},
-			},
+		build = "cargo build --release",
 
-			completion = {
-				trigger = { prefetch_on_insert = true },
-				accept = { auto_brackets = { enabled = true } },
-				menu = {
-					border = "rounded",
-					scrolloff = 1,
-					scrollbar = false,
-
-					draw = {
-						columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "source_name" } },
-						gap = 1,
-						-- treesitter = true,
+		config = function()
+			require("blink-cmp").setup {
+				-- keymap = { preset = "super-tab" },
+				keymap = {
+					["<Tab>"] = { "select_next", "snippet_forward", "fallback" }, -- snippets
+					["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+					["<CR>"] = { "accept", "fallback" },
+					["<C-l>"] = { "show", "hide", "fallback" },
+					["<C-e>"] = { "cancel", "fallback" },
+					["<C-Space>"] = { "show_documentation", "hide_documentation", "fallback" },
+					["<C-f>"] = { "scroll_documentation_down", "fallback" },
+					["<C-b>"] = { "scroll_documentation_up", "fallback" },
+				},
+				appearance = {
+					use_nvim_cmp_as_default = true,
+					-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+					-- Adjusts spacing to ensure icons are aligned
+					nerd_font_variant = "mono",
+				},
+				sources = {
+					default = {
+						"lazydev",
+						"lsp",
+						"path",
+						"luasnip",
+						"buffer",
+					},
+					providers = {
+						lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
 					},
 				},
 
-				list = { selection = "auto_insert" },
-
-				documentation = {
-					auto_show_delay_ms = 0,
-					auto_show = true,
-					window = {
+				completion = {
+					trigger = { prefetch_on_insert = true },
+					accept = { auto_brackets = { enabled = true } },
+					menu = {
 						border = "rounded",
+						scrolloff = 1,
+						scrollbar = false,
+
+						draw = {
+							columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "source_name" } },
+							gap = 1,
+							-- treesitter = { "lazydev", "lsp", "luasnip" },
+							components = {
+								label = {
+									text = require("colorful-menu").blink_components_text,
+									highlight = require("colorful-menu").blink_components_highlight,
+								},
+							},
+						},
+					},
+					list = { selection = "auto_insert" },
+					documentation = {
+						auto_show_delay_ms = 0,
+						auto_show = true,
+						window = {
+							border = "rounded",
+						},
 					},
 				},
-			},
-			snippets = {
-				expand = function(snippet)
-					require("luasnip").lsp_expand(snippet)
-				end,
-				active = function(filter)
-					if filter and filter.direction then
-						return require("luasnip").jumpable(filter.direction)
-					end
-					return require("luasnip").in_snippet()
-				end,
-				jump = function(direction)
-					require("luasnip").jump(direction)
-				end,
-			},
+				snippets = {
+					expand = function(snippet)
+						require("luasnip").lsp_expand(snippet)
+					end,
+					active = function(filter)
+						if filter and filter.direction then
+							return require("luasnip").jumpable(filter.direction)
+						end
+						return require("luasnip").in_snippet()
+					end,
+					jump = function(direction)
+						require("luasnip").jump(direction)
+					end,
+				},
 
-			signature = {
-				enabled = true,
-				window = { border = "rounded" },
-			},
-		},
+				signature = {
+					enabled = true,
+					window = { border = "rounded" },
+				},
+			}
+		end,
 	},
 
 	{
@@ -646,6 +659,30 @@ require("lazy").setup {
 			},
 		},
 	},
+
+	--[[ {
+		"OXY2DEV/markview.nvim",
+		lazy = false, -- Recommended
+		-- ft = "markdown" -- If you decide to lazy-load anyway
+
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+	}, ]]
+
+	--[[ {
+		"Thiago4532/mdmath.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		opts = { ... },
+
+		-- The build is already done by default in lazy.nvim, so you don't need
+		-- the next line, but you can use the command `:MdMath build` to rebuild
+		-- if the build fails for some reason.
+		-- build = ':MdMath build'
+	}, ]]
 
 	-- Session manager
 	--[[ {

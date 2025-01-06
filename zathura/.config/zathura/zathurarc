@@ -92,5 +92,9 @@ set recolor-keephue "true"
 
 set database "sqlite"
 
-map j feedkeys "<C-Down>"
-map k feedkeys "<C-Up>"
+map k scroll up
+map j scroll down
+set scroll-step 500
+
+# map j feedkeys "<C-Down>"
+# map k feedkeys "<C-Up>"

@@ -79,7 +79,7 @@ window#waybar.empty {
 #temperature,
 #backlight,
 #idle_inhibitor,
-#mpd {
+#mpris {
 	padding: 0 10px;
 	border-bottom: 1px solid @surface0;
 }
@@ -103,7 +103,7 @@ label:focus {
 	background-color: #000000;
 }
 
-#mpd {
+#network {
 	border-left: 1px solid @surface0;
 	border-top: 1px solid @surface0;
 	border-radius: 100px 0 0 100px;
@@ -129,10 +129,10 @@ label:focus {
 	color: #2d3436;
 }
 
-#mpd.stopped,
-#mpd.paused {}
+#mpris.stopped,
+#mpris.paused {}
 
-/* #mpd {
+/* #mpris {
 	color: @lavenderu;
 }
 
@@ -171,7 +171,7 @@ label:focus {
 #temperature,
 #backlight,
 #idle_inhibitor,
-#mpd {
+#mpris {
 	background-color: @mantle;
 	color: @lavender;
 

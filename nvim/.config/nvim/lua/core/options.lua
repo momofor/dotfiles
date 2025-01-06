@@ -31,8 +31,8 @@ local options = {
 	signcolumn = "yes", -- can be set to number
 	termguicolors = true,
 	timeoutlen = 300,
-	updatetime = 200, -- Faster completion
-	conceallevel = 0,
+	updatetime = 100, -- Faster completion
+	-- conceallevel = 0,
 	undofile = true,
 	guifont = "Fira Code:h16:#e-subpixelantialias:#h-slight",
 }

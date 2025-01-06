@@ -16,8 +16,8 @@ require("lspconfig").texlab.setup({
 				onEdit = true,
 				onOpenAndSave = true,
 			},
-			diagnosticsDelay = 300,
-			formatterLineLength = 80,
+			diagnosticsDelay = 100,
+			formatterLineLength = 120,
 			forwardSearch = {
 				executable = "zathura",
 				args = { "--synctex-forward", "%l:1:%f", "%p" },
