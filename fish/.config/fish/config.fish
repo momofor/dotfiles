@@ -15,7 +15,7 @@
 ##################################START OF AUTOSTART ###############
 # "autostart"
 function fish_greeting
-	# test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
+# 	test -r "~/.dir_colors" && eval (dircolors ~/.dir_colors)
 end
 #################################END OF AUTOSTART########################
 zoxide init fish | source
@@ -104,7 +104,7 @@ alias ll="eza -l --icons"
 alias la="eza -la --icons"
 alias lt="eza -la --icons --tree"
 alias sz="source ~/.zshrc"
-alias ft="freetube --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"
+# alias ft="freetube --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"
 alias C="sudo apt autoremove && sudo apt autoclean"
 alias upd="sudo pacman -Sy && sudo powerpill -Su && paru -Su"
 alias spo="LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
@@ -116,8 +116,8 @@ alias night="gammastep -O 5000K"
 alias l="eza --icons"
 alias ls="ls --hyperlink=auto --color=auto"
 alias rust-analyzer="rustup run nightly rust-analyzer"
-alias pf="PF_INFO='ascii title os host kernel uptime pkgs memory shell editor wm de palette' pfetch"
-alias bt="btm"
+# alias pf="PF_INFO='ascii title os host kernel uptime pkgs memory shell editor wm de palette' pfetch"
+# alias bt="btm"
 alias ee="easyeffects"
 alias nf="nvim ~/.config/fish/config.fish"
 alias gc="git commit -m "

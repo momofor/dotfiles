@@ -171,9 +171,9 @@ require("lazy").setup {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		-- config = function()
-		-- 	require "plugins.git-signs"
-		-- end,
+		config = function()
+			require("gitsigns").setup {}
+		end,
 		event = "BufRead",
 	},
 	{
@@ -259,7 +259,7 @@ require("lazy").setup {
 						"lazydev",
 						"lsp",
 						"path",
-						"luasnip",
+						"snippets",
 						"buffer",
 					},
 					providers = {
@@ -268,9 +268,16 @@ require("lazy").setup {
 				},
 
 				completion = {
-					trigger = { prefetch_on_insert = true },
+					trigger = {
+						prefetch_on_insert = true,
+						show_on_insert_on_trigger_character = true,
+						show_on_trigger_character = true,
+					},
 					accept = { auto_brackets = { enabled = true } },
 					menu = {
+						--[[ auto_show = function(ctx)
+							return ctx.mode ~= "cmdline"
+						end, ]]
 						border = "rounded",
 						scrolloff = 1,
 						scrollbar = false,
@@ -287,7 +294,14 @@ require("lazy").setup {
 							},
 						},
 					},
-					list = { selection = "auto_insert" },
+					list = {
+						selection = {
+							preselect = function(ctx)
+								return ctx.mode ~= "cmdline"
+							end,
+							auto_insert = true,
+						},
+					},
 					documentation = {
 						auto_show_delay_ms = 0,
 						auto_show = true,
@@ -297,18 +311,7 @@ require("lazy").setup {
 					},
 				},
 				snippets = {
-					expand = function(snippet)
-						require("luasnip").lsp_expand(snippet)
-					end,
-					active = function(filter)
-						if filter and filter.direction then
-							return require("luasnip").jumpable(filter.direction)
-						end
-						return require("luasnip").in_snippet()
-					end,
-					jump = function(direction)
-						require("luasnip").jump(direction)
-					end,
+					preset = "luasnip",
 				},
 
 				signature = {
@@ -364,7 +367,7 @@ require("lazy").setup {
 	{
 		"smjonas/inc-rename.nvim",
 		config = function()
-			require("inc_rename").setup()
+			require("inc_rename").setup {}
 		end,
 		event = "LspAttach",
 	},
@@ -546,7 +549,7 @@ require("lazy").setup {
 			input = { enabled = true },
 			notifier = { enabled = true },
 			quickfile = { enabled = true },
-			scroll = { enabled = true },
+			scroll = { enabled = false },
 			statuscolumn = { enabled = true },
 			words = { enabled = false },
 		},

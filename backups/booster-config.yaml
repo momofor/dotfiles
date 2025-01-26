@@ -1,0 +1,7 @@
+universal: false
+modules_force_load: i915
+modules: kernel/fs/btrfs/btrfs.ko
+mount_timeout: 0s
+strip: true
+vconsole: true
+compression: lz4
