@@ -7,7 +7,7 @@
 }
 
 #waybar {
-	background-color: @base;
+	background-color: transparent;
 }
 
 #waybar.hidden {
@@ -17,7 +17,8 @@
 #window {
 	font-family: "Dejavu Sans";
 	min-width: 20rem;
-	color: @lavender;
+	background-color: @pink;
+	color: @surface1;
 	border: 1px solid @surface0;
 	border-radius: 10em;
 	padding: 0 1em;
@@ -29,21 +30,23 @@ window#waybar.empty {
 	border: none;
 }
 
-/* #waybar#waybar.empty {
+#waybar#waybar.empty {
 	background-color: transparent;
-} */
+}
 
 /*!###############################################################################################*/
 #workspaces {
 	margin-left: 0.5em;
 	border: 1px solid @surface1 ;
 	border-radius: 10em;
+	background-color: @maroon;
+	color: @base;
 }
 
 #workspaces button label {
 	min-width: 1em;
 	border-radius: 10em;
-	color: @subtext1;
+	color: @base;
 }
 
 #workspaces button {
@@ -52,7 +55,7 @@ window#waybar.empty {
 
 #workspaces button.active label {
 	padding: 0 20px;
-	color: @mantle;
+	color: @surface1;
 	background-color: @lavender;
 	background-size: 200% 200%;
 	border-radius: 10em;
@@ -89,7 +92,8 @@ window#waybar.empty {
 	border: 1px solid @surface0;
 	margin-right: 2em;
 	border-radius: 100px;
-	color: @flamingo;
+	background-color: @flamingo;
+	color: @base;
 }
 
 @keyframes blink {
@@ -120,9 +124,9 @@ label:focus {
 	border-radius: 0 100px 100px 0;
 }
 
-#tray {
+/* #tray {
 	background-color: transparent;
-}
+} */
 
 #idle_inhibitor.activated {
 	background-color: #ecf0f1;
@@ -172,7 +176,7 @@ label:focus {
 #backlight,
 #idle_inhibitor,
 #mpris {
-	background-color: @mantle;
-	color: @lavender;
+	background-color: @mauve;
+	color: @surface1;
 
 }
