@@ -90,7 +90,7 @@ M.on_attach = function(client, bufnr)
 		vim.lsp.buf.implementation()
 	end, bufopt)
 	M.nnoremap("K", function()
-		vim.lsp.buf.hover()
+		vim.lsp.buf.hover { border = "rounded" }
 	end, bufopt)
 	M.nnoremap("ga", function()
 		vim.lsp.buf.signature_help()

@@ -5,6 +5,6 @@ prequire("core.plugins")
 prequire("core.lsp-hotkeys")
 prequire("core.filetypes")
 prequire("core.autocmd-groups")
-prequire("core.lsp-icons")
+-- prequire("core.lsp-icons")
 -- color scheme
 -- prequire("core.test")
