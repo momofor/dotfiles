@@ -1,7 +1,7 @@
 -- configure treesitter
 local utils = require("core._utils")
 vim.g.mapleader = " "
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
 	highlight = {
 		enable = true,
 		disable = { "html", "css", "latex" },
@@ -15,35 +15,7 @@ require("nvim-treesitter.configs").setup({
 			node_decremental = "grm",
 		},
 	},
-	refactor = {
-		highlight_definitions = { enable = false },
-		highlight_current_scope = { enable = false },
-	},
-	textobjects = {
-		select = {
-			enable = true,
-			lookahead = true,
-			keymaps = {
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-				["ac"] = "@class.outer",
-				["ic"] = "@class.inner",
-				["aa"] = "@parameter.outer",
-				["ia"] = "@parameter.inner",
-				["rh"] = "@assignment.rhs",
-				["lh"] = "@assignment.lhs",
-			},
-		},
-		lsp_interop = {
-			enable = true,
-			border = "rounded",
-			peek_definition_code = {
-				["<leader>df"] = "@function.outer",
-				["<leader>dc"] = "@class.outer",
-			},
-		},
-	},
 })
 
 --utils.map("n" , "<Leader>m" , ":lua print(require'nvim-treesitter.ts_utils'.get_node_at_cursor()) <CR>"  , {})
-utils.map("n", "<Leader>cg", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true })
+-- utils.map("n", "<Leader>cg", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true })
