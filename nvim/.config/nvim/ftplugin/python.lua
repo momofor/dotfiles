@@ -1,6 +1,6 @@
 local utils = require("core._utils")
 
-require("lspconfig").pyright.setup({
+vim.lsp.config("pyright", {
 	on_attach = utils.on_attach,
 })
 

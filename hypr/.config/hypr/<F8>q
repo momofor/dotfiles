@@ -1,0 +1,247 @@
+# nvim: filetype=hyprlang
+monitor=,preferred,auto,1
+exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec-once=$HOME/.config/hypr/import-gsettings
+exec-once=$HOME/start-hyprland.sh
+exec-once=hyprctl setcursor Bibata-Modern-Classic 24
+exec-once = wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+exec-once=$HOME/audio_output_hyprland.sh
+exec-once=$HOME/start-wob.sh
+# exec-once=obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
+
+input {
+    # kb_file=
+    kb_layout=dvp,us,ma,fr
+
+    # kb_variant=
+    # kb_model=
+    kb_options=grp:rctrl_rshift_toggle,compose:ralt,caps:swapescape
+    kb_rules=
+	repeat_rate=40
+	repeat_delay=150
+	scroll_factor = 5
+
+    follow_mouse=1
+
+    accel_profile = flat
+    force_no_accel=true # true for osu
+    sensitivity=0.0 # -1.0 - 1.0, 0 means no modification.
+
+    touchpad {
+        natural_scroll=no
+		tap-to-click=true
+		disable_while_typing=true
+    }
+
+}
+
+general {
+    # main_mod=SUPER
+    gaps_in=3
+    gaps_out=3
+    border_size=3
+	
+
+    col.active_border=0xFFb7bdf8
+    # col.inactive_border=0xFFf0c6c6
+    col.inactive_border=0xFF494d64
+		# for use with borderangle animation
+		# col.active_border = rgb(8aadf4) rgb(24273A) rgb(24273A) rgb(8aadf4) 45deg
+		# col.inactive_border= rgb(24273A) rgb(24273A) rgb(24273A) rgb(24273A) 45deg
+	layout = dwindle  # master|dwindle 
+	# apply_sens_to_raw=1 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
+}
+
+group {
+    col.border_active=0xff89dceb 
+    group_on_movetoworkspace = true
+    # merge_floated_into_tiled_on_groupbar  = true
+	# col.border_inactive=0xfff9e2b0
+	groupbar {
+		col.active=0xfff9e2b0
+		gradients=false
+		scrolling=false
+	}
+}
+
+
+decoration {
+	# multisample_edges = true
+	screen_shader = ~/.config/hypr/shaders/blue_light.glsl
+	# screen_shader = ~/.config/hypr/shaders/vibrance.glsl
+
+    rounding=10
+	blur {
+		enabled=off
+		size=3 # minimum 1
+		passes=2 # minimum 1
+	}
+    # blur_new_optimizations=on
+}
+# this is the smooooothest bezier curve
+animations {
+    enabled=1
+
+	bezier=easeInOutSine,0.37, 0, 0.63, 1
+	bezier=easeInSine,0.12, 0, 0.39, 0
+	bezier=easeOutSine,0.61, 1, 0.88, 1
+	bezier = linear, 0.0, 0.0, 1.0, 1.0
+
+    animation=windows,1,2,default
+	animation=windowsIn,1,2,easeInSine,popin,60
+	animation=windowsOut,1,2,easeOutSine,popin,60
+    animation=fade,1,2,easeInOutSine
+    animation=workspaces,1,2,easeInOutSine,slide
+
+
+
+	# this kills my cpu
+    # animation = border, 1, 50, easeInOutSine
+    # animation = borderangle, 1, 100, linear, loop
+}
+
+dwindle {
+    pseudotile=1 # enable pseudotiling on dwindle
+	# no_gaps_when_only=false # No gaps when there is only one window on the workspace aka smart gaps. Was removed on 0.45.0
+	force_split = 0 
+	special_scale_factor = 0.8
+	split_width_multiplier = 1.0 
+	use_active_for_splits = true
+	pseudotile = yes 
+	preserve_split = yes 
+}
+
+gestures {
+    workspace_swipe=yes
+    workspace_swipe_fingers=3
+	workspace_swipe_distance = 250
+	workspace_swipe_invert = true
+	workspace_swipe_min_speed_to_force = 15
+	workspace_swipe_cancel_ratio = 0.5
+	workspace_swipe_create_new = false
+}
+
+misc {
+	vfr = true
+	disable_hyprland_logo=true
+	disable_splash_rendering=true
+}
+
+
+# VARIABLES
+# $menu=bemenu
+$browser=firefox
+$browser-alt=zen-browser
+$terminal=kitty
+$terminal2=footclient
+
+bind=SUPER,RETURN,exec,$terminal
+bind=SUPERSHIFT,RETURN,exec,$terminal2
+bind=SUPERSHIFT,Q,killactive,
+bind=SUPERSHIFT,E,exit,
+bind=SUPER,Space,togglefloating,
+bind=SUPER,D,exec,wofi --show drun
+bind=ALT,P,pseudo,
+bind=SUPER,E,exec,easyeffects
+bind=SUPER,A,exec,$HOME/audio_output_hyprland.sh
+
+bind=SUPER,h,movefocus,l
+bind=SUPER,l,movefocus,r
+bind=SUPER,k,movefocus,u
+bind=SUPER,j,movefocus,d
+
+bind=SUPERSHIFT,h,movewindoworgroup,l
+bind=SUPERSHIFT,l,movewindoworgroup,r
+bind=SUPERSHIFT,k,movewindoworgroup,u
+bind=SUPERSHIFT,j,movewindoworgroup,d
+
+bind=SUPER,10,workspace,1
+bind=SUPER,11,workspace,2
+bind=SUPER,12,workspace,3
+bind=SUPER,13,workspace,4
+bind=SUPER,14,workspace,5
+
+bind=ALT,10,movetoworkspace,1
+bind=ALT,11,movetoworkspace,2
+bind=ALT,12,movetoworkspace,3
+bind=ALT,13,movetoworkspace,4
+bind=ALT,14,movetoworkspace,5
+bind=ALT,O,movetoworkspace,special:scratchpad
+bind=SUPER,O,workspace,special:scratchpad
+bind=SUPERSHIFT,O,togglespecialworkspace
+
+bind=SUPER,F,fullscreen,
+bind=SUPERALT,H,togglesplit
+
+binds {
+   workspace_back_and_forth = 1 
+   allow_workspace_cycles = 1
+}
+
+bind=SUPER,Q,exec,$browser
+bind=ALT,Q,exec,$browser-alt
+bind=SUPERALT,Q,exec,chromium --enable-features=UseOzonePlatform --ozone-platform=wayland
+# RESIZE SUBMAP BEGIN
+bind=SUPER,R,submap,resize # will switch to a submap called resize
+
+submap=resize # will start a submap called "resize"
+
+binde=,l,resizeactive,10 0
+binde=,h,resizeactive,-10 0
+binde=,k,resizeactive,0 -10
+binde=,j,resizeactive,0 10
+
+bind=,escape,submap,reset # use reset to go back to the global submap
+
+submap=reset # will reset the submap, meaning end the current one and return to the global one.
+# RESIZE SUBMAP END
+
+# binde=SUPER,up,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
+# binde=SUPER,down,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
+# wpctl set-volume 54 5%+
+$sink_name=51
+binde=SUPER,up,exec, wpctl set-volume $sink_name 5%+  && echo "$(wpctl get-volume $sink_name | rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe
+binde=SUPER,down,exec, wpctl set-volume $sink_name 5%- && echo "$(wpctl get-volume $sink_name| rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe
+
+binde=,XF86MonBrightnessUp,exec,brightnessctl set +3%
+binde=,XF86MonBrightnessDown,exec,brightnessctl set 3%-
+bind=,XF86Explorer,exec,playerctl next
+bind=,XF86LaunchA,exec,playerctl play-pause
+bind=SUPER,M,exec,wpctl set-mute $sink_name toggle
+
+
+bind=SUPER,W,togglegroup,
+bind=SUPER,N,changegroupactive,f
+bind=SUPER,P,changegroupactive,b
+bind=SUPER,tab,changegroupactive
+
+# bind=SUPERALT,S,exec,grim -g "SAVE_FILE=$(zenity --file-selection --save) "$(slurp)" $SAVE_FILE"
+bind=SUPER,S,exec,$HOME/switch-waybar-theme.fish
+
+
+bind=CTRLSHIFT,L,exec,wlogout
+bind=CTRLALT,L,exec,hyprlock 
+bind=SUPERSHIFT,P,exec,clipman pick -t "wofi" 
+# Move window with Super+LMB (Left Mouse Button)
+bindm=SUPER,mouse:272,movewindow
+# Resize window with Super+RMB (Right Mouse Button)
+bindm=SUPER,mouse:273,resizewindow
+# bind=SUPER,Z,layoutmsg,orientationtop
+
+bind=SUPER,mouse_down,workspace,e+1
+bind=SUPER,mouse_up,workspace,e-1
+# bind=SUPER,Z,exec,grimblast --notify save area /home/momofor/screenshots/$(bemenu -p "Name of File:" < /dev/null).png
+# bind=SUPER,Z,exec,grimblast --notify save area /home/momofor/screenshots/$(bemenu -p "Name of File:" < /dev/null).png
+# bind=SUPER,Z,exec,grim -g "$(slurp)" - | tesseract -l "fra+eng" stdin stdout | wl-copy
+# bind=, F10, pass, class:^vesktop$
+bind=SUPER,Z,exec,grim -g "$(slurp)" - | wl-copy
+# bind=SUPER,Z,exec,mpv $(wl-paste) & notify-send "Watching" "$(yt-dlp --get-title $(wl-paste))"
+# bind=SUPER,O,exec,firefox https://www.almaany.com/ar/dict/ar-ar/$(bemenu -p "Name of word:" < /dev/null) 
+# windowrulev2 = fullscreen,class:^(Spotify)$,title:^(Spotify)$
+
+layerrule = blur, notifications
+layerrule = ignorezero, notifications
+layerrule = ignorezero, gtk-layer-shell
+layerrule = blur, gtk-layer-shell
+
+layerrule = blur, notifications

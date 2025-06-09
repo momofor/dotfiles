@@ -5,7 +5,7 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 local utils = require("core._utils")
 
-require("lspconfig").clangd.setup({
+vim.lsp.config("clangd", {
 	cmd = {
 		"clangd",
 		"--background-index",
@@ -16,4 +16,6 @@ require("lspconfig").clangd.setup({
 	capabilities = capabilities,
 	on_attach = utils.on_attach,
 })
+
+vim.lsp.enable("clangd")
 vim.cmd([[LspStart]])
