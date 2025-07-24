@@ -30,7 +30,6 @@
 		"memory",
 		"temperature",
 		"backlight",
-		"battery",
 		"pulseaudio",
 		"tray"
 	],
