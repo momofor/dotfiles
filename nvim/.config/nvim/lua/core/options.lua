@@ -35,6 +35,7 @@ local options = {
 	-- conceallevel = 0,
 	undofile = true,
 	guifont = "Fira Code:h16:#e-subpixelantialias:#h-slight",
+	virtualedit = "all",
 }
 
 vim.opt.shortmess:append "c"
