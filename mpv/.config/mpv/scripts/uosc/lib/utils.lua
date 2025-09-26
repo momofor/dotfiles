@@ -428,6 +428,11 @@ function serialize_path(path)
 	}
 end
 
+local system_files = create_set({
+	'$RECYCLE.BIN', '$Recycle.Bin', '$SysReset', '$WinREAgent', '.sys', 'pagefile.sys', 'hiberfil.sys', 'config.sys',
+	'swapfile.sys', 'Thumbs.db', 'desktop.ini',
+})
+
 -- Reads items in directory and splits it into directories and files tables.
 ---@param path string
 ---@param opts? {types?: string[], hidden?: boolean}
@@ -444,7 +449,7 @@ function read_directory(path, opts)
 	end
 
 	for _, item in ipairs(items) do
-		if item ~= '.' and item ~= '..' and (opts.hidden or item:sub(1, 1) ~= '.') then
+		if item ~= '.' and item ~= '..' and not system_files[item] and (opts.hidden or item:sub(1, 1) ~= '.') then
 			local info = utils.file_info(join_path(path, item))
 			if info then
 				if info.is_file then
@@ -804,6 +809,19 @@ function find_active_keybindings(key)
 	return key and active_map[key] or active_table
 end
 
+do
+	local key_subs = {{'^#$', ''}, {anycase('sharp'), '#'}}
+
+	-- Replaces stuff like `SHARP` -> `#`, `#` -> ``
+	---@param keybind string
+	function keybind_to_human(keybind)
+		for _, sub in ipairs(key_subs) do
+			keybind = string.gsub(keybind, sub[1], sub[2])
+		end
+		return keybind
+	end
+end
+
 ---@param type 'sub'|'audio'|'video'
 ---@param path string
 function load_track(type, path)
@@ -876,6 +894,15 @@ end
 
 ---@return string|nil
 function get_clipboard()
+	local data, err = mp.get_property('clipboard/text')
+	if data then
+		return data
+	end
+	if err and err ~= 'property not found' and err ~= 'property unavailable' then
+		mp.commandv('show-text', 'Get clipboard error: ' .. err)
+		return nil
+	end
+
 	local err, data = call_ziggy({'get-clipboard'})
 	if err then
 		mp.commandv('show-text', 'Get clipboard error. See console for details.')
@@ -888,6 +915,17 @@ end
 ---@return string|nil payload String that was copied to clipboard.
 function set_clipboard(payload)
 	payload = tostring(payload)
+
+	local success, err = mp.set_property('clipboard/text', payload)
+	if success then
+		mp.commandv('show-text', t('Copied to clipboard') .. ': ' .. payload, 3000)
+		return payload
+	end
+	if err and err ~= 'property not found' and err ~= 'property unavailable' then
+		mp.commandv('show-text', 'Set clipboard error: ' .. err)
+		return nil
+	end
+
 	local err, data = call_ziggy({'set-clipboard', payload})
 	if err then
 		mp.commandv('show-text', 'Set clipboard error. See console for details.')

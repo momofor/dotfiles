@@ -1,28 +1,24 @@
 # script-opts=ytdl_hook-ytdl_path=yt-dlp 
-# ytdl-format=bestvideo[height=720]+bestaudio/best
-ytdl-format="bestvideo[height<=720]+bestaudio/best"
+ytdl-format=bestvideo[height<=720]+bestaudio/best
 ytdl-raw-options=cookies=/home/momofor/cookies.txt
+profile=fast
 save-watch-history=yes
-force-window=immediate
-no-cache-pause
 
 # Not too important on modern hardware. 'auto-copy-safe' is a safe option to use if one wants to enable it. Defaults to 'no'.
-# hwdec=no
+hwdec=auto
 
 # Video driver to use. I recommend using the stable older 'gpu' (default) or the new experimental 'gpu-next'. Latter might still have various issues.
 vo=gpu
 ###### Vulkan on Linux, Windows or macOS (recommended)
-# gpu-api=vulkan
+gpu-api=vulkan
 ao=pipewire
 
-profile=fast
-
-# [twitch]
-# profile-cond=get("path", ""):find("^https://www.twitch.tv/") ~= nil
-# profile-restore=copy-equal
-# sub-font-size=30
-# sub-align-x=right
-# sub-align-y=top
+[twitch]
+profile-cond=get("path", ""):find("^https://www.twitch.tv/") ~= nil
+profile-restore=copy-equal
+sub-font-size=30
+sub-align-x=right
+sub-align-y=top
 
 
 # [deinterlace]
