@@ -1,3 +1,4 @@
 local uls = require("core._utils")
-require("lspconfig").asm_lsp.setup({ on_attach = uls.on_attach })
-vim.cmd([[LspStart]])
+
+vim.lsp.config({ "asm_lsp" })
+vim.lsp.enable("asm_lsp")

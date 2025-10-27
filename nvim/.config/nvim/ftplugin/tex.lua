@@ -1,7 +1,8 @@
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 local utils = require("core._utils")
 --
-require("lspconfig").texlab.setup({
+vim.lsp.config({
+	"texlab",
 	settings = {
 		["texlab"] = {
 			auxDirectory = "./out",
@@ -29,7 +30,6 @@ require("lspconfig").texlab.setup({
 		},
 	},
 	capabilities = capabilities,
-	on_attach = utils.on_attach,
 })
 vim.cmd([[LspStart]])
 

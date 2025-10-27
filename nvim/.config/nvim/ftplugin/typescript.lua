@@ -1,4 +1,4 @@
-local nvim_lsp = require("lspconfig")
+--[[ local nvim_lsp = require("lspconfig")
 require("null-ls").setup({})
 
 nvim_lsp.tsserver.setup({
@@ -59,4 +59,4 @@ nvim_lsp.tsserver.setup({
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", {silent = true})
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", {silent = true}) ]]
 	end,
-})
+}) ]]

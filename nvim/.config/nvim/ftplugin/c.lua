@@ -14,7 +14,6 @@ vim.lsp.config("clangd", {
 		"--completion-style=detailed",
 	}, -- custom build dir
 	capabilities = capabilities,
-	on_attach = utils.on_attach,
 })
 
 vim.lsp.enable("clangd")

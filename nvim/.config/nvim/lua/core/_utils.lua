@@ -98,13 +98,6 @@ M.on_attach = function(client, bufnr)
 
 	M.nnoremap("<Leader>a", ":lua vim.lsp.buf.code_action()<CR>", bufopt)
 
-	M.nnoremap("<C-n>", function()
-		vim.diagnostic.goto_next()
-	end, bufopt)
-
-	M.nnoremap("<C-p>", function()
-		vim.diagnostic.goto_prev()
-	end, bufopt)
 	M.nnoremap("<space>ca", vim.lsp.codelens.run, bufopt)
 end
 

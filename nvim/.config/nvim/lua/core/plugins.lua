@@ -200,6 +200,7 @@ require("lazy").setup {
 
 	{
 		"saghen/blink.cmp",
+		version = "1.*",
 		dependencies = {
 			{
 
@@ -244,7 +245,7 @@ require("lazy").setup {
 					["<C-b>"] = { "scroll_documentation_up", "fallback" },
 				},
 				appearance = {
-					use_nvim_cmp_as_default = true,
+					use_nvim_cmp_as_default = false,
 					-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 					-- Adjusts spacing to ensure icons are aligned
 					nerd_font_variant = "mono",
@@ -656,6 +657,20 @@ require("lazy").setup {
 				end,
 				desc = "which_key_ignore",
 			},
+		},
+	},
+	{
+		"Julian/lean.nvim",
+		event = { "BufReadPre *.lean", "BufNewFile *.lean" },
+
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"nvim-lua/plenary.nvim",
+		},
+
+		---@type lean.Config
+		opts = { -- see below for full configuration options
+			mappings = true,
 		},
 	},
 

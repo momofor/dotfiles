@@ -23,6 +23,5 @@ vim.lsp.config("lua_ls", {
 		},
 	},
 	capabilities = capabilities,
-	on_attach = utils.on_attach,
 })
-vim.cmd([[LspStart]])
+vim.lsp.enable("lua_ls")

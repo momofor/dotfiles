@@ -14,5 +14,4 @@ require("lspconfig").clangd.setup({
 		"--completion-style=detailed",
 	}, -- custom build dir
 	capabilities = capabilities,
-	on_attach = utils.on_attach,
 })

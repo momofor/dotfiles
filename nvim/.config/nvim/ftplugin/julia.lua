@@ -24,7 +24,6 @@ capabilities.textDocument.codeAction = {
 		},
 	},
 }
-require("lspconfig").julials.setup({
-	on_attach = utils.on_attach,
+vim.lsp.config{"julials",
 	capabilities = capabilities,
 })
