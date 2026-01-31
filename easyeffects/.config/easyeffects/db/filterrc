@@ -1,0 +1,11 @@
+[soe][Filter#0]
+bypass=true
+frequency=329
+mode=4
+slope=3
+type=1
+
+[soe][Filter#1]
+frequency=120
+gain=36
+type=1

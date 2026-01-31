@@ -58,7 +58,6 @@ require("lazy").setup {
 	{
 		event = "BufRead",
 		"nvim-treesitter/nvim-treesitter",
-		branch = "main",
 		build = ":TSUpdate",
 		config = function()
 			require "plugins.treesitter-config"
@@ -659,7 +658,7 @@ require("lazy").setup {
 			},
 		},
 	},
-	{
+	--[[ {
 		"Julian/lean.nvim",
 		event = { "BufReadPre *.lean", "BufNewFile *.lean" },
 
@@ -672,9 +671,9 @@ require("lazy").setup {
 		opts = { -- see below for full configuration options
 			mappings = true,
 		},
-	},
+	}, ]]
 
-	--[[ {
+	{
 		"OXY2DEV/markview.nvim",
 		lazy = false, -- Recommended
 		-- ft = "markdown" -- If you decide to lazy-load anyway
@@ -683,7 +682,7 @@ require("lazy").setup {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
-	}, ]]
+	},
 
 	--[[ {
 		"Thiago4532/mdmath.nvim",

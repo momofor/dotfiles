@@ -1,4 +1,4 @@
-require("lspconfig").jsonls.setup({
+vim.lsp.config("lspconfig", {
 	settings = {
 		json = {
 			schemas = require("schemastore").json.schemas({

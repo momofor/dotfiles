@@ -1,2 +1,2 @@
-require'lspconfig'.bashls.setup{}
-vim.cmd "LspStart"
+vim.lsp.config("lspconfig", {})
+vim.lsp.enable("lspconfig")
