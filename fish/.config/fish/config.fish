@@ -66,6 +66,7 @@ set -x WX_CONFIG /usr/bin/wx-config-gtk3-3.1
 set -x LD ld.lld
 set -x WLR_DRM_DEVICES /dev/dri/card0
 set -x BEMENU_OPTS '--fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e"'
+set QT_QPA_PLATFORMTHEME qt6ct
 
 
 

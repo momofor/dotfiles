@@ -55,14 +55,14 @@ require("lazy").setup {
 		event = "BufRead",
 	}, ]]
 
-	{
+	--[[ {
 		event = "BufRead",
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
 			require "plugins.treesitter-config"
 		end,
-	},
+	}, ]]
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		keys = { "<leader>t", desc = "NeoTree" },
@@ -412,7 +412,7 @@ require("lazy").setup {
 		keys = { "<leader>to", desc = "Open kitty runner" },
 		ft = { "julia" },
 	},
-	{
+	--[[ {
 		"mrcjkb/haskell-tools.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -422,7 +422,7 @@ require("lazy").setup {
 			require "plugins.haskell-tools"
 		end,
 		ft = { "haskell" },
-	},
+	}, ]]
 	--[[ {
 		"nvim-neorg/neorg",
 		-- build = ":Neorg sync-parsers",
@@ -679,9 +679,15 @@ require("lazy").setup {
 		-- ft = "markdown" -- If you decide to lazy-load anyway
 
 		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
+			-- "nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
+	},
+	{
+		"romus204/tree-sitter-manager.nvim",
+		config = function()
+			require("tree-sitter-manager").setup {}
+		end,
 	},
 
 	--[[ {

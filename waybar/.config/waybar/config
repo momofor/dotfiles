@@ -1,4 +1,4 @@
-// vim:filetype=json
+//; vim:filetype=json
 //                              /\ \                       
 //  __  __  __     __     __  __\ \ \____     __     _ __  
 // /\ \/\ \/\ \  /'__`\  /\ \/\ \\ \ '__`\  /'__`\  /\`'__\
@@ -93,7 +93,8 @@
 
 			]
 		},
-		"on-click": "pavucontrol"
+		"on-click": "pavucontrol",
+		"ignored-sinks": ["Easy Effects Sink"]
 	},
 	"tray": {
 		// "icon-size": 21,

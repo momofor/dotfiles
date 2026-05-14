@@ -1,4 +1,6 @@
 [soe][StereoTools#0]
-bypass=true
-delay=20
-phaser=true
+balanceIn=1
+mode=4
+mutel=true
+softclip=true
+stereoBase=0.25

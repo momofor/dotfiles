@@ -1,2 +1,8 @@
 [soe][Limiter#0]
-lookahead=10
+gainBoost=false
+inputToLink=0
+inputToSidechain=0
+linkToInput=0
+linkToSidechain=0
+sidechainToInput=0
+sidechainToLink=0
