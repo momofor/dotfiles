@@ -3,7 +3,7 @@ numBands=10
 
 [soe][Equalizer#0#left]
 band0Frequency=32
-band0Gain=3.6300000000000026
+band0Gain=4
 band0Q=1.504760237537245
 band10Type=0
 band11Type=0
@@ -56,7 +56,7 @@ band9Q=1.504760237537245
 
 [soe][Equalizer#0#right]
 band0Frequency=32
-band0Gain=3.6300000000000026
+band0Gain=4
 band0Q=1.504760237537245
 band10Type=0
 band11Type=0

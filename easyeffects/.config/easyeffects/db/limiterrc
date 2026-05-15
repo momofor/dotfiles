@@ -1,8 +1,8 @@
 [soe][Limiter#0]
-gainBoost=false
-inputToLink=0
-inputToSidechain=0
-linkToInput=0
-linkToSidechain=0
-sidechainToInput=0
-sidechainToLink=0
+alr=true
+alrAttack=10
+alrKnee=6
+alrRelease=1000
+attack=10
+lookahead=20
+release=20
