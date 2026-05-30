@@ -1,0 +1,4 @@
+[sie][Speex#0]
+bypass=true
+enableDereverb=true
+enableVad=true

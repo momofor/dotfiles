@@ -1,8 +1,3 @@
-[soe][Limiter#0]
+[sie][Limiter#0]
 alr=true
-alrAttack=10
-alrKnee=6
-alrRelease=1000
-attack=10
-lookahead=20
-release=20
+outputGain=-4.6

@@ -1,6 +1,6 @@
 [sie][Delay#0]
-timeL=250
-timeR=250
+timeL=500
+timeR=500
 
 [soe][Delay#0]
 timeR=20

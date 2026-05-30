@@ -69,7 +69,7 @@ require("lazy").setup {
 		config = function()
 			require "plugins.neo-tree-config"
 		end,
-		branch = "v2.x",
+		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended

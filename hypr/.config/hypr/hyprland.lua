@@ -14,13 +14,14 @@ hl.monitor({
 	scale = 1,
 	bitdepth = 8,
 	-- cm = srgb
-	icc = home .. "/sRGB_IEC61966-2-1_black_scaled.icc",
+	icc = home .. "/.local/share/icc/sRGB2014.icc",
 })
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("$HOME/start-hyprland.sh")
+	hl.exec_cmd("$HOME/start-wob.sh")
 end)
 
 hl.config({ binds = {
@@ -101,11 +102,11 @@ hl.curve("easeInSine", { type = "bezier", points = { { 0.12, 0 }, { 0.63, 1 } } 
 hl.curve("easeOutSine", { type = "bezier", points = { { 0.61, 1 }, { 0.88, 1 } } })
 hl.curve("easeInOutSine", { type = "bezier", points = { { 0.37, 0 }, { 0.63, 1 } } })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 2, bezier = "default" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 2, bezier = "easeInSine", style = "popin 60" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 2, bezier = "easeOutSine", style = "popin 60" })
-hl.animation({ leaf = "fade", enabled = true, speed = 2, bezier = "easeInOutSine" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 2, bezier = "easeInOutSine", style = "slide" })
+hl.animation({ leaf = "windows", enabled = true, speed = 1, bezier = "default" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 1, bezier = "easeInSine", style = "popin 60" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, bezier = "easeOutSine", style = "popin 60" })
+hl.animation({ leaf = "fade", enabled = true, speed = 1, bezier = "easeInOutSine" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1, bezier = "easeInOutSine", style = "slide" })
 
 --- ---- Window Rules
 

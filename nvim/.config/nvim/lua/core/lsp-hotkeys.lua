@@ -24,7 +24,7 @@ end)
 utils.nnoremap("<leader>fn", function()
 	utils.Search("< NeovimRC >", "~/.config/nvim/")
 end)
-utils.nnoremap("<leader>fr", ":e ~/.config/hypr/hyprland.conf<CR>")
+utils.nnoremap("<leader>fr", ":e ~/.config/hypr/hyprland.lua<CR>")
 
 utils.nnoremap("<leader>mk", ":TexlabForward<CR>")
 

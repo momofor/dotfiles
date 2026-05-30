@@ -9,14 +9,14 @@ hl.bind("SUPER+ALT+Q", hl.dsp.exec_cmd("chromium --enable-features=UseOzonePlatf
 hl.bind(
 	"SUPER+up",
 	hl.dsp.exec_cmd(
-		[[wpctl set-sink-volume @DEFAULT_SINK@ -l 1 +5%&& echo "$(wpctl get-volume @DEFAULT_SINK@ | rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe]]
+		[[wpctl set-volume -l 1 @DEFAULT_SINK@ 5%+ && echo "$(wpctl get-volume @DEFAULT_SINK@ | rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe]]
 	),
 	{ repeating = true }
 )
 hl.bind(
 	"SUPER+down",
 	hl.dsp.exec_cmd(
-		[[wpctl set-sink-volume @DEFAULT_SINK@ -5% && echo "$(wpctl get-volume @DEFAULT_SINK@ | rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe]]
+		[[wpctl set-volume @DEFAULT_SINK@ 5%- && echo "$(wpctl get-volume @DEFAULT_SINK@ | rg -m1 -o "\d+"| tail --lines 1)" > /tmp/wobpipe]]
 	),
 	{ repeating = true }
 )
@@ -32,7 +32,7 @@ hl.bind("ALT+S", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("CTRL+SHIFT+L", hl.dsp.exec_cmd("wlogout"))
 hl.bind("CTRL+ALT+L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER+SHIFT+P", hl.dsp.exec_cmd([[clipman pick -t "wofi"]]))
-hl.bind("SUPER+C", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | tesseract -l "eng" stdin stdout | wl-copy]]))
+hl.bind("SUPER+C", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy]]))
 hl.bind("SUPER+Z", hl.dsp.exec_cmd([[grim -g "$(slurp)" ~/.other/screenshots/"$(date --rfc-3339 s).png"]]))
 hl.bind("SUPER+SHIFT+Z", hl.dsp.exec_cmd([[wl-paste | sed -E "s|(https://)[^/]+|\1youtube.com|" | wl-copy]]))
 hl.bind(
@@ -49,7 +49,7 @@ hl.bind(
 )
 
 hl.bind("SUPER+Space", hl.dsp.window.float({ action = "toggle" }))
-hl.bind("SUPER+SHIFT+Q", hl.dsp.window.kill())
+hl.bind("SUPER+SHIFT+Q", hl.dsp.window.close())
 hl.bind("SUPER+SHIFT+E", hl.dsp.exit())
 
 hl.bind("SUPER+h", hl.dsp.focus({ direction = "left" }))
@@ -67,6 +67,7 @@ for i = 10, 19 do
 	local workspace = i % 10 + 1
 	hl.bind("SUPER + code:" .. i, hl.dsp.focus({ workspace = workspace }))
 	hl.bind("SUPER + SHIFT + code:" .. i, hl.dsp.window.move({ workspace = workspace }))
+	hl.bind("ALT + code:" .. i, hl.dsp.window.move({ workspace = workspace }))
 end
 
 hl.bind("ALT+O", hl.dsp.window.move({ workspace = "special:scratchpad" }))
@@ -76,3 +77,13 @@ hl.bind("SUPER+F", hl.dsp.window.fullscreen())
 hl.bind("SUPER+ALT+H", hl.dsp.layout("togglesplit"))
 
 hl.bind("SUPER+W", hl.dsp.group.toggle())
+
+hl.bind("SUPER+left", hl.dsp.focus({ workspace = 2 }))
+hl.bind("SUPER+right", hl.dsp.focus({ workspace = 2 }))
+
+hl.bind("SUPER+N", hl.dsp.group.next())
+hl.bind("SUPER+p", hl.dsp.group.prev())
+
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true, description = "Window: Move" })
+hl.bind("SUPER + mouse:274", hl.dsp.window.drag(), { mouse = true })
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true, description = "Window: Resize" })
