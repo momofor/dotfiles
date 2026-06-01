@@ -78,12 +78,21 @@ hl.bind("SUPER+ALT+H", hl.dsp.layout("togglesplit"))
 
 hl.bind("SUPER+W", hl.dsp.group.toggle())
 
-hl.bind("SUPER+left", hl.dsp.focus({ workspace = 2 }))
-hl.bind("SUPER+right", hl.dsp.focus({ workspace = 2 }))
-
 hl.bind("SUPER+N", hl.dsp.group.next())
 hl.bind("SUPER+p", hl.dsp.group.prev())
 
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true, description = "Window: Move" })
 hl.bind("SUPER + mouse:274", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true, description = "Window: Resize" })
+
+local function workspace_switch()
+	local cur_workspace = tonumber(hl.get_active_workspace().name)
+	if cur_workspace == 1 or cur_workspace == 2 then
+		hl.dispatch(hl.dsp.focus({ workspace = cur_workspace % 2 + 1 }))
+	else
+		hl.dispatch(hl.dsp.focus({ workspace = 2 }))
+	end
+end
+
+hl.bind("SUPER+left", workspace_switch)
+hl.bind("SUPER+right", workspace_switch)

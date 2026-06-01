@@ -5,6 +5,8 @@ hl.monitor({
 	mode = "preferred",
 	position = "auto-right",
 	scale = 1.2,
+	cm = "srgb",
+	icc = home .. "/.local/share/icc/Gamma5000K.icc",
 })
 
 hl.monitor({
@@ -13,7 +15,7 @@ hl.monitor({
 	position = "auto-left",
 	scale = 1,
 	bitdepth = 8,
-	-- cm = srgb
+	-- cm = "srgb",
 	icc = home .. "/.local/share/icc/sRGB2014.icc",
 })
 
