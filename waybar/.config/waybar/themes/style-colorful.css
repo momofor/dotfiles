@@ -15,7 +15,6 @@
 }
 
 #window {
-	font-family: "Dejavu Sans";
 	min-width: 20rem;
 	background-color: @pink;
 	color: @surface1;

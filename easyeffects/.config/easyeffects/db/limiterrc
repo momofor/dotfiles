@@ -1,3 +1,6 @@
 [sie][Limiter#0]
 alr=true
 outputGain=-4.6
+
+[soe][Limiter#0]
+alr=true

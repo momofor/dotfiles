@@ -39,7 +39,7 @@ hl.config({
 		kb_options = "grp:rctrl_rshift_toggle,compose:ralt,caps:swapescape",
 		kb_rules = "",
 		repeat_rate = 40,
-		repeat_delay = 150,
+		repeat_delay = 200,
 		scroll_factor = 2,
 
 		follow_mouse = 1,
