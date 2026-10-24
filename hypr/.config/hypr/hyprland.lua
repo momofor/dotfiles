@@ -1,22 +1,24 @@
 require("keybinds")
+require("hyprgrass-gestures")
 local home = os.getenv("HOME")
-hl.monitor({
-	output = "eDP-1",
-	mode = "preferred",
-	position = "auto-right",
-	scale = 1.2,
-	cm = "srgb",
-	icc = home .. "/.local/share/icc/Gamma5000K.icc",
-})
 
 hl.monitor({
 	output = "HDMI-A-2",
 	mode = "preferred",
 	position = "auto-left",
-	scale = 1,
-	bitdepth = 8,
+	scale = 1.2,
+	-- bitdepth = 8,
+	cm = "hdr",
+	-- icc = home .. "/.local/share/icc/sRGB2014.icc",
+})
+
+hl.monitor({
+	output = "eDP-1",
+	mode = "preferred",
+	position = "auto-right",
+	scale = 1.2,
 	-- cm = "srgb",
-	icc = home .. "/.local/share/icc/sRGB2014.icc",
+	icc = home .. "/.local/share/icc/Gamma5000K.icc",
 })
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
@@ -27,8 +29,8 @@ hl.on("hyprland.start", function()
 end)
 
 hl.config({ binds = {
-	workspace_back_and_forth = 1,
-	allow_workspace_cycles = 1,
+	workspace_back_and_forth = true,
+	allow_workspace_cycles = true,
 	scroll_event_delay = 5,
 } })
 

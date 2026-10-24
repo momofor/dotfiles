@@ -3,4 +3,4 @@ timeL=500
 timeR=500
 
 [soe][Delay#0]
-timeR=20
+timeR=5

@@ -3,4 +3,4 @@ alr=true
 outputGain=-4.6
 
 [soe][Limiter#0]
-alr=true
+lookahead=10

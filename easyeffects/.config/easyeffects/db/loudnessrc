@@ -2,4 +2,6 @@
 volume=3
 
 [soe][Loudness#0]
+bypass=true
 std=1
+volume=6

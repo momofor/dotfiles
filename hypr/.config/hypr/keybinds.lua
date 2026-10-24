@@ -1,6 +1,6 @@
 local home = os.getenv("HOME")
 hl.bind("SUPER+RETURN", hl.dsp.exec_cmd("kitty"))
-hl.bind("SUPER+D", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind("SUPER+D", hl.dsp.exec_cmd("wofi --show drun -I -m -i "))
 hl.bind("SUPER+E", hl.dsp.exec_cmd("easyeffects"))
 hl.bind("SUPER+A", hl.dsp.exec_cmd(home .. "/audio_output_hyprland.sh"))
 hl.bind("ALT+Q", hl.dsp.exec_cmd("firefox"))
@@ -79,7 +79,7 @@ hl.bind("SUPER+ALT+H", hl.dsp.layout("togglesplit"))
 hl.bind("SUPER+W", hl.dsp.group.toggle())
 
 hl.bind("SUPER+N", hl.dsp.group.next())
-hl.bind("SUPER+p", hl.dsp.group.prev())
+hl.bind("SUPER+P", hl.dsp.group.prev())
 
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true, description = "Window: Move" })
 hl.bind("SUPER + mouse:274", hl.dsp.window.drag(), { mouse = true })

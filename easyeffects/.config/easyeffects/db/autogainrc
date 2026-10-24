@@ -1,2 +1,6 @@
 [sie][Autogain#0]
 bypass=true
+
+[soe][Autogain#0]
+forceSilence=true
+maximumHistory=6
